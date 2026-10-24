@@ -743,7 +743,10 @@ Wichtig:
 - Kaffeemaschinen, Wasserkocher usw. -> Haushaltsgeräte.
 - Prozent-Aktionen ohne Produkt ("20 % Rabatt auf ...") -> Rabatte & Coupons.
 
-Antworte NUR mit einem JSON-Objekt {{"Nummer": "Code", ...}}.
+Antworte NUR mit einer Zeile pro Produkt im Format "Nummer: Code", z.B.
+0: 11.3
+1: 12.5
+Keine weiteren Erklärungen.
 
 Produkte:
 """
@@ -774,16 +777,25 @@ def gruppen_zuordnen(angebote: list[dict]) -> None:
                     messages=[{"role": "user", "content": prompt + liste}],
                 )
                 text = "".join(b.text for b in antwort.content if getattr(b, "type", "") == "text")
-                a, b = text.find("{"), text.rfind("}")
-                zuordnung = json.loads(text[a:b + 1]) if a >= 0 and b > a else {}
             except Exception as e:
                 log(f"  Untergruppen: FEHLER bei Paket {start // 150 + 1} – {e}")
                 continue
+            if start == 0:  # Beispielantwort zur Kontrolle aufheben
+                CACHE_DIR.mkdir(exist_ok=True)
+                (CACHE_DIR / "untergruppen_beispiel.txt").write_text(
+                    liste[:1500] + "\n\n--- Antwort ---\n" + text[:3000], encoding="utf-8")
+            # Robust lesen: "0: 11.3", "0 = 11.3", {"0": "11.3"} oder {"0": 11.3}
+            zuordnung = dict(re.findall(r'"?(\d+)"?\s*[:=]\s*"?(\d+\.\d+)', text))
+            treffer = 0
             for i, s in enumerate(teil):
-                code = str(zuordnung.get(str(i), "")).strip()
-                # Ungültige Antworten als "Sonstiges > Weiteres" merken, sonst täglich neu gefragt
-                cache[s] = code if code in OPTIONEN else WEITERES_CODE
-                neu += 1
+                code = zuordnung.get(str(i), "")
+                if code in OPTIONEN:
+                    cache[s] = code
+                    treffer += 1
+                # Ohne gültigen Code nichts speichern -> nächster Lauf versucht es erneut
+            neu += treffer
+            if treffer < len(teil) // 2:
+                log(f"  Untergruppen: Paket {start // 150 + 1} nur {treffer}/{len(teil)} lesbar")
             # nach jedem Paket speichern, damit ein Abbruch nichts verliert
             CACHE_DIR.mkdir(exist_ok=True)
             cache_datei.write_text(json.dumps(cache, ensure_ascii=False, indent=0), encoding="utf-8")
