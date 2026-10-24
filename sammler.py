@@ -691,7 +691,8 @@ UNTERGRUPPEN = {
     "Fisch": ["Frischer Fisch", "Räucherfisch", "Fischkonserven & Feinkost", "Garnelen & Meeresfrüchte"],
     "Milch, Käse & Eier": ["Milch & Milchgetränke", "Butter & Margarine", "Scheibenkäse",
                            "Käse am Stück & gerieben", "Weichkäse", "Frischkäse & Streichkäse",
-                           "Back-, Ofen- & Grillkäse", "Joghurt & Quark", "Sahne & Desserts", "Eier"],
+                           "Back-, Ofen- & Grillkäse", "Naturjoghurt & Quark", "Frucht- & Sahnejoghurt",
+                           "Sahne & Desserts", "Eier"],
     "Brot & Backwaren": ["Brot & Brötchen", "Toast & Sandwich", "Zwieback & Knäckebrot"],
     "Tiefkühl": ["Tiefkühl-Pizza & Snacks", "Tiefkühl-Gemüse & -Obst", "Pommes & Kartoffelprodukte",
                  "Eis", "Tiefkühl-Fisch & -Fleisch", "Tiefkühl-Fertiggerichte"],
@@ -765,6 +766,10 @@ Wichtig:
 - Lesebrillen, Rollatoren, Rollstühle, Blutdruckmessgeräte -> Gesundheit & Nahrungsergänzung.
 - Getränke immer nach Inhalt, auch bei seltsamen Namen ("Near Water", "Infused Water" -> Wasser).
 - Grillanzünder, Anzündholz, Holzbriketts, Grillkohle -> Garten & Pflanzen (kein Fleisch!).
+- Joghurt: Naturjoghurt, griechischer Joghurt, Skyr natur, Speisequark, Magerquark,
+  Kräuterquark -> Naturjoghurt & Quark; mit Frucht, Geschmack oder Sahne (Fruchtzwerge,
+  Almighurt, Sahnejoghurt, Fruchtquark, Joghurt mit der Ecke) -> Frucht- & Sahnejoghurt;
+  Trinkjoghurt, Actimel, Skyr-Drink -> Milch & Milchgetränke.
 - Prozent-Aktionen ohne Produkt ("20 % Rabatt auf ...") -> Rabatte & Coupons.
 
 Antworte NUR mit einer Zeile pro Produkt im Format "Nummer: Code", z.B.
