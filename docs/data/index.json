@@ -1,5 +1,5 @@
 {
- "stand": "2026-10-24T17:31+02:00",
+ "stand": "2026-10-24T17:39+02:00",
  "regionen": [
   {
    "id": "steinfurt",
@@ -15,7 +15,7 @@
     "Penny",
     "Rossmann"
    ],
-   "anzahl": 2983
+   "anzahl": 2996
   },
   {
    "id": "winsen",
@@ -33,7 +33,7 @@
     "budni",
     "famila"
    ],
-   "anzahl": 3567
+   "anzahl": 4233
   },
   {
    "id": "harburg",
@@ -51,7 +51,7 @@
     "dm",
     "nahkauf"
    ],
-   "anzahl": 3620
+   "anzahl": 3633
   }
  ]
 }
