@@ -166,6 +166,23 @@ main { max-width: 640px; margin: 0 auto; padding: 12px 16px 24px; }
 }
 .knopf.leise { background: none; color: var(--tinte); border: 1px solid var(--linie); }
 
+/* ---------- Markt-Kennzeichnung ---------- */
+.abz {
+  display: inline-grid; place-items: center; flex: none;
+  width: 26px; height: 26px; border-radius: 50%;
+  background: var(--mf); color: #fff;
+  font-size: 11px; font-weight: 800; font-stretch: 80%; letter-spacing: -0.02em;
+  vertical-align: middle;
+}
+.abz.klein { width: 20px; height: 20px; font-size: 9px; }
+.markt-zeile { display: flex; align-items: center; gap: 6px; }
+.chip .abz { margin: -2px 6px -2px -6px; }
+/* Variante 2: Farbstreifen statt Abzeichen */
+body.stil-streifen .abz { display: none; }
+body.stil-streifen .angebot, body.stil-streifen .posten { box-shadow: inset 5px 0 0 var(--mf); }
+body.stil-streifen .angebot { padding-left: 18px; }
+body.stil-streifen .markt { color: var(--mf); filter: brightness(1.15); }
+
 /* ---------- Kategorien ---------- */
 .kacheln { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 8px; }
 .kachel {
@@ -493,6 +510,25 @@ function schild(a) {
   return `<span class="schild" aria-label="${eur(a.p)}"><span class="euro">${e},</span><span class="cent">${c}</span></span>`;
 }
 
+/* Eigene Kennfarben je Markt – bewusst NICHT die Firmenfarben */
+const MARKT_STIL = {
+  "Lidl":     ["#2E7D6B", "Li"],  "Aldi":    ["#7A4FB3", "Al"],
+  "Penny":    ["#B5577D", "Pe"],  "Netto":   ["#5E7A2E", "Ne"],
+  "Rewe":     ["#8A5A3C", "Re"],  "Edeka":   ["#2F6F8F", "Ed"],
+  "Kaufland": ["#C26A2E", "Ka"],  "K+K":     ["#3E8E5A", "K+K"],
+  "Combi":    ["#9C6B1F", "Co"],  "famila":  ["#A2475A", "Fa"],
+  "Norma":    ["#546E7A", "No"],  "nahkauf": ["#6D8C3A", "Na"],
+  "Rossmann": ["#8E5BA0", "Ro"],  "budni":   ["#1F7F86", "Bu"],
+  "dm":       ["#7D6B5D", "dm"],
+};
+function marktStil(h) {
+  return MARKT_STIL[h] || ["#6B7280", (h || "?").slice(0, 2)];
+}
+function abzeichen(h, klein) {
+  const [farbe, kurz] = marktStil(h);
+  return `<span class="abz${klein ? " klein" : ""}" style="--mf:${farbe}" aria-hidden="true">${esc(kurz)}</span>`;
+}
+
 function angebotHTML(a) {
   const gemerkt = zustand.liste.some((x) => x.id === a.id);
   const spar = a.ap && a.p ? Math.round((1 - a.p / a.ap) * 100) : 0;
@@ -500,11 +536,11 @@ function angebotHTML(a) {
     ? `<span class="bald">ab ${esc(datumKurz(a.von))}</span>`
     : a.bis ? `bis ${esc(datumKurz(a.bis))}` : "";
   const info = [esc(a.pk), zeit].filter(Boolean).join(", ");
-  return `<li class="angebot">
+  return `<li class="angebot" style="--mf:${marktStil(a.h)[0]}">
     <div class="links">
       ${merkKnopf(a, gemerkt)}
       <div>
-        <div class="markt">${esc(a.h)}</div>
+        <div class="markt markt-zeile">${abzeichen(a.h, true)}${esc(a.h)}</div>
         <div class="name">${a.m ? `<span class="marke">${esc(a.m)}</span> ` : ""}${esc(a.n)}</div>
         ${info ? `<div class="info">${info}</div>` : ""}
       </div>
@@ -631,7 +667,7 @@ function zeichneMarktChips() {
   const m = aktiveMaerkte();
   $("#marktChips").innerHTML =
     `<button class="chip" data-markt="" aria-pressed="${sucheMarkt === null}">Alle Märkte</button>` +
-    m.map((x) => `<button class="chip" data-markt="${esc(x)}" aria-pressed="${sucheMarkt === x}">${esc(x)}</button>`).join("");
+    m.map((x) => `<button class="chip" data-markt="${esc(x)}" aria-pressed="${sucheMarkt === x}">${abzeichen(x, true)}${esc(x)}</button>`).join("");
 }
 function zeichneSuche() {
   zeichneMarktChips();
@@ -693,10 +729,10 @@ function zeichneListe() {
     const summe = posten.filter((p) => !p.erledigt).reduce((s, p) => s + (p.a.p || 0), 0);
     gesamt += summe;
     return `<div class="markt-gruppe">
-      <div class="markt-kopf"><h2>${esc(markt)}</h2><span class="summe">${summe ? eur(summe) : ""}</span></div>
+      <div class="markt-kopf"><h2 class="markt-zeile">${abzeichen(markt)}${esc(markt)}</h2><span class="summe">${summe ? eur(summe) : ""}</span></div>
       <ul class="liste">${posten.map((p) => {
         const abgel = p.a.bis && p.a.bis < t;
-        return `<li class="posten${p.erledigt ? " erledigt" : ""}">
+        return `<li class="posten${p.erledigt ? " erledigt" : ""}" style="--mf:${marktStil(markt)[0]}">
           <input type="checkbox" data-abhaken="${p.id}" ${p.erledigt ? "checked" : ""} aria-label="${esc(p.a.n)} abhaken">
           <div><div class="pname">${p.a.m ? esc(p.a.m) + " " : ""}${esc(p.a.n)}</div>
             <div class="pinfo">${[esc(p.a.pk), abgel ? `<span class="abgelaufen">abgelaufen</span>` : p.a.bis ? "bis " + esc(datumKurz(p.a.bis)) : ""].filter(Boolean).join(", ")}</div></div>
@@ -778,7 +814,7 @@ function zeichneEinstellungen() {
         <button class="textknopf" data-alle-maerkte="${aktiv.size === alle.length ? "aus" : "an"}">${aktiv.size === alle.length ? "Alle abwählen" : "Alle auswählen"}</button></div>
       <p class="erkl">Nur diese Märkte werden angezeigt.</p>
       <div class="markt-raster">${alle.map((m) =>
-        `<button class="chip" data-markt-schalter="${esc(m)}" aria-pressed="${aktiv.has(m)}">${esc(m)}</button>`).join("")}</div>
+        `<button class="chip" data-markt-schalter="${esc(m)}" aria-pressed="${aktiv.has(m)}">${abzeichen(m, true)}${esc(m)}</button>`).join("")}</div>
     </div>
     <div class="abschnitt">
       <h2>Ort</h2>
