@@ -1,5 +1,5 @@
 {
- "stand": "2026-10-24T18:54+02:00",
+ "stand": "2026-10-24T19:37+02:00",
  "regionen": [
   {
    "id": "steinfurt",
@@ -9,13 +9,12 @@
     "Combi",
     "Edeka",
     "K+K",
-    "Kaufland",
     "Lidl",
     "Netto",
     "Penny",
     "Rossmann"
    ],
-   "anzahl": 3000
+   "anzahl": 2527
   },
   {
    "id": "winsen",
@@ -25,7 +24,6 @@
     "budni",
     "Edeka",
     "famila",
-    "Kaufland",
     "Lidl",
     "Netto",
     "Norma",
@@ -33,7 +31,7 @@
     "Rewe",
     "Rossmann"
    ],
-   "anzahl": 4175
+   "anzahl": 3692
   },
   {
    "id": "harburg",
