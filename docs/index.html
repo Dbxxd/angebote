@@ -501,7 +501,9 @@ function suche(begriff, maerkte, gruppe) {
   const gruppenZahl = {};
   const katTreffer = treffer.filter(katPasst);
   for (const a of katTreffer) if (a.g) gruppenZahl[a.g] = (gruppenZahl[a.g] || 0) + 1;
-  const typisch = new Set(Object.keys(gruppenZahl).filter((g) => gruppenZahl[g] >= katTreffer.length * 0.25));
+  // Die häufigste Gruppe gilt immer, weitere nur bei klarem Gewicht (≥ 40 %)
+  const rangfolge = Object.keys(gruppenZahl).sort((x, y) => gruppenZahl[y] - gruppenZahl[x]);
+  const typisch = new Set(rangfolge.filter((g, i) => i === 0 || gruppenZahl[g] >= katTreffer.length * 0.4));
 
   const passend = [], weitere = [];
   for (const a of treffer) {
@@ -668,17 +670,32 @@ function zeichneFuerDich() {
 /* ---------- Suche & Kategorien ---------- */
 let sucheMarkt = null;   // null = alle aktiven
 let sucheGruppe = null;  // gewählte Kategorie oder null
+let sucheUnter = null;   // gewählte Unterkategorie oder null
 let anzeigeLimit = 50;   // große Listen schrittweise zeigen
 
-// Reihenfolge der Kacheln (wie im Laden: frisch zuerst, Non-Food zuletzt)
-const GRUPPEN = [
+// Reihenfolge der Kacheln (wie im Laden: frisch zuerst, Non-Food zuletzt).
+// Die Daten bringen die aktuelle Liste samt Unterkategorien mit; dies ist nur der Rückfall.
+const GRUPPEN_STANDARD = [
   "Obst & Gemüse", "Fleisch & Wurst", "Fisch", "Milch, Käse & Eier", "Brot & Backwaren",
   "Tiefkühl", "Fertiggerichte & Konserven", "Vorrat & Backen", "Frühstück & Aufstriche",
   "Süßes & Snacks", "Kaffee & Tee", "Getränke", "Bier", "Wein & Sekt", "Spirituosen",
   "Drogerie & Pflege", "Baby & Kind", "Haushalt & Reinigung", "Tierbedarf",
   "Kleidung & Schuhe", "Haus, Garten & Deko", "Elektronik & Technik", "Sonstiges",
 ];
+function gruppenListe() { return daten && daten.gruppen ? Object.keys(daten.gruppen) : GRUPPEN_STANDARD; }
+function unterListe(g) { return (daten && daten.gruppen && daten.gruppen[g]) || []; }
 function gruppeVon(a) { return a.g || "Sonstiges"; }
+
+function unterChips(liste) {
+  const zahl = {};
+  for (const a of liste) if (a.u) zahl[a.u] = (zahl[a.u] || 0) + 1;
+  const vorhanden = unterListe(sucheGruppe).filter((u) => zahl[u]);
+  if (vorhanden.length < 2) return "";
+  return `<div class="chips" role="group" aria-label="Unterkategorie">
+    <button class="chip" data-unter="" aria-pressed="${sucheUnter === null}">Alle ${liste.length}</button>
+    ${vorhanden.map((u) => `<button class="chip" data-unter="${esc(u)}" aria-pressed="${sucheUnter === u}">${esc(u)} ${zahl[u]}</button>`).join("")}
+  </div>`;
+}
 
 const ICON_ZURUECK = `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>`;
 
@@ -699,7 +716,7 @@ function kachelnHTML() {
   const erlaubt = new Set(aktiveMaerkte());
   const zahl = {};
   for (const a of angebote) if (erlaubt.has(a.h)) zahl[gruppeVon(a)] = (zahl[gruppeVon(a)] || 0) + 1;
-  const vorhanden = GRUPPEN.filter((g) => zahl[g]);
+  const vorhanden = gruppenListe().filter((g) => zahl[g]);
   if (!vorhanden.length) return "";
   return `<p class="zwischentitel">Kategorien</p><div class="kacheln">${vorhanden.map((g) =>
     `<button class="kachel" data-gruppe="${esc(g)}"><strong>${esc(g)}</strong><span>${zahl[g]} Angebote</span></button>`).join("")}</div>`;
@@ -735,9 +752,11 @@ function zeichneSuche() {
   // Kategorie ohne Suchbegriff: alles aus der Kategorie
   if (!begriff) {
     const erlaubt = new Set(maerkte);
-    const liste = sortiere(angebote.filter((a) => erlaubt.has(a.h) && gruppeVon(a) === sucheGruppe));
-    ziel.innerHTML = kopf + sortierChips() + (liste.length
-      ? `<p class="zwischentitel">${liste.length === 1 ? "1 Angebot" : liste.length + " Angebote"}${beiMarkt}</p>${begrenzteListe(liste)}`
+    const ganz = angebote.filter((a) => erlaubt.has(a.h) && gruppeVon(a) === sucheGruppe);
+    if (sucheUnter && !ganz.some((a) => a.u === sucheUnter)) sucheUnter = null;
+    const liste = sortiere(sucheUnter ? ganz.filter((a) => a.u === sucheUnter) : ganz.slice());
+    ziel.innerHTML = kopf + unterChips(ganz) + sortierChips() + (liste.length
+      ? `<p class="zwischentitel">${liste.length === 1 ? "1 Angebot" : liste.length + " Angebote"}${sucheUnter ? " in " + esc(sucheUnter) : ""}${beiMarkt}</p>${begrenzteListe(liste)}`
       : `<p class="hinweis">Diese Woche nichts aus dieser Kategorie${beiMarkt}.</p>`);
     return;
   }
@@ -898,8 +917,14 @@ document.addEventListener("click", async (ev) => {
     anzeigeLimit = 50;
     zeichneSuche();
   }
+  else if (d.unter !== undefined) {
+    sucheUnter = d.unter || null;
+    anzeigeLimit = 50;
+    zeichneSuche();
+  }
   else if (d.gruppe !== undefined) {
     sucheGruppe = d.gruppe || null;
+    sucheUnter = null;
     anzeigeLimit = 50;
     if (!sucheGruppe) $("#such").value = "";
     zeichneSuche();

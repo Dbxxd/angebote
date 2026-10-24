@@ -683,66 +683,115 @@ def kategorien_ergaenzen(angebote: list[dict]) -> None:
 # Feste Gruppen zum Stöbern in der App
 # =============================================================================
 
-GRUPPEN = [
-    "Obst & Gemüse", "Fleisch & Wurst", "Fisch", "Milch, Käse & Eier", "Brot & Backwaren",
-    "Tiefkühl", "Fertiggerichte & Konserven", "Vorrat & Backen", "Frühstück & Aufstriche",
-    "Süßes & Snacks", "Kaffee & Tee", "Getränke", "Bier", "Wein & Sekt", "Spirituosen",
-    "Drogerie & Pflege", "Baby & Kind", "Haushalt & Reinigung", "Tierbedarf",
-    "Kleidung & Schuhe", "Haus, Garten & Deko", "Elektronik & Technik", "Sonstiges",
-]
+# Gruppe -> Untergruppen. Reihenfolge = Reihenfolge in der App (wie im Laden: frisch zuerst).
+UNTERGRUPPEN = {
+    "Obst & Gemüse": ["Obst", "Gemüse", "Kartoffeln & Zwiebeln", "Salat & Kräuter"],
+    "Fleisch & Wurst": ["Rind", "Schwein", "Geflügel", "Hackfleisch", "Grillgut & Bratwurst",
+                        "Aufschnitt & Wurst", "Schinken & Salami", "Fleischersatz"],
+    "Fisch": ["Frischer Fisch", "Räucherfisch", "Fischkonserven & Feinkost", "Garnelen & Meeresfrüchte"],
+    "Milch, Käse & Eier": ["Milch & Milchgetränke", "Butter & Margarine", "Käse", "Joghurt & Quark",
+                           "Sahne & Desserts", "Eier"],
+    "Brot & Backwaren": ["Brot & Brötchen", "Toast & Sandwich", "Kuchen & Feingebäck"],
+    "Tiefkühl": ["Tiefkühl-Pizza & Snacks", "Tiefkühl-Gemüse & -Obst", "Pommes & Kartoffelprodukte",
+                 "Eis", "Tiefkühl-Fisch & -Fleisch", "Tiefkühl-Fertiggerichte"],
+    "Fertiggerichte & Konserven": ["Fertiggerichte", "Suppen & Eintöpfe", "Gemüse- & Obstkonserven",
+                                   "Feinkost & Salate"],
+    "Vorrat & Backen": ["Nudeln & Reis", "Mehl, Zucker & Backzutaten", "Öl & Essig",
+                        "Saucen, Ketchup & Senf", "Gewürze & Brühe"],
+    "Frühstück & Aufstriche": ["Müsli & Cerealien", "Marmelade & Honig", "Nuss-Nougat- & Brotaufstriche"],
+    "Süßes & Snacks": ["Schokolade & Riegel", "Fruchtgummi & Bonbons", "Kekse & Gebäck",
+                       "Chips & Knabbereien", "Nüsse & Trockenobst"],
+    "Kaffee & Tee": ["Kaffeebohnen", "Gemahlener Kaffee", "Pads & Kapseln", "Instantkaffee", "Tee & Kakao"],
+    "Getränke": ["Wasser", "Saft & Schorle", "Limonade & Cola", "Energy- & Sportgetränke",
+                 "Kaffee- & Teegetränke"],
+    "Bier": ["Pils & Helles", "Weizenbier", "Alkoholfrei & Radler", "Spezialitäten & Mix"],
+    "Wein & Sekt": ["Rotwein", "Weißwein", "Roséwein", "Sekt & Prosecco", "Glühwein"],
+    "Spirituosen": ["Likör", "Whisky", "Rum", "Wodka & Gin", "Weitere Spirituosen"],
+    "Drogerie & Pflege": ["Körper- & Gesichtspflege", "Haarpflege", "Zahnpflege", "Kosmetik & Parfüm",
+                          "Gesundheit & Nahrungsergänzung", "Damenhygiene & Rasur"],
+    "Baby & Kind": ["Babynahrung", "Windeln & Babypflege", "Spielzeug", "Kinderbedarf"],
+    "Haushalt & Reinigung": ["Waschmittel", "Reinigung & Spülen", "Papier & Folien",
+                             "Küche & Kochen", "Haushaltsgeräte"],
+    "Tierbedarf": ["Katze", "Hund", "Weitere Tiere"],
+    "Kleidung & Schuhe": ["Damen", "Herren", "Kinder", "Schuhe", "Wäsche & Socken"],
+    "Haus, Garten & Deko": ["Deko & Saisonartikel", "Heimtextilien", "Garten & Pflanzen", "Möbel & Aufbewahrung",
+                            "Kerzen & Licht"],
+    "Elektronik & Technik": ["Unterhaltungselektronik", "Werkzeug & Heimwerken", "Auto & Fahrrad",
+                             "Weitere Technik"],
+    "Sonstiges": ["Freizeit & Sport", "Bücher & Schreibwaren", "Rabatte & Coupons", "Weiteres"],
+}
+GRUPPEN = list(UNTERGRUPPEN)
 
-GRUPPEN_PROMPT = """Ordne jeden Eintrag genau einer dieser Gruppen eines Supermarkt-Prospekts zu:
-{gruppen}
+# Codes wie "11.3" halten die Antwort der KI kurz
+OPTIONEN = {
+    f"{gi}.{ui}": (g, u)
+    for gi, (g, us) in enumerate(UNTERGRUPPEN.items(), 1)
+    for ui, u in enumerate(us, 1)
+}
+WEITERES_CODE = next(c for c, v in OPTIONEN.items() if v == ("Sonstiges", "Weiteres"))
 
-Hinweise: "Getränke" = alkoholfrei (Wasser, Saft, Limo, Energy). Butter und Margarine
-gehören zu "Milch, Käse & Eier". Nudeln, Reis, Mehl, Zucker, Öl, Gewürze, Saucen
-gehören zu "Vorrat & Backen". Müsli, Marmelade, Honig, Nuss-Nougat-Creme gehören zu
-"Frühstück & Aufstriche". Wenn nichts passt: "Sonstiges".
+GRUPPEN_PROMPT = """Ordne jedes Produkt aus einem Supermarkt-Prospekt genau EINER Unterkategorie zu.
+Antworte mit deren Code.
 
-Antworte NUR mit einem JSON-Objekt {{"Nummer": "Gruppe", ...}} und verwende die
-Gruppennamen exakt wie oben geschrieben.
+{optionen}
 
-Einträge:
+Wichtig:
+- Fertige Getränke gehören zu "Getränke", auch wenn Kaffee oder Tee drin ist
+  ("Starbucks Chilled Coffee", "Iced Coffee", "Eistee" -> Kaffee- & Teegetränke).
+- "Kaffee & Tee" nur für Bohnen, Pulver, Pads, Kapseln, Instant, Teebeutel, Kakaopulver.
+- Butter und Margarine -> Butter & Margarine. Buttermilch, Kakaodrink -> Milch & Milchgetränke.
+- Kaffeemaschinen, Wasserkocher usw. -> Haushaltsgeräte.
+- Prozent-Aktionen ohne Produkt ("20 % Rabatt auf ...") -> Rabatte & Coupons.
+
+Antworte NUR mit einem JSON-Objekt {{"Nummer": "Code", ...}}.
+
+Produkte:
 """
 
 
 def gruppen_zuordnen(angebote: list[dict]) -> None:
-    """Setzt a['g'] (eine der GRUPPEN) für jedes Angebot. Ergebnisse werden gecacht."""
-    cache_datei = CACHE_DIR / "gruppen.json"
+    """Setzt a['g'] (Gruppe) und a['u'] (Untergruppe) für jedes Angebot.
+    Entschieden wird pro Produkt (Marke + Name + Kategorie); Ergebnisse werden gecacht."""
+    cache_datei = CACHE_DIR / "untergruppen.json"
     cache = json.loads(cache_datei.read_text(encoding="utf-8")) if cache_datei.exists() else {}
 
     def schluessel(a):
-        # Meist reicht die Kategorie; ohne Kategorie entscheidet der Produktname
-        return f"k:{a['k'].lower()}" if a["k"] else f"n:{a['m']} {a['n']}".lower()
+        return f"{a['m']} {a['n']} [{a['k']}]".strip().lower()
 
     offen = sorted({schluessel(a) for a in angebote} - set(cache))
     if offen and os.environ.get("ANTHROPIC_API_KEY"):
-        try:
-            import anthropic
-            client = anthropic.Anthropic()
-            prompt = GRUPPEN_PROMPT.format(gruppen="\n".join(f"- {g}" for g in GRUPPEN))
-            for start in range(0, len(offen), 200):
-                teil = offen[start:start + 200]
-                liste = "\n".join(f"{i}: {s[2:]}" for i, s in enumerate(teil))
+        import anthropic
+        client = anthropic.Anthropic()
+        optionen = "\n".join(f"{c} {g} > {u}" for c, (g, u) in OPTIONEN.items())
+        prompt = GRUPPEN_PROMPT.format(optionen=optionen)
+        neu = 0
+        for start in range(0, len(offen), 150):
+            teil = offen[start:start + 150]
+            liste = "\n".join(f"{i}: {s}" for i, s in enumerate(teil))
+            try:
                 antwort = client.messages.create(
-                    model=KK_MODELL, max_tokens=8000,
+                    model=KK_MODELL, max_tokens=4000,
                     messages=[{"role": "user", "content": prompt + liste}],
                 )
                 text = "".join(b.text for b in antwort.content if getattr(b, "type", "") == "text")
                 a, b = text.find("{"), text.rfind("}")
                 zuordnung = json.loads(text[a:b + 1]) if a >= 0 and b > a else {}
-                for i, s in enumerate(teil):
-                    g = zuordnung.get(str(i))
-                    # Ungültige Antworten als "Sonstiges" merken, damit nicht täglich neu gefragt wird
-                    cache[s] = g if g in GRUPPEN else "Sonstiges"
-            log(f"  Gruppen: {len(offen)} Begriffe neu zugeordnet")
+            except Exception as e:
+                log(f"  Untergruppen: FEHLER bei Paket {start // 150 + 1} – {e}")
+                continue
+            for i, s in enumerate(teil):
+                code = str(zuordnung.get(str(i), "")).strip()
+                # Ungültige Antworten als "Sonstiges > Weiteres" merken, sonst täglich neu gefragt
+                cache[s] = code if code in OPTIONEN else WEITERES_CODE
+                neu += 1
+            # nach jedem Paket speichern, damit ein Abbruch nichts verliert
             CACHE_DIR.mkdir(exist_ok=True)
             cache_datei.write_text(json.dumps(cache, ensure_ascii=False, indent=0), encoding="utf-8")
-        except Exception as e:
-            log(f"  Gruppen: FEHLER – {e}")
+        log(f"  Untergruppen: {neu} Produkte neu zugeordnet")
 
     for a in angebote:
-        a["g"] = cache.get(schluessel(a), "Sonstiges")
+        g, u = OPTIONEN.get(cache.get(schluessel(a), ""), ("Sonstiges", "Weiteres"))
+        a["g"], a["u"] = g, u
 
 
 # =============================================================================
@@ -803,6 +852,7 @@ def main():
         datei.write_text(
             json.dumps(
                 {"region": rid, "name": r["name"], "stand": stand, "maerkte": maerkte,
+                 "gruppen": UNTERGRUPPEN,
                  "quellen": status, "angebote": angebote},
                 ensure_ascii=False, separators=(",", ":"),
             ),
