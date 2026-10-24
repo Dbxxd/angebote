@@ -750,7 +750,18 @@ function zeichneMarktChips() {
     `<button class="chip" data-markt="" aria-pressed="${sucheMarkt === null}">Alle Märkte</button>` +
     m.map((x) => `<button class="chip" data-markt="${esc(x)}" aria-pressed="${sucheMarkt === x}">${esc(x)}</button>`).join("");
 }
+/* Filterzeilen (Märkte, Unterkategorien) behalten beim Neuzeichnen ihre Scroll-Position */
 function zeichneSuche() {
+  const pos = {};
+  document.querySelectorAll("#v-suche .chips[aria-label]").forEach((el) => { pos[el.getAttribute("aria-label")] = el.scrollLeft; });
+  zeichneSucheInnen();
+  document.querySelectorAll("#v-suche .chips[aria-label]").forEach((el) => {
+    const p = pos[el.getAttribute("aria-label")];
+    if (p) el.scrollLeft = p;
+  });
+}
+
+function zeichneSucheInnen() {
   zeichneMarktChips();
   const begriff = $("#such").value.trim();
   $("#leeren").hidden = !begriff;
