@@ -1,5 +1,5 @@
 {
- "stand": "2026-10-24T18:49+02:00",
+ "stand": "2026-10-24T18:54+02:00",
  "regionen": [
   {
    "id": "steinfurt",
@@ -15,7 +15,7 @@
     "Penny",
     "Rossmann"
    ],
-   "anzahl": 2996
+   "anzahl": 3000
   },
   {
    "id": "winsen",
@@ -33,7 +33,7 @@
     "Rewe",
     "Rossmann"
    ],
-   "anzahl": 4233
+   "anzahl": 4175
   },
   {
    "id": "harburg",
@@ -43,7 +43,6 @@
     "budni",
     "dm",
     "Edeka",
-    "Kaufland",
     "Lidl",
     "nahkauf",
     "Netto",
@@ -51,7 +50,7 @@
     "Rewe",
     "Rossmann"
    ],
-   "anzahl": 3633
+   "anzahl": 3143
   }
  ]
 }
