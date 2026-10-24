@@ -223,6 +223,11 @@ button.bild { padding: 0; cursor: zoom-in; font: inherit; }
 .detail-preis .schild .cent { font-size: 20px; }
 .detail-aktion { width: 100%; }
 .detail-aktion[aria-pressed="true"] { background: var(--gruen); color: #fff; }
+.detail-knoepfe { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.detail-knoepfe .knopf { padding-left: 8px; padding-right: 8px; }
+.detail-fav[aria-pressed="true"] { background: var(--gelb, #FFD43B); color: #1a1a1a; border-color: transparent; }
+.angebot .fav-stern { color: #E0A800; font-size: 14px; margin-right: 2px; }
+.nie-hinweis { color: var(--grau); font-size: 13px; margin: -4px 0 0; text-align: center; }
 @media (prefers-reduced-motion: no-preference) {
   .detail:not([hidden]) .detail-karte { animation: hoch .18s ease-out; }
   @keyframes hoch { from { transform: translateY(24px); opacity: .6; } to { transform: none; opacity: 1; } }
@@ -442,7 +447,7 @@ function laden() {
   try { return JSON.parse(localStorage.getItem(SPEICHER)) || {}; } catch (e) { return {}; }
 }
 const zustand = Object.assign(
-  { region: null, maerkte: {}, vorlieben: STANDARD_VORLIEBEN.slice(), liste: [], vorrat: [] },
+  { region: null, maerkte: {}, vorlieben: STANDARD_VORLIEBEN.slice(), liste: [], vorrat: [], favoriten: [], nie: [] },
   laden()
 );
 function speichern() {
@@ -451,7 +456,43 @@ function speichern() {
 
 let index = null;   // data/index.json
 let daten = null;   // data/<region>.json
-let angebote = [];  // aufbereitete, aktuell gültige Angebote
+let alleAngebote = []; // aufbereitete, aktuell gültige Angebote
+let angebote = [];     // davon ohne "Nie anzeigen"
+
+/* =========================================================================
+   Favoriten (bestimmte Produkte, egal in welchem Markt) und
+   "Nie anzeigen" (Begriffe/Produkte, die überall ausgeblendet werden)
+   ========================================================================= */
+if (!Array.isArray(zustand.favoriten)) zustand.favoriten = [];
+if (!Array.isArray(zustand.nie)) zustand.nie = [];
+
+// Wörter eines Begriffs; jedes muss im Angebot vorkommen
+function begriffWoerter(text) {
+  return norm(text).split(/[\s,&/()+.-]+/).filter((w) => w.length >= 2);
+}
+function passtAlle(a, woerter) {
+  return woerter.length > 0 && woerter.every((w) => a.such.includes(w));
+}
+function produktText(a) { return (a.m ? a.m + " " : "") + a.n; }
+
+function nieTrifft(a) {
+  return zustand.nie.some((n) => passtAlle(a, begriffWoerter(n)));
+}
+function nieFiltern() {
+  angebote = alleAngebote.filter((a) => !nieTrifft(a));
+}
+function nieAnzahl(text) {
+  const w = begriffWoerter(text);
+  return alleAngebote.filter((a) => passtAlle(a, w)).length;
+}
+
+function favoritVon(a) {
+  return zustand.favoriten.find((f) => passtAlle(a, begriffWoerter(f)));
+}
+function favoritAngebote() {
+  const erlaubt = new Set(aktiveMaerkte());
+  return sortiere(angebote.filter((a) => erlaubt.has(a.h) && favoritVon(a)));
+}
 
 /* =========================================================================
    Hilfen
@@ -507,7 +548,7 @@ async function ladeRegion() {
   if (!r.ok) throw new Error("region");
   daten = await r.json();
   const t = heute();
-  angebote = daten.angebote
+  alleAngebote = daten.angebote
     .filter((a) => !a.bis || a.bis >= t)           // abgelaufene weg
     .map((a) => {
       const id = hash([a.h, a.m, a.n, a.p, a.von, a.pk].join("|"));
@@ -518,6 +559,7 @@ async function ladeRegion() {
         kat: norm(a.k),
       });
     });
+  nieFiltern();
   zeigeKopf();
   vorratZaehler();
 }
@@ -678,6 +720,11 @@ function detailHTML(a) {
       ${a.gp != null && a.ge ? `<span class="gp">${eur(a.gp)}/${a.ge}</span>` : ""}
     </div>
     <button class="knopf detail-aktion" data-merken="${a.id}" aria-pressed="${gemerkt}">${gemerkt ? "Auf der Wochenliste ✓" : "Auf die Wochenliste"}</button>
+    <div class="detail-knoepfe">
+      <button class="knopf leise detail-fav" data-favorit="${a.id}" aria-pressed="${!!favoritVon(a)}">${favoritVon(a) ? "★ Favorit" : "☆ Als Favorit"}</button>
+      <button class="knopf leise" data-nie="${a.id}">Nie anzeigen</button>
+    </div>
+    <p class="nie-hinweis">Favoriten erscheinen oben unter „Für dich“, sobald sie im Angebot sind – in jedem Markt.</p>
   </div>`;
 }
 function oeffneDetail(id) {
@@ -711,7 +758,7 @@ function angebotHTML(a) {
       <span class="bild-rahmen">${bildHTML(a)}${merkKnopf(a, gemerkt)}</span>
       <div>
         <div class="markt">${esc(a.h)}</div>
-        <div class="name">${a.m ? `<span class="marke">${esc(a.m)}</span> ` : ""}${esc(a.n)}</div>
+        <div class="name">${favoritVon(a) ? `<span class="fav-stern" aria-label="Favorit">★</span>` : ""}${a.m ? `<span class="marke">${esc(a.m)}</span> ` : ""}${esc(a.n)}</div>
         ${info ? `<div class="info">${info}</div>` : ""}
       </div>
     </div>
@@ -926,10 +973,24 @@ function vorratBlockHTML() {
     (vorrat.length ? `<div class="vorliebe-kopf"><h2>Gut für den Vorrat</h2><button data-gehe="vorrat">Vorrat</button></div>${block(vorrat, "gutes Angebot", "gute Angebote")}` : "");
 }
 
+/* Block ganz oben auf "Für dich": Favoriten, die gerade im Angebot sind */
+function favoritBlockHTML() {
+  if (!zustand.favoriten.length) return "";
+  const liste = favoritAngebote();
+  if (!liste.length) {
+    return `<div class="vorliebe-kopf"><h2>Deine Favoriten</h2></div>
+      <p class="hinweis" style="padding-top:0">Gerade ist keiner deiner ${zustand.favoriten.length === 1 ? "Favoriten" : zustand.favoriten.length + " Favoriten"} im Angebot.</p>`;
+  }
+  const offen = ausgeklappt.has("__fav");
+  return `<div class="vorliebe-kopf"><h2>Favoriten im Angebot</h2><button data-gehe="einst">Verwalten</button></div>
+    ${listeHTML(liste, offen ? 0 : 5)}
+    ${liste.length > 5 ? `<button class="mehr" data-klappen="__fav">${offen ? "Weniger zeigen" : `Alle ${liste.length} zeigen`}</button>` : ""}`;
+}
+
 function zeichneFuerDich() {
   const el = $("#v-fuerdich");
   if (!aktiveMaerkte().length) { el.innerHTML = KEINE_MAERKTE; return; }
-  const vorratBlock = vorratBlockHTML();
+  const vorratBlock = favoritBlockHTML() + vorratBlockHTML();
   if (!zustand.vorlieben.length) {
     if (vorratBlock) { el.innerHTML = vorratBlock; return; }
     el.innerHTML = `<div class="leer-box"><p>Leg fest, was dich interessiert, z.B. Butter, Kaffee oder eine bestimmte Marke. Hier siehst du dann jede Woche die günstigsten Angebote dazu.</p>
@@ -1135,6 +1196,39 @@ function merken(id) {
   });
 }
 
+function favoritUmschalten(id) {
+  const a = angebote.find((x) => x.id === id);
+  if (!a) return;
+  const f = favoritVon(a);
+  if (f) {
+    zustand.favoriten = zustand.favoriten.filter((x) => x !== f);
+    meldung("Kein Favorit mehr");
+  } else {
+    zustand.favoriten.push(produktText(a));
+    meldung("Als Favorit gespeichert");
+  }
+  speichern();
+  const b = document.querySelector(`[data-favorit="${id}"]`);
+  if (b) { const jetzt = !!favoritVon(a); b.setAttribute("aria-pressed", jetzt); b.textContent = jetzt ? "★ Favorit" : "☆ Als Favorit"; }
+  neuZeichnen();
+}
+function nieHinzufuegen(text) {
+  text = text.trim();
+  if (!text || zustand.nie.some((x) => norm(x) === norm(text))) return false;
+  zustand.nie.push(text);
+  speichern();
+  nieFiltern();
+  vorratZaehler();
+  neuZeichnen();
+  return true;
+}
+// Aktuelle Ansicht unter der Detailansicht auffrischen
+function neuZeichnen() {
+  if (aktuelleAnsicht === "fuerdich") zeichneFuerDich();
+  else if (aktuelleAnsicht === "suche") zeichneSuche();
+  else if (aktuelleAnsicht === "vorrat") zeichneVorrat();
+}
+
 async function listeTeilen() {
   const gruppen = {};
   for (const p of zustand.liste.filter((p) => !p.erledigt)) (gruppen[p.a.h] ||= []).push(p);
@@ -1164,6 +1258,26 @@ function zeichneEinstellungen() {
         <label for="vorliebeNeu" class="sr">Neue Vorliebe</label>
         <input id="vorliebeNeu" placeholder="z.B. Kerrygold, Joghurt" autocomplete="off" enterkeyhint="done">
         <button class="knopf" type="submit">Hinzufügen</button>
+      </form>
+    </div>
+    <div class="abschnitt">
+      <h2>Favoriten</h2>
+      <p class="erkl">Tipp bei einem Angebot aufs Bild und dann auf „Als Favorit“. Sobald das Produkt wieder irgendwo im Angebot ist, steht es oben unter „Für dich“.</p>
+      ${zustand.favoriten.length ? `<div class="tag-liste">${zustand.favoriten.map((v, i) =>
+        `<span class="tag">★ ${esc(v)}<button data-favorit-weg="${i}" aria-label="${esc(v)} entfernen">×</button></span>`).join("")}</div>`
+        : `<p class="erkl">Noch keine Favoriten.</p>`}
+    </div>
+    <div class="abschnitt">
+      <h2>Nie anzeigen</h2>
+      <p class="erkl">Diese Produkte, Marken oder Begriffe werden überall ausgeblendet. Ein Wort wie „feucht“ blendet z.B. feuchtes Toilettenpapier aus.</p>
+      ${zustand.nie.length ? `<div class="tag-liste">${zustand.nie.map((v, i) => {
+        const n = nieAnzahl(v);
+        return `<span class="tag">${esc(v)}${n ? ` <span style="color:var(--grau);font-size:13px">(${n})</span>` : ""}<button data-nie-weg="${i}" aria-label="${esc(v)} wieder anzeigen">×</button></span>`;
+      }).join("")}</div>` : ""}
+      <form class="zeile-form" id="nieForm">
+        <label for="nieNeu" class="sr">Neuer Begriff zum Ausblenden</label>
+        <input id="nieNeu" placeholder="z.B. Cottonelle, Fischstäbchen" autocomplete="off" enterkeyhint="done">
+        <button class="knopf" type="submit">Ausblenden</button>
       </form>
     </div>
     <div class="abschnitt">
@@ -1204,6 +1318,24 @@ document.addEventListener("click", async (ev) => {
     await start();
   }
   else if (d.merken) merken(d.merken);
+  else if (d.favorit) favoritUmschalten(d.favorit);
+  else if (d.nie) {
+    const a = angebote.find((x) => x.id === d.nie);
+    if (a) {
+      nieHinzufuegen(produktText(a));
+      history.back();  // schließt die Detailansicht
+      meldung(`„${produktText(a)}“ wird nicht mehr angezeigt`);
+    }
+  }
+  else if (d.favoritWeg !== undefined) {
+    zustand.favoriten.splice(+d.favoritWeg, 1);
+    speichern(); zeichneEinstellungen();
+  }
+  else if (d.nieWeg !== undefined) {
+    const v = zustand.nie.splice(+d.nieWeg, 1)[0];
+    speichern(); nieFiltern(); vorratZaehler(); zeichneEinstellungen();
+    if (v) meldung(`„${v}“ wird wieder angezeigt`);
+  }
   else if (d.suche !== undefined) {
     $("#such").value = d.suche;
     if (aktuelleAnsicht === "suche" && !sucheGruppe) zeichneSuche();
@@ -1328,6 +1460,14 @@ document.addEventListener("submit", (ev) => {
     if (vorratHinzufuegen(inp.value)) meldung(`„${inp.value.trim()}“ zum Vorrat hinzugefügt`);
     zeichneVorrat(); vorratZaehler();
     $("#vorratNeu").focus();
+    return;
+  }
+  if (ev.target.id === "nieForm") {
+    ev.preventDefault();
+    const v = $("#nieNeu").value.trim();
+    if (v && nieHinzufuegen(v)) meldung(`${nieAnzahl(v) === 1 ? "1 Angebot" : nieAnzahl(v) + " Angebote"} ausgeblendet`);
+    zeichneEinstellungen();
+    $("#nieNeu").focus();
     return;
   }
   if (ev.target.id !== "vorliebeForm") return;
