@@ -1,0 +1,822 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Angebote</title>
+<meta name="theme-color" content="#C8102E">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Angebote">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --papier: #F3F4F1;
+  --karte: #FFFFFF;
+  --tinte: #1D2321;
+  --grau: #646B68;
+  --linie: #DADDD8;
+  --rot: #C8102E;
+  --rot-dunkel: #9E0B23;
+  --gelb: #FFD400;
+  --gruen: #1F7A4D;
+  --fokus: #1D5FD1;
+  --r: 10px;
+  --schrift: "Archivo", system-ui, -apple-system, "Segoe UI", sans-serif;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --papier: #151918;
+    --karte: #1E2321;
+    --tinte: #EEF0EE;
+    --grau: #A3AAA7;
+    --linie: #333A37;
+    --rot: #E0213F;
+    --rot-dunkel: #B5142E;
+    --gruen: #4CC488;
+    --fokus: #7FA9FF;
+    color-scheme: dark;
+  }
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body {
+  background: var(--papier);
+  color: var(--tinte);
+  font-family: var(--schrift);
+  font-size: 16px;
+  line-height: 1.4;
+  -webkit-text-size-adjust: 100%;
+  padding-bottom: calc(72px + env(safe-area-inset-bottom));
+}
+button, input { font: inherit; color: inherit; }
+button { cursor: pointer; }
+:focus-visible { outline: 3px solid var(--fokus); outline-offset: 2px; border-radius: 4px; }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+/* ---------- Kopf ---------- */
+.kopf {
+  position: sticky; top: 0; z-index: 5;
+  background: var(--papier);
+  padding: calc(10px + env(safe-area-inset-top)) 16px 10px;
+  border-bottom: 1px solid var(--linie);
+}
+.kopf-zeile { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; max-width: 640px; margin: 0 auto; }
+.kopf h1 {
+  margin: 0; font-size: 26px; line-height: 1.1;
+  font-stretch: 70%; font-weight: 800; letter-spacing: -0.01em;
+}
+.ort-knopf {
+  background: none; border: 0; padding: 4px 0; color: var(--grau);
+  font-size: 14px; text-decoration: underline; text-underline-offset: 3px; text-align: right;
+}
+.stand { max-width: 640px; margin: 2px auto 0; font-size: 12px; color: var(--grau); }
+
+main { max-width: 640px; margin: 0 auto; padding: 12px 16px 24px; }
+.ansicht[hidden] { display: none; }
+
+/* ---------- Suche ---------- */
+.suchfeld {
+  display: flex; align-items: center; gap: 8px;
+  background: var(--karte); border: 2px solid var(--tinte); border-radius: var(--r);
+  padding: 4px 6px 4px 12px; margin-bottom: 10px;
+}
+.suchfeld input {
+  flex: 1; border: 0; background: none; padding: 10px 0; font-size: 18px; min-width: 0;
+}
+.suchfeld input:focus { outline: none; }
+.suchfeld:focus-within { outline: 3px solid var(--fokus); outline-offset: 2px; }
+.leeren { border: 0; background: none; font-size: 22px; line-height: 1; padding: 6px 8px; color: var(--grau); }
+.chips { display: flex; gap: 6px; overflow-x: auto; padding: 2px 0 10px; scrollbar-width: none; }
+.chips::-webkit-scrollbar { display: none; }
+.chip {
+  flex: none; border: 1px solid var(--linie); background: var(--karte);
+  border-radius: 999px; padding: 6px 12px; font-size: 14px; white-space: nowrap;
+}
+.chip[aria-pressed="true"] { background: var(--tinte); color: var(--papier); border-color: var(--tinte); }
+.vorschlaege { display: flex; flex-wrap: wrap; gap: 6px; margin: 4px 0 16px; }
+
+.zwischentitel {
+  font-size: 15px; font-weight: 700; margin: 18px 0 6px; color: var(--grau);
+  font-stretch: 85%;
+}
+.zwischentitel:first-child { margin-top: 4px; }
+
+/* ---------- Angebotszeile ---------- */
+.liste { list-style: none; margin: 0; padding: 0; background: var(--karte); border-radius: var(--r); border: 1px solid var(--linie); }
+.liste > li + li { border-top: 1px solid var(--linie); }
+.angebot { display: grid; grid-template-columns: 1fr auto; gap: 4px 12px; padding: 12px 12px 12px 14px; align-items: start; }
+.angebot .markt { font-size: 13px; font-weight: 700; color: var(--grau); }
+.angebot .name { font-size: 16px; font-weight: 600; line-height: 1.25; overflow-wrap: anywhere; }
+.angebot .marke { font-weight: 400; color: var(--grau); }
+.angebot .info { font-size: 13px; color: var(--grau); margin-top: 2px; }
+.angebot .info .bald { color: var(--tinte); font-weight: 600; }
+.angebot .rechts { display: flex; flex-direction: column; align-items: flex-end; gap: 4px; }
+
+/* Das Preisschild: das eine auffällige Element */
+.schild {
+  display: inline-flex; align-items: flex-start;
+  background: var(--rot); color: #fff;
+  border-radius: 4px; padding: 3px 8px 4px 9px;
+  font-stretch: 62%; font-weight: 800; line-height: 1;
+  box-shadow: 0 2px 0 var(--rot-dunkel);
+}
+.schild .euro { font-size: 30px; letter-spacing: -0.02em; }
+.schild .cent { font-size: 16px; margin-top: 2px; margin-left: 1px; }
+.schild.aktion { font-size: 17px; padding: 6px 9px; font-stretch: 75%; }
+.alt { font-size: 13px; color: var(--grau); text-decoration: line-through; }
+.spar {
+  background: var(--gelb); color: #1D2321; font-weight: 800; font-size: 12px;
+  padding: 2px 6px; border-radius: 3px; font-stretch: 80%;
+}
+.gp { font-size: 13px; color: var(--tinte); font-weight: 600; white-space: nowrap; }
+.preiszeile { display: flex; gap: 6px; align-items: center; }
+
+.angebot .links { display: flex; gap: 10px; align-items: flex-start; }
+.merken {
+  flex: none; width: 40px; height: 40px; margin-top: 2px;
+  border: 1.5px solid var(--linie); background: var(--karte); border-radius: 50%;
+  display: grid; place-items: center; padding: 0; color: var(--tinte);
+}
+.merken svg { width: 20px; height: 20px; stroke: currentColor; fill: none; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+.merken[aria-pressed="true"] { background: var(--gruen); border-color: var(--gruen); color: #fff; }
+.suchfeld input::-webkit-search-cancel-button { -webkit-appearance: none; appearance: none; }
+
+.mehr {
+  display: block; width: 100%; border: 0; background: none; padding: 12px; font-size: 15px;
+  font-weight: 600; color: var(--tinte); text-decoration: underline; text-underline-offset: 3px;
+}
+
+.hinweis { color: var(--grau); font-size: 15px; padding: 18px 4px; }
+.hinweis strong { color: var(--tinte); }
+.leer-box {
+  background: var(--karte); border: 1px dashed var(--linie); border-radius: var(--r);
+  padding: 18px 16px; color: var(--grau);
+}
+.leer-box p { margin: 0 0 12px; }
+.knopf {
+  display: inline-block; border: 0; border-radius: var(--r);
+  background: var(--tinte); color: var(--papier); padding: 11px 16px; font-weight: 700;
+}
+.knopf.leise { background: none; color: var(--tinte); border: 1px solid var(--linie); }
+
+/* ---------- Für dich ---------- */
+.vorliebe-kopf { display: flex; align-items: baseline; justify-content: space-between; margin: 22px 0 8px; }
+.vorliebe-kopf:first-child { margin-top: 4px; }
+.vorliebe-kopf h2 { margin: 0; font-size: 22px; font-stretch: 75%; font-weight: 800; }
+.vorliebe-kopf button { border: 0; background: none; color: var(--grau); font-size: 14px; text-decoration: underline; }
+
+/* ---------- Wochenliste ---------- */
+.markt-gruppe { margin-bottom: 18px; }
+.markt-kopf { display: flex; justify-content: space-between; align-items: baseline; margin: 0 2px 6px; }
+.markt-kopf h2 { margin: 0; font-size: 22px; font-stretch: 75%; font-weight: 800; }
+.markt-kopf .summe { font-weight: 700; }
+.posten { display: grid; grid-template-columns: auto 1fr auto auto; gap: 10px; align-items: center; padding: 12px 10px 12px 12px; }
+.posten input[type=checkbox] { width: 24px; height: 24px; accent-color: var(--gruen); margin: 0; }
+.posten .pname { line-height: 1.25; }
+.posten .pinfo { font-size: 13px; color: var(--grau); }
+.posten .ppreis { font-weight: 700; white-space: nowrap; }
+.posten.erledigt .pname, .posten.erledigt .ppreis { text-decoration: line-through; color: var(--grau); }
+.posten .weg { border: 0; background: none; font-size: 20px; color: var(--grau); padding: 4px 6px; }
+.posten .abgelaufen { color: var(--rot); font-weight: 600; }
+.gesamt { display: flex; justify-content: space-between; font-size: 18px; font-weight: 800; margin: 8px 2px 16px; }
+.listen-aktionen { display: flex; gap: 8px; flex-wrap: wrap; }
+
+/* ---------- Einstellungen ---------- */
+.abschnitt { margin-bottom: 26px; }
+.abschnitt h2 { font-size: 20px; font-stretch: 75%; font-weight: 800; margin: 0 0 4px; }
+.abschnitt p.erkl { margin: 0 0 10px; color: var(--grau); font-size: 14px; }
+.wahl { display: grid; gap: 8px; }
+.wahl label {
+  display: flex; align-items: center; gap: 10px; background: var(--karte);
+  border: 1px solid var(--linie); border-radius: var(--r); padding: 12px;
+}
+.wahl input { width: 20px; height: 20px; accent-color: var(--tinte); margin: 0; }
+.wahl .klein { color: var(--grau); font-size: 13px; margin-left: auto; }
+.markt-raster { display: flex; flex-wrap: wrap; gap: 6px; }
+.tag-liste { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 10px; }
+.tag {
+  display: inline-flex; align-items: center; gap: 4px; background: var(--karte);
+  border: 1px solid var(--linie); border-radius: 999px; padding: 5px 6px 5px 12px; font-size: 15px;
+}
+.tag button { border: 0; background: none; font-size: 18px; line-height: 1; color: var(--grau); padding: 0 4px; }
+.zeile-form { display: flex; gap: 8px; }
+.zeile-form input {
+  flex: 1; min-width: 0; border: 1px solid var(--linie); border-radius: var(--r);
+  background: var(--karte); padding: 10px 12px;
+}
+.quellen { font-size: 13px; color: var(--grau); margin: 0; padding-left: 18px; }
+.quellen .fehler { color: var(--rot); }
+
+/* ---------- Untere Leiste ---------- */
+.leiste {
+  position: fixed; left: 0; right: 0; bottom: 0; z-index: 10;
+  background: var(--karte); border-top: 1px solid var(--linie);
+  padding-bottom: env(safe-area-inset-bottom);
+}
+.leiste-innen { display: grid; grid-template-columns: repeat(4, 1fr); max-width: 640px; margin: 0 auto; }
+.leiste button {
+  border: 0; background: none; padding: 10px 4px 9px; font-size: 13px; color: var(--grau);
+  display: flex; flex-direction: column; align-items: center; gap: 3px; position: relative;
+}
+.leiste svg { width: 24px; height: 24px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.leiste button[aria-current="page"] { color: var(--tinte); font-weight: 700; }
+.leiste button[aria-current="page"]::before {
+  content: ""; position: absolute; top: 0; left: 28%; right: 28%; height: 3px; background: var(--rot); border-radius: 0 0 3px 3px;
+}
+.zaehler {
+  position: absolute; top: 4px; left: calc(50% + 6px);
+  background: var(--rot); color: #fff; font-size: 11px; font-weight: 800;
+  min-width: 18px; height: 18px; border-radius: 9px; padding: 0 5px; line-height: 18px;
+}
+.zaehler[hidden] { display: none; }
+
+/* ---------- Erster Start ---------- */
+.start { padding-top: 20px; }
+.start h2 { font-size: 34px; line-height: 1.05; font-stretch: 65%; font-weight: 800; margin: 0 0 10px; }
+.start p { color: var(--grau); margin: 0 0 18px; max-width: 34ch; }
+
+.meldung {
+  position: fixed; left: 50%; bottom: calc(84px + env(safe-area-inset-bottom)); transform: translateX(-50%);
+  background: var(--tinte); color: var(--papier); padding: 10px 16px; border-radius: var(--r);
+  font-size: 15px; z-index: 20; max-width: calc(100% - 32px);
+  opacity: 0; pointer-events: none; transition: opacity .2s;
+}
+.meldung.an { opacity: 1; }
+@media (prefers-reduced-motion: reduce) { .meldung { transition: none; } }
+</style>
+</head>
+<body>
+
+<header class="kopf">
+  <div class="kopf-zeile">
+    <h1 id="titel">Angebote</h1>
+    <button class="ort-knopf" id="ortKnopf" hidden></button>
+  </div>
+  <p class="stand" id="stand"></p>
+</header>
+
+<main id="inhalt">
+  <section class="ansicht" id="v-start" hidden>
+    <div class="start">
+      <h2>Wo kaufst du ein?</h2>
+      <p>Die App zeigt die Prospekt-Angebote der Supermärkte in deiner Gegend. Das lässt sich später in den Einstellungen ändern.</p>
+      <div class="wahl" id="startOrte"></div>
+    </div>
+  </section>
+
+  <section class="ansicht" id="v-fuerdich" hidden aria-label="Für dich"></section>
+
+  <section class="ansicht" id="v-suche" hidden aria-label="Suche">
+    <div class="suchfeld">
+      <label for="such" class="sr">Angebote durchsuchen</label>
+      <input id="such" type="search" placeholder="Butter, Kaffee, Bier …" autocomplete="off" enterkeyhint="search">
+      <button class="leeren" id="leeren" aria-label="Suche leeren" hidden>×</button>
+    </div>
+    <div class="chips" id="marktChips" role="group" aria-label="Nach Markt filtern"></div>
+    <div id="sucheErgebnis"></div>
+  </section>
+
+  <section class="ansicht" id="v-liste" hidden aria-label="Wochenliste"></section>
+
+  <section class="ansicht" id="v-einst" hidden aria-label="Einstellungen"></section>
+</main>
+
+<nav class="leiste" id="leiste" aria-label="Bereiche" hidden>
+  <div class="leiste-innen">
+    <button data-ziel="fuerdich">
+      <svg viewBox="0 0 24 24"><path d="M12 21s-7-4.4-9.3-9A5.3 5.3 0 0 1 12 6.6 5.3 5.3 0 0 1 21.3 12C19 16.6 12 21 12 21z"/></svg>
+      Für dich
+    </button>
+    <button data-ziel="suche">
+      <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg>
+      Suche
+    </button>
+    <button data-ziel="liste">
+      <svg viewBox="0 0 24 24"><path d="M9 6h11M9 12h11M9 18h11M4 6h.01M4 12h.01M4 18h.01"/></svg>
+      Wochenliste
+      <span class="zaehler" id="listenZaehler" hidden></span>
+    </button>
+    <button data-ziel="einst">
+      <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg>
+      Einstellungen
+    </button>
+  </div>
+</nav>
+
+<div class="meldung" id="meldung" role="status" aria-live="polite"></div>
+
+<script>
+"use strict";
+
+/* =========================================================================
+   Zustand (wird nur auf diesem Gerät gespeichert)
+   ========================================================================= */
+const SPEICHER = "prospekt-app-v1";
+const STANDARD_VORLIEBEN = ["Butter", "Kaffee", "Bier"];
+
+function laden() {
+  try { return JSON.parse(localStorage.getItem(SPEICHER)) || {}; } catch (e) { return {}; }
+}
+const zustand = Object.assign(
+  { region: null, maerkte: {}, vorlieben: STANDARD_VORLIEBEN.slice(), liste: [] },
+  laden()
+);
+function speichern() {
+  try { localStorage.setItem(SPEICHER, JSON.stringify(zustand)); } catch (e) { /* privates Fenster o.ä. */ }
+}
+
+let index = null;   // data/index.json
+let daten = null;   // data/<region>.json
+let angebote = [];  // aufbereitete, aktuell gültige Angebote
+
+/* =========================================================================
+   Hilfen
+   ========================================================================= */
+const $ = (s) => document.querySelector(s);
+const heute = () => new Date().toLocaleDateString("sv-SE"); // YYYY-MM-DD in lokaler Zeit
+
+function esc(s) {
+  return String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+}
+function norm(s) {
+  return String(s || "").toLowerCase()
+    .replace(/ä/g, "ae").replace(/ö/g, "oe").replace(/ü/g, "ue").replace(/ß/g, "ss")
+    .normalize("NFD").replace(/[̀-ͯ]/g, "");
+}
+function eur(x) { return x == null ? "" : x.toFixed(2).replace(".", ",") + " €"; }
+function datumKurz(iso) {
+  if (!iso) return "";
+  const d = new Date(iso + "T12:00:00");
+  return d.toLocaleDateString("de-DE", { weekday: "short", day: "2-digit", month: "2-digit" });
+}
+function hash(s) {
+  let h = 2166136261;
+  for (let i = 0; i < s.length; i++) { h ^= s.charCodeAt(i); h = Math.imul(h, 16777619); }
+  return (h >>> 0).toString(36);
+}
+function meldung(text) {
+  const m = $("#meldung");
+  m.textContent = text;
+  m.classList.add("an");
+  clearTimeout(meldung.t);
+  meldung.t = setTimeout(() => m.classList.remove("an"), 2200);
+}
+
+/* Märkte, die in dieser Region angezeigt werden (Standard: alle) */
+function aktiveMaerkte() {
+  const alle = daten ? daten.maerkte : [];
+  const gew = zustand.maerkte[zustand.region];
+  return gew ? alle.filter((m) => gew.includes(m)) : alle;
+}
+
+/* =========================================================================
+   Daten laden
+   ========================================================================= */
+async function ladeIndex() {
+  const r = await fetch("data/index.json", { cache: "no-cache" });
+  if (!r.ok) throw new Error("index");
+  index = await r.json();
+}
+
+async function ladeRegion() {
+  const r = await fetch(`data/${zustand.region}.json`, { cache: "no-cache" });
+  if (!r.ok) throw new Error("region");
+  daten = await r.json();
+  const t = heute();
+  angebote = daten.angebote
+    .filter((a) => !a.bis || a.bis >= t)           // abgelaufene weg
+    .map((a) => {
+      const id = hash([a.h, a.m, a.n, a.p, a.von, a.pk].join("|"));
+      return Object.assign({}, a, {
+        id,
+        bald: a.von && a.von > t,
+        such: norm([a.h, a.m, a.n, a.k, a.pk].join(" ")),
+        kat: norm(a.k),
+      });
+    });
+  zeigeKopf();
+}
+
+function zeigeKopf() {
+  const reg = index && index.regionen.find((r) => r.id === zustand.region);
+  const ort = $("#ortKnopf");
+  ort.hidden = !reg;
+  ort.textContent = reg ? reg.name : "";
+  if (daten && daten.stand) {
+    const d = new Date(daten.stand);
+    $("#stand").textContent = "Stand: " + d.toLocaleString("de-DE", { weekday: "short", day: "2-digit", month: "2-digit", hour: "2-digit", minute: "2-digit" }) + " Uhr";
+  }
+}
+
+/* =========================================================================
+   Suche
+   ========================================================================= */
+function vergleichswert(a) {
+  // Erst nach Grundpreis (kg/l), Stückartikel danach nach Preis
+  return a.gp != null && a.ge ? [0, a.gp] : [1, a.p ?? 9999];
+}
+function sortiere(liste) {
+  return liste.sort((x, y) => {
+    const a = vergleichswert(x), b = vergleichswert(y);
+    return a[0] - b[0] || a[1] - b[1];
+  });
+}
+
+/* Liefert {passend, weitere}: "passend" = Kategorie trifft den Begriff */
+function suche(begriff, maerkte) {
+  const woerter = norm(begriff).split(/\s+/).filter(Boolean);
+  if (!woerter.length) return { passend: [], weitere: [] };
+  const erlaubt = new Set(maerkte);
+  const treffer = angebote.filter((a) => erlaubt.has(a.h) && woerter.every((w) => a.such.includes(w)));
+  const katWort = (k) => k.split(/[\s,&/-]+/);
+  const passend = [], weitere = [];
+  for (const a of treffer) {
+    // Angebote ohne Kategorie (z.B. Aldi) zählen als passend, sonst fielen sie immer raus
+    const kw = katWort(a.kat);
+    (!a.kat || woerter.some((w) => kw.includes(w)) ? passend : weitere).push(a);
+  }
+  // Keine Kategorie-Treffer (z.B. Aldi ohne Kategorien): alles als passend zeigen
+  if (!passend.length) return { passend: sortiere(weitere), weitere: [] };
+  return { passend: sortiere(passend), weitere: sortiere(weitere) };
+}
+
+/* =========================================================================
+   Darstellung eines Angebots
+   ========================================================================= */
+function schild(a) {
+  if (a.p == null) return `<span class="schild aktion">Aktion</span>`;
+  const [e, c] = a.p.toFixed(2).split(".");
+  return `<span class="schild" aria-label="${eur(a.p)}"><span class="euro">${e},</span><span class="cent">${c}</span></span>`;
+}
+
+function angebotHTML(a) {
+  const gemerkt = zustand.liste.some((x) => x.id === a.id);
+  const spar = a.ap && a.p ? Math.round((1 - a.p / a.ap) * 100) : 0;
+  const zeit = a.bald
+    ? `<span class="bald">ab ${esc(datumKurz(a.von))}</span>`
+    : a.bis ? `bis ${esc(datumKurz(a.bis))}` : "";
+  const info = [esc(a.pk), zeit].filter(Boolean).join(", ");
+  return `<li class="angebot">
+    <div class="links">
+      ${merkKnopf(a, gemerkt)}
+      <div>
+        <div class="markt">${esc(a.h)}</div>
+        <div class="name">${a.m ? `<span class="marke">${esc(a.m)}</span> ` : ""}${esc(a.n)}</div>
+        ${info ? `<div class="info">${info}</div>` : ""}
+      </div>
+    </div>
+    <div class="rechts">
+      ${schild(a)}
+      ${a.ap ? `<div class="preiszeile"><span class="alt">${eur(a.ap)}</span>${spar >= 5 ? `<span class="spar">−${spar} %</span>` : ""}</div>` : ""}
+      ${a.gp != null && a.ge ? `<span class="gp">${eur(a.gp)}/${a.ge}</span>` : ""}
+    </div>
+  </li>`;
+}
+
+const ICON_PLUS = `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>`;
+const ICON_HAKEN = `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>`;
+function merkKnopf(a, gemerkt) {
+  const label = (gemerkt ? "Von der Wochenliste nehmen: " : "Auf die Wochenliste: ") + (a.m ? a.m + " " : "") + a.n;
+  return `<button class="merken" data-merken="${a.id}" aria-pressed="${gemerkt}" aria-label="${esc(label)}">${gemerkt ? ICON_HAKEN : ICON_PLUS}</button>`;
+}
+
+function listeHTML(liste, max) {
+  const teil = max ? liste.slice(0, max) : liste;
+  return `<ul class="liste">${teil.map(angebotHTML).join("")}</ul>`;
+}
+
+/* =========================================================================
+   Ansichten
+   ========================================================================= */
+const ANSICHTEN = ["start", "fuerdich", "suche", "liste", "einst"];
+let aktuelleAnsicht = null;
+
+function zeige(name) {
+  aktuelleAnsicht = name;
+  for (const v of ANSICHTEN) $("#v-" + v).hidden = v !== name;
+  $("#leiste").hidden = name === "start";
+  document.querySelectorAll(".leiste button").forEach((b) => {
+    if (b.dataset.ziel === name) b.setAttribute("aria-current", "page");
+    else b.removeAttribute("aria-current");
+  });
+  const titel = { start: "Angebote", fuerdich: "Für dich", suche: "Suche", liste: "Wochenliste", einst: "Einstellungen" }[name];
+  $("#titel").textContent = titel;
+  if (name === "fuerdich") zeichneFuerDich();
+  if (name === "suche") zeichneSuche();
+  if (name === "liste") zeichneListe();
+  if (name === "einst") zeichneEinstellungen();
+  window.scrollTo(0, 0);
+}
+
+/* ---------- Erster Start ---------- */
+function zeichneStart() {
+  $("#startOrte").innerHTML = index.regionen.map((r) =>
+    `<button class="knopf leise" style="text-align:left;padding:14px" data-region="${esc(r.id)}">
+       <strong>${esc(r.name)}</strong><br><span style="color:var(--grau);font-size:14px">${esc(r.maerkte.join(", "))}</span>
+     </button>`).join("");
+  zeige("start");
+}
+
+/* ---------- Für dich ---------- */
+const ausgeklappt = new Set();
+function zeichneFuerDich() {
+  const el = $("#v-fuerdich");
+  if (!zustand.vorlieben.length) {
+    el.innerHTML = `<div class="leer-box"><p>Leg fest, was dich interessiert, z.B. Butter, Kaffee oder eine bestimmte Marke. Hier siehst du dann jede Woche die günstigsten Angebote dazu.</p>
+      <button class="knopf" data-gehe="einst">Vorlieben festlegen</button></div>`;
+    return;
+  }
+  const maerkte = aktiveMaerkte();
+  el.innerHTML = zustand.vorlieben.map((v) => {
+    const { passend } = suche(v, maerkte);
+    const offen = ausgeklappt.has(v);
+    const max = offen ? 0 : 3;
+    return `<div class="vorliebe-kopf"><h2>${esc(v)}</h2>
+        ${passend.length ? `<button data-suche="${esc(v)}">${passend.length} Angebote</button>` : ""}</div>
+      ${passend.length
+        ? listeHTML(passend, max) + (passend.length > 3
+          ? `<button class="mehr" data-klappen="${esc(v)}">${offen ? "Weniger zeigen" : `Alle ${passend.length} zeigen`}</button>` : "")
+        : `<p class="hinweis">Diese Woche nichts im Angebot.</p>`}`;
+  }).join("");
+}
+
+/* ---------- Suche ---------- */
+let sucheMarkt = null; // null = alle aktiven
+function zeichneMarktChips() {
+  const m = aktiveMaerkte();
+  $("#marktChips").innerHTML =
+    `<button class="chip" data-markt="" aria-pressed="${sucheMarkt === null}">Alle Märkte</button>` +
+    m.map((x) => `<button class="chip" data-markt="${esc(x)}" aria-pressed="${sucheMarkt === x}">${esc(x)}</button>`).join("");
+}
+function zeichneSuche() {
+  zeichneMarktChips();
+  const begriff = $("#such").value.trim();
+  $("#leeren").hidden = !begriff;
+  const ziel = $("#sucheErgebnis");
+  if (!begriff) {
+    ziel.innerHTML = zustand.vorlieben.length
+      ? `<p class="zwischentitel">Deine Vorlieben</p><div class="vorschlaege">${zustand.vorlieben.map((v) => `<button class="chip" data-suche="${esc(v)}">${esc(v)}</button>`).join("")}</div>`
+      : "";
+    return;
+  }
+  const maerkte = sucheMarkt ? [sucheMarkt] : aktiveMaerkte();
+  const { passend, weitere } = suche(begriff, maerkte);
+  if (!passend.length && !weitere.length) {
+    ziel.innerHTML = `<p class="hinweis">Keine Angebote zu <strong>„${esc(begriff)}“</strong>${sucheMarkt ? ` bei ${esc(sucheMarkt)}` : ""}. Versuch einen allgemeineren Begriff.</p>`;
+    return;
+  }
+  ziel.innerHTML =
+    (passend.length ? `<p class="zwischentitel">${passend.length} Angebote, günstigster Grundpreis zuerst</p>${listeHTML(passend)}` : "") +
+    (weitere.length ? `<p class="zwischentitel">Weitere Treffer mit „${esc(begriff)}“</p>${listeHTML(weitere)}` : "");
+}
+
+/* ---------- Wochenliste ---------- */
+function zeichneListe() {
+  const el = $("#v-liste");
+  const t = heute();
+  if (!zustand.liste.length) {
+    el.innerHTML = `<div class="leer-box"><p>Deine Wochenliste ist leer. Tipp bei einem Angebot auf „Auf die Wochenliste“, dann landet es hier, sortiert nach Markt.</p>
+      <button class="knopf" data-gehe="suche">Angebote suchen</button></div>`;
+    return;
+  }
+  const gruppen = {};
+  for (const p of zustand.liste) (gruppen[p.a.h] ||= []).push(p);
+  let gesamt = 0;
+  const html = Object.keys(gruppen).sort().map((markt) => {
+    const posten = gruppen[markt];
+    const summe = posten.filter((p) => !p.erledigt).reduce((s, p) => s + (p.a.p || 0), 0);
+    gesamt += summe;
+    return `<div class="markt-gruppe">
+      <div class="markt-kopf"><h2>${esc(markt)}</h2><span class="summe">${summe ? eur(summe) : ""}</span></div>
+      <ul class="liste">${posten.map((p) => {
+        const abgel = p.a.bis && p.a.bis < t;
+        return `<li class="posten${p.erledigt ? " erledigt" : ""}">
+          <input type="checkbox" data-abhaken="${p.id}" ${p.erledigt ? "checked" : ""} aria-label="${esc(p.a.n)} abhaken">
+          <div><div class="pname">${p.a.m ? esc(p.a.m) + " " : ""}${esc(p.a.n)}</div>
+            <div class="pinfo">${[esc(p.a.pk), abgel ? `<span class="abgelaufen">abgelaufen</span>` : p.a.bis ? "bis " + esc(datumKurz(p.a.bis)) : ""].filter(Boolean).join(", ")}</div></div>
+          <span class="ppreis">${p.a.p != null ? eur(p.a.p) : "Aktion"}</span>
+          <button class="weg" data-entfernen="${p.id}" aria-label="${esc(p.a.n)} entfernen">×</button>
+        </li>`;
+      }).join("")}</ul></div>`;
+  }).join("");
+  el.innerHTML = html +
+    `<div class="gesamt"><span>Noch zu kaufen</span><span>${eur(gesamt)}</span></div>
+     <div class="listen-aktionen">
+       <button class="knopf leise" data-aktion="erledigte">Erledigte entfernen</button>
+       <button class="knopf leise" data-aktion="teilen">Liste teilen</button>
+       <button class="knopf leise" data-aktion="leeren">Liste leeren</button>
+     </div>`;
+}
+
+function listenZaehler() {
+  const offen = zustand.liste.filter((p) => !p.erledigt).length;
+  const z = $("#listenZaehler");
+  z.hidden = !offen;
+  z.textContent = offen;
+}
+
+function merken(id) {
+  const i = zustand.liste.findIndex((p) => p.id === id);
+  if (i >= 0) {
+    zustand.liste.splice(i, 1);
+    meldung("Von der Wochenliste entfernt");
+  } else {
+    const a = angebote.find((x) => x.id === id);
+    if (!a) return;
+    // Kopie speichern, damit die Liste auch nach dem nächsten Datenabruf stimmt
+    zustand.liste.push({ id, erledigt: false, a: { h: a.h, m: a.m, n: a.n, p: a.p, pk: a.pk, bis: a.bis } });
+    meldung(`Auf der Wochenliste (${a.h})`);
+  }
+  speichern();
+  listenZaehler();
+  const drauf = zustand.liste.some((p) => p.id === id);
+  const a = angebote.find((x) => x.id === id);
+  document.querySelectorAll(`[data-merken="${id}"]`).forEach((b) => {
+    if (a) b.outerHTML = merkKnopf(a, drauf);
+  });
+}
+
+async function listeTeilen() {
+  const gruppen = {};
+  for (const p of zustand.liste.filter((p) => !p.erledigt)) (gruppen[p.a.h] ||= []).push(p);
+  const text = Object.keys(gruppen).sort().map((m) =>
+    m + ":\n" + gruppen[m].map((p) => `- ${p.a.m ? p.a.m + " " : ""}${p.a.n}${p.a.p != null ? " (" + eur(p.a.p) + ")" : ""}`).join("\n")
+  ).join("\n\n");
+  if (!text) { meldung("Nichts mehr offen auf der Liste"); return; }
+  try {
+    if (navigator.share) await navigator.share({ title: "Wochenliste", text });
+    else { await navigator.clipboard.writeText(text); meldung("Liste kopiert"); }
+  } catch (e) { /* Teilen abgebrochen */ }
+}
+
+/* ---------- Einstellungen ---------- */
+function zeichneEinstellungen() {
+  const el = $("#v-einst");
+  const alle = daten ? daten.maerkte : [];
+  const aktiv = new Set(aktiveMaerkte());
+  const quellen = daten ? Object.entries(daten.quellen || {}) : [];
+  el.innerHTML = `
+    <div class="abschnitt">
+      <h2>Vorlieben</h2>
+      <p class="erkl">Produkte oder Marken, die dich interessieren. Unter „Für dich“ siehst du die günstigsten Angebote dazu.</p>
+      <div class="tag-liste">${zustand.vorlieben.map((v, i) =>
+        `<span class="tag">${esc(v)}<button data-vorliebe-weg="${i}" aria-label="${esc(v)} entfernen">×</button></span>`).join("")}</div>
+      <form class="zeile-form" id="vorliebeForm">
+        <label for="vorliebeNeu" class="sr">Neue Vorliebe</label>
+        <input id="vorliebeNeu" placeholder="z.B. Kerrygold, Joghurt" autocomplete="off" enterkeyhint="done">
+        <button class="knopf" type="submit">Hinzufügen</button>
+      </form>
+    </div>
+    <div class="abschnitt">
+      <h2>Märkte</h2>
+      <p class="erkl">Nur diese Märkte werden angezeigt.</p>
+      <div class="markt-raster">${alle.map((m) =>
+        `<button class="chip" data-markt-schalter="${esc(m)}" aria-pressed="${aktiv.has(m)}">${esc(m)}</button>`).join("")}</div>
+    </div>
+    <div class="abschnitt">
+      <h2>Ort</h2>
+      <div class="wahl">${(index ? index.regionen : []).map((r) =>
+        `<label><input type="radio" name="region" value="${esc(r.id)}" ${r.id === zustand.region ? "checked" : ""}>${esc(r.name)}<span class="klein">${r.anzahl} Angebote</span></label>`).join("")}</div>
+    </div>
+    <div class="abschnitt">
+      <h2>Datenquellen</h2>
+      <p class="erkl">Die Angebote werden jeden Morgen automatisch aus öffentlichen Prospekten gesammelt. Preise ohne Gewähr.</p>
+      <ul class="quellen">${quellen.map(([n, s]) =>
+        `<li>${esc(n)}: ${s.ok ? `${s.anzahl} Angebote` : `<span class="fehler">nicht erreichbar</span>`}</li>`).join("")}</ul>
+    </div>`;
+}
+
+/* =========================================================================
+   Ereignisse
+   ========================================================================= */
+document.addEventListener("click", async (ev) => {
+  const t = ev.target.closest("button, [data-region]");
+  if (!t) return;
+  const d = t.dataset;
+
+  if (d.ziel) zeige(d.ziel);
+  else if (d.gehe) zeige(d.gehe);
+  else if (d.region) {
+    zustand.region = d.region; speichern();
+    await start();
+  }
+  else if (d.merken) merken(d.merken);
+  else if (d.suche !== undefined) {
+    $("#such").value = d.suche;
+    zeige("suche");
+  }
+  else if (d.klappen) {
+    ausgeklappt.has(d.klappen) ? ausgeklappt.delete(d.klappen) : ausgeklappt.add(d.klappen);
+    zeichneFuerDich();
+  }
+  else if (d.markt !== undefined) {
+    sucheMarkt = d.markt || null;
+    zeichneSuche();
+  }
+  else if (d.marktSchalter) {
+    const aktiv = new Set(aktiveMaerkte());
+    aktiv.has(d.marktSchalter) ? aktiv.delete(d.marktSchalter) : aktiv.add(d.marktSchalter);
+    if (!aktiv.size) { meldung("Mindestens ein Markt muss ausgewählt sein"); return; }
+    zustand.maerkte[zustand.region] = [...aktiv];
+    if (sucheMarkt && !aktiv.has(sucheMarkt)) sucheMarkt = null;
+    speichern();
+    zeichneEinstellungen();
+  }
+  else if (d.vorliebeWeg !== undefined) {
+    zustand.vorlieben.splice(+d.vorliebeWeg, 1);
+    speichern();
+    zeichneEinstellungen();
+  }
+  else if (d.entfernen) {
+    zustand.liste = zustand.liste.filter((p) => p.id !== d.entfernen);
+    speichern(); listenZaehler(); zeichneListe();
+  }
+  else if (d.aktion === "erledigte") {
+    zustand.liste = zustand.liste.filter((p) => !p.erledigt);
+    speichern(); listenZaehler(); zeichneListe();
+  }
+  else if (d.aktion === "leeren") {
+    if (confirm("Wochenliste komplett leeren?")) {
+      zustand.liste = []; speichern(); listenZaehler(); zeichneListe();
+    }
+  }
+  else if (d.aktion === "teilen") listeTeilen();
+  else if (t.id === "leeren") { $("#such").value = ""; zeichneSuche(); $("#such").focus(); }
+  else if (t.id === "ortKnopf") zeige("einst");
+});
+
+document.addEventListener("change", async (ev) => {
+  const t = ev.target;
+  if (t.dataset.abhaken) {
+    const p = zustand.liste.find((x) => x.id === t.dataset.abhaken);
+    if (p) { p.erledigt = t.checked; speichern(); listenZaehler(); zeichneListe(); }
+  }
+  if (t.name === "region") {
+    zustand.region = t.value; sucheMarkt = null; speichern();
+    await ladeRegionSicher();
+    zeichneEinstellungen();
+    meldung("Ort geändert");
+  }
+});
+
+document.addEventListener("submit", (ev) => {
+  if (ev.target.id !== "vorliebeForm") return;
+  ev.preventDefault();
+  const inp = $("#vorliebeNeu");
+  const v = inp.value.trim();
+  if (v && !zustand.vorlieben.some((x) => norm(x) === norm(v))) {
+    zustand.vorlieben.push(v);
+    speichern();
+  }
+  zeichneEinstellungen();
+  $("#vorliebeNeu").focus();
+});
+
+let suchTimer;
+$("#such").addEventListener("input", () => {
+  clearTimeout(suchTimer);
+  suchTimer = setTimeout(zeichneSuche, 150);
+});
+
+/* =========================================================================
+   Start
+   ========================================================================= */
+function fehlerAnzeigen() {
+  $("#v-fuerdich").innerHTML = `<div class="leer-box"><p>Die Angebote konnten nicht geladen werden. Prüf deine Internetverbindung und lade die Seite neu.</p>
+    <button class="knopf" onclick="location.reload()">Neu laden</button></div>`;
+  zeige("fuerdich");
+}
+
+async function ladeRegionSicher() {
+  try { await ladeRegion(); return true; }
+  catch (e) { fehlerAnzeigen(); return false; }
+}
+
+async function start() {
+  try { if (!index) await ladeIndex(); }
+  catch (e) { fehlerAnzeigen(); return; }
+  if (!zustand.region || !index.regionen.some((r) => r.id === zustand.region)) {
+    zeichneStart();
+    return;
+  }
+  if (await ladeRegionSicher()) {
+    listenZaehler();
+    zeige("fuerdich");
+  }
+}
+
+start();
+
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("sw.js").catch(() => {});
+}
+</script>
+</body>
+</html>

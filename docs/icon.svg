@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect width="512" height="512" rx="96" fill="#C8102E"/>
+  <!-- Preisschild mit Loch -->
+  <path d="M136 150h190l86 106-86 106H136a24 24 0 0 1-24-24V174a24 24 0 0 1 24-24z" fill="#fff"/>
+  <circle cx="344" cy="256" r="18" fill="#C8102E"/>
+  <text x="208" y="300" text-anchor="middle" font-family="Arial Narrow, Arial, sans-serif" font-weight="700" font-size="132" fill="#C8102E">€</text>
+  <rect x="112" y="378" width="120" height="40" rx="6" fill="#FFD400"/>
+</svg>

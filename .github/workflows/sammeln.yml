@@ -1,0 +1,46 @@
+name: Angebote sammeln
+
+on:
+  schedule:
+    # Täglich um 4:17 UTC (= 6:17 Uhr Sommerzeit / 5:17 Uhr Winterzeit)
+    - cron: "17 4 * * *"
+  workflow_dispatch: {}  # Manuell starten über "Actions" -> "Run workflow"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sammeln
+  cancel-in-progress: false
+
+jobs:
+  sammeln:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - run: pip install -r requirements.txt
+
+      - name: Angebote abrufen
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          TZ: Europe/Berlin
+        run: python sammler.py
+
+      - name: Neue Daten speichern
+        run: |
+          git config user.name "angebote-bot"
+          git config user.email "angebote-bot@users.noreply.github.com"
+          git add docs/data cache
+          if git diff --cached --quiet; then
+            echo "Keine Änderungen."
+          else
+            git commit -m "Angebote vom $(TZ=Europe/Berlin date +'%d.%m.%Y')"
+            git push
+          fi
