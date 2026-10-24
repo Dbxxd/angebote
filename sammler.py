@@ -689,8 +689,9 @@ UNTERGRUPPEN = {
     "Fleisch & Wurst": ["Rind", "Schwein", "Geflügel", "Hackfleisch", "Grillgut & Bratwurst",
                         "Aufschnitt & Wurst", "Schinken & Salami", "Fleischersatz"],
     "Fisch": ["Frischer Fisch", "Räucherfisch", "Fischkonserven & Feinkost", "Garnelen & Meeresfrüchte"],
-    "Milch, Käse & Eier": ["Milch & Milchgetränke", "Butter & Margarine", "Käse", "Joghurt & Quark",
-                           "Sahne & Desserts", "Eier"],
+    "Milch, Käse & Eier": ["Milch & Milchgetränke", "Butter & Margarine", "Scheibenkäse",
+                           "Käse am Stück & gerieben", "Weichkäse", "Frischkäse & Streichkäse",
+                           "Back-, Ofen- & Grillkäse", "Joghurt & Quark", "Sahne & Desserts", "Eier"],
     "Brot & Backwaren": ["Brot & Brötchen", "Toast & Sandwich", "Zwieback & Knäckebrot"],
     "Tiefkühl": ["Tiefkühl-Pizza & Snacks", "Tiefkühl-Gemüse & -Obst", "Pommes & Kartoffelprodukte",
                  "Eis", "Tiefkühl-Fisch & -Fleisch", "Tiefkühl-Fertiggerichte"],
@@ -748,6 +749,10 @@ Wichtig:
 - Butter und Margarine -> Butter & Margarine. Buttermilch, Kakaodrink -> Milch & Milchgetränke.
 - Kaffeemaschinen, Wasserkocher usw. -> Haushaltsgeräte.
 - Zwieback, Knäckebrot, Grissini -> Zwieback & Knäckebrot (bei Brot & Backwaren).
+- Käse: Scheiben -> Scheibenkäse; Stück, Würfel, gerieben -> Käse am Stück & gerieben;
+  Camembert, Brie, Weichkäse -> Weichkäse; Frischkäse, Frischkäsezubereitung, körniger
+  Frischkäse, Miree, Almette, Bresso, Streichkäse -> Frischkäse & Streichkäse;
+  Back-Camembert, Backkäse, Ofenkäse, Grillkäse, Halloumi -> Back-, Ofen- & Grillkäse.
 - Kuchen, Stollen, Torten, Muffins, Croissants, Berliner -> Kuchen & Feingebäck (bei Süßes & Snacks).
 - Prozent-Aktionen ohne Produkt ("20 % Rabatt auf ...") -> Rabatte & Coupons.
 
