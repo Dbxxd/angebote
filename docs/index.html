@@ -310,9 +310,9 @@ button.bild { padding: 0; cursor: zoom-in; font: inherit; }
   background: var(--karte); border-top: 1px solid var(--linie);
   padding-bottom: env(safe-area-inset-bottom);
 }
-.leiste-innen { display: grid; grid-template-columns: repeat(4, 1fr); max-width: 640px; margin: 0 auto; }
+.leiste-innen { display: grid; grid-template-columns: repeat(5, 1fr); max-width: 640px; margin: 0 auto; }
 .leiste button {
-  border: 0; background: none; padding: 10px 4px 9px; font-size: 13px; color: var(--grau);
+  border: 0; background: none; padding: 10px 2px 9px; font-size: 11.5px; color: var(--grau); min-width: 0;
   display: flex; flex-direction: column; align-items: center; gap: 3px; position: relative;
 }
 .leiste svg { width: 24px; height: 24px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
@@ -326,6 +326,24 @@ button.bild { padding: 0; cursor: zoom-in; font: inherit; }
   min-width: 18px; height: 18px; border-radius: 9px; padding: 0 5px; line-height: 18px;
 }
 .zaehler[hidden] { display: none; }
+
+/* ---------- Vorrat ---------- */
+.vorrat-erkl { margin: 0 0 12px; color: var(--grau); font-size: 14px; }
+.vorrat-liste { list-style: none; margin: 0 0 14px; padding: 0; background: var(--karte); border: 1px solid var(--linie); border-radius: var(--r); overflow: hidden; }
+.vorrat-liste > li + li { border-top: 1px solid var(--linie); }
+.vorrat-zeile { display: grid; grid-template-columns: auto 1fr auto; gap: 12px; align-items: center; padding: 12px 8px 12px 12px; }
+.vorrat-zeile input[type=checkbox] { width: 26px; height: 26px; margin: 0; accent-color: var(--rot); }
+.vorrat-name { font-size: 17px; font-weight: 600; line-height: 1.2; overflow-wrap: anywhere; }
+.vorrat-status { font-size: 13px; color: var(--grau); margin-top: 2px; }
+.vorrat-status .treffer { color: var(--gruen); font-weight: 700; }
+.vorrat-status .leerbald { color: var(--rot); font-weight: 700; }
+.vorrat-auf { border: 0; background: none; padding: 8px; color: var(--grau); }
+.vorrat-auf svg { width: 20px; height: 20px; stroke: currentColor; fill: none; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; transition: transform .15s; }
+.vorrat-auf[aria-expanded="true"] svg { transform: rotate(180deg); }
+.vorrat-details { padding: 0 12px 12px; display: grid; gap: 8px; }
+.vorrat-details .zeile { display: flex; gap: 16px; flex-wrap: wrap; }
+.vorschlag-titel { margin: 18px 0 6px; font-size: 14px; color: var(--grau); }
+@media (prefers-reduced-motion: reduce) { .vorrat-auf svg { transition: none; } }
 
 /* ---------- Erster Start ---------- */
 .start { padding-top: 20px; }
@@ -373,6 +391,8 @@ button.bild { padding: 0; cursor: zoom-in; font: inherit; }
     <div id="sucheErgebnis"></div>
   </section>
 
+  <section class="ansicht" id="v-vorrat" hidden aria-label="Vorrat"></section>
+
   <section class="ansicht" id="v-liste" hidden aria-label="Wochenliste"></section>
 
   <section class="ansicht" id="v-einst" hidden aria-label="Einstellungen"></section>
@@ -387,6 +407,11 @@ button.bild { padding: 0; cursor: zoom-in; font: inherit; }
     <button data-ziel="suche">
       <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg>
       Suche
+    </button>
+    <button data-ziel="vorrat">
+      <svg viewBox="0 0 24 24"><path d="M3 7.5 12 3l9 4.5v9L12 21l-9-4.5z"/><path d="M3 7.5 12 12l9-4.5M12 12v9"/></svg>
+      Vorrat
+      <span class="zaehler" id="vorratZaehler" hidden></span>
     </button>
     <button data-ziel="liste">
       <svg viewBox="0 0 24 24"><path d="M9 6h11M9 12h11M9 18h11M4 6h.01M4 12h.01M4 18h.01"/></svg>
@@ -417,7 +442,7 @@ function laden() {
   try { return JSON.parse(localStorage.getItem(SPEICHER)) || {}; } catch (e) { return {}; }
 }
 const zustand = Object.assign(
-  { region: null, maerkte: {}, vorlieben: STANDARD_VORLIEBEN.slice(), liste: [] },
+  { region: null, maerkte: {}, vorlieben: STANDARD_VORLIEBEN.slice(), liste: [], vorrat: [] },
   laden()
 );
 function speichern() {
@@ -494,6 +519,7 @@ async function ladeRegion() {
       });
     });
   zeigeKopf();
+  vorratZaehler();
 }
 
 function zeigeKopf() {
@@ -712,7 +738,7 @@ function listeHTML(liste, max) {
 /* =========================================================================
    Ansichten
    ========================================================================= */
-const ANSICHTEN = ["start", "fuerdich", "suche", "liste", "einst"];
+const ANSICHTEN = ["start", "fuerdich", "suche", "vorrat", "liste", "einst"];
 let aktuelleAnsicht = null;
 
 function zeige(name) {
@@ -723,10 +749,11 @@ function zeige(name) {
     if (b.dataset.ziel === name) b.setAttribute("aria-current", "page");
     else b.removeAttribute("aria-current");
   });
-  const titel = { start: "Angebote", fuerdich: "Für dich", suche: "Suche", liste: "Wochenliste", einst: "Einstellungen" }[name];
+  const titel = { start: "Angebote", fuerdich: "Für dich", suche: "Suche", vorrat: "Vorrat", liste: "Wochenliste", einst: "Einstellungen" }[name];
   $("#titel").textContent = titel;
   if (name === "fuerdich") zeichneFuerDich();
   if (name === "suche") zeichneSuche();
+  if (name === "vorrat") zeichneVorrat();
   if (name === "liste") zeichneListe();
   if (name === "einst") zeichneEinstellungen();
   window.scrollTo(0, 0);
@@ -774,16 +801,143 @@ const ausgeklappt = new Set();
 const KEINE_MAERKTE = `<div class="leer-box"><p>Es ist kein Markt ausgewählt. Wähl in den Einstellungen aus, welche Märkte angezeigt werden sollen.</p>
   <button class="knopf" data-gehe="einst">Märkte auswählen</button></div>`;
 
+/* =========================================================================
+   Vorrat: dauerhafte Liste; "bald leer" = alle Angebote zeigen,
+   sonst nur besonders gute Angebote (ab VORRAT_RABATT) zum Vorratskauf
+   ========================================================================= */
+const VORRAT_RABATT = 0.2;
+const VORRAT_VORSCHLAEGE = ["Klopapier", "Küchenrolle", "Haferflocken", "Kaffee", "Spülmittel",
+  "Waschmittel", "Zahnpasta", "Duschgel", "Müllbeutel", "Nudeln", "Milch", "Butter"];
+// Wie es im Prospekt heißt (Schlüssel normalisiert: ä->ae usw.)
+const SYNONYME = {
+  klopapier: ["toilettenpapier"], toilettenpapier: ["klopapier"],
+  kuechenrolle: ["kuechenpapier", "kuechentuecher", "haushaltsrolle"],
+  zahnpasta: ["zahncreme"], zahncreme: ["zahnpasta"],
+  spueli: ["spuelmittel"], waschpulver: ["waschmittel"],
+  taschentuecher: ["taschentuch"], muellbeutel: ["muellsack", "abfallbeutel", "muellbeutel"],
+  spuelmaschinentabs: ["geschirrspueltabs", "spuelmaschinen", "maschinengeschirr"],
+  duschgel: ["duschbad", "dusche"], nudeln: ["pasta", "spaghetti", "penne", "fusilli"],
+};
+
+if (!Array.isArray(zustand.vorrat)) zustand.vorrat = [];
+
+function vorratBegriffe(name) {
+  const teile = name.split(/[,/]/).map((x) => x.trim()).filter(Boolean);
+  const alle = new Set(teile);
+  for (const t of teile) for (const s of SYNONYME[norm(t)] || []) alle.add(s);
+  return [...alle];
+}
+function vorratAngebote(eintrag) {
+  const maerkte = aktiveMaerkte();
+  const gesehen = new Map();
+  for (const b of vorratBegriffe(eintrag.name)) {
+    for (const a of suche(b, maerkte).passend) gesehen.set(a.id, a);
+  }
+  const alle = sortiere([...gesehen.values()]);
+  const gut = alle.filter((a) => rabatt(a) >= VORRAT_RABATT);
+  return { alle, gut, relevant: eintrag.leer ? alle : gut };
+}
+
+function vorratZaehler() {
+  const z = $("#vorratZaehler");
+  if (!z) return;
+  const n = angebote.length ? zustand.vorrat.filter((v) => v.leer && vorratAngebote(v).alle.length).length : 0;
+  z.hidden = !n;
+  z.textContent = n;
+}
+
+const ICON_AUF = `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>`;
+const vorratOffen = new Set();
+
+function zeichneVorrat() {
+  const el = $("#v-vorrat");
+  if (!aktiveMaerkte().length) { el.innerHTML = KEINE_MAERKTE; return; }
+  const formular = `<form class="zeile-form" id="vorratForm" style="margin-bottom:12px">
+      <label for="vorratNeu" class="sr">Neuer Vorrat-Eintrag</label>
+      <input id="vorratNeu" placeholder="z.B. Klopapier, Haferflocken" autocomplete="off" enterkeyhint="done">
+      <button class="knopf" type="submit">Hinzufügen</button>
+    </form>`;
+  const vorhanden = new Set(zustand.vorrat.map((v) => norm(v.name)));
+  const vorschlaege = VORRAT_VORSCHLAEGE.filter((v) => !vorhanden.has(norm(v)));
+  const vorschlagHTML = vorschlaege.length
+    ? `<p class="vorschlag-titel">Schnell hinzufügen</p><div class="vorschlaege">${vorschlaege.map((v) =>
+        `<button class="chip" data-vorrat-neu="${esc(v)}">+ ${esc(v)}</button>`).join("")}</div>` : "";
+
+  if (!zustand.vorrat.length) {
+    el.innerHTML = formular + `<div class="leer-box"><p>Trag hier ein, was ihr regelmäßig braucht. Hak an, was <strong>bald leer</strong> ist, dann siehst du alle Angebote dazu. Bei allem anderen meldet sich die App nur bei richtig guten Angeboten (ab ${Math.round(VORRAT_RABATT * 100)} % Rabatt), damit du auf Vorrat kaufen kannst.</p></div>` + vorschlagHTML;
+    return;
+  }
+
+  // "bald leer" zuerst, sonst Reihenfolge beibehalten
+  const reihen = zustand.vorrat.map((v, i) => ({ v, i })).sort((x, y) => (y.v.leer ? 1 : 0) - (x.v.leer ? 1 : 0));
+  const zeilen = reihen.map(({ v, i }) => {
+    const { alle, gut, relevant } = vorratAngebote(v);
+    const offen = vorratOffen.has(v.name);
+    let status;
+    if (v.leer) {
+      status = alle.length
+        ? `<span class="leerbald">Bald leer</span> · <span class="treffer">${alle.length === 1 ? "1 Angebot" : alle.length + " Angebote"}</span>, ab ${eur(alle.slice().sort((a, b) => (a.p ?? 1e9) - (b.p ?? 1e9))[0].p)}`
+        : `<span class="leerbald">Bald leer</span> · gerade kein Angebot`;
+    } else {
+      status = gut.length
+        ? `Genug da · <span class="treffer">${gut.length === 1 ? "1 gutes Angebot" : gut.length + " gute Angebote"}</span> zum Vorratskauf`
+        : `Genug da · ${alle.length ? `${alle.length === 1 ? "1 Angebot, nicht" : alle.length + " Angebote, keins"} besonders günstig` : "kein Angebot"}`;
+    }
+    const details = offen ? `<div class="vorrat-details">
+        ${relevant.length ? listeHTML(relevant, 5) : `<p class="hinweis" style="padding:4px 0">${v.leer ? "Diese Woche kein Angebot." : "Kein Angebot mit mindestens " + Math.round(VORRAT_RABATT * 100) + " % Rabatt."}</p>`}
+        <div class="zeile">
+          ${alle.length ? `<button class="textknopf" data-suche="${esc(vorratBegriffe(v.name)[0])}">Alle ${alle.length} in der Suche</button>` : ""}
+          <button class="textknopf" data-vorrat-weg="${i}">Entfernen</button>
+        </div>
+      </div>` : "";
+    return `<li>
+      <div class="vorrat-zeile">
+        <input type="checkbox" data-vorrat-haken="${i}" ${v.leer ? "checked" : ""} aria-label="${esc(v.name)} ist bald leer">
+        <div><div class="vorrat-name">${esc(v.name)}</div><div class="vorrat-status">${status}</div></div>
+        <button class="vorrat-auf" data-vorrat-auf="${esc(v.name)}" aria-expanded="${offen}" aria-label="Angebote zu ${esc(v.name)} ${offen ? "zuklappen" : "zeigen"}">${ICON_AUF}</button>
+      </div>${details}</li>`;
+  }).join("");
+  el.innerHTML = formular +
+    `<p class="vorrat-erkl">Haken = bald leer: alle Angebote. Ohne Haken: nur Angebote ab ${Math.round(VORRAT_RABATT * 100)} % Rabatt.</p>` +
+    `<ul class="vorrat-liste">${zeilen}</ul>` + vorschlagHTML;
+}
+
+function vorratHinzufuegen(name) {
+  name = name.trim();
+  if (!name || zustand.vorrat.some((v) => norm(v.name) === norm(name))) return false;
+  zustand.vorrat.push({ name, leer: false });
+  speichern();
+  return true;
+}
+
+/* Block oben auf "Für dich": was bald leer ist und gerade im Angebot */
+function vorratBlockHTML() {
+  if (!zustand.vorrat.length) return "";
+  const leer = [], vorrat = [];
+  for (const v of zustand.vorrat) {
+    const { alle, gut } = vorratAngebote(v);
+    if (v.leer && alle.length) leer.push({ v, a: alle[0], n: alle.length });
+    else if (!v.leer && gut.length) vorrat.push({ v, a: gut.slice().sort((a, b) => rabatt(b) - rabatt(a))[0], n: gut.length });
+  }
+  // je Eintrag: Name + Anzahl, darunter das beste Angebot
+  const block = (eintraege, einzahl, mehrzahl) => eintraege.map(({ v, a, n }) =>
+    `<p class="zwischentitel">${esc(v.name)} · ${n === 1 ? "1 " + einzahl : n + " " + mehrzahl}</p>${listeHTML([a])}`).join("");
+  return (leer.length ? `<div class="vorliebe-kopf"><h2>Bald leer, jetzt im Angebot</h2><button data-gehe="vorrat">Vorrat</button></div>${block(leer, "Angebot", "Angebote")}` : "") +
+    (vorrat.length ? `<div class="vorliebe-kopf"><h2>Gut für den Vorrat</h2><button data-gehe="vorrat">Vorrat</button></div>${block(vorrat, "gutes Angebot", "gute Angebote")}` : "");
+}
+
 function zeichneFuerDich() {
   const el = $("#v-fuerdich");
   if (!aktiveMaerkte().length) { el.innerHTML = KEINE_MAERKTE; return; }
+  const vorratBlock = vorratBlockHTML();
   if (!zustand.vorlieben.length) {
+    if (vorratBlock) { el.innerHTML = vorratBlock; return; }
     el.innerHTML = `<div class="leer-box"><p>Leg fest, was dich interessiert, z.B. Butter, Kaffee oder eine bestimmte Marke. Hier siehst du dann jede Woche die günstigsten Angebote dazu.</p>
       <button class="knopf" data-gehe="einst">Vorlieben festlegen</button></div>`;
     return;
   }
   const maerkte = aktiveMaerkte();
-  el.innerHTML = zustand.vorlieben.map((v) => {
+  el.innerHTML = vorratBlock + zustand.vorlieben.map((v) => {
     const { passend } = suche(v, maerkte);
     const offen = ausgeklappt.has(v);
     const max = offen ? 0 : 3;
@@ -1091,15 +1245,35 @@ document.addEventListener("click", async (ev) => {
     const aktiv = new Set(aktiveMaerkte());
     aktiv.has(d.marktSchalter) ? aktiv.delete(d.marktSchalter) : aktiv.add(d.marktSchalter);
     zustand.maerkte[zustand.region] = [...aktiv];
+    vorratZaehler();
     if (sucheMarkt && !aktiv.has(sucheMarkt)) sucheMarkt = null;
     speichern();
     zeichneEinstellungen();
   }
   else if (d.alleMaerkte) {
     zustand.maerkte[zustand.region] = d.alleMaerkte === "an" ? [...daten.maerkte] : [];
+    vorratZaehler();
     sucheMarkt = null;
     speichern();
     zeichneEinstellungen();
+  }
+  else if (d.vorratNeu) {
+    vorratHinzufuegen(d.vorratNeu);
+    meldung(`„${d.vorratNeu}“ zum Vorrat hinzugefügt`);
+    zeichneVorrat(); vorratZaehler();
+  }
+  else if (d.vorratAuf !== undefined) {
+    vorratOffen.has(d.vorratAuf) ? vorratOffen.delete(d.vorratAuf) : vorratOffen.add(d.vorratAuf);
+    zeichneVorrat();
+  }
+  else if (d.vorratWeg !== undefined) {
+    const v = zustand.vorrat[+d.vorratWeg];
+    if (v) {
+      zustand.vorrat.splice(+d.vorratWeg, 1);
+      vorratOffen.delete(v.name);
+      speichern(); vorratZaehler(); zeichneVorrat();
+      meldung(`„${v.name}“ entfernt`);
+    }
   }
   else if (d.vorliebeWeg !== undefined) {
     zustand.vorlieben.splice(+d.vorliebeWeg, 1);
@@ -1126,6 +1300,15 @@ document.addEventListener("click", async (ev) => {
 
 document.addEventListener("change", async (ev) => {
   const t = ev.target;
+  if (t.dataset.vorratHaken !== undefined) {
+    const v = zustand.vorrat[+t.dataset.vorratHaken];
+    if (v) {
+      v.leer = t.checked;
+      speichern(); vorratZaehler(); zeichneVorrat();
+      meldung(v.leer ? `${v.name}: bald leer – alle Angebote werden gezeigt` : `${v.name}: genug da`);
+    }
+    return;
+  }
   if (t.dataset.abhaken) {
     const p = zustand.liste.find((x) => x.id === t.dataset.abhaken);
     if (p) { p.erledigt = t.checked; speichern(); listenZaehler(); zeichneListe(); }
@@ -1139,6 +1322,14 @@ document.addEventListener("change", async (ev) => {
 });
 
 document.addEventListener("submit", (ev) => {
+  if (ev.target.id === "vorratForm") {
+    ev.preventDefault();
+    const inp = $("#vorratNeu");
+    if (vorratHinzufuegen(inp.value)) meldung(`„${inp.value.trim()}“ zum Vorrat hinzugefügt`);
+    zeichneVorrat(); vorratZaehler();
+    $("#vorratNeu").focus();
+    return;
+  }
   if (ev.target.id !== "vorliebeForm") return;
   ev.preventDefault();
   const inp = $("#vorliebeNeu");
@@ -1180,6 +1371,7 @@ async function start() {
   }
   if (await ladeRegionSicher()) {
     listenZaehler();
+    vorratZaehler();
     history.replaceState({ ansicht: "fuerdich", gruppe: null }, "");
     zeige("fuerdich");
   }
