@@ -754,6 +754,9 @@ Wichtig:
   Frischkäse, Miree, Almette, Bresso, Streichkäse -> Frischkäse & Streichkäse;
   Back-Camembert, Backkäse, Ofenkäse, Grillkäse, Halloumi -> Back-, Ofen- & Grillkäse.
 - Kuchen, Stollen, Torten, Muffins, Croissants, Berliner -> Kuchen & Feingebäck (bei Süßes & Snacks).
+- Fertige Salate aus dem Kühlregal (Kartoffel-, Nudel-, Fleisch-, Kraut-, Gurken-, Beilagensalat),
+  Dips, Tzatziki, Hummus, Antipasti -> Feinkost & Salate (bei Fertiggerichte & Konserven).
+  "Salat & Kräuter" (Obst & Gemüse) nur für frischen Salat wie Eisberg, Rucola, Feldsalat.
 - Prozent-Aktionen ohne Produkt ("20 % Rabatt auf ...") -> Rabatte & Coupons.
 
 Antworte NUR mit einer Zeile pro Produkt im Format "Nummer: Code", z.B.
