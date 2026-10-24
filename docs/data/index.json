@@ -1,5 +1,5 @@
 {
- "stand": "2026-10-24T20:31+02:00",
+ "stand": "2026-10-25T00:24+02:00",
  "regionen": [
   {
    "id": "steinfurt",
@@ -7,14 +7,12 @@
    "maerkte": [
     "Aldi",
     "Combi",
-    "Edeka",
-    "K+K",
     "Lidl",
     "Netto",
     "Penny",
     "Rossmann"
    ],
-   "anzahl": 2527
+   "anzahl": 2082
   },
   {
    "id": "winsen",
@@ -31,7 +29,7 @@
     "Rewe",
     "Rossmann"
    ],
-   "anzahl": 3692
+   "anzahl": 2843
   },
   {
    "id": "harburg",
@@ -48,7 +46,7 @@
     "Rewe",
     "Rossmann"
    ],
-   "anzahl": 3143
+   "anzahl": 2828
   }
  ]
 }
