@@ -184,7 +184,49 @@ main { max-width: 640px; margin: 0 auto; padding: 12px 16px 24px; }
 }
 .bild-rahmen .merken svg { width: 16px; height: 16px; }
 /* größere unsichtbare Tippfläche */
-.bild-rahmen .merken::after { content: ""; position: absolute; inset: -8px; }
+/* nach außen großzügig, zur Bildmitte hin knapp – sonst würde ein Tipp aufs Bild "merken" auslösen */
+.bild-rahmen .merken::after { content: ""; position: absolute; inset: -2px -8px -8px -2px; }
+
+button.bild { padding: 0; cursor: zoom-in; font: inherit; }
+
+/* ---------- Detailansicht (großes Bild) ---------- */
+.detail {
+  position: fixed; inset: 0; z-index: 30;
+  background: rgba(10, 12, 11, .72);
+  display: grid; place-items: end center;
+  padding: env(safe-area-inset-top, 0px) 0 0;
+}
+.detail[hidden] { display: none; }
+.detail-karte {
+  width: 100%; max-width: 640px; max-height: 92vh; overflow-y: auto;
+  background: var(--karte); color: var(--tinte);
+  border-radius: 16px 16px 0 0;
+  padding: 12px max(16px, env(safe-area-inset-left, 0px)) calc(20px + env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-right, 0px));
+  box-shadow: inset 0 5px 0 var(--mf, transparent);
+  display: grid; gap: 12px;
+}
+.detail-kopf { display: flex; justify-content: space-between; align-items: center; }
+.detail-kopf .markt { font-size: 15px; font-weight: 800; color: var(--mf, var(--grau)); }
+.detail-zu { border: 0; background: none; font-size: 28px; line-height: 1; padding: 4px 8px; color: var(--grau); }
+.detail-bild {
+  position: relative; width: 100%; aspect-ratio: 1 / 1; max-height: 52vh;
+  background: #fff; border-radius: 12px; overflow: hidden; display: grid; place-items: center;
+}
+.detail-bild img.ganz { width: 100%; height: 100%; object-fit: contain; }
+.detail-bild.ausschnitt img { position: absolute; max-width: none; opacity: 0; }
+.detail-bild.leer { background: var(--papier); color: var(--grau); font-size: 14px; }
+.detail h2 { margin: 0; font-size: 22px; line-height: 1.2; font-weight: 700; }
+.detail h2 .marke { font-weight: 400; color: var(--grau); }
+.detail .info { color: var(--grau); font-size: 15px; }
+.detail-preis { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+.detail-preis .schild .euro { font-size: 40px; }
+.detail-preis .schild .cent { font-size: 20px; }
+.detail-aktion { width: 100%; }
+.detail-aktion[aria-pressed="true"] { background: var(--gruen); color: #fff; }
+@media (prefers-reduced-motion: no-preference) {
+  .detail:not([hidden]) .detail-karte { animation: hoch .18s ease-out; }
+  @keyframes hoch { from { transform: translateY(24px); opacity: .6; } to { transform: none; opacity: 1; } }
+}
 
 /* ---------- Markt-Kennzeichnung: Farbstreifen + Marktname in Marktfarbe ---------- */
 .angebot, .posten { box-shadow: inset 5px 0 0 var(--mf, transparent); }
@@ -357,6 +399,8 @@ main { max-width: 640px; margin: 0 auto; padding: 12px 16px 24px; }
     </button>
   </div>
 </nav>
+
+<div class="detail" id="detail" hidden role="dialog" aria-modal="true" aria-label="Angebot"></div>
 
 <div class="meldung" id="meldung" role="status" aria-live="polite"></div>
 
@@ -563,13 +607,70 @@ function zuschneiden(img) {
 }
 
 function bildHTML(a) {
+  const tipp = `data-detail="${a.id}" aria-label="Details zu ${esc((a.m ? a.m + " " : "") + a.n)}"`;
   if (a.b && a.b.startsWith("ks:https://")) {
     const [url, bereich] = a.b.slice(3).split("#");
-    return `<span class="bild ausschnitt" aria-hidden="true"><img src="${esc(url)}" data-b="${esc(bereich)}" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" onload="zuschneiden(this)" onerror="this.parentNode.classList.add('leer');this.remove()"></span>`;
+    return `<button class="bild ausschnitt" ${tipp}><img src="${esc(url)}" data-b="${esc(bereich)}" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" onload="zuschneiden(this)" onerror="this.parentNode.classList.add('leer');this.remove()"></button>`;
   }
   const url = bildUrl(a);
-  if (!url) return `<span class="bild leer" aria-hidden="true"></span>`;
-  return `<span class="bild" aria-hidden="true"><img src="${esc(url)}" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.parentNode.classList.add('leer');this.remove()"></span>`;
+  if (!url) return `<button class="bild leer" ${tipp}></button>`;
+  return `<button class="bild" ${tipp}><img src="${esc(url)}" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.parentNode.classList.add('leer');this.remove()"></button>`;
+}
+
+/* Größere Variante des Bildes für die Detailansicht (fällt auf das kleine zurück) */
+function grossesBildUrl(a) {
+  if (!a.b) return "";
+  if (a.b.startsWith("mg:")) return `https://cdn.marktguru.de/api/v1/offers/${encodeURIComponent(a.b.slice(3))}/images/default/0/large.webp`;
+  if (a.b.includes("scene7.com")) return a.b.replace(/wid=\d+&hei=\d+/, "wid=900&hei=900");
+  return bildUrl(a);
+}
+
+/* ---------- Detailansicht ---------- */
+let detailId = null;
+function detailHTML(a) {
+  const gemerkt = zustand.liste.some((x) => x.id === a.id);
+  const spar = a.ap && a.p ? Math.round((1 - a.p / a.ap) * 100) : 0;
+  let bild;
+  if (a.b && a.b.startsWith("ks:https://")) {
+    const [url, bereich] = a.b.slice(3).split("#");
+    bild = `<div class="detail-bild ausschnitt"><img src="${esc(url)}" data-b="${esc(bereich)}" alt="" referrerpolicy="no-referrer" onload="zuschneiden(this)" onerror="this.parentNode.classList.add('leer');this.parentNode.textContent='Kein Bild verfügbar'"></div>`;
+  } else if (bildUrl(a)) {
+    bild = `<div class="detail-bild"><img class="ganz" src="${esc(grossesBildUrl(a))}" data-klein="${esc(bildUrl(a))}" alt="${esc((a.m ? a.m + " " : "") + a.n)}" referrerpolicy="no-referrer"
+      onerror="if(this.dataset.klein&&this.src!==this.dataset.klein){this.src=this.dataset.klein}else{this.parentNode.classList.add('leer');this.parentNode.textContent='Kein Bild verfügbar'}"></div>`;
+  } else {
+    bild = `<div class="detail-bild leer">Kein Bild verfügbar</div>`;
+  }
+  const zeit = a.bald ? `ab ${esc(datumKurz(a.von))}` : a.bis ? `gültig bis ${esc(datumKurz(a.bis))}` : "";
+  return `<div class="detail-karte" style="--mf:${marktFarbe(a.h)}">
+    <div class="detail-kopf"><span class="markt">${esc(a.h)}</span><button class="detail-zu" data-detail-zu aria-label="Schließen">×</button></div>
+    ${bild}
+    <h2>${a.m ? `<span class="marke">${esc(a.m)}</span> ` : ""}${esc(a.n)}</h2>
+    <div class="info">${[esc(a.pk), zeit].filter(Boolean).join(" · ")}</div>
+    <div class="detail-preis">
+      ${schild(a)}
+      ${a.ap ? `<span class="alt">${eur(a.ap)}</span>${spar >= 5 ? `<span class="spar">−${spar} %</span>` : ""}` : ""}
+      ${a.gp != null && a.ge ? `<span class="gp">${eur(a.gp)}/${a.ge}</span>` : ""}
+    </div>
+    <button class="knopf detail-aktion" data-merken="${a.id}" aria-pressed="${gemerkt}">${gemerkt ? "Auf der Wochenliste ✓" : "Auf die Wochenliste"}</button>
+  </div>`;
+}
+function oeffneDetail(id) {
+  const a = angebote.find((x) => x.id === id);
+  if (!a) return;
+  detailId = id;
+  const el = $("#detail");
+  el.innerHTML = detailHTML(a);
+  el.hidden = false;
+  document.body.style.overflow = "hidden";
+  history.pushState(Object.assign({}, history.state, { detail: id }), "");
+  el.querySelector(".detail-zu").focus();
+}
+function schliesseDetail() {
+  if (!detailId) return;
+  detailId = null;
+  $("#detail").hidden = true;
+  $("#detail").innerHTML = "";
+  document.body.style.overflow = "";
 }
 
 function angebotHTML(a) {
@@ -651,7 +752,12 @@ function wendeAn(schritt) {
   zeige(schritt.ansicht);
 }
 window.addEventListener("popstate", (e) => {
+  // Offene Detailansicht: Zurück schließt nur sie, die Liste darunter bleibt wie sie war
+  if (detailId && !(e.state && e.state.detail)) { schliesseDetail(); return; }
   if (e.state && e.state.ansicht && aktuelleAnsicht && aktuelleAnsicht !== "start") wendeAn(e.state);
+});
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape" && detailId) history.back();
 });
 
 /* ---------- Erster Start ---------- */
@@ -868,7 +974,10 @@ function merken(id) {
   const drauf = zustand.liste.some((p) => p.id === id);
   const a = angebote.find((x) => x.id === id);
   document.querySelectorAll(`[data-merken="${id}"]`).forEach((b) => {
-    if (a) b.outerHTML = merkKnopf(a, drauf);
+    if (b.classList.contains("detail-aktion")) {
+      b.setAttribute("aria-pressed", drauf);
+      b.textContent = drauf ? "Auf der Wochenliste ✓" : "Auf die Wochenliste";
+    } else if (a) b.outerHTML = merkKnopf(a, drauf);
   });
 }
 
@@ -927,11 +1036,14 @@ function zeichneEinstellungen() {
    Ereignisse
    ========================================================================= */
 document.addEventListener("click", async (ev) => {
+  if (ev.target.id === "detail") { history.back(); return; }  // Tipp neben die Karte
   const t = ev.target.closest("button, [data-region]");
   if (!t) return;
   const d = t.dataset;
 
-  if (d.ziel) geheZu({ ansicht: d.ziel, gruppe: d.ziel === "suche" ? sucheGruppe : null });
+  if (d.detail) oeffneDetail(d.detail);
+  else if (d.detailZu !== undefined) history.back();
+  else if (d.ziel) geheZu({ ansicht: d.ziel, gruppe: d.ziel === "suche" ? sucheGruppe : null });
   else if (d.gehe) geheZu({ ansicht: d.gehe, gruppe: null });
   else if (d.region) {
     zustand.region = d.region; speichern();
