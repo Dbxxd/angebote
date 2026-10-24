@@ -438,9 +438,16 @@ function suche(begriff, maerkte) {
   const katWort = (k) => k.split(/[\s,&/-]+/);
   const passend = [], weitere = [];
   for (const a of treffer) {
-    // Angebote ohne Kategorie (z.B. Aldi) zählen als passend, sonst fielen sie immer raus
+    // Passend, wenn die Kategorie den Begriff enthält, das Angebot keine Kategorie hat,
+    // oder ein Wort im Namen auf den Begriff endet ("Steinofenpizza", "Weidebutter",
+    // aber nicht "Butterkäse" oder "Kaffeegetränk")
     const kw = katWort(a.kat);
-    (!a.kat || woerter.some((w) => kw.includes(w)) ? passend : weitere).push(a);
+    // Bei "Butter-Mandel-Stollen" zählt nur der letzte Teil ("stollen")
+    const nameWoerter = norm(a.n).split(/[\s,&/()]+/).map((x) => x.split("-").pop());
+    const ok = !a.kat
+      || woerter.some((w) => kw.includes(w))
+      || woerter.some((w) => nameWoerter.some((nw) => nw.endsWith(w)));
+    (ok ? passend : weitere).push(a);
   }
   // Keine Kategorie-Treffer (z.B. Aldi ohne Kategorien): alles als passend zeigen
   if (!passend.length) return { passend: sortiere(weitere), weitere: [] };
@@ -539,7 +546,7 @@ function zeichneFuerDich() {
     const offen = ausgeklappt.has(v);
     const max = offen ? 0 : 3;
     return `<div class="vorliebe-kopf"><h2>${esc(v)}</h2>
-        ${passend.length ? `<button data-suche="${esc(v)}">${passend.length} Angebote</button>` : ""}</div>
+        ${passend.length ? `<button data-suche="${esc(v)}">${passend.length === 1 ? "1 Angebot" : passend.length + " Angebote"}</button>` : ""}</div>
       ${passend.length
         ? listeHTML(passend, max) + (passend.length > 3
           ? `<button class="mehr" data-klappen="${esc(v)}">${offen ? "Weniger zeigen" : `Alle ${passend.length} zeigen`}</button>` : "")
@@ -573,7 +580,7 @@ function zeichneSuche() {
     return;
   }
   ziel.innerHTML =
-    (passend.length ? `<p class="zwischentitel">${passend.length} Angebote, günstigster Grundpreis zuerst</p>${listeHTML(passend)}` : "") +
+    (passend.length ? `<p class="zwischentitel">${passend.length === 1 ? "1 Angebot" : passend.length + " Angebote, günstigster Grundpreis zuerst"}</p>${listeHTML(passend)}` : "") +
     (weitere.length ? `<p class="zwischentitel">Weitere Treffer mit „${esc(begriff)}“</p>${listeHTML(weitere)}` : "");
 }
 
@@ -582,7 +589,7 @@ function zeichneListe() {
   const el = $("#v-liste");
   const t = heute();
   if (!zustand.liste.length) {
-    el.innerHTML = `<div class="leer-box"><p>Deine Wochenliste ist leer. Tipp bei einem Angebot auf „Auf die Wochenliste“, dann landet es hier, sortiert nach Markt.</p>
+    el.innerHTML = `<div class="leer-box"><p>Deine Wochenliste ist leer. Tipp bei einem Angebot auf das +, dann landet es hier, sortiert nach Markt.</p>
       <button class="knopf" data-gehe="suche">Angebote suchen</button></div>`;
     return;
   }
