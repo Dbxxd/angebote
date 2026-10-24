@@ -140,7 +140,7 @@ main { max-width: 640px; margin: 0 auto; padding: 12px 16px 24px; }
 
 .angebot .links { display: flex; gap: 10px; align-items: flex-start; }
 .merken {
-  flex: none; width: 40px; height: 40px; margin-top: 2px;
+  flex: none; width: 40px; height: 40px; margin-top: 4px;
   border: 1.5px solid var(--linie); background: var(--karte); border-radius: 50%;
   display: grid; place-items: center; padding: 0; color: var(--tinte);
 }
@@ -165,6 +165,24 @@ main { max-width: 640px; margin: 0 auto; padding: 12px 16px 24px; }
   background: var(--tinte); color: var(--papier); padding: 11px 16px; font-weight: 700;
 }
 .knopf.leise { background: none; color: var(--tinte); border: 1px solid var(--linie); }
+
+/* ---------- Produktbild ---------- */
+.bild {
+  flex: none; width: 56px; height: 56px; border-radius: 8px; margin-top: 2px;
+  background: #fff; border: 1px solid var(--linie); overflow: hidden;
+  display: grid; place-items: center;
+}
+.bild img { width: 100%; height: 100%; object-fit: contain; display: block; }
+.bild.leer { background: var(--papier); }
+.bild-rahmen { position: relative; flex: none; padding: 0 8px 8px 0; }
+.bild-rahmen .merken {
+  position: absolute; right: 0; bottom: 0; margin: 0;
+  width: 32px; height: 32px; border-width: 1.5px; border-color: var(--tinte);
+  box-shadow: 0 1px 3px rgba(0,0,0,.25);
+}
+.bild-rahmen .merken svg { width: 16px; height: 16px; }
+/* größere unsichtbare Tippfläche */
+.bild-rahmen .merken::after { content: ""; position: absolute; inset: -8px; }
 
 /* ---------- Markt-Kennzeichnung: Farbstreifen + Marktname in Marktfarbe ---------- */
 .angebot, .posten { box-shadow: inset 5px 0 0 var(--mf, transparent); }
@@ -520,6 +538,18 @@ const MARKT_FARBE = {
 };
 function marktFarbe(h) { return MARKT_FARBE[h] || "#6B7280"; }
 
+/* Produktbild: wird direkt von der Quelle geladen (nicht kopiert) */
+function bildUrl(a) {
+  if (!a.b) return "";
+  if (a.b.startsWith("mg:")) return `https://cdn.marktguru.de/api/v1/offers/${encodeURIComponent(a.b.slice(3))}/images/default/0/medium.webp`;
+  return a.b.startsWith("https://") ? a.b : "";
+}
+function bildHTML(a) {
+  const url = bildUrl(a);
+  if (!url) return `<span class="bild leer" aria-hidden="true"></span>`;
+  return `<span class="bild" aria-hidden="true"><img src="${esc(url)}" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.parentNode.classList.add('leer');this.remove()"></span>`;
+}
+
 function angebotHTML(a) {
   const gemerkt = zustand.liste.some((x) => x.id === a.id);
   const spar = a.ap && a.p ? Math.round((1 - a.p / a.ap) * 100) : 0;
@@ -529,7 +559,7 @@ function angebotHTML(a) {
   const info = [esc(a.pk), zeit].filter(Boolean).join(", ");
   return `<li class="angebot" style="--mf:${marktFarbe(a.h)}">
     <div class="links">
-      ${merkKnopf(a, gemerkt)}
+      <span class="bild-rahmen">${bildHTML(a)}${merkKnopf(a, gemerkt)}</span>
       <div>
         <div class="markt">${esc(a.h)}</div>
         <div class="name">${a.m ? `<span class="marke">${esc(a.m)}</span> ` : ""}${esc(a.n)}</div>

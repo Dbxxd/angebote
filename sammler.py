@@ -155,8 +155,10 @@ def grundpreis_berechnen(preis: float, packung: str) -> tuple[float | None, str]
     return round(preis / menge, 2), einheit
 
 
-def angebot(markt, marke, name, preis, alt_preis, gp, ge, packung, von, bis, kategorie, quelle):
-    """Einheitliches, kompaktes Format (kurze Schlüssel halten die JSON-Datei klein)."""
+def angebot(markt, marke, name, preis, alt_preis, gp, ge, packung, von, bis, kategorie, quelle,
+            bild=""):
+    """Einheitliches, kompaktes Format (kurze Schlüssel halten die JSON-Datei klein).
+    bild: Bild-URL der Quelle, oder 'mg:<id>' für marktguru (die App baut die URL)."""
     preis, alt_preis, gp = zahl(preis), zahl(alt_preis), zahl(gp)
     if alt_preis is not None and preis is not None and alt_preis <= preis:
         alt_preis = None
@@ -182,6 +184,7 @@ def angebot(markt, marke, name, preis, alt_preis, gp, ge, packung, von, bis, kat
         "bis": bis or "",
         "k": (kategorie or "").strip(),
         "q": quelle,
+        **({"b": bild} if bild else {}),
     }
 
 
@@ -281,6 +284,7 @@ def mg_alle_angebote(plz: str) -> list[dict]:
             mg_packung(o),
             (v.get("from") or "")[:10], (v.get("to") or "")[:10],
             kat, "marktguru",
+            f"mg:{o['id']}" if o.get("id") and (o.get("images") or {}).get("count") else "",
         ))
     return ergebnis
 
@@ -332,6 +336,14 @@ def aldi_alle_angebote() -> list[dict]:
     if not produkte:
         raise RuntimeError("Aldi: keine Produktdaten gefunden (Seitenaufbau geändert?)")
 
+    def aldi_bild(p: dict) -> str:
+        assets = p.get("assets") or []
+        haupt = next((x for x in assets if x.get("type") == "primary"), assets[0] if assets else {})
+        url = haupt.get("url") or ""
+        if url.startswith("http") and "scene7" in url and "?" not in url:
+            url += "?wid=240&hei=240&fit=constrain"  # kleine Vorschau statt Originalgröße
+        return url if url.startswith("http") else ""
+
     ergebnis = []
     for p in produkte.values():
         cp = p.get("currentPrice") or {}
@@ -345,7 +357,7 @@ def aldi_alle_angebote() -> list[dict]:
             bp.get("basePriceValue"), bp.get("basePriceScale"),
             p.get("salesUnit"),
             aldi_datum(cp.get("validFrom")), aldi_datum(cp.get("validUntil")),
-            "", "aldi-nord.de",
+            "", "aldi-nord.de", aldi_bild(p),
         ))
     return ergebnis
 
@@ -433,6 +445,9 @@ def kaufda_einzelangebot(markt: str, o: dict, prospekt: dict) -> dict:
     gueltig = ((c.get("publicationProfiles") or [{}])[0].get("validity") or {})
     beschreibung = " ".join(x.get("paragraph", "") for x in (p.get("description") or [])).strip()
     kats = [k.get("name", "") for k in (p.get("categoryPaths") or [])]
+    # Produktbild bevorzugen (freigestellt), sonst Ausschnitt aus dem Prospekt
+    bilder = [i.get("url") for i in (p.get("images") or []) if isinstance(i, dict) and i.get("url")]
+    bild = bilder[0] if bilder else (c.get("image") if isinstance(c.get("image"), str) else "")
     return angebot(
         markt,
         p.get("brandName"), p.get("name"),
@@ -442,6 +457,7 @@ def kaufda_einzelangebot(markt: str, o: dict, prospekt: dict) -> dict:
         kaufda_datum(gueltig.get("startDate", "")) or prospekt["von"],
         kaufda_datum(gueltig.get("endDate", "")) or prospekt["bis"],
         kats[-1] if kats else "", "kaufDA",
+        bild if (bild or "").startswith("http") else "",
     )
 
 
