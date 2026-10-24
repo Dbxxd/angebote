@@ -1,5 +1,5 @@
 {
- "stand": "2026-10-24T17:28+02:00",
+ "stand": "2026-10-24T17:31+02:00",
  "regionen": [
   {
    "id": "steinfurt",
@@ -26,12 +26,14 @@
     "Kaufland",
     "Lidl",
     "Netto",
+    "Norma",
     "Penny",
     "Rewe",
     "Rossmann",
-    "budni"
+    "budni",
+    "famila"
    ],
-   "anzahl": 3241
+   "anzahl": 3567
   },
   {
    "id": "harburg",

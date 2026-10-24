@@ -1,0 +1,3312 @@
+{
+ "markt": "Norma",
+ "prospekt": {
+  "id": "ebfce8fe-37c2-404a-93b5-001d8cf0cbd8",
+  "titel": "Mehr fürs Geld",
+  "von": "2026-10-19",
+  "bis": "2026-10-24"
+ },
+ "modell": "claude-haiku-5-5",
+ "angebote": [
+  {
+   "marke": "Ronley",
+   "name": "Fleece-Blouson für Herren",
+   "packung": "",
+   "preis": 13.99,
+   "alt_preis": 17.99,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Fleecejacke"
+  },
+  {
+   "marke": "Ellenor",
+   "name": "Thermo-Steppjacke für Damen",
+   "packung": "",
+   "preis": 16.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Steppjacke"
+  },
+  {
+   "marke": "Ellenor",
+   "name": "Thermo-Leggings für Damen",
+   "packung": "",
+   "preis": 5.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Leggings"
+  },
+  {
+   "marke": "Trekk Star",
+   "name": "Thermo-Stiefel für Damen und Herren",
+   "packung": "",
+   "preis": 19.99,
+   "alt_preis": 29.99,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Winterstiefel"
+  },
+  {
+   "marke": "pierre cardin",
+   "name": "Sweatshirt",
+   "packung": "",
+   "preis": 14.99,
+   "alt_preis": 39.95,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Sweatshirt"
+  },
+  {
+   "marke": "Ronley",
+   "name": "Hybrid-Jacke für Herren",
+   "packung": "",
+   "preis": 19.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Jacke"
+  },
+  {
+   "marke": "Toptex",
+   "name": "Reflektierende Steppjacke für Damen und Herren",
+   "packung": "",
+   "preis": 29.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Steppjacke"
+  },
+  {
+   "marke": "Ellenor",
+   "name": "Kuschelfleece-Pullover für Damen",
+   "packung": "",
+   "preis": 14.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Pullover"
+  },
+  {
+   "marke": "Ronley",
+   "name": "Socken für Damen und Herren",
+   "packung": "7 Paar",
+   "preis": 7.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Socken"
+  },
+  {
+   "marke": "Ronley",
+   "name": "Vollfrottee-socken für Damen und Herren",
+   "packung": "6 Paar",
+   "preis": 9.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Socken"
+  },
+  {
+   "marke": "bruno banani",
+   "name": "Winter-Strickaccessoires für Damen und Herren",
+   "packung": "",
+   "preis": 9.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Mütze und Schal"
+  },
+  {
+   "marke": "",
+   "name": "Winter-Stiefelette für Damen und Herren",
+   "packung": "",
+   "preis": 19.99,
+   "alt_preis": 39.95,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Stiefelette"
+  },
+  {
+   "marke": "Ronley",
+   "name": "Winterhausschuhe für Damen und Herren",
+   "packung": "",
+   "preis": 9.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Hausschuhe"
+  },
+  {
+   "marke": "Winterworld",
+   "name": "Outdoor-Weihnachtsstern 3D-LED, 120 Lumen",
+   "packung": "ca. 57 cm",
+   "preis": 9.99,
+   "alt_preis": 19.99,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Weihnachtsdeko"
+  },
+  {
+   "marke": "flower",
+   "name": "LED-Glaskugel \"Frio\"",
+   "packung": "",
+   "preis": 9.99,
+   "alt_preis": 14.99,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Weihnachtsdeko"
+  },
+  {
+   "marke": "i-glow by flower",
+   "name": "LED-3D-Kerze \"Collar\"",
+   "packung": "3 Größen",
+   "preis": 2.99,
+   "alt_preis": 4.99,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Kerze"
+  },
+  {
+   "marke": "",
+   "name": "LED-Deko-Bäumchen",
+   "packung": "Höhe ca. 45 cm",
+   "preis": 9.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Weihnachtsdeko"
+  },
+  {
+   "marke": "",
+   "name": "LED-Teelichte 10er-Set",
+   "packung": "10er-Set",
+   "preis": 9.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Teelicht"
+  },
+  {
+   "marke": "",
+   "name": "LED-Lichterdraht",
+   "packung": "ca. 1,9 m",
+   "preis": 2.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Lichterkette"
+  },
+  {
+   "marke": "i-glow by flower",
+   "name": "LED-Outdoor-Laterne \"Argus\" / \"Clara\"",
+   "packung": "",
+   "preis": 14.99,
+   "alt_preis": 19.99,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Laterne"
+  },
+  {
+   "marke": "ISALUMA",
+   "name": "LED-Solar-Winterstecker",
+   "packung": "3er-Set",
+   "preis": 2.99,
+   "alt_preis": 4.79,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Weihnachtsdeko"
+  },
+  {
+   "marke": "i-glow",
+   "name": "LED-Solar-Gartenstecker \"Tannenbaum\"",
+   "packung": "",
+   "preis": 5.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Weihnachtsdeko"
+  },
+  {
+   "marke": "",
+   "name": "LED-Mini-Laterne",
+   "packung": "Höhe ca. 13 cm",
+   "preis": 2.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Laterne"
+  },
+  {
+   "marke": "",
+   "name": "LED-Kerze mit Schmelzeffekt",
+   "packung": "3 Größen",
+   "preis": 3.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Kerze"
+  },
+  {
+   "marke": "Koopmann International",
+   "name": "LED-Kristall-Kerzen",
+   "packung": "3er-Set",
+   "preis": 2.99,
+   "alt_preis": 4.99,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Kerze"
+  },
+  {
+   "marke": "",
+   "name": "Einzeln schaltbare Steckdosen",
+   "packung": "3-fach, 4-fach, 5-fach oder 6-fach",
+   "preis": 7.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Steckdose"
+  },
+  {
+   "marke": "",
+   "name": "Steckdose 3-fach mit USB-A und USB-C-Anschluss",
+   "packung": "",
+   "preis": 9.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Steckdose"
+  },
+  {
+   "marke": "",
+   "name": "Fluoreszierende Adapter (2x Euro- und 1x Schuko-Anschluss)",
+   "packung": "",
+   "preis": 1.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Adapter"
+  },
+  {
+   "marke": "",
+   "name": "Fluoreszierender Adapter (1x Schuko, 1x USB-A, 1x USB-C)",
+   "packung": "",
+   "preis": 6.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Adapter"
+  },
+  {
+   "marke": "",
+   "name": "Fluoreszierende Steckdosenleisten",
+   "packung": "4-fach, 5-fach oder 6-fach",
+   "preis": 4.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Steckdosenleiste"
+  },
+  {
+   "marke": "TOPTEX",
+   "name": "Kinder-Softshelljacke Handwerkerstyle",
+   "packung": "je Kinder-Jacke",
+   "preis": 12.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Arbeitskleidung"
+  },
+  {
+   "marke": "TOPTEX",
+   "name": "Herren-Arbeits-Softshelljacke Handwerkerstyle",
+   "packung": "je Herren-Jacke",
+   "preis": 19.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Arbeitskleidung"
+  },
+  {
+   "marke": "TOPTEX",
+   "name": "Arbeits-Fleecejacke für Herren",
+   "packung": "je Jacke",
+   "preis": 17.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Arbeitskleidung"
+  },
+  {
+   "marke": "TOPTEX",
+   "name": "Kinderhose Handwerkerstyle",
+   "packung": "je Kinder-Hose",
+   "preis": 12.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Arbeitshose"
+  },
+  {
+   "marke": "TOPTEX",
+   "name": "Herren-Arbeitshose Handwerkerstyle",
+   "packung": "je Herren-Hose",
+   "preis": 15.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Arbeitshose"
+  },
+  {
+   "marke": "",
+   "name": "Arbeits-Accessoires (Strickmütze, Gürtel, Hosenträger)",
+   "packung": "",
+   "preis": 7.99,
+   "alt_preis": 14.99,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Arbeitsaccessoires"
+  },
+  {
+   "marke": "TOPTEX",
+   "name": "Arbeits-Kurzschaftsocken",
+   "packung": "8 Paar",
+   "preis": 5.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Socken"
+  },
+  {
+   "marke": "POWER GARDEN",
+   "name": "Pflanzen-Kälteschutz Kokos-Luftpolsterfolie",
+   "packung": "ca. 5 x 1 m",
+   "preis": 3.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Kälteschutz"
+  },
+  {
+   "marke": "POWER GARDEN",
+   "name": "Kälte-Topfschutz",
+   "packung": "in 4 Größen",
+   "preis": 6.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Topfschutz"
+  },
+  {
+   "marke": "POWER GARDEN",
+   "name": "Profi-Spezialbesen aus hochwertigem Holz",
+   "packung": "in 4 Ausführungen",
+   "preis": 9.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Besen"
+  },
+  {
+   "marke": "POWER GARDEN",
+   "name": "Premium-Abdeckplane",
+   "packung": "in zwei Größen",
+   "preis": 9.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Abdeckplane"
+  },
+  {
+   "marke": "KRAFT",
+   "name": "XXL Naturseile",
+   "packung": "je Ausführung",
+   "preis": 9.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Seil"
+  },
+  {
+   "marke": "",
+   "name": "Schleifschwamm/-kissen",
+   "packung": "in verschiedenen Körnungen",
+   "preis": 4.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Schleifmittel"
+  },
+  {
+   "marke": "KRAFT",
+   "name": "Sägeblatt-Satz",
+   "packung": "je Ausführung",
+   "preis": 9.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Sägeblatt"
+  },
+  {
+   "marke": "KRAFT",
+   "name": "Bohrmaschinen-Zubehör zur Holzbearbeitung",
+   "packung": "",
+   "preis": 4.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Bohrerzubehör"
+  },
+  {
+   "marke": "i-glow by flower",
+   "name": "LED-Deko-Apfel/-Tropfen",
+   "packung": "mit 15 bzw. 20 LEDs",
+   "preis": 12.99,
+   "alt_preis": 19.99,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Deko-Leuchte"
+  },
+  {
+   "marke": "bella casa",
+   "name": "Leinenoptik-Tischwäsche, Deckchen rund 2er / Deckchen oval",
+   "packung": "Deckchen rund 2er ca. 30 cm / Deckchen oval ca. 35 x 50 cm",
+   "preis": 3.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Tischwäsche"
+  },
+  {
+   "marke": "bella casa",
+   "name": "Leinenoptik-Tischwäsche, Mitteldecke / Tischläufer",
+   "packung": "Mitteldecke ca. 75 x 75 cm / Tischläufer ca. 40 x 135 cm",
+   "preis": 4.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Tischwäsche"
+  },
+  {
+   "marke": "bella casa",
+   "name": "Filz-Untersetzer mit Ausbrenner-Motiv",
+   "packung": "ca. 45 x 35 cm bzw. ca. 38 cm je Ausführung",
+   "preis": 2.49,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Untersetzer"
+  },
+  {
+   "marke": "",
+   "name": "Filz-Dekoration (Wichtel auf Ski, Rehkitz, Wichtel Nordic, Filz-Deckchen)",
+   "packung": "ca. 18 cm bzw. 24 cm bzw. 13 cm bzw. 43 cm",
+   "preis": 2.49,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Dekoration"
+  },
+  {
+   "marke": "",
+   "name": "XXL-LED-Nussknacker mit Musikfunktion",
+   "packung": "ca. 57 cm",
+   "preis": 19.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Dekoration"
+  },
+  {
+   "marke": "EDILIGHT",
+   "name": "LED-3D-Tischleuchte mit Vasenfunktion",
+   "packung": "ca. 12 x 18 cm",
+   "preis": 9.99,
+   "alt_preis": 14.99,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Tischleuchte"
+  },
+  {
+   "marke": "EDILIGHT",
+   "name": "LED-Streifen-Set \"Slim\"",
+   "packung": "2 Streifen à ca. 2,5 m Länge",
+   "preis": 14.99,
+   "alt_preis": 19.99,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "LED-Lichterkette"
+  },
+  {
+   "marke": "bella casa",
+   "name": "Saug-/Fensterhaken für Weihnachtsdeko (Fensterhaken 4er-Set, Lichterkettensauger 16er-Set, Dachrinnenhaken 16er-Set, Saughaken 2er-Set)",
+   "packung": "je nach Artikel: 4er-, 16er- oder 2er-Set",
+   "preis": 1.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Haken"
+  },
+  {
+   "marke": "",
+   "name": "XXL-Geschenkpapier",
+   "packung": "ca. 0,7 x 27 m",
+   "preis": 4.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Geschenkpapier"
+  },
+  {
+   "marke": "",
+   "name": "Weihnachts-Geschenktaschen (Maxi, Flaschentaschen, Mini, Quer-Taschen)",
+   "packung": "3er-Set, 2er-Set, 4er-Set bzw. 3er-Set je nach Größe",
+   "preis": 1.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Geschenktasche"
+  },
+  {
+   "marke": "",
+   "name": "Weihnachtsverpackungen (Hologramm-Tragetaschen, Folien-Geschenkbeutel, Textil-Dekoband, Gutscheinverpackung)",
+   "packung": "je nach Artikel, z.B. 10, 15 oder 20 Stück bzw. 3 m",
+   "preis": 1.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Geschenkverpackung"
+  },
+  {
+   "marke": "bella casa",
+   "name": "Adventskerzen (Rubin und Champagner)",
+   "packung": "ca. 11 cm hoch, ca. 4 cm Ø bzw. ca. 28 cm hoch, 4er-Set",
+   "preis": 3.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Kerze"
+  },
+  {
+   "marke": "BIC",
+   "name": "Feuerzeug, Stabfeuerzeug",
+   "packung": "1 Stück, EZ Reach bzw. 2er-Set Stabfeuerzeug",
+   "preis": 2.79,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Feuerzeug"
+  },
+  {
+   "marke": "Langholz",
+   "name": "Zündhölzer Spezial/Maxi",
+   "packung": "je 2x45 Stück, ca. 20 cm lang oder je 4x55 Stück, ca. 10 cm lang",
+   "preis": 1.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Zündhölzer"
+  },
+  {
+   "marke": "",
+   "name": "Stumpenkerze Foggy",
+   "packung": "ca. 10 cm hoch, ca. 0,8 cm Brenndauer: ca. 31 h je Kerze",
+   "preis": 2.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Kerze"
+  },
+  {
+   "marke": "",
+   "name": "Stumpenkerze 3D",
+   "packung": "ca. 11 cm hoch, ca. 0,7 cm Ø, Brenndauer: ca. 30 h je Kerze",
+   "preis": 2.49,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Kerze"
+  },
+  {
+   "marke": "",
+   "name": "Duftkerze",
+   "packung": "ca. 7,9 cm hoch, ca. 6,5 cm Ø, Brenndauer: ca. 26 h je Kerze",
+   "preis": 2.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Kerze"
+  },
+  {
+   "marke": "nola",
+   "name": "Kamin- & Grill-Anzünder, Öko-Anzünderwolle",
+   "packung": "1 kg",
+   "preis": 5.99,
+   "alt_preis": 7.99,
+   "grundpreis": 5.99,
+   "gp_einheit": "kg",
+   "kategorie": "Anzünder"
+  },
+  {
+   "marke": "DAUNASOFT",
+   "name": "Motivservietten Winter",
+   "packung": "33x33 cm, 3-lagig, je 40 Stück",
+   "preis": 1.19,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Servietten"
+  },
+  {
+   "marke": "",
+   "name": "Tier-Holzpuzzle (Löwe, Tiger, Einhorn, Eule, Schildkröte)",
+   "packung": "ca. 30 x 22 cm",
+   "preis": 7.99,
+   "alt_preis": 9.99,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Puzzle"
+  },
+  {
+   "marke": "Trefl",
+   "name": "Premium-Puzzle",
+   "packung": "1000 Teile, ca. 63 x 48 cm",
+   "preis": 6.99,
+   "alt_preis": 13.99,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Puzzle"
+  },
+  {
+   "marke": "Schmidt",
+   "name": "Meine Lieblingsspiele",
+   "packung": "",
+   "preis": 11.99,
+   "alt_preis": 21.99,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Gesellschaftsspiel"
+  },
+  {
+   "marke": "",
+   "name": "3D-Puzzle (Katzen, Hunde, Bergschloss, Waldweg)",
+   "packung": "500 Teile, ca. 61 x 46 cm",
+   "preis": 6.99,
+   "alt_preis": 14.99,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Puzzle"
+  },
+  {
+   "marke": "Clementoni",
+   "name": "Experimentierkasten",
+   "packung": "",
+   "preis": 5.99,
+   "alt_preis": 10.99,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Experimentierkasten"
+  },
+  {
+   "marke": "",
+   "name": "Wasser-/Zaubermalspaß",
+   "packung": "ca. 18 x 18 cm, inkl. 6 Malvorlagen und 1 Pinselstift",
+   "preis": 2.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Malbuch"
+  },
+  {
+   "marke": "Moxy",
+   "name": "Diamond-/Rock-Painting",
+   "packung": "",
+   "preis": 5.99,
+   "alt_preis": 8.95,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Bastelset"
+  },
+  {
+   "marke": "Dickie",
+   "name": "Fahrzeuge mit Sound und Licht (Safety Unit, City Team, Fire Rescue)",
+   "packung": "ca. 12 cm bzw. ca. 14 cm bzw. ca. 17 cm",
+   "preis": 7.99,
+   "alt_preis": 9.99,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Spielzeugfahrzeug"
+  },
+  {
+   "marke": "tapiro",
+   "name": "LED-Badespielzeug 4er-Set",
+   "packung": "4er-Set",
+   "preis": 4.99,
+   "alt_preis": 9.99,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Badespielzeug"
+  },
+  {
+   "marke": "",
+   "name": "Alleskleber",
+   "packung": "27 g",
+   "preis": 1.99,
+   "alt_preis": 2.98,
+   "grundpreis": 73.7,
+   "gp_einheit": "kg",
+   "kategorie": "Klebstoff"
+  },
+  {
+   "marke": "",
+   "name": "Buch Mein schönes Land Edition – Plätzchen & süße Geschenke",
+   "packung": "",
+   "preis": 2.99,
+   "alt_preis": 4.95,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Buch"
+  },
+  {
+   "marke": "",
+   "name": "Weihnachtslieder",
+   "packung": "",
+   "preis": 3.99,
+   "alt_preis": 4.95,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Buch"
+  },
+  {
+   "marke": "",
+   "name": "Willkommen auf der Dino Ranch",
+   "packung": "",
+   "preis": 4.99,
+   "alt_preis": 11.99,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Buch"
+  },
+  {
+   "marke": "Trötsch",
+   "name": "Broschürenkalender 2027",
+   "packung": "",
+   "preis": 4.99,
+   "alt_preis": 5.95,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Kalender"
+  },
+  {
+   "marke": "",
+   "name": "Leggings „Space Dyed“ für Damen",
+   "packung": "je Leggings",
+   "preis": 5.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Leggings"
+  },
+  {
+   "marke": "",
+   "name": "Thermo-Strumpfhose 200 den",
+   "packung": "je Strumpfhose",
+   "preis": 8.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Strumpfhose"
+  },
+  {
+   "marke": "Toptex",
+   "name": "Funktionswäsche im Jacquard-Design",
+   "packung": "je Unterhemd/-hose",
+   "preis": 8.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Funktionswäsche"
+  },
+  {
+   "marke": "",
+   "name": "Taillenslips 4er-Pack für Damen",
+   "packung": "4er-Pack",
+   "preis": 9.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Slips"
+  },
+  {
+   "marke": "Toptex",
+   "name": "Soft-Socken für Damen und Herren",
+   "packung": "2 Paar",
+   "preis": 4.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Socken"
+  },
+  {
+   "marke": "Sensomed",
+   "name": "Physio-Tape",
+   "packung": "ca. 7,5 m",
+   "preis": 3.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Tape"
+  },
+  {
+   "marke": "Sensomed",
+   "name": "Naturmoor-Wärmekissen",
+   "packung": "",
+   "preis": 9.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Wärmekissen"
+  },
+  {
+   "marke": "kinder",
+   "name": "Adventskalender kinder Überraschung, kinder Schokolade, kinder Country, kinder Schoko-Bons, kinder Schokolade Hohlfigur",
+   "packung": "351 g",
+   "preis": 13.99,
+   "alt_preis": 15.99,
+   "grundpreis": 39.86,
+   "gp_einheit": "kg",
+   "kategorie": "Adventskalender"
+  },
+  {
+   "marke": "Cornwall",
+   "name": "Edler Tee-Adventskalender",
+   "packung": "51 g",
+   "preis": 3.99,
+   "alt_preis": null,
+   "grundpreis": 78.24,
+   "gp_einheit": "kg",
+   "kategorie": "Adventskalender"
+  },
+  {
+   "marke": "Trumpf",
+   "name": "Edle Tropfen Adventskalender",
+   "packung": "300 g",
+   "preis": 5.99,
+   "alt_preis": 7.99,
+   "grundpreis": 19.97,
+   "gp_einheit": "kg",
+   "kategorie": "Adventskalender"
+  },
+  {
+   "marke": "kinder",
+   "name": "3D-Adventskalender",
+   "packung": "226 g",
+   "preis": 10.99,
+   "alt_preis": 11.49,
+   "grundpreis": 48.63,
+   "gp_einheit": "kg",
+   "kategorie": "Adventskalender"
+  },
+  {
+   "marke": "",
+   "name": "Adventskalender K-Pop, Paw Patrol, Pokémon oder Disney",
+   "packung": "75 g",
+   "preis": 1.99,
+   "alt_preis": 2.49,
+   "grundpreis": 26.53,
+   "gp_einheit": "kg",
+   "kategorie": "Adventskalender"
+  },
+  {
+   "marke": "Lindt",
+   "name": "Mini Pralinés Adventskalender",
+   "packung": "125 g",
+   "preis": 10.99,
+   "alt_preis": 12.99,
+   "grundpreis": 87.92,
+   "gp_einheit": "kg",
+   "kategorie": "Adventskalender"
+  },
+  {
+   "marke": "",
+   "name": "Saatgut-Adventskalender Mini-Gewächshaus-Set",
+   "packung": "je Stück",
+   "preis": 15.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Adventskalender"
+  },
+  {
+   "marke": "Gräfs",
+   "name": "Adventskalender Party-Minis (24 Liqueure)",
+   "packung": "24 x 0,02 l",
+   "preis": 11.99,
+   "alt_preis": 13.99,
+   "grundpreis": 24.98,
+   "gp_einheit": "l",
+   "kategorie": "Adventskalender"
+  },
+  {
+   "marke": "Ardilla",
+   "name": "Nuss Adventskalender",
+   "packung": "600 g",
+   "preis": 15.99,
+   "alt_preis": null,
+   "grundpreis": 26.65,
+   "gp_einheit": "kg",
+   "kategorie": "Adventskalender"
+  },
+  {
+   "marke": "kinder",
+   "name": "Mixbeutel Weihnachts-Mix",
+   "packung": "153 g",
+   "preis": 3.59,
+   "alt_preis": 4.69,
+   "grundpreis": 23.46,
+   "gp_einheit": "kg",
+   "kategorie": "Schokolade"
+  },
+  {
+   "marke": "",
+   "name": "Gouda XXL Jung & mild",
+   "packung": "600 g",
+   "preis": 2.99,
+   "alt_preis": null,
+   "grundpreis": 4.98,
+   "gp_einheit": "kg",
+   "kategorie": "Käse"
+  },
+  {
+   "marke": "Time to Taste",
+   "name": "Mozzarella Sticks XXL",
+   "packung": "600 g",
+   "preis": 3.99,
+   "alt_preis": null,
+   "grundpreis": 6.65,
+   "gp_einheit": "kg",
+   "kategorie": "Snack"
+  },
+  {
+   "marke": "Vobro",
+   "name": "Pralinen Großpackung",
+   "packung": "750 g",
+   "preis": 6.99,
+   "alt_preis": null,
+   "grundpreis": 9.32,
+   "gp_einheit": "kg",
+   "kategorie": "Süßwaren"
+  },
+  {
+   "marke": "Ponnath",
+   "name": "Aufschnitt Platte",
+   "packung": "250 g",
+   "preis": 2.59,
+   "alt_preis": null,
+   "grundpreis": 10.36,
+   "gp_einheit": "kg",
+   "kategorie": "Aufschnitt"
+  },
+  {
+   "marke": "Gut Langenhof",
+   "name": "Nacho Chicken Nuggets",
+   "packung": "700 g",
+   "preis": 5.99,
+   "alt_preis": null,
+   "grundpreis": 8.56,
+   "gp_einheit": "kg",
+   "kategorie": "Snack"
+  },
+  {
+   "marke": "Coca-Cola",
+   "name": "Coca-Cola",
+   "packung": "12er Pack",
+   "preis": 9.99,
+   "alt_preis": null,
+   "grundpreis": 1.67,
+   "gp_einheit": "l",
+   "kategorie": "Erfrischungsgetränk"
+  },
+  {
+   "marke": "Blasius",
+   "name": "Kräuter-Bitter",
+   "packung": "1 Liter",
+   "preis": 10.99,
+   "alt_preis": null,
+   "grundpreis": 10.99,
+   "gp_einheit": "l",
+   "kategorie": "Bitter"
+  },
+  {
+   "marke": "",
+   "name": "Holländische Gebäckmischung mit Dekor",
+   "packung": "300 g",
+   "preis": 2.99,
+   "alt_preis": 3.49,
+   "grundpreis": 9.97,
+   "gp_einheit": "kg",
+   "kategorie": "Gebäck"
+  },
+  {
+   "marke": "Gut Langenhof",
+   "name": "Chicken Nuggets in der Box XXL",
+   "packung": "750 g",
+   "preis": 5.99,
+   "alt_preis": null,
+   "grundpreis": 7.99,
+   "gp_einheit": "kg",
+   "kategorie": "Snack"
+  },
+  {
+   "marke": "Elcurina",
+   "name": "Pferdebalsam Rotes Weinlaub oder Teufelskralle",
+   "packung": "2x500 ml",
+   "preis": 3.99,
+   "alt_preis": null,
+   "grundpreis": 3.99,
+   "gp_einheit": "l",
+   "kategorie": "Balsam"
+  },
+  {
+   "marke": "Energizer",
+   "name": "Long Lasting Batterien AA/AAA",
+   "packung": "8+4 gratis",
+   "preis": 3.99,
+   "alt_preis": 11.89,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Batterien"
+  },
+  {
+   "marke": "friends",
+   "name": "Mehlwürmer getrocknet",
+   "packung": "500 g",
+   "preis": 8.99,
+   "alt_preis": null,
+   "grundpreis": 17.98,
+   "gp_einheit": "kg",
+   "kategorie": "Tierfutter"
+  },
+  {
+   "marke": "Sauberman",
+   "name": "Quick Dry Trockentuch",
+   "packung": "2er Pack",
+   "preis": 4.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Trockentuch"
+  },
+  {
+   "marke": "",
+   "name": "Gulasch gemischt vom Schwein und Rind zum Braten",
+   "packung": "800 g",
+   "preis": 7.99,
+   "alt_preis": 9.99,
+   "grundpreis": 9.99,
+   "gp_einheit": "kg",
+   "kategorie": "Fleisch"
+  },
+  {
+   "marke": "Kinder",
+   "name": "Cards",
+   "packung": "10 Stück",
+   "preis": 3.99,
+   "alt_preis": 2.99,
+   "grundpreis": 15.59,
+   "gp_einheit": "kg",
+   "kategorie": "Süßware"
+  },
+  {
+   "marke": "Milka",
+   "name": "Schokodrink mit Schokolade, Haselnuss- oder Karamell-Geschmack",
+   "packung": "220 ml",
+   "preis": 0.99,
+   "alt_preis": 1.29,
+   "grundpreis": 4.5,
+   "gp_einheit": "l",
+   "kategorie": "Schokodrink"
+  },
+  {
+   "marke": "Monte",
+   "name": "Top Cup/Dessert Butterkeks & Crunchy/Dessert",
+   "packung": "je 70 g, 125 g bzw. 150 g",
+   "preis": 0.79,
+   "alt_preis": 0.99,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Dessert"
+  },
+  {
+   "marke": "Milky Way / Mars",
+   "name": "Croissants",
+   "packung": "192 g",
+   "preis": 1.99,
+   "alt_preis": 2.99,
+   "grundpreis": 10.36,
+   "gp_einheit": "kg",
+   "kategorie": "Gebäck"
+  },
+  {
+   "marke": "Vita",
+   "name": "Bärentatzen/Wikinger Waffeln",
+   "packung": "4er Pack bzw. 6er Pack",
+   "preis": 1.39,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Waffeln"
+  },
+  {
+   "marke": "Milka",
+   "name": "Tender/Nussini-/Strawberry-Riegel",
+   "packung": "5 Stück bzw. je 157,5 g, 182,5 g, 185 g",
+   "preis": 1.99,
+   "alt_preis": 3.19,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Riegel"
+  },
+  {
+   "marke": "Ehrmann",
+   "name": "Grand Dessert",
+   "packung": "190 g",
+   "preis": 0.49,
+   "alt_preis": 0.99,
+   "grundpreis": 2.58,
+   "gp_einheit": "kg",
+   "kategorie": "Dessert"
+  },
+  {
+   "marke": "Capri-Sun",
+   "name": "Energy Drink \"Game on\" (Red Berry oder Mango Peach)",
+   "packung": "0,31 l",
+   "preis": 0.99,
+   "alt_preis": 1.29,
+   "grundpreis": 3.0,
+   "gp_einheit": "l",
+   "kategorie": "Energy Drink"
+  },
+  {
+   "marke": "Henglein",
+   "name": "Zimtschnecken-Kit",
+   "packung": "620 g",
+   "preis": 2.99,
+   "alt_preis": null,
+   "grundpreis": 4.82,
+   "gp_einheit": "kg",
+   "kategorie": "Backmischung"
+  },
+  {
+   "marke": "",
+   "name": "Schoko-Lebkuchen Figuren (Vollmilch oder Zartbitter)",
+   "packung": "200 g",
+   "preis": 1.99,
+   "alt_preis": 3.99,
+   "grundpreis": 9.95,
+   "gp_einheit": "kg",
+   "kategorie": "Lebkuchen"
+  },
+  {
+   "marke": "Gutfried",
+   "name": "Nuggets/Mini Schnitzel",
+   "packung": "300 g",
+   "preis": 3.49,
+   "alt_preis": 3.99,
+   "grundpreis": 11.63,
+   "gp_einheit": "kg",
+   "kategorie": "Geflügel"
+  },
+  {
+   "marke": "Lachgummi",
+   "name": "Lachgummi (Cola Flaschen, Rote Früchte und Heroes, Joghurt u.a.)",
+   "packung": "200 g bzw. 225 g bzw. 250 g",
+   "preis": 0.99,
+   "alt_preis": 1.29,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Fruchtgummi"
+  },
+  {
+   "marke": "Volvic",
+   "name": "Touch: Zero Mango Passionsfrucht, Tee Minze oder Pfirsich",
+   "packung": "1,5 l",
+   "preis": 0.99,
+   "alt_preis": 1.29,
+   "grundpreis": 0.86,
+   "gp_einheit": "l",
+   "kategorie": "Erfrischungsgetränk"
+  },
+  {
+   "marke": "Mars / Snickers / Twix",
+   "name": "Schokoriegel",
+   "packung": "10 Stück (Mars 450 g) bzw. 500 g",
+   "preis": 3.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Schokoriegel"
+  },
+  {
+   "marke": "Milram",
+   "name": "Milchreis/Grießpudding",
+   "packung": "1 kg",
+   "preis": 1.99,
+   "alt_preis": 2.19,
+   "grundpreis": 1.99,
+   "gp_einheit": "kg",
+   "kategorie": "Dessert"
+  },
+  {
+   "marke": "Trimm",
+   "name": "Banane-Kirsch-Getränk",
+   "packung": "1 l",
+   "preis": 1.19,
+   "alt_preis": null,
+   "grundpreis": 1.19,
+   "gp_einheit": "l",
+   "kategorie": "Fruchtsaftgetränk"
+  },
+  {
+   "marke": "Knorr",
+   "name": "Suppenliebe Hühnersuppe mit vielen Nudeln",
+   "packung": "Inhalt ergibt 750 ml",
+   "preis": 0.69,
+   "alt_preis": 0.99,
+   "grundpreis": 0.92,
+   "gp_einheit": "l",
+   "kategorie": "Suppe"
+  },
+  {
+   "marke": "",
+   "name": "Mini Kokosgebäck (natur oder dekoriert)",
+   "packung": "250 g",
+   "preis": 1.79,
+   "alt_preis": null,
+   "grundpreis": 7.16,
+   "gp_einheit": "kg",
+   "kategorie": "Gebäck"
+  },
+  {
+   "marke": "Lachgummi",
+   "name": "Softies mit Fruchtsaft",
+   "packung": "225 g",
+   "preis": 0.99,
+   "alt_preis": 1.29,
+   "grundpreis": 4.4,
+   "gp_einheit": "kg",
+   "kategorie": "Fruchtgummi"
+  },
+  {
+   "marke": "Feigling",
+   "name": "33 Jahre Jubel-Mix",
+   "packung": "14er PACK",
+   "preis": 5.88,
+   "alt_preis": 6.99,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Süßwaren"
+  },
+  {
+   "marke": "",
+   "name": "XXL Fruchtige Kaubonbons",
+   "packung": "1 kg",
+   "preis": 2.99,
+   "alt_preis": 3.66,
+   "grundpreis": 2.99,
+   "gp_einheit": "kg",
+   "kategorie": "Süßwaren"
+  },
+  {
+   "marke": "",
+   "name": "Süßwaren Sortiment zum Teilen",
+   "packung": "400 g",
+   "preis": 2.99,
+   "alt_preis": 3.99,
+   "grundpreis": 7.48,
+   "gp_einheit": "kg",
+   "kategorie": "Süßwaren"
+  },
+  {
+   "marke": "Ritter Sport",
+   "name": "Mini Turm",
+   "packung": "116 g",
+   "preis": 2.79,
+   "alt_preis": 3.59,
+   "grundpreis": 24.05,
+   "gp_einheit": "kg",
+   "kategorie": "Schokolade"
+  },
+  {
+   "marke": "Giotto",
+   "name": "Minis",
+   "packung": "4x5 Stück, je 86 g",
+   "preis": 2.39,
+   "alt_preis": 2.89,
+   "grundpreis": 27.79,
+   "gp_einheit": "kg",
+   "kategorie": "Süßwaren"
+  },
+  {
+   "marke": "Cool",
+   "name": "Rocks Lollies/Bonbons",
+   "packung": "240 g",
+   "preis": 2.59,
+   "alt_preis": 3.29,
+   "grundpreis": 10.79,
+   "gp_einheit": "kg",
+   "kategorie": "Süßwaren"
+  },
+  {
+   "marke": "my smile",
+   "name": "Lolly Mix",
+   "packung": "500 g",
+   "preis": 2.99,
+   "alt_preis": null,
+   "grundpreis": 5.98,
+   "gp_einheit": "kg",
+   "kategorie": "Süßwaren"
+  },
+  {
+   "marke": "nimm2",
+   "name": "Soft Splash Kaubonbon Knallrot",
+   "packung": "240 g",
+   "preis": 1.69,
+   "alt_preis": 1.99,
+   "grundpreis": 7.04,
+   "gp_einheit": "kg",
+   "kategorie": "Süßwaren"
+  },
+  {
+   "marke": "lachgummi",
+   "name": "Minis Fruchtgummi",
+   "packung": "258 g",
+   "preis": 1.79,
+   "alt_preis": 2.49,
+   "grundpreis": 6.94,
+   "gp_einheit": "kg",
+   "kategorie": "Fruchtgummi"
+  },
+  {
+   "marke": "Yippy",
+   "name": "Partyspaß",
+   "packung": "0,75 l",
+   "preis": 1.99,
+   "alt_preis": 3.29,
+   "grundpreis": 2.65,
+   "gp_einheit": "l",
+   "kategorie": "Getränk"
+  },
+  {
+   "marke": "Roy",
+   "name": "Filetsnacks Enten- oder Hähnchenbrustfilets",
+   "packung": "200 g",
+   "preis": 1.99,
+   "alt_preis": 2.65,
+   "grundpreis": 9.95,
+   "gp_einheit": "kg",
+   "kategorie": "Tiernahrung"
+  },
+  {
+   "marke": "frisan",
+   "name": "Pflanzencreme zum Braten",
+   "packung": "750 ml",
+   "preis": 1.79,
+   "alt_preis": 2.29,
+   "grundpreis": 2.39,
+   "gp_einheit": "l",
+   "kategorie": "Pflanzencreme"
+  },
+  {
+   "marke": "Almette",
+   "name": "Frischkäse Natur, Kräuter, Kräuter leicht, Meerrettich, Tomate Pesto oder Balance Natur",
+   "packung": "150 g",
+   "preis": 1.11,
+   "alt_preis": 1.99,
+   "grundpreis": 7.4,
+   "gp_einheit": "kg",
+   "kategorie": "Frischkäse"
+  },
+  {
+   "marke": "Knorr",
+   "name": "Fix Produkt verschiedene Sorten, z.B. Spaghetti Bolognese, Broccoli Gratin",
+   "packung": "je 40 g bzw. 70 g",
+   "preis": 0.49,
+   "alt_preis": 1.19,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Fertiggericht"
+  },
+  {
+   "marke": "Potato Master",
+   "name": "Bratkartoffeln mit Speck und Zwiebeln, mit Schinken und Zwiebeln oder mit Zwiebeln",
+   "packung": "400 g",
+   "preis": 0.99,
+   "alt_preis": 1.49,
+   "grundpreis": 2.48,
+   "gp_einheit": "kg",
+   "kategorie": "Kartoffeln"
+  },
+  {
+   "marke": "",
+   "name": "CO2 Kohlensäurezylinder gegen Tausch mit leerem Zylinder",
+   "packung": "je 425 g",
+   "preis": 4.44,
+   "alt_preis": 5.55,
+   "grundpreis": 10.45,
+   "gp_einheit": "kg",
+   "kategorie": "Kohlensäurezylinder"
+  },
+  {
+   "marke": "Lätta",
+   "name": "Halbfett Margarine natürlich frischer",
+   "packung": "450 g",
+   "preis": 1.29,
+   "alt_preis": 2.29,
+   "grundpreis": 2.87,
+   "gp_einheit": "kg",
+   "kategorie": "Margarine"
+  },
+  {
+   "marke": "Somersby",
+   "name": "Cider Blackberry",
+   "packung": "0,33 l",
+   "preis": 0.99,
+   "alt_preis": 1.49,
+   "grundpreis": 3.0,
+   "gp_einheit": "l",
+   "kategorie": "Cider"
+  },
+  {
+   "marke": "AXE",
+   "name": "Duschgel 3in1 Black, Alaska, Dark Temptation, Epic Fresh",
+   "packung": "400 ml",
+   "preis": 2.99,
+   "alt_preis": 3.75,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Duschgel"
+  },
+  {
+   "marke": "AXE",
+   "name": "Deodorant Bodyspray Black, Alaska, Dark Temptation oder Sunset Fresh",
+   "packung": "150 ml",
+   "preis": 2.99,
+   "alt_preis": 3.75,
+   "grundpreis": 19.93,
+   "gp_einheit": "l",
+   "kategorie": "Deodorant"
+  },
+  {
+   "marke": "Pantene Pro-V",
+   "name": "Spülung/Shampoo z.B. Repair & Care",
+   "packung": "je 200 ml bzw. 300 ml",
+   "preis": 2.99,
+   "alt_preis": 3.95,
+   "grundpreis": 14.95,
+   "gp_einheit": "l",
+   "kategorie": "Haarpflege"
+  },
+  {
+   "marke": "",
+   "name": "Anthurie",
+   "packung": "Höhe ca. 40–45 cm inkl. 12-cm-Kulturtopf",
+   "preis": 4.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Zimmerpflanze"
+  },
+  {
+   "marke": "",
+   "name": "Chrysantheme \"Sixtie\" Pink Flair",
+   "packung": "Höhe ca. 25–30 cm inkl. 14-cm-Kulturtopf",
+   "preis": 2.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Pflanze"
+  },
+  {
+   "marke": "",
+   "name": "Pernettya mit Beeren",
+   "packung": "Höhe ca. 22–25 cm inkl. 11-cm-Kulturtopf",
+   "preis": 3.29,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Pflanze"
+  },
+  {
+   "marke": "",
+   "name": "Indoor Oase XXL",
+   "packung": "Höhe je nach Sorte ca. 40–65 cm",
+   "preis": 5.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Zimmerpflanze"
+  },
+  {
+   "marke": "",
+   "name": "Topfrosen Spezial Duo-Color",
+   "packung": "Höhe ca. 28–32 cm inkl. 10,5-cm-Kulturtopf",
+   "preis": 1.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Pflanze"
+  },
+  {
+   "marke": "",
+   "name": "Alpenveilchen Duo \"Maxi Sorten\"",
+   "packung": "Höhe ca. 25–30 cm inkl. 13-cm-Kulturtopf",
+   "preis": 2.79,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Pflanze"
+  },
+  {
+   "marke": "",
+   "name": "Amaryllis",
+   "packung": "in 12-cm-Kulturtopf",
+   "preis": 2.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Pflanze"
+  },
+  {
+   "marke": "",
+   "name": "Speisekartoffeln",
+   "packung": "7,5 kg",
+   "preis": 4.44,
+   "alt_preis": null,
+   "grundpreis": 0.59,
+   "gp_einheit": "kg",
+   "kategorie": "Kartoffeln"
+  },
+  {
+   "marke": "",
+   "name": "Saftorangen",
+   "packung": "3 kg",
+   "preis": 3.99,
+   "alt_preis": null,
+   "grundpreis": 1.33,
+   "gp_einheit": "kg",
+   "kategorie": "Obst"
+  },
+  {
+   "marke": "",
+   "name": "Paprika Sweet Mix",
+   "packung": "1 kg",
+   "preis": 3.33,
+   "alt_preis": null,
+   "grundpreis": 3.33,
+   "gp_einheit": "kg",
+   "kategorie": "Gemüse"
+  },
+  {
+   "marke": "",
+   "name": "Gebürstetes Acrylgarn \"Brenda\"",
+   "packung": "500 g",
+   "preis": 8.99,
+   "alt_preis": 9.99,
+   "grundpreis": 17.98,
+   "gp_einheit": "kg",
+   "kategorie": "Garn"
+  },
+  {
+   "marke": "",
+   "name": "Kuschelige 6-fach Sockenwolle \"Lime\"",
+   "packung": "150 g",
+   "preis": 4.99,
+   "alt_preis": null,
+   "grundpreis": 33.27,
+   "gp_einheit": "kg",
+   "kategorie": "Garn"
+  },
+  {
+   "marke": "",
+   "name": "Glitzergarn \"Starlight\"",
+   "packung": "150 g",
+   "preis": 3.99,
+   "alt_preis": null,
+   "grundpreis": 26.6,
+   "gp_einheit": "kg",
+   "kategorie": "Garn"
+  },
+  {
+   "marke": "",
+   "name": "Filzwolle",
+   "packung": "150 g",
+   "preis": 4.99,
+   "alt_preis": null,
+   "grundpreis": 33.27,
+   "gp_einheit": "kg",
+   "kategorie": "Wolle"
+  },
+  {
+   "marke": "",
+   "name": "Mouline-Effektgarn \"Confetti\"",
+   "packung": "200 g",
+   "preis": 4.99,
+   "alt_preis": null,
+   "grundpreis": 24.95,
+   "gp_einheit": "kg",
+   "kategorie": "Garn"
+  },
+  {
+   "marke": "",
+   "name": "Sockenwolle \"Ombre\"",
+   "packung": "100 g",
+   "preis": 2.99,
+   "alt_preis": null,
+   "grundpreis": 29.9,
+   "gp_einheit": "kg",
+   "kategorie": "Garn"
+  },
+  {
+   "marke": "",
+   "name": "Chenillegarn \"Cosy\"",
+   "packung": "200 g",
+   "preis": 4.99,
+   "alt_preis": null,
+   "grundpreis": 24.95,
+   "gp_einheit": "kg",
+   "kategorie": "Garn"
+  },
+  {
+   "marke": "",
+   "name": "Glitzer-Sockenwolle \"Galaxy\" 2er-Pack",
+   "packung": "2 x 100 g",
+   "preis": 4.99,
+   "alt_preis": null,
+   "grundpreis": 24.95,
+   "gp_einheit": "kg",
+   "kategorie": "Garn"
+  },
+  {
+   "marke": "",
+   "name": "Kurzwaren (jeder Artikel)",
+   "packung": "",
+   "preis": 1.29,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Kurzwaren"
+  },
+  {
+   "marke": "EDILIGHT",
+   "name": "LED-Lupenleuchte",
+   "packung": "",
+   "preis": 29.99,
+   "alt_preis": 39.99,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Lupenleuchte"
+  },
+  {
+   "marke": "Knoppers",
+   "name": "Knoppers Minis",
+   "packung": "200 g",
+   "preis": 1.99,
+   "alt_preis": 2.78,
+   "grundpreis": 9.95,
+   "gp_einheit": "kg",
+   "kategorie": "Milchschnitte"
+  },
+  {
+   "marke": "Chivers",
+   "name": "Original englische Marmelade",
+   "packung": "320 g",
+   "preis": 2.59,
+   "alt_preis": 3.49,
+   "grundpreis": 8.09,
+   "gp_einheit": "kg",
+   "kategorie": "Marmelade"
+  },
+  {
+   "marke": "Durstlöscher",
+   "name": "Fruchtsaftgetränk Multivitamin 12-Frucht oder Tropical-Geschmack",
+   "packung": "10 x 0,2 l",
+   "preis": 2.99,
+   "alt_preis": 3.99,
+   "grundpreis": 1.5,
+   "gp_einheit": "l",
+   "kategorie": "Fruchtsaftgetränk"
+  },
+  {
+   "marke": "Underberg",
+   "name": "Kräuterbitter",
+   "packung": "12 x 0,02 l",
+   "preis": 7.99,
+   "alt_preis": 9.99,
+   "grundpreis": 33.29,
+   "gp_einheit": "l",
+   "kategorie": "Kräuterbitter"
+  },
+  {
+   "marke": "Cinzano",
+   "name": "Vermouth Bianco",
+   "packung": "750 ml",
+   "preis": 6.99,
+   "alt_preis": 7.99,
+   "grundpreis": 9.32,
+   "gp_einheit": "l",
+   "kategorie": "Wermut"
+  },
+  {
+   "marke": "TUC",
+   "name": "Bake Rolls Meersalz, Tomate & Olive oder Knoblauch",
+   "packung": "150 g",
+   "preis": 1.49,
+   "alt_preis": 1.99,
+   "grundpreis": 9.93,
+   "gp_einheit": "kg",
+   "kategorie": "Salzgebäck"
+  },
+  {
+   "marke": "NIVEA",
+   "name": "Body Creme Reichhaltige Body Creme, Creamy Kakao Dream oder Fresh Aloe Bliss",
+   "packung": "400 ml",
+   "preis": 4.79,
+   "alt_preis": 5.45,
+   "grundpreis": 11.98,
+   "gp_einheit": "l",
+   "kategorie": "Bodylotion"
+  },
+  {
+   "marke": "Glanz Meister",
+   "name": "Geschirrspültabs ALL-IN-1 mit Extra-Trocken-Effekt",
+   "packung": "90 Pack",
+   "preis": 7.99,
+   "alt_preis": 9.99,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Geschirrspültabs"
+  },
+  {
+   "marke": "bella casa",
+   "name": "XXXL-Flanell-Kuschel-/Tagesdecke \"Family\"",
+   "packung": "ca. 3 x 3 m",
+   "preis": 19.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Decke"
+  },
+  {
+   "marke": "multimat",
+   "name": "XL-Teppich \"Vital Arosa\"",
+   "packung": "ca. 160 x 240 cm",
+   "preis": 39.99,
+   "alt_preis": 79.95,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Teppich"
+  },
+  {
+   "marke": "Lifetex",
+   "name": "Teppich \"Billy\"",
+   "packung": "ca. 100 x 150 cm",
+   "preis": 14.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Teppich"
+  },
+  {
+   "marke": "Lifetex",
+   "name": "XXXL-Teppichläufer \"Aspen\"",
+   "packung": "ca. 67 x 400 cm",
+   "preis": 24.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Teppichläufer"
+  },
+  {
+   "marke": "bella casa",
+   "name": "Dekokissen \"Peppo\" (ca. 30x50 cm / 45x45 cm)",
+   "packung": "30x50cm / 45x45cm",
+   "preis": 5.99,
+   "alt_preis": 7.99,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Dekokissen"
+  },
+  {
+   "marke": "bella casa",
+   "name": "Dekokissen \"Peppo\" (ca. 60x60 cm / 50x70 cm)",
+   "packung": "60x60cm / 50x70cm",
+   "preis": 7.99,
+   "alt_preis": 9.99,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Dekokissen"
+  },
+  {
+   "marke": "KRAFT",
+   "name": "Klapptritt 2-stufig",
+   "packung": "2-stufig",
+   "preis": 14.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Klapptritt"
+  },
+  {
+   "marke": "",
+   "name": "Nacken-/Rückenheizkissen HP-74E",
+   "packung": "",
+   "preis": 19.99,
+   "alt_preis": 24.95,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Heizkissen"
+  },
+  {
+   "marke": "ecomed",
+   "name": "Elektro-Wärmeunterbett HU-70E",
+   "packung": "ca. 150 x 80 cm",
+   "preis": 19.99,
+   "alt_preis": 29.95,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Wärmeunterbett"
+  },
+  {
+   "marke": "ecomed",
+   "name": "Elektro-Heizkissen HP-70E",
+   "packung": "ca. 30 x 40 cm",
+   "preis": 14.99,
+   "alt_preis": 19.95,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Heizkissen"
+  },
+  {
+   "marke": "HEITECH",
+   "name": "LED-Lichtleiste",
+   "packung": "ca. 21 x 4 x 3 cm",
+   "preis": 9.99,
+   "alt_preis": 14.99,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Lichtleiste"
+  },
+  {
+   "marke": "Moller Licht",
+   "name": "LED-Leuchtmittel EEK A, 3er-Pack",
+   "packung": "3er-Pack",
+   "preis": 7.99,
+   "alt_preis": 12.99,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Leuchtmittel"
+  },
+  {
+   "marke": "Delmarin",
+   "name": "Matjeshappen / Bratheringshappen",
+   "packung": "500 g",
+   "preis": 3.49,
+   "alt_preis": 3.99,
+   "grundpreis": 6.98,
+   "gp_einheit": "kg",
+   "kategorie": "Fisch"
+  },
+  {
+   "marke": "Schlösser",
+   "name": "Schinkenspeck, einzeln ausgepreist",
+   "packung": "z.R. 275 g",
+   "preis": 2.97,
+   "alt_preis": null,
+   "grundpreis": 10.79,
+   "gp_einheit": "kg",
+   "kategorie": "Fleisch"
+  },
+  {
+   "marke": "Rotkäppchen",
+   "name": "Piccolo Sekt, trocken oder halbtrocken",
+   "packung": "0,2 l",
+   "preis": 0.88,
+   "alt_preis": 1.11,
+   "grundpreis": 4.4,
+   "gp_einheit": "l",
+   "kategorie": "Sekt"
+  },
+  {
+   "marke": "",
+   "name": "Original Dresdner Christstollen",
+   "packung": "1 kg",
+   "preis": 10.99,
+   "alt_preis": 13.99,
+   "grundpreis": 10.99,
+   "gp_einheit": "kg",
+   "kategorie": "Stollen"
+  },
+  {
+   "marke": "Zetti",
+   "name": "Happy Zetti Schoko-Party-Spaß, Mini Bambina mini, 55 Stück",
+   "packung": "600 g",
+   "preis": 8.99,
+   "alt_preis": 9.99,
+   "grundpreis": 14.98,
+   "gp_einheit": "kg",
+   "kategorie": "Süßwaren"
+  },
+  {
+   "marke": "Wilthener",
+   "name": "Feiner Alter Weinbrand",
+   "packung": "0,7 l",
+   "preis": 6.79,
+   "alt_preis": 8.79,
+   "grundpreis": 9.7,
+   "gp_einheit": "l",
+   "kategorie": "Weinbrand"
+  },
+  {
+   "marke": "Hasseröder",
+   "name": "Premium Pils",
+   "packung": "20 x 0,5 l",
+   "preis": 8.4,
+   "alt_preis": null,
+   "grundpreis": 0.84,
+   "gp_einheit": "l",
+   "kategorie": "Bier"
+  },
+  {
+   "marke": "Rügen Fisch",
+   "name": "Heringsfilets in Tomaten-Creme, Feinschmeckerplatte in Curry-Ananas-Creme oder Dill-Kräuter-Creme",
+   "packung": "200 g",
+   "preis": 0.99,
+   "alt_preis": 1.89,
+   "grundpreis": 4.95,
+   "gp_einheit": "kg",
+   "kategorie": "Fisch"
+  },
+  {
+   "marke": "Krostitzer",
+   "name": "Feinherbes Pilsner",
+   "packung": "6 x 0,5 l",
+   "preis": 3.99,
+   "alt_preis": 5.34,
+   "grundpreis": 1.33,
+   "gp_einheit": "l",
+   "kategorie": "Bier"
+  },
+  {
+   "marke": "Berggold",
+   "name": "Gelee Bananen",
+   "packung": "250 g",
+   "preis": 1.11,
+   "alt_preis": 1.79,
+   "grundpreis": 4.44,
+   "gp_einheit": "kg",
+   "kategorie": "Süßwaren"
+  },
+  {
+   "marke": "Bautzner",
+   "name": "Fix Soße, Tomaten- oder Senfsoße",
+   "packung": "400 ml",
+   "preis": 1.49,
+   "alt_preis": 1.99,
+   "grundpreis": 3.73,
+   "gp_einheit": "l",
+   "kategorie": "Soße"
+  },
+  {
+   "marke": "Spreewaldhof",
+   "name": "Kürbis in Stücken, süß-sauer",
+   "packung": "670 g",
+   "preis": 1.79,
+   "alt_preis": 2.69,
+   "grundpreis": 4.48,
+   "gp_einheit": "kg",
+   "kategorie": "Gemüse"
+  },
+  {
+   "marke": "",
+   "name": "Pfefferminz Likör",
+   "packung": "0,7 l",
+   "preis": 3.99,
+   "alt_preis": 4.99,
+   "grundpreis": 5.7,
+   "gp_einheit": "l",
+   "kategorie": "Likör"
+  },
+  {
+   "marke": "HEXEN-Eis",
+   "name": "Hexen Grusel/Cocktail Becher",
+   "packung": "2 x 200 ml",
+   "preis": 2.89,
+   "alt_preis": 3.39,
+   "grundpreis": 7.23,
+   "gp_einheit": "l",
+   "kategorie": "Eis"
+  },
+  {
+   "marke": "Rätzel",
+   "name": "Hausmacher Wurst im Glas",
+   "packung": "200 g",
+   "preis": 2.49,
+   "alt_preis": 2.99,
+   "grundpreis": 12.45,
+   "gp_einheit": "kg",
+   "kategorie": "Wurst"
+  },
+  {
+   "marke": "Dreistern",
+   "name": "Eisbeinfleisch in feiner Aspik",
+   "packung": "200 g",
+   "preis": 1.99,
+   "alt_preis": 2.49,
+   "grundpreis": 9.95,
+   "gp_einheit": "kg",
+   "kategorie": "Fleisch"
+  },
+  {
+   "marke": "Rücker",
+   "name": "Schnittkäse Küsten-Urtyp, Alter Schwede",
+   "packung": "100 g",
+   "preis": 1.49,
+   "alt_preis": 1.99,
+   "grundpreis": 14.9,
+   "gp_einheit": "kg",
+   "kategorie": "Käse"
+  },
+  {
+   "marke": "Nudossi",
+   "name": "Nuss-Nougat-Creme",
+   "packung": "400 g",
+   "preis": 2.99,
+   "alt_preis": 3.79,
+   "grundpreis": 7.48,
+   "gp_einheit": "kg",
+   "kategorie": "Aufstrich"
+  },
+  {
+   "marke": "",
+   "name": "Grützwurst XXL",
+   "packung": "600 g",
+   "preis": 2.99,
+   "alt_preis": 3.49,
+   "grundpreis": 4.98,
+   "gp_einheit": "kg",
+   "kategorie": "Wurst"
+  },
+  {
+   "marke": "",
+   "name": "O's Kugeln",
+   "packung": "125 g",
+   "preis": 1.11,
+   "alt_preis": 1.59,
+   "grundpreis": 8.88,
+   "gp_einheit": "kg",
+   "kategorie": "Süßware"
+  },
+  {
+   "marke": "Pichmännel",
+   "name": "Festbier",
+   "packung": "6 x 0,5 l",
+   "preis": 4.99,
+   "alt_preis": 5.49,
+   "grundpreis": 1.66,
+   "gp_einheit": "l",
+   "kategorie": "Bier"
+  },
+  {
+   "marke": "",
+   "name": "Schlachte- oder Bratwurstkraut",
+   "packung": "550 g",
+   "preis": 1.49,
+   "alt_preis": 1.69,
+   "grundpreis": 2.71,
+   "gp_einheit": "kg",
+   "kategorie": "Sauerkraut"
+  },
+  {
+   "marke": "Lecker Lausitz",
+   "name": "Würstchen Spezialitäten (Delikates Brühpolnische / Knoblauchbockwurst)",
+   "packung": "400 g",
+   "preis": 2.49,
+   "alt_preis": 2.99,
+   "grundpreis": 6.23,
+   "gp_einheit": "kg",
+   "kategorie": "Wurst"
+  },
+  {
+   "marke": "Spreewälder",
+   "name": "Knoblauchzehen, mariniert mit Paprika und Kräutern",
+   "packung": "185 g (Abtropfgewicht 120 g)",
+   "preis": 1.99,
+   "alt_preis": 2.29,
+   "grundpreis": 16.58,
+   "gp_einheit": "kg",
+   "kategorie": "Konserve"
+  },
+  {
+   "marke": "fit",
+   "name": "Spülmittel Original oder Birne & Sakura-Blüte",
+   "packung": "1 Liter",
+   "preis": 1.95,
+   "alt_preis": null,
+   "grundpreis": 1.95,
+   "gp_einheit": "l",
+   "kategorie": "Spülmittel"
+  },
+  {
+   "marke": "Dreistern",
+   "name": "Königsberger Klopse / Kohlroulade",
+   "packung": "800 g",
+   "preis": 2.99,
+   "alt_preis": 3.99,
+   "grundpreis": 3.74,
+   "gp_einheit": "kg",
+   "kategorie": "Konserve"
+  },
+  {
+   "marke": "Villa Gusto",
+   "name": "3 Steinofenpizzen Edelsalami",
+   "packung": "3 x 350 g",
+   "preis": 2.99,
+   "alt_preis": 3.99,
+   "grundpreis": 2.85,
+   "gp_einheit": "kg",
+   "kategorie": "Pizza"
+  },
+  {
+   "marke": "Nordbrand",
+   "name": "Cocktail Sex on the Beach, Mojito oder Caipirinha",
+   "packung": "0,7 l",
+   "preis": 4.44,
+   "alt_preis": 5.99,
+   "grundpreis": 6.34,
+   "gp_einheit": "l",
+   "kategorie": "Spirituosen"
+  },
+  {
+   "marke": "",
+   "name": "Pils Legende",
+   "packung": "6 x 0,5 l",
+   "preis": 4.44,
+   "alt_preis": 4.99,
+   "grundpreis": 1.48,
+   "gp_einheit": "l",
+   "kategorie": "Bier"
+  },
+  {
+   "marke": "Landfein",
+   "name": "Speisequark 40% Fett",
+   "packung": "250 g",
+   "preis": 0.59,
+   "alt_preis": 0.79,
+   "grundpreis": 2.36,
+   "gp_einheit": "kg",
+   "kategorie": "Quark"
+  },
+  {
+   "marke": "Zetti",
+   "name": "Bambina Klassik, Weiß oder Eierlikör",
+   "packung": "100 g",
+   "preis": 1.19,
+   "alt_preis": 1.69,
+   "grundpreis": 11.9,
+   "gp_einheit": "kg",
+   "kategorie": "Gebäck"
+  },
+  {
+   "marke": "Werder",
+   "name": "Schlemmersauce (Cocktail, Steak, Senf Dill, Spicy Chili, Knoblauch oder Barbecue)",
+   "packung": "250 ml",
+   "preis": 1.29,
+   "alt_preis": 1.79,
+   "grundpreis": 5.16,
+   "gp_einheit": "l",
+   "kategorie": "Sauce"
+  },
+  {
+   "marke": "Rondo",
+   "name": "Pads Rondo Original, ideal für alle Kaffeepadmaschinen",
+   "packung": "100 Stück",
+   "preis": 10.99,
+   "alt_preis": 13.99,
+   "grundpreis": 15.7,
+   "gp_einheit": "kg",
+   "kategorie": "Kaffee"
+  },
+  {
+   "marke": "Whiskas",
+   "name": "Katzennassnahrung, Klassische Auswahl in Sauce oder Geflügel Ragout in Gelee",
+   "packung": "40 x 85 g",
+   "preis": 11.99,
+   "alt_preis": 13.95,
+   "grundpreis": 3.53,
+   "gp_einheit": "kg",
+   "kategorie": "Katzenfutter"
+  },
+  {
+   "marke": "Coca-Cola",
+   "name": "Coca-Cola Original Taste, koffeinhaltiges Erfrischungsgetränk",
+   "packung": "2 Liter",
+   "preis": 1.39,
+   "alt_preis": null,
+   "grundpreis": 0.7,
+   "gp_einheit": "l",
+   "kategorie": "Erfrischungsgetränk"
+  },
+  {
+   "marke": "Becherovka",
+   "name": "Kräuterlikör",
+   "packung": "0,7 l",
+   "preis": 9.99,
+   "alt_preis": 13.99,
+   "grundpreis": 14.27,
+   "gp_einheit": "l",
+   "kategorie": "Kräuterlikör"
+  },
+  {
+   "marke": "Absolut",
+   "name": "Vodka",
+   "packung": "0,7 l",
+   "preis": 10.88,
+   "alt_preis": 14.99,
+   "grundpreis": 15.54,
+   "gp_einheit": "l",
+   "kategorie": "Vodka"
+  },
+  {
+   "marke": "Eilles",
+   "name": "Exclusive Caffè Crema, ganze Bohne",
+   "packung": "1 kg",
+   "preis": 13.99,
+   "alt_preis": 17.99,
+   "grundpreis": 13.99,
+   "gp_einheit": "kg",
+   "kategorie": "Kaffee"
+  },
+  {
+   "marke": "Dr. Oetker",
+   "name": "Kleine Kuchen (Zitronenkuchen, Marmorkuchen, Brownies, Duo oder Sorte des Jahres: Mohn)",
+   "packung": "4er Pack, je 140 g",
+   "preis": 1.99,
+   "alt_preis": 2.99,
+   "grundpreis": 14.21,
+   "gp_einheit": "kg",
+   "kategorie": "Kleingebäck"
+  },
+  {
+   "marke": "fruit2go",
+   "name": "Fruchtsaftgetränk (Citrus-Pomelo, Orange-Mango, Grapefruit-Himbeere, Schwarze Johannisbeere-Kirsche oder Maracuja-Limette)",
+   "packung": "je 0,75 l",
+   "preis": 0.99,
+   "alt_preis": 1.29,
+   "grundpreis": 1.32,
+   "gp_einheit": "l",
+   "kategorie": "Erfrischungsgetränk"
+  },
+  {
+   "marke": "Heinz",
+   "name": "Tomato Ketchup",
+   "packung": "1,17 l",
+   "preis": 3.39,
+   "alt_preis": null,
+   "grundpreis": 2.9,
+   "gp_einheit": "l",
+   "kategorie": "Ketchup"
+  },
+  {
+   "marke": "Heinz",
+   "name": "Tomato Ketchup (Preis mit NORMA Plus App)",
+   "packung": "1,17 l",
+   "preis": 2.99,
+   "alt_preis": null,
+   "grundpreis": 2.56,
+   "gp_einheit": "l",
+   "kategorie": "Ketchup"
+  },
+  {
+   "marke": "Glücksblatt",
+   "name": "Küchentücher XXL, 3-lagig",
+   "packung": "12 Rollen, je 12 x 64 Blatt",
+   "preis": 7.77,
+   "alt_preis": 8.99,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Küchenrolle"
+  },
+  {
+   "marke": "Cillit Bang",
+   "name": "Kraftreiniger Bad & Dusche, Kalk & Schmutz oder Fettlöser",
+   "packung": "1 Liter",
+   "preis": 2.95,
+   "alt_preis": null,
+   "grundpreis": 2.95,
+   "gp_einheit": "l",
+   "kategorie": "Reiniger"
+  },
+  {
+   "marke": "Perwoll",
+   "name": "Waschmittel Color, Color Blütenrausch oder Black",
+   "packung": "2,6 l, 52 Waschladungen",
+   "preis": 9.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Waschmittel"
+  },
+  {
+   "marke": "Emmi",
+   "name": "Caffè Latte (Cappuccino, Macchiato, Matcha Latte, Vanille, High Protein oder Balance)",
+   "packung": "230 ml",
+   "preis": 1.49,
+   "alt_preis": 2.19,
+   "grundpreis": 6.48,
+   "gp_einheit": "l",
+   "kategorie": "Kaffee"
+  },
+  {
+   "marke": "Danone",
+   "name": "Actimel (Classic oder Erdbeere)",
+   "packung": "14er Pack",
+   "preis": 3.44,
+   "alt_preis": 3.99,
+   "grundpreis": 2.46,
+   "gp_einheit": "kg",
+   "kategorie": "Joghurt"
+  },
+  {
+   "marke": "Rougette",
+   "name": "Ofenkäse (Garten-Kräuter, Cremig-Mild oder Fein-Würzig)",
+   "packung": "320 g",
+   "preis": 3.99,
+   "alt_preis": 4.99,
+   "grundpreis": 12.47,
+   "gp_einheit": "kg",
+   "kategorie": "Käse"
+  },
+  {
+   "marke": "Rougette",
+   "name": "Ofenkäse mit NORMA Plus App (gültig 23.10.–25.10.2026)",
+   "packung": "320 g",
+   "preis": 3.49,
+   "alt_preis": 3.99,
+   "grundpreis": 10.91,
+   "gp_einheit": "kg",
+   "kategorie": "Käse"
+  },
+  {
+   "marke": "Rama",
+   "name": "Rama mit Butter (gesalzen oder ungesalzen)",
+   "packung": "400 g",
+   "preis": 1.99,
+   "alt_preis": 1.7,
+   "grundpreis": 4.98,
+   "gp_einheit": "kg",
+   "kategorie": "Butter"
+  },
+  {
+   "marke": "Dr. Oetker",
+   "name": "Ristorante Pizza (Salami, Pepperoni-Salami oder Tonno)",
+   "packung": "2er Pack",
+   "preis": 3.99,
+   "alt_preis": 6.78,
+   "grundpreis": 6.23,
+   "gp_einheit": "kg",
+   "kategorie": "Pizza"
+  },
+  {
+   "marke": "Nutella",
+   "name": "Eisbecher",
+   "packung": "470 ml",
+   "preis": 3.77,
+   "alt_preis": 5.49,
+   "grundpreis": 8.02,
+   "gp_einheit": "l",
+   "kategorie": "Eis"
+  },
+  {
+   "marke": "",
+   "name": "Schweine Kasseler Lachs",
+   "packung": "ca. 1,8 kg",
+   "preis": 6.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Fleisch"
+  },
+  {
+   "marke": "",
+   "name": "Schweine Minutensteaks",
+   "packung": "800 g",
+   "preis": 4.99,
+   "alt_preis": 2.99,
+   "grundpreis": 6.24,
+   "gp_einheit": "kg",
+   "kategorie": "Fleisch"
+  },
+  {
+   "marke": "",
+   "name": "Suppenfleischplatte vom Schwein",
+   "packung": "2 kg",
+   "preis": 9.99,
+   "alt_preis": null,
+   "grundpreis": 5.0,
+   "gp_einheit": "kg",
+   "kategorie": "Fleisch"
+  },
+  {
+   "marke": "Gut Langenhof",
+   "name": "Hähnchen Brustfilet natur",
+   "packung": "1,5 kg",
+   "preis": 12.49,
+   "alt_preis": 6.79,
+   "grundpreis": 8.33,
+   "gp_einheit": "kg",
+   "kategorie": "Geflügel"
+  },
+  {
+   "marke": "",
+   "name": "WPC-Sichtschutzzaun CORTADO, Grau",
+   "packung": "3x Elemente + 6x Pfosten",
+   "preis": 699.0,
+   "alt_preis": 1299.0,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Zaun"
+  },
+  {
+   "marke": "",
+   "name": "Poolüberdachung AQUALINA",
+   "packung": "für Pools bis ca. 600 x 400 cm",
+   "preis": 3999.0,
+   "alt_preis": 5999.0,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Poolüberdachung"
+  },
+  {
+   "marke": "",
+   "name": "Aluminium-Pavillon Pergola",
+   "packung": "ca. 350 x 505 x 236 cm",
+   "preis": 649.0,
+   "alt_preis": 1499.0,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Pavillon"
+  },
+  {
+   "marke": "",
+   "name": "Alu-Gewächshaus OSAKA",
+   "packung": "ca. 250 x 190 x 195 cm",
+   "preis": 199.0,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Gewächshaus"
+  },
+  {
+   "marke": "",
+   "name": "Alu-Gewächshaus OSAKA",
+   "packung": "ca. 310 x 190 x 195 cm",
+   "preis": 199.0,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Gewächshaus"
+  },
+  {
+   "marke": "",
+   "name": "Alu-Gewächshaus OSAKA",
+   "packung": "ca. 430 x 250 x 205 cm",
+   "preis": 399.0,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Gewächshaus"
+  },
+  {
+   "marke": "",
+   "name": "Alu-Gewächshaus OSAKA",
+   "packung": "ca. 430 x 250 x 235 cm",
+   "preis": 449.0,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Gewächshaus"
+  },
+  {
+   "marke": "",
+   "name": "Alu-Grillpavillon SHADOW",
+   "packung": "ca. 163 x 243 x 235 cm",
+   "preis": 179.0,
+   "alt_preis": 399.0,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Pavillon"
+  },
+  {
+   "marke": "",
+   "name": "Alu-Grillpavillon SHADOW",
+   "packung": "ca. 165 x 275 x 235 cm",
+   "preis": 229.0,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Pavillon"
+  },
+  {
+   "marke": "HOME DELUXE",
+   "name": "Traditionelle Sauna SHADOW XL",
+   "packung": "",
+   "preis": 1799.0,
+   "alt_preis": 3249.0,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Sauna"
+  },
+  {
+   "marke": "HOME DELUXE",
+   "name": "Aufsitzrasenmäher REAPER",
+   "packung": "4,8 kW, 6 PS",
+   "preis": 899.0,
+   "alt_preis": 1499.0,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Rasenmäher"
+  },
+  {
+   "marke": "scheppach",
+   "name": "Benzin-Kettensäge CSH56",
+   "packung": "",
+   "preis": 99.0,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Kettensäge"
+  },
+  {
+   "marke": "UMZI",
+   "name": "Teleskop-Waschbürste",
+   "packung": "7 m",
+   "preis": 49.99,
+   "alt_preis": 113.95,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Waschbürste"
+  },
+  {
+   "marke": "WALTER",
+   "name": "2in1 Teleskop-Heckenschere 20V",
+   "packung": "",
+   "preis": 69.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Heckenschere"
+  },
+  {
+   "marke": "scheppach",
+   "name": "Meterholzspalter 230V Compact Bt",
+   "packung": "",
+   "preis": 549.0,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Holzspalter"
+  },
+  {
+   "marke": "Güde",
+   "name": "Wippkreissäge GWS 700 HM-2",
+   "packung": "700 mm Hartmetall-Sägeblatt",
+   "preis": 599.0,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Kreissäge"
+  },
+  {
+   "marke": "Güde",
+   "name": "Allraddumper GAD 400.5/4x4",
+   "packung": "",
+   "preis": 1049.0,
+   "alt_preis": 1699.0,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Dumper"
+  },
+  {
+   "marke": "scheppach",
+   "name": "Hochdruckreiniger-Set 180 bar SHD180 XL",
+   "packung": "",
+   "preis": 119.0,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Hochdruckreiniger"
+  },
+  {
+   "marke": "HYUNDAI",
+   "name": "Inverter-Generator HY2300Si D",
+   "packung": "",
+   "preis": 359.0,
+   "alt_preis": 439.0,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Generator"
+  },
+  {
+   "marke": "KRAFT",
+   "name": "Werkstatt-Set 6tlg.",
+   "packung": "Set 6tlg., Breite ca. 240 cm",
+   "preis": 599.0,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Werkstattset"
+  },
+  {
+   "marke": "",
+   "name": "Schwerlastregal mit 5 Ablagen",
+   "packung": "ca. 180 x 100 x 60 cm",
+   "preis": 17.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Regal"
+  },
+  {
+   "marke": "KRAFT",
+   "name": "Paletten-Hubwagen 2,5t",
+   "packung": "",
+   "preis": 279.0,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Hubwagen"
+  },
+  {
+   "marke": "WALTER",
+   "name": "Sägeblatt-Schärfgerät SB51100",
+   "packung": "",
+   "preis": 59.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Schärfgerät"
+  },
+  {
+   "marke": "scheppach",
+   "name": "Elektro-Nass-/Trockensauger VC25",
+   "packung": "1.200 W",
+   "preis": 49.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Sauger"
+  },
+  {
+   "marke": "Güde",
+   "name": "Tischkreissäge GTK 2000.1",
+   "packung": "",
+   "preis": 129.0,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Kreissäge"
+  },
+  {
+   "marke": "Craftsman",
+   "name": "Werkstattwagen",
+   "packung": "70 tlg.",
+   "preis": 179.0,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Werkstattwagen"
+  },
+  {
+   "marke": "",
+   "name": "Elektr.-Massagesessel",
+   "packung": "112x75x104 cm",
+   "preis": 699,
+   "alt_preis": 2099,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Massagesessel"
+  },
+  {
+   "marke": "",
+   "name": "Elektr. Massage-Schaukelstuhl",
+   "packung": "126x64x81 cm",
+   "preis": 299,
+   "alt_preis": 699,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Massagesessel"
+  },
+  {
+   "marke": "",
+   "name": "Schlafsofa",
+   "packung": "169x83x72 cm",
+   "preis": 199,
+   "alt_preis": 479,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Sofa"
+  },
+  {
+   "marke": "",
+   "name": "Relaxsofa-Set 3tlg.",
+   "packung": "",
+   "preis": 899,
+   "alt_preis": 2399,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Sofa"
+  },
+  {
+   "marke": "",
+   "name": "XXL-Ohrensessel",
+   "packung": "100x85x75 cm",
+   "preis": 159,
+   "alt_preis": 359,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Sessel"
+  },
+  {
+   "marke": "",
+   "name": "Bürostuhl",
+   "packung": "70x71x115-121,5 cm",
+   "preis": 129,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Bürostuhl"
+  },
+  {
+   "marke": "",
+   "name": "Spiegelschrank (Badezimmermöbel)",
+   "packung": "65x65x10 cm",
+   "preis": 39.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Badmöbel"
+  },
+  {
+   "marke": "",
+   "name": "Waschbeckenunterschrank (Badezimmermöbel)",
+   "packung": "60x28x55 cm",
+   "preis": 29.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Badmöbel"
+  },
+  {
+   "marke": "",
+   "name": "Schuhschrank XL",
+   "packung": "92x33x99 cm",
+   "preis": 59.99,
+   "alt_preis": 149,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Schuhschrank"
+  },
+  {
+   "marke": "Chilloo",
+   "name": "Garten-Pavillon Prato",
+   "packung": "300x365x292 cm",
+   "preis": 999,
+   "alt_preis": 1999,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Pavillon"
+  },
+  {
+   "marke": "Home & Living",
+   "name": "Design-Vordach",
+   "packung": "200x100 cm",
+   "preis": 59.99,
+   "alt_preis": 99,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Vordach"
+  },
+  {
+   "marke": "",
+   "name": "Alu-Gewächshaus",
+   "packung": "374x190x184 cm",
+   "preis": 299,
+   "alt_preis": 499,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Gewächshaus"
+  },
+  {
+   "marke": "Home & Living",
+   "name": "Briefkasten",
+   "packung": "37x37x10,5 cm",
+   "preis": 29.99,
+   "alt_preis": 59.99,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Briefkasten"
+  },
+  {
+   "marke": "",
+   "name": "3er-Mülltonnenbox",
+   "packung": "101x212x113-134 cm",
+   "preis": 249,
+   "alt_preis": 499,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Mülltonnenbox"
+  },
+  {
+   "marke": "San Marino",
+   "name": "Metallgerätehaus",
+   "packung": "174x236x190 cm",
+   "preis": 199,
+   "alt_preis": 699,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Gerätehaus"
+  },
+  {
+   "marke": "HD Tools",
+   "name": "Kupfer Dachschutz",
+   "packung": "5 Meter selbstklebendes Kupferband (Breite ca. 19,5 cm)",
+   "preis": 39.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Dachschutz"
+  },
+  {
+   "marke": "Home",
+   "name": "Edelstahltisch",
+   "packung": "120x60x80/10 cm",
+   "preis": 289,
+   "alt_preis": 639,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Tisch"
+  },
+  {
+   "marke": "",
+   "name": "Getränkekisten-Regal",
+   "packung": "104x33x84 cm",
+   "preis": 39.99,
+   "alt_preis": 99,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Regal"
+  },
+  {
+   "marke": "Krups",
+   "name": "Kaffeevollautomat",
+   "packung": "",
+   "preis": 299,
+   "alt_preis": 799.99,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Kaffeevollautomat"
+  },
+  {
+   "marke": "ELO",
+   "name": "Schnellkochtopf Praktika Plus XS",
+   "packung": "Volumen 2,5 l",
+   "preis": 36.99,
+   "alt_preis": 109,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Schnellkochtopf"
+  },
+  {
+   "marke": "",
+   "name": "3-Rad E-Seniorenmobil T409-1",
+   "packung": "",
+   "preis": 1599,
+   "alt_preis": 1999,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Seniorenmobil"
+  },
+  {
+   "marke": "LOB",
+   "name": "Falt-E-Bike 20\"",
+   "packung": "",
+   "preis": 899,
+   "alt_preis": 2099,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "E-Bike"
+  },
+  {
+   "marke": "",
+   "name": "Full-HD DVB-S2 Receiver DVBS-206HD",
+   "packung": "",
+   "preis": 25.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Receiver"
+  },
+  {
+   "marke": "Siesta",
+   "name": "Kaltschaummatratze AH16",
+   "packung": "90x200 cm",
+   "preis": 59.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Matratze"
+  },
+  {
+   "marke": "NORMA connect",
+   "name": "Smart S 5G (25 GB Allnet + SMS Flat, +25 GB Datenpolster für 365 Tage)",
+   "packung": "4 Wochen",
+   "preis": 8.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Mobilfunktarif"
+  },
+  {
+   "marke": "PFIFF",
+   "name": "Erdnüsse geröstet & gesalzen",
+   "packung": "500 g",
+   "preis": 1.79,
+   "alt_preis": 1.99,
+   "grundpreis": 3.58,
+   "gp_einheit": "kg",
+   "kategorie": "Nüsse"
+  },
+  {
+   "marke": "PFIFF",
+   "name": "Erdnüsse geröstet, ohne Salz",
+   "packung": "500 g",
+   "preis": 1.79,
+   "alt_preis": 1.99,
+   "grundpreis": 3.58,
+   "gp_einheit": "kg",
+   "kategorie": "Nüsse"
+  },
+  {
+   "marke": "PFIFF",
+   "name": "Erdnüsse geröstet & gesalzen",
+   "packung": "200 g",
+   "preis": 0.79,
+   "alt_preis": 0.99,
+   "grundpreis": 3.95,
+   "gp_einheit": "kg",
+   "kategorie": "Nüsse"
+  },
+  {
+   "marke": "PFIFF",
+   "name": "Cashews, verschiedene Sorten",
+   "packung": "150 g",
+   "preis": 1.95,
+   "alt_preis": 2.25,
+   "grundpreis": 13.0,
+   "gp_einheit": "kg",
+   "kategorie": "Nüsse"
+  },
+  {
+   "marke": "Excelsior",
+   "name": "Schokoladenriegel Boxer/Runner/Jumper",
+   "packung": "300 g",
+   "preis": 1.99,
+   "alt_preis": 2.09,
+   "grundpreis": 6.63,
+   "gp_einheit": "kg",
+   "kategorie": "Schokolade"
+  },
+  {
+   "marke": "Excelsior",
+   "name": "Edel-Sahne-Schokolade, versch. Sorten, z.B. Kaffee-Sahne",
+   "packung": "200 g",
+   "preis": 1.99,
+   "alt_preis": 2.19,
+   "grundpreis": 9.95,
+   "gp_einheit": "kg",
+   "kategorie": "Schokolade"
+  },
+  {
+   "marke": "Excelsior",
+   "name": "Magie Gefüllte Tafel, versch. Sorten, z.B. Cookies & Cream",
+   "packung": "190/200 g",
+   "preis": 1.99,
+   "alt_preis": 2.19,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Schokolade"
+  },
+  {
+   "marke": "Excelsior",
+   "name": "Edelnusstafel, versch. Sorten, z.B. Rum Traube Nuss",
+   "packung": "200 g",
+   "preis": 1.99,
+   "alt_preis": 2.19,
+   "grundpreis": 9.95,
+   "gp_einheit": "kg",
+   "kategorie": "Schokolade"
+  },
+  {
+   "marke": "Ardilla",
+   "name": "Nussvariation naturbelassen",
+   "packung": "200 g",
+   "preis": 2.99,
+   "alt_preis": 3.39,
+   "grundpreis": 14.95,
+   "gp_einheit": "kg",
+   "kategorie": "Nüsse"
+  },
+  {
+   "marke": "Backen",
+   "name": "Mandeln gemahlen, unblanchiert",
+   "packung": "200 g",
+   "preis": 2.49,
+   "alt_preis": 2.99,
+   "grundpreis": 12.45,
+   "gp_einheit": "kg",
+   "kategorie": "Nüsse"
+  },
+  {
+   "marke": "Backen",
+   "name": "Kokos fein geraspelt",
+   "packung": "200 g",
+   "preis": 1.19,
+   "alt_preis": 1.45,
+   "grundpreis": 5.95,
+   "gp_einheit": "kg",
+   "kategorie": "Kokos"
+  },
+  {
+   "marke": "Backen",
+   "name": "Haselnusskerne ganz oder gemahlen",
+   "packung": "200 g",
+   "preis": 2.99,
+   "alt_preis": 3.49,
+   "grundpreis": 14.95,
+   "gp_einheit": "kg",
+   "kategorie": "Nüsse"
+  },
+  {
+   "marke": "Backen",
+   "name": "Mandeln gehackt oder gestiftet",
+   "packung": "100 g",
+   "preis": 1.25,
+   "alt_preis": 1.49,
+   "grundpreis": 12.5,
+   "gp_einheit": "kg",
+   "kategorie": "Nüsse"
+  },
+  {
+   "marke": "Backen",
+   "name": "Mandeln gehobelt",
+   "packung": "100 g",
+   "preis": 1.25,
+   "alt_preis": 1.49,
+   "grundpreis": 12.5,
+   "gp_einheit": "kg",
+   "kategorie": "Nüsse"
+  },
+  {
+   "marke": "multiTEC",
+   "name": "Gefrierbeutel",
+   "packung": "je 75x3 l / 100x1 l",
+   "preis": 1.15,
+   "alt_preis": 1.45,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Haushaltswaren"
+  },
+  {
+   "marke": "multiTEC",
+   "name": "Aluminium-Folie besonders reißfest und hitzebeständig",
+   "packung": "je 50 m",
+   "preis": 2.89,
+   "alt_preis": 3.25,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Haushaltswaren"
+  },
+  {
+   "marke": "Riva",
+   "name": "Nut/Choco Star",
+   "packung": "6x68 ml",
+   "preis": 2.29,
+   "alt_preis": 2.69,
+   "grundpreis": 5.61,
+   "gp_einheit": "l",
+   "kategorie": "Eis"
+  },
+  {
+   "marke": "Riva",
+   "name": "Watermelon Sticks",
+   "packung": "je 5x73 ml",
+   "preis": 1.49,
+   "alt_preis": 1.89,
+   "grundpreis": 4.08,
+   "gp_einheit": "l",
+   "kategorie": "Eis"
+  },
+  {
+   "marke": "multiTEC",
+   "name": "Allzweck-/Gefrierbeutel mit Zip",
+   "packung": "je 15x3 l / 20x1 l",
+   "preis": 1.49,
+   "alt_preis": 1.59,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Haushaltswaren"
+  },
+  {
+   "marke": "multiTEC",
+   "name": "Müllbeutel mit Tragegriffen",
+   "packung": "je 50x25 l",
+   "preis": 1.15,
+   "alt_preis": 1.19,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Haushaltswaren"
+  },
+  {
+   "marke": "St. Andreas",
+   "name": "Melatonin Spray oder Baldrian-Tropfen",
+   "packung": "je 25 ml oder je 150 ml",
+   "preis": 3.45,
+   "alt_preis": 4.25,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Nahrungsergänzungsmittel"
+  },
+  {
+   "marke": "Riva",
+   "name": "Spaghetti Waffelhörnchen oder Softeis Waffelhörnchen",
+   "packung": "je 4x130 ml oder 4x140 ml",
+   "preis": 1.99,
+   "alt_preis": 2.29,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Eis"
+  },
+  {
+   "marke": "Ardilla",
+   "name": "Walnusskerne naturbelassen",
+   "packung": "200 g",
+   "preis": 2.49,
+   "alt_preis": 2.99,
+   "grundpreis": 12.45,
+   "gp_einheit": "kg",
+   "kategorie": "Nüsse"
+  },
+  {
+   "marke": "Pfiff",
+   "name": "Macadamia geröstet oder geröstet & gesalzen",
+   "packung": "125 g",
+   "preis": 2.99,
+   "alt_preis": 3.49,
+   "grundpreis": 23.92,
+   "gp_einheit": "kg",
+   "kategorie": "Nüsse"
+  },
+  {
+   "marke": "Trimm",
+   "name": "Orangensaft aus Orangensaftkonzentrat 100% Fruchtgehalt",
+   "packung": "1 l",
+   "preis": 1.39,
+   "alt_preis": 1.99,
+   "grundpreis": 1.39,
+   "gp_einheit": "l",
+   "kategorie": "Saft"
+  },
+  {
+   "marke": "Trimm",
+   "name": "Orangennektar aus Orangensaftkonzentrat mind. 50% Fruchtgehalt",
+   "packung": "1,5 l",
+   "preis": 1.39,
+   "alt_preis": 1.69,
+   "grundpreis": 0.93,
+   "gp_einheit": "l",
+   "kategorie": "Saft"
+  },
+  {
+   "marke": "Daunasoft",
+   "name": "Zupfi Taschentücher",
+   "packung": "100 Stück",
+   "preis": 0.85,
+   "alt_preis": 0.95,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Taschentücher"
+  },
+  {
+   "marke": "Daunasoft",
+   "name": "Taschentücher",
+   "packung": "30 x 10 Stück",
+   "preis": 2.75,
+   "alt_preis": 2.85,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Taschentücher"
+  },
+  {
+   "marke": "Daunasoft",
+   "name": "Balsam Taschentücher",
+   "packung": "15 x 10 Stück",
+   "preis": 1.65,
+   "alt_preis": 1.75,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Taschentücher"
+  },
+  {
+   "marke": "Daunasoft",
+   "name": "Küchentücher Effect 3-lagig",
+   "packung": "4x64-Blatt",
+   "preis": 2.65,
+   "alt_preis": 2.75,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Küchentücher"
+  },
+  {
+   "marke": "Daunasoft",
+   "name": "Toilettenpapier Komfort 3-lagig",
+   "packung": "10x220-Blatt",
+   "preis": 3.75,
+   "alt_preis": 3.85,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Toilettenpapier"
+  },
+  {
+   "marke": "Daunasoft",
+   "name": "Toilettenpapier Sensation 4-lagig",
+   "packung": "10x200-Blatt",
+   "preis": 4.85,
+   "alt_preis": 4.95,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Toilettenpapier"
+  },
+  {
+   "marke": "Daunasoft",
+   "name": "Toilettenpapier Nature Recycling 3-lagig",
+   "packung": "8x220-Blatt",
+   "preis": 2.55,
+   "alt_preis": 2.65,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Toilettenpapier"
+  }
+ ]
+}
