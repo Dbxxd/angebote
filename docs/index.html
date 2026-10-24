@@ -334,6 +334,19 @@ button.bild { padding: 0; cursor: zoom-in; font: inherit; }
 
 /* ---------- Vorrat ---------- */
 .vorrat-erkl { margin: 0 0 12px; color: var(--grau); font-size: 14px; }
+/* ---------- Anleitung ---------- */
+.hilfe-knopf { width: 100%; margin-bottom: 22px; }
+.hilfe-einl { color: var(--grau); font-size: 15px; margin: 0 0 14px; }
+.hilfe details { scroll-margin-top: 90px; background: var(--karte); border: 1px solid var(--linie); border-radius: var(--r); margin-bottom: 8px; }
+.hilfe summary { padding: 14px; font-weight: 700; font-size: 17px; cursor: pointer; list-style: none; display: flex; justify-content: space-between; gap: 10px; }
+.hilfe summary::-webkit-details-marker { display: none; }
+.hilfe summary::after { content: "+"; color: var(--grau); font-weight: 400; font-size: 20px; line-height: 1; }
+.hilfe details[open] summary::after { content: "−"; }
+.hilfe .inhalt { padding: 0 14px 14px; font-size: 15px; line-height: 1.45; }
+.hilfe .inhalt p { margin: 0 0 8px; }
+.hilfe .inhalt ul { margin: 0 0 8px; padding-left: 20px; }
+.hilfe .inhalt li { margin-bottom: 4px; }
+.hilfe .tipp { background: var(--papier); border-radius: 10px; padding: 10px 12px; font-size: 14px; color: var(--grau); }
 .vorrat-liste { list-style: none; margin: 0 0 14px; padding: 0; background: var(--karte); border: 1px solid var(--linie); border-radius: var(--r); overflow: hidden; }
 .vorrat-liste > li + li { border-top: 1px solid var(--linie); }
 .vorrat-zeile { display: grid; grid-template-columns: auto 1fr auto; gap: 12px; align-items: center; padding: 12px 8px 12px 12px; }
@@ -401,6 +414,8 @@ button.bild { padding: 0; cursor: zoom-in; font: inherit; }
   <section class="ansicht" id="v-liste" hidden aria-label="Wochenliste"></section>
 
   <section class="ansicht" id="v-einst" hidden aria-label="Einstellungen"></section>
+
+  <section class="ansicht hilfe" id="v-hilfe" hidden aria-label="Anleitung"></section>
 </main>
 
 <nav class="leiste" id="leiste" aria-label="Bereiche" hidden>
@@ -814,7 +829,7 @@ function listeHTML(liste, max) {
 /* =========================================================================
    Ansichten
    ========================================================================= */
-const ANSICHTEN = ["start", "fuerdich", "suche", "vorrat", "liste", "einst"];
+const ANSICHTEN = ["start", "fuerdich", "suche", "vorrat", "liste", "einst", "hilfe"];
 let aktuelleAnsicht = null;
 
 function zeige(name) {
@@ -822,16 +837,17 @@ function zeige(name) {
   for (const v of ANSICHTEN) $("#v-" + v).hidden = v !== name;
   $("#leiste").hidden = name === "start";
   document.querySelectorAll(".leiste button").forEach((b) => {
-    if (b.dataset.ziel === name) b.setAttribute("aria-current", "page");
+    if (b.dataset.ziel === name || (name === "hilfe" && b.dataset.ziel === "einst")) b.setAttribute("aria-current", "page");
     else b.removeAttribute("aria-current");
   });
-  const titel = { start: "Angebote", fuerdich: "Für dich", suche: "Suche", vorrat: "Vorrat", liste: "Wochenliste", einst: "Einstellungen" }[name];
+  const titel = { start: "Angebote", fuerdich: "Für dich", suche: "Suche", vorrat: "Vorrat", liste: "Wochenliste", einst: "Einstellungen", hilfe: "Anleitung" }[name];
   $("#titel").textContent = titel;
   if (name === "fuerdich") zeichneFuerDich();
   if (name === "suche") zeichneSuche();
   if (name === "vorrat") zeichneVorrat();
   if (name === "liste") zeichneListe();
   if (name === "einst") zeichneEinstellungen();
+  if (name === "hilfe") zeichneHilfe();
   window.scrollTo(0, 0);
 }
 
@@ -1003,7 +1019,7 @@ function zeichneVorrat() {
       </div>${details}</li>`;
   }).join("");
   el.innerHTML = formular +
-    `<p class="vorrat-erkl">Haken = bald leer: alle Angebote. Ohne Haken: nur Angebote ab ${Math.round(VORRAT_RABATT * 100)} % Rabatt.</p>` +
+    `<p class="vorrat-erkl">Haken = bald leer: alle Angebote. Ohne Haken: nur Angebote ab ${Math.round(VORRAT_RABATT * 100)} % Rabatt. <button class="textknopf" data-hilfe="vorrat">Mehr dazu</button></p>` +
     `<ul class="vorrat-liste">${zeilen}</ul>` + vorschlagHTML;
 }
 
@@ -1300,6 +1316,80 @@ async function listeTeilen() {
   } catch (e) { /* Teilen abgebrochen */ }
 }
 
+/* ---------- Anleitung ---------- */
+let hilfeOffen = null;
+const HILFE = [
+  ["fuerdich", "Für dich", `
+    <p>Deine Startseite. Hier steht alles, was dich diese Woche interessiert, immer das Günstigste zuerst:</p>
+    <ul>
+      <li><strong>Favoriten im Angebot</strong>: deine gespeicherten Lieblingsprodukte, egal in welchem Markt</li>
+      <li><strong>Bald leer, jetzt im Angebot</strong> und <strong>Gut für den Vorrat</strong>: aus deiner Vorrat-Liste</li>
+      <li>Deine <strong>Vorlieben</strong> (z.B. Butter, Kaffee, Bier) mit den 3 günstigsten Angeboten. „Alle zeigen“ klappt den Rest auf.</li>
+    </ul>
+    <p>Vorlieben legst du in den Einstellungen fest. Das kann ein Produkt sein („Joghurt“) oder eine Marke („Kerrygold“).</p>`],
+  ["suche", "Suche und Kategorien", `
+    <p>Tipp ein, was du suchst. Die Treffer sind nach <strong>Grundpreis</strong> sortiert (€/kg oder €/l), damit du Packungsgrößen fair vergleichen kannst. Mit „Größter Rabatt“ stehen die stärksten Preissenkungen oben.</p>
+    <ul>
+      <li>Die Chips oben filtern nach Markt.</li>
+      <li>Ohne Suchbegriff siehst du die <strong>Kategorien</strong>. Darin gibt es Unterkategorien, z.B. Käse → Scheibenkäse.</li>
+      <li>„Weitere Treffer“ sind Angebote, in denen das Wort nur vorkommt, z.B. Butterkekse bei „Butter“.</li>
+      <li>Andere Wörter werden mitgesucht: Klopapier findet auch Toilettenpapier.</li>
+    </ul>`],
+  ["detail", "Angebot ansehen", `
+    <p>Tipp auf das <strong>Bild</strong> eines Angebots. Dann siehst du es groß, mit Preis, Grundpreis und Gültigkeit. Dort kannst du es:</p>
+    <ul>
+      <li>auf die <strong>Wochenliste</strong> setzen,</li>
+      <li>als <strong>Favorit</strong> speichern (★),</li>
+      <li>mit <strong>Nie anzeigen</strong> überall ausblenden.</li>
+    </ul>
+    <p>Das <strong>+</strong> an der Bildecke setzt das Angebot direkt auf die Wochenliste, ohne die Detailansicht.</p>
+    <p class="tipp">Die Zurück-Taste schließt die Detailansicht und führt dann Schritt für Schritt zurück.</p>`],
+  ["liste", "Wochenliste", `
+    <p>Deine Einkaufsliste für diese Woche, sortiert nach Markt mit Summe. Hak ab, was im Wagen liegt.</p>
+    <ul>
+      <li><strong>Liste teilen</strong> schickt sie z.B. per WhatsApp.</li>
+      <li>Abgelaufene Angebote werden rot markiert.</li>
+    </ul>`],
+  ["vorrat", "Vorrat", `
+    <p>Eine Liste, die immer bleibt: Dinge, die ihr regelmäßig braucht.</p>
+    <ul>
+      <li><strong>Haken = bald leer</strong>: Du siehst alle Angebote dazu. Die Zahl am Vorrat-Symbol zeigt, wie viele davon gerade im Angebot sind.</li>
+      <li><strong>Ohne Haken = genug da</strong>: Die App meldet sich nur bei richtig guten Angeboten (ab 20&nbsp;% Rabatt), damit du auf Vorrat kaufen kannst.</li>
+      <li>Mit dem Pfeil klappst du die Angebote zu einem Eintrag auf.</li>
+    </ul>
+    <p>Die Treffer sind bewusst genau: Bei „Spülmittel“ kommen keine Spülmaschinen-Tabs, bei „Butter“ keine Margarine.</p>
+    <p class="tipp">Trag es so ein, wie du es kaufst: „Kaffeebohnen“ statt „Kaffee“, wenn ihr Bohnen kauft. Mehrere Varianten trennst du mit Komma: „Haferflocken, Porridge“.</p>`],
+  ["favoriten", "Favoriten und Nie anzeigen", `
+    <p><strong>Favoriten</strong> sind bestimmte Produkte, die du gern kaufst. Sobald eins davon in irgendeinem Markt im Angebot ist, steht es oben unter „Für dich“ und bekommt überall einen ★.</p>
+    <p><strong>Nie anzeigen</strong> blendet Produkte überall aus, auch in der Suche und im Vorrat. In den Einstellungen kannst du auch selbst Wörter eintragen:</p>
+    <ul>
+      <li>eine Marke: „Cottonelle“</li>
+      <li>ein Wort: „feucht“ blendet feuchtes Toilettenpapier aus</li>
+    </ul>
+    <p>Die Zahl in Klammern zeigt, wie viele Angebote ein Eintrag gerade ausblendet. Mit × wird alles wieder angezeigt.</p>`],
+  ["einst", "Märkte und Ort", `
+    <p>In den Einstellungen wählst du deinen <strong>Ort</strong> (Emsdetten/Steinfurt, Winsen, Harburg) und welche <strong>Märkte</strong> angezeigt werden. Für jeden Ort merkt sich die App die Märkte getrennt.</p>`],
+  ["wissen", "Gut zu wissen", `
+    <ul>
+      <li>Die Angebote werden <strong>jeden Morgen</strong> automatisch aus den Prospekten geholt. „Stand“ oben zeigt, wann.</li>
+      <li>„ab Mo.“ heißt: Das Angebot gilt erst ab diesem Tag.</li>
+      <li>Alle Listen und Einstellungen werden <strong>nur auf diesem Handy</strong> gespeichert. Jedes Familienmitglied hat seine eigenen.</li>
+      <li>Nach einem Update: App einmal ganz schließen und neu öffnen.</li>
+      <li>Preise ohne Gewähr. Bei Prospekten, die per Bild ausgelesen werden (K+K, Norma), kann mal ein Preis falsch sein.</li>
+    </ul>`],
+];
+function zeichneHilfe() {
+  const el = $("#v-hilfe");
+  el.innerHTML = `<p class="hilfe-einl">Tipp auf ein Thema, um es aufzuklappen.</p>` +
+    HILFE.map(([id, titel, inhalt]) =>
+      `<details id="hilfe-${id}" ${hilfeOffen === id ? "open" : ""}><summary>${titel}</summary><div class="inhalt">${inhalt}</div></details>`).join("");
+  if (hilfeOffen) {
+    const z = $("#hilfe-" + hilfeOffen);
+    hilfeOffen = null;
+    if (z) requestAnimationFrame(() => z.scrollIntoView({ block: "start" }));
+  }
+}
+
 /* ---------- Einstellungen ---------- */
 function zeichneEinstellungen() {
   const el = $("#v-einst");
@@ -1307,6 +1397,7 @@ function zeichneEinstellungen() {
   const aktiv = new Set(aktiveMaerkte());
   const quellen = daten ? Object.entries(daten.quellen || {}) : [];
   el.innerHTML = `
+    <button class="knopf leise hilfe-knopf" data-gehe="hilfe">So funktioniert die App</button>
     <div class="abschnitt">
       <h2>Vorlieben</h2>
       <p class="erkl">Produkte oder Marken, die dich interessieren. Unter „Für dich“ siehst du die günstigsten Angebote dazu.</p>
@@ -1371,6 +1462,7 @@ document.addEventListener("click", async (ev) => {
   else if (d.detailZu !== undefined) history.back();
   else if (d.ziel) geheZu({ ansicht: d.ziel, gruppe: d.ziel === "suche" ? sucheGruppe : null });
   else if (d.gehe) geheZu({ ansicht: d.gehe, gruppe: null });
+  else if (d.hilfe) { hilfeOffen = d.hilfe; geheZu({ ansicht: "hilfe", gruppe: null }); }
   else if (d.region) {
     zustand.region = d.region; speichern();
     await start();
