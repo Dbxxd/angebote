@@ -1,5 +1,5 @@
 {
- "stand": "2026-10-24T17:39+02:00",
+ "stand": "2026-10-24T18:07+02:00",
  "regionen": [
   {
    "id": "steinfurt",
@@ -22,16 +22,16 @@
    "name": "Winsen (Luhe)",
    "maerkte": [
     "Aldi",
+    "budni",
     "Edeka",
+    "famila",
     "Kaufland",
     "Lidl",
     "Netto",
     "Norma",
     "Penny",
     "Rewe",
-    "Rossmann",
-    "budni",
-    "famila"
+    "Rossmann"
    ],
    "anzahl": 4233
   },
@@ -40,16 +40,16 @@
    "name": "Hamburg-Harburg",
    "maerkte": [
     "Aldi",
+    "budni",
+    "dm",
     "Edeka",
     "Kaufland",
     "Lidl",
+    "nahkauf",
     "Netto",
     "Penny",
     "Rewe",
-    "Rossmann",
-    "budni",
-    "dm",
-    "nahkauf"
+    "Rossmann"
    ],
    "anzahl": 3633
   }
