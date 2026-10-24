@@ -754,6 +754,8 @@ Wichtig:
   Frischkäse, Miree, Almette, Bresso, Streichkäse -> Frischkäse & Streichkäse;
   Back-Camembert, Backkäse, Ofenkäse, Grillkäse, Halloumi -> Back-, Ofen- & Grillkäse.
 - Kuchen, Stollen, Torten, Muffins, Croissants, Berliner -> Kuchen & Feingebäck (bei Süßes & Snacks).
+- Obst und Gemüse in Dose oder Glas (Litschis, Mais, Rotkohl im Glas, Apfelmus)
+  -> Gemüse- & Obstkonserven (bei Fertiggerichte & Konserven).
 - Fertige Salate aus dem Kühlregal (Kartoffel-, Nudel-, Fleisch-, Kraut-, Gurken-, Beilagensalat),
   Dips, Tzatziki, Hummus, Antipasti -> Feinkost & Salate (bei Fertiggerichte & Konserven).
   "Salat & Kräuter" (Obst & Gemüse) nur für frischen Salat wie Eisberg, Rucola, Feldsalat.
@@ -838,6 +840,12 @@ def gruppen_zuordnen(angebote: list[dict]) -> None:
     for a in angebote:
         wert = cache.get(schluessel(a), "Sonstiges|Weiteres")
         a["g"], a["u"] = wert.split("|", 1)
+        # Obst und Gemüse in Dose oder Glas sind Konserven, auch wenn der Prospekt "Obst" sagt
+        if a["g"] == "Obst & Gemüse" and KONSERVE.search(f'{a.get("pk") or ""} {a.get("n") or ""}'):
+            a["g"], a["u"] = "Fertiggerichte & Konserven", "Gemüse- & Obstkonserven"
+
+
+KONSERVE = re.compile(r"\b(dose|glas|konserve)\b|-dose\b|-glas\b", re.I)
 
 
 # =============================================================================
