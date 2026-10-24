@@ -761,6 +761,10 @@ function vlSatz(a) {
     const w = a.vl[1];
     return `<p class="vl-hinweis"><strong>So günstig war es seit ${w >= 52 ? wochenText(w) : w + " Wochen"} nicht.</strong></p>`;
   }
+  if (a.vl[0] === "woanders") {
+    const [, markt, preis, ge] = a.vl;
+    return `<p class="vl-hinweis">Bei ${esc(markt)} gerade günstiger: <strong>${eur(preis)}${ge ? "/" + esc(ge) : ""}</strong></p>`;
+  }
   const [, datum, markt, preis, ge] = a.vl;
   return `<p class="vl-hinweis">Am ${esc(datumKurz(datum))} gab es das bei ${esc(markt)} günstiger: <strong>${eur(preis)}${ge ? "/" + esc(ge) : ""}</strong></p>`;
 }

@@ -913,6 +913,9 @@ def verlauf_aktualisieren(rid: str, angebote: list[dict], heute: str) -> None:
             liste.append([d, a["h"], a["p"], a.get("gp"), a.get("ge")])
 
     # 2. Für jedes aktuelle Angebot: wie steht der Preis im Vergleich zu früher?
+    # Gezählt wird erst ab Beginn der Aufzeichnung, ältere Aktionsdaten sagen nichts über die Zeit davor
+    seit = verlauf["seit"]
+    laufend = {(verlauf_schluessel(a), a["h"], a["p"], a.get("von") or heute) for a in angebote if a.get("p") is not None}
     for a in angebote:
         if a.get("p") is None:
             continue
@@ -924,9 +927,14 @@ def verlauf_aktualisieren(rid: str, angebote: list[dict], heute: str) -> None:
         werte = [(e, w, jetzt, ge) for e, w, jetzt, ge in werte if w is not None and jetzt is not None]
         if not werte:
             continue
-        tage = lambda x: (datetime.fromisoformat(d) - datetime.fromisoformat(x)).days
+        tage = lambda x: (datetime.fromisoformat(d) - datetime.fromisoformat(max(x, seit))).days
         guenstiger = [(e, w, ge) for e, w, jetzt, ge in werte if w < jetzt - 0.005]
-        if not guenstiger:
+        schluessel = verlauf_schluessel(a)
+        jetzt_woanders = [(e, w, ge) for e, w, ge in guenstiger if (schluessel, e[1], e[2], e[0]) in laufend]
+        if jetzt_woanders:
+            e, w, ge = min(jetzt_woanders, key=lambda x: x[1])
+            a["vl"] = ["woanders", e[1], round(w, 2), ge]
+        elif not guenstiger:
             wochen = tage(min(e[0] for e, *_ in werte)) // 7
             if wochen >= 2:
                 a["vl"] = ["tief", wochen]
