@@ -43,23 +43,32 @@ UA = (
 # -----------------------------------------------------------------------------
 # Regionen
 # -----------------------------------------------------------------------------
-# plz:  PLZs, für die marktguru abgefragt wird (Ergebnisse werden zusammengeführt)
-# kk:   ob es dort K+K gibt
+# plz:    PLZs, für die marktguru abgefragt wird (Ergebnisse werden zusammengeführt)
+# latlng: Ortsmitte, für die kaufDA-Abfragen
+# kaufda: Märkte, die marktguru dort nicht liefert -> über ihre kaufDA-Händlerseite.
+#         Hat kaufDA Einzelangebote, werden die genommen; sonst liest Claude die
+#         Prospektseiten aus (einmal pro Prospekt, mit Cache).
 REGIONEN = {
     "steinfurt": {
         "name": "Emsdetten / Steinfurt",
         "plz": ["48282", "48341", "48356", "48565"],
-        "kk": True,
+        "latlng": ("52.1758", "7.52741"),
+        "kaufda": {"K+K": "/Emsdetten/K-K-Klaas-Kock/p-r586"},
     },
     "winsen": {
         "name": "Winsen (Luhe)",
         "plz": ["21423"],
-        "kk": False,
+        "latlng": ("53.3576", "10.2108"),
+        "kaufda": {
+            "famila": "/Winsen-Luhe/famila-Nordost/p-r182",
+            "Norma": "/Winsen-Luhe/Norma/p-r78",
+        },
     },
     "harburg": {
         "name": "Hamburg-Harburg",
         "plz": ["21073"],
-        "kk": False,
+        "latlng": ("53.4607", "9.9836"),
+        "kaufda": {},
     },
 }
 
@@ -86,9 +95,9 @@ MAERKTE = {
 }
 AUSSCHLIESSEN = ["foodservice"]  # Großhandel, nicht für Endkunden
 
-# Diese Märkte kommen aus eigenen Quellen; marktguru-Treffer dafür werden ignoriert,
-# damit nichts doppelt auftaucht.
-EIGENE_QUELLE = {"Aldi", "Rossmann", "K+K"}
+# Diese Märkte kommen überall aus eigenen Quellen; marktguru-Treffer dafür werden
+# ignoriert, damit nichts doppelt auftaucht. (Pro Region kommen die "kaufda"-Märkte dazu.)
+EIGENE_QUELLE = {"Aldi", "Rossmann"}
 
 
 def markt_kurzname(name: str) -> str | None:
@@ -339,15 +348,16 @@ def aldi_alle_angebote() -> list[dict]:
 
 
 # =============================================================================
-# Quelle: kaufDA (Rossmann direkt, K+K über Bilder + Claude)
+# Quelle: kaufDA
+# Einzelangebote, wenn vorhanden (Rossmann, Penny, ...); sonst Prospektbilder,
+# die Claude ausliest (K+K, ggf. famila/Norma).
 # =============================================================================
 
-KAUFDA_SEITEN = {
-    "Rossmann": "https://www.kaufda.de/Emsdetten/Rossmann/p-r98",
-    "K+K": "https://www.kaufda.de/Emsdetten/K-K-Klaas-Kock/p-r586",
-}
+KAUFDA_BASIS = "https://www.kaufda.de"
+ROSSMANN_SEITE = "/Emsdetten/Rossmann/p-r98"  # Rossmann-Prospekt ist bundesweit gleich
 KAUFDA_PAGES_API = "https://content-viewer-be.kaufda.de/v1/brochures/{id}/pages"
-KAUFDA_LATLNG = {"lat": "52.1758", "lng": "7.52741"}  # Emsdetten
+EMSDETTEN = ("52.1758", "7.52741")
+MIN_EINZELANGEBOTE = 5  # darunter gilt der Prospekt als "nur Bilder" -> KI
 
 
 def kaufda_datum(s: str) -> str:
@@ -360,7 +370,8 @@ def kaufda_datum(s: str) -> str:
 
 
 def kaufda_prospekte(seite: str) -> list[dict]:
-    r = requests.get(seite, headers={"User-Agent": UA}, timeout=30)
+    url = seite if seite.startswith("http") else KAUFDA_BASIS + seite
+    r = requests.get(url, headers={"User-Agent": UA}, timeout=30)
     r.raise_for_status()
     m = re.search(r'<script id="__NEXT_DATA__"[^>]*>(.*?)</script>', r.text, re.S)
     if not m:
@@ -378,10 +389,10 @@ def kaufda_prospekte(seite: str) -> list[dict]:
     ]
 
 
-def kaufda_seiten(prospekt_id: str) -> list[dict]:
+def kaufda_seiten(prospekt_id: str, latlng: tuple[str, str] = EMSDETTEN) -> list[dict]:
     r = requests.get(
         KAUFDA_PAGES_API.format(id=prospekt_id),
-        params={"partner": "kaufda_web", **KAUFDA_LATLNG},
+        params={"partner": "kaufda_web", "lat": latlng[0], "lng": latlng[1]},
         headers={"User-Agent": UA},
         timeout=30,
     )
@@ -389,33 +400,52 @@ def kaufda_seiten(prospekt_id: str) -> list[dict]:
     return r.json().get("contents", [])
 
 
-def rossmann_alle_angebote() -> list[dict]:
+def kaufda_einzelangebot(markt: str, o: dict, prospekt: dict) -> dict:
+    c = o.get("content", {})
+    p = (c.get("products") or [{}])[0]
+    preise = {d.get("type"): d.get("min") for d in (c.get("deals") or [])}
+    gueltig = ((c.get("publicationProfiles") or [{}])[0].get("validity") or {})
+    beschreibung = " ".join(x.get("paragraph", "") for x in (p.get("description") or [])).strip()
+    kats = [k.get("name", "") for k in (p.get("categoryPaths") or [])]
+    return angebot(
+        markt,
+        p.get("brandName"), p.get("name"),
+        preise.get("SALES_PRICE") or None, preise.get("REGULAR_PRICE") or None,
+        None, "",
+        beschreibung[:80],
+        kaufda_datum(gueltig.get("startDate", "")) or prospekt["von"],
+        kaufda_datum(gueltig.get("endDate", "")) or prospekt["bis"],
+        kats[-1] if kats else "", "kaufDA",
+    )
+
+
+def kaufda_markt_angebote(markt: str, seite: str, latlng: tuple[str, str] = EMSDETTEN) -> list[dict]:
+    """Alle aktuellen Angebote eines Händlers über seine kaufDA-Seite."""
     ergebnis = []
-    for prospekt in kaufda_prospekte(KAUFDA_SEITEN["Rossmann"]):
-        for seite in kaufda_seiten(prospekt["id"]):
-            for o in seite.get("offers", []):
-                c = o.get("content", {})
-                p = (c.get("products") or [{}])[0]
-                preise = {d.get("type"): d.get("min") for d in (c.get("deals") or [])}
-                gueltig = ((c.get("publicationProfiles") or [{}])[0].get("validity") or {})
-                beschreibung = " ".join(
-                    x.get("paragraph", "") for x in (p.get("description") or [])
-                ).strip()
-                kats = [k.get("name", "") for k in (p.get("categoryPaths") or [])]
+    for prospekt in kaufda_prospekte(seite):
+        seiten = kaufda_seiten(prospekt["id"], latlng)
+        einzeln = [o for s in seiten for o in s.get("offers", [])]
+        if len(einzeln) >= MIN_EINZELANGEBOTE:
+            ergebnis += [kaufda_einzelangebot(markt, o, prospekt) for o in einzeln]
+        else:
+            for a in ki_prospekt_auslesen(markt, prospekt, seiten):
                 ergebnis.append(angebot(
-                    "Rossmann",
-                    p.get("brandName"), p.get("name"),
-                    preise.get("SALES_PRICE") or None, preise.get("REGULAR_PRICE") or None,
-                    None, "",
-                    beschreibung[:80],
-                    kaufda_datum(gueltig.get("startDate", "")) or prospekt["von"],
-                    kaufda_datum(gueltig.get("endDate", "")) or prospekt["bis"],
-                    kats[-1] if kats else "", "kaufDA",
+                    markt, a.get("marke"), a.get("name"),
+                    a.get("preis"), a.get("alt_preis"),
+                    a.get("grundpreis"), a.get("gp_einheit"),
+                    a.get("packung"),
+                    prospekt["von"], prospekt["bis"],
+                    a.get("kategorie"), "kaufDA+KI",
                 ))
+            ergebnis = ki_doppelte_entfernen(ergebnis)
     return ergebnis
 
 
-# --- K+K ----------------------------------------------------------------------
+def rossmann_alle_angebote() -> list[dict]:
+    return kaufda_markt_angebote("Rossmann", ROSSMANN_SEITE)
+
+
+# --- Prospektbilder per Claude auslesen (K+K und andere ohne Einzelangebote) ---
 
 KK_MODELL = os.environ.get("PROSPEKT_MODELL", "claude-haiku-5-5")
 
@@ -473,58 +503,59 @@ def kk_seite_auslesen(client, bild_url: str) -> tuple[list[dict], int, int]:
     return daten, antwort.usage.input_tokens, antwort.usage.output_tokens
 
 
-def kk_prospekt_auslesen(prospekt: dict) -> list[dict]:
-    cache = CACHE_DIR / f"kk_{prospekt['id']}.json"
-    if cache.exists():
-        return json.loads(cache.read_text(encoding="utf-8"))["angebote"]
+MAX_KI_SEITEN = 40  # Schutz vor sehr dicken Prospekten (Kosten)
+
+
+def ki_prospekt_auslesen(markt: str, prospekt: dict, seiten: list[dict]) -> list[dict]:
+    """Liest einen Prospekt per Claude aus. Ergebnis wird pro Prospekt gecacht."""
+    cache = CACHE_DIR / f"ki_{prospekt['id']}.json"
+    alt = CACHE_DIR / f"kk_{prospekt['id']}.json"  # Cache-Name aus früherer Version
+    for c in (cache, alt):
+        if c.exists():
+            return json.loads(c.read_text(encoding="utf-8"))["angebote"]
 
     if not os.environ.get("ANTHROPIC_API_KEY"):
-        raise RuntimeError("ANTHROPIC_API_KEY fehlt – K+K übersprungen")
+        raise RuntimeError(f"ANTHROPIC_API_KEY fehlt – {markt} übersprungen")
     import anthropic
 
     client = anthropic.Anthropic()
     bilder = []
-    for seite in kaufda_seiten(prospekt["id"]):
+    for seite in seiten:
         b = {i.get("size"): i.get("url") for i in seite.get("images", [])}
         url = b.get("1600x1600") or (list(b.values())[-1] if b else None)
         if url:
             bilder.append(url)
+    if len(bilder) > MAX_KI_SEITEN:
+        log(f"  {markt}: Prospekt hat {len(bilder)} Seiten, lese nur die ersten {MAX_KI_SEITEN}")
+        bilder = bilder[:MAX_KI_SEITEN]
 
-    log(f"  K+K: lese '{prospekt['titel']}' ({len(bilder)} Seiten) mit {KK_MODELL} aus ...")
+    log(f"  {markt}: lese '{prospekt['titel']}' ({len(bilder)} Seiten) mit {KK_MODELL} aus ...")
     alle, ti, to = [], 0, 0
     for i, url in enumerate(bilder, 1):
         daten, a, b = kk_seite_auslesen(client, url)
         log(f"    Seite {i}: {len(daten)} Angebote")
         alle.extend(daten)
         ti, to = ti + a, to + b
-    log(f"  K+K: {len(alle)} Angebote, {ti} Tokens rein / {to} raus")
+    log(f"  {markt}: {len(alle)} Angebote, {ti} Tokens rein / {to} raus")
 
     CACHE_DIR.mkdir(exist_ok=True)
     cache.write_text(
-        json.dumps({"prospekt": prospekt, "modell": KK_MODELL, "angebote": alle},
+        json.dumps({"markt": markt, "prospekt": prospekt, "modell": KK_MODELL, "angebote": alle},
                    ensure_ascii=False, indent=1),
         encoding="utf-8",
     )
     return alle
 
 
-def kk_alle_angebote() -> list[dict]:
-    ergebnis = []
-    for prospekt in kaufda_prospekte(KAUFDA_SEITEN["K+K"]):
-        for a in kk_prospekt_auslesen(prospekt):
-            ergebnis.append(angebot(
-                "K+K", a.get("marke"), a.get("name"),
-                a.get("preis"), a.get("alt_preis"),
-                a.get("grundpreis"), a.get("gp_einheit"),
-                a.get("packung"),
-                prospekt["von"], prospekt["bis"],
-                a.get("kategorie"), "kaufDA+KI",
-            ))
-    # Titelseite und Innenteil zeigen oft dasselbe Angebot
+def ki_doppelte_entfernen(angebote: list[dict]) -> list[dict]:
+    """Titelseite und Innenteil zeigen oft dasselbe Angebot (leicht anders formuliert)."""
     gesehen, eindeutig = set(), []
-    for a in ergebnis:
+    for a in angebote:
+        if a["q"] != "kaufDA+KI":
+            eindeutig.append(a)
+            continue
         w = re.findall(r"[a-zäöüß]+", a["n"].lower())
-        s = (a["p"], w[0] if w else a["n"])
+        s = (a["h"], a["p"], w[0] if w else a["n"])
         if s not in gesehen:
             gesehen.add(s)
             eindeutig.append(a)
@@ -615,8 +646,6 @@ def main():
     aldi = versuche("Aldi", aldi_alle_angebote, global_status)
     kategorien_ergaenzen(aldi)
     rossmann = versuche("Rossmann", rossmann_alle_angebote, global_status)
-    kk = None  # erst bei Bedarf
-    kk_status: dict = {}
 
     index = {"stand": stand, "regionen": []}
     for rid in regionen:
@@ -624,15 +653,16 @@ def main():
         log(f"\nRegion {r['name']}:")
         status = dict(global_status)
         angebote = list(aldi) + list(rossmann)
+        eigene = set(r.get("kaufda", {}))  # diese Märkte nicht zusätzlich von marktguru
 
         for plz in r["plz"]:
-            angebote += versuche(f"marktguru {plz}", lambda p=plz: mg_alle_angebote(p), status)
+            mg = versuche(f"marktguru {plz}", lambda p=plz: mg_alle_angebote(p), status)
+            angebote += [a for a in mg if a["h"] not in eigene]
 
-        if r["kk"]:
-            if kk is None:
-                kk = versuche("K+K", kk_alle_angebote, kk_status)
-            status["K+K"] = kk_status["K+K"]
-            angebote += kk
+        for markt, seite in r.get("kaufda", {}).items():
+            angebote += versuche(
+                markt, lambda m=markt, s=seite: kaufda_markt_angebote(m, s, r["latlng"]), status
+            )
 
         angebote = doppelte_entfernen(angebote)
         maerkte = sorted({a["h"] for a in angebote})
