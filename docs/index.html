@@ -1131,13 +1131,13 @@ function begrenzteListe(liste) {
 }
 
 function kachelnHTML() {
-  const erlaubt = new Set(aktiveMaerkte());
+  const erlaubt = new Set(sucheMarkt ? [sucheMarkt] : aktiveMaerkte());
   const zahl = {};
   for (const a of angebote) if (erlaubt.has(a.h)) zahl[gruppeVon(a)] = (zahl[gruppeVon(a)] || 0) + 1;
   const vorhanden = gruppenListe().filter((g) => zahl[g]);
-  if (!vorhanden.length) return "";
-  return `<p class="zwischentitel">Kategorien</p><div class="kacheln">${vorhanden.map((g) =>
-    `<button class="kachel" data-gruppe="${esc(g)}"><strong>${esc(g)}</strong><span>${zahl[g]} Angebote</span></button>`).join("")}</div>`;
+  if (!vorhanden.length) return `<p class="hinweis">Diese Woche keine Angebote${sucheMarkt ? " bei " + esc(sucheMarkt) : ""}.</p>`;
+  return `<p class="zwischentitel">Kategorien${sucheMarkt ? " bei " + esc(sucheMarkt) : ""}</p><div class="kacheln">${vorhanden.map((g) =>
+    `<button class="kachel" data-gruppe="${esc(g)}"><strong>${esc(g)}</strong><span>${zahl[g] === 1 ? "1 Angebot" : zahl[g] + " Angebote"}</span></button>`).join("")}</div>`;
 }
 function zeichneMarktChips() {
   const m = aktiveMaerkte();
