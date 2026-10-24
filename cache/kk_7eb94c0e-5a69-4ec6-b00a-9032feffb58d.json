@@ -1,0 +1,1641 @@
+{
+ "prospekt": {
+  "id": "7eb94c0e-5a69-4ec6-b00a-9032feffb58d",
+  "titel": "Wenn Lebensmittel, dann K+K",
+  "von": "2026-10-19",
+  "bis": "2026-10-24"
+ },
+ "modell": "claude-haiku-5-5",
+ "angebote": [
+  {
+   "marke": "Kinder",
+   "name": "Riegel 10+1 gratis",
+   "packung": "",
+   "preis": 2.99,
+   "alt_preis": 3.69,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Süßwaren"
+  },
+  {
+   "marke": "Kinder",
+   "name": "Bueno 6+2 gratis",
+   "packung": "172g Packung",
+   "preis": 2.49,
+   "alt_preis": 3.29,
+   "grundpreis": 14.48,
+   "gp_einheit": "kg",
+   "kategorie": "Süßwaren"
+  },
+  {
+   "marke": "Kinder",
+   "name": "Country 9+1 gratis",
+   "packung": "235g Packung",
+   "preis": 2.99,
+   "alt_preis": 3.49,
+   "grundpreis": 12.72,
+   "gp_einheit": "kg",
+   "kategorie": "Süßwaren"
+  },
+  {
+   "marke": "drlander",
+   "name": "Kasselernackenbraten ohne Knochen, geräuchert",
+   "packung": "1000g",
+   "preis": 7.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Fleisch"
+  },
+  {
+   "marke": "",
+   "name": "Spießbraten Schweinenacken ohne Knochen, backofenfertig",
+   "packung": "100g",
+   "preis": 1.19,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Fleisch"
+  },
+  {
+   "marke": "drlander",
+   "name": "Herzhafter Fleischkäse fein, backofenfertig",
+   "packung": "600g Schale",
+   "preis": 5.0,
+   "alt_preis": null,
+   "grundpreis": 8.33,
+   "gp_einheit": "kg",
+   "kategorie": "Fleisch"
+  },
+  {
+   "marke": "",
+   "name": "Speisemöhren aus dem Münsterland, aromatisch Kl. 1",
+   "packung": "1kg Schale",
+   "preis": 0.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Gemüse"
+  },
+  {
+   "marke": "",
+   "name": "Strauchtomaten schnittfest und aromatisch Kl. 1",
+   "packung": "1kg",
+   "preis": 2.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Gemüse"
+  },
+  {
+   "marke": "",
+   "name": "Kohlrabi zart und delikat",
+   "packung": "je Stück",
+   "preis": 0.59,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Gemüse"
+  },
+  {
+   "marke": "Dr. Oetker",
+   "name": "Bistro Baguettes, verschiedene Sorten",
+   "packung": "250g Packung",
+   "preis": 1.49,
+   "alt_preis": 2.29,
+   "grundpreis": 5.96,
+   "gp_einheit": "kg",
+   "kategorie": "Tiefkühlpizza"
+  },
+  {
+   "marke": "FRoSTA",
+   "name": "Fertiggerichte oder Veggie, verschiedene Sorten",
+   "packung": "450g–500g Beutel",
+   "preis": 2.99,
+   "alt_preis": null,
+   "grundpreis": 5.98,
+   "gp_einheit": "kg",
+   "kategorie": "Fertiggericht"
+  },
+  {
+   "marke": "Arla",
+   "name": "Kaergården gesalzen und ungesalzen",
+   "packung": "200g Becher",
+   "preis": 1.29,
+   "alt_preis": 2.69,
+   "grundpreis": 6.45,
+   "gp_einheit": "kg",
+   "kategorie": "Butter"
+  },
+  {
+   "marke": "Ehrmann",
+   "name": "Grand Dessert, verschiedene Sorten",
+   "packung": "190g Becher",
+   "preis": 0.69,
+   "alt_preis": 1.19,
+   "grundpreis": 3.63,
+   "gp_einheit": "kg",
+   "kategorie": "Dessert"
+  },
+  {
+   "marke": "Rama",
+   "name": "Rama, 100% pflanzlich",
+   "packung": "400g Becher",
+   "preis": 1.29,
+   "alt_preis": 2.29,
+   "grundpreis": 3.23,
+   "gp_einheit": "kg",
+   "kategorie": "Margarine"
+  },
+  {
+   "marke": "Katjes",
+   "name": "Katjes, verschiedene Sorten",
+   "packung": "210g Beutel",
+   "preis": 0.89,
+   "alt_preis": 1.39,
+   "grundpreis": 4.24,
+   "gp_einheit": "kg",
+   "kategorie": "Süßwaren"
+  },
+  {
+   "marke": "Ritter Sport",
+   "name": "Bunte Vielfalt, verschiedene Sorten",
+   "packung": "100g Tafel",
+   "preis": 1.29,
+   "alt_preis": 1.99,
+   "grundpreis": 12.9,
+   "gp_einheit": "kg",
+   "kategorie": "Schokolade"
+  },
+  {
+   "marke": "Valensina",
+   "name": "Valensina, verschiedene Sorten",
+   "packung": "1 l PET-Flasche",
+   "preis": 1.79,
+   "alt_preis": 2.49,
+   "grundpreis": 2.38,
+   "gp_einheit": "l",
+   "kategorie": "Saft"
+  },
+  {
+   "marke": "Monster Energy",
+   "name": "Energy, verschiedene Sorten",
+   "packung": "0,5 l Dose",
+   "preis": 5.95,
+   "alt_preis": 8.95,
+   "grundpreis": 2.38,
+   "gp_einheit": "l",
+   "kategorie": "Energydrink"
+  },
+  {
+   "marke": "Schwartau",
+   "name": "Corny, verschiedene Sorten",
+   "packung": "96g–150g Packung",
+   "preis": 1.79,
+   "alt_preis": 2.59,
+   "grundpreis": 11.93,
+   "gp_einheit": "kg",
+   "kategorie": "Müsliriegel"
+  },
+  {
+   "marke": "Freixenet",
+   "name": "Mederano Glühwein, Mia Weine, verschiedene Sorten",
+   "packung": "1 l Flasche",
+   "preis": 2.99,
+   "alt_preis": 4.49,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Wein"
+  },
+  {
+   "marke": "Erdinger",
+   "name": "Weißbier, verschiedene Sorten oder Brauhaus",
+   "packung": "20 x 0,5 l",
+   "preis": 14.99,
+   "alt_preis": 21.99,
+   "grundpreis": 1.5,
+   "gp_einheit": "l",
+   "kategorie": "Bier"
+  },
+  {
+   "marke": "Veltins",
+   "name": "Pilsener, Helles Pülleken oder Helles Lager",
+   "packung": "24 x 0,33 l",
+   "preis": 13.99,
+   "alt_preis": 16.99,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Bier"
+  },
+  {
+   "marke": "",
+   "name": "Rinderbeinscheibe für die gute Suppe",
+   "packung": "1000g",
+   "preis": 10.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Fleisch"
+  },
+  {
+   "marke": "",
+   "name": "Premium Rindergehacktes, frisch durchgedreht",
+   "packung": "100g",
+   "preis": 1.79,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Fleisch"
+  },
+  {
+   "marke": "",
+   "name": "Schweinefilet, frisch",
+   "packung": "100g",
+   "preis": 1.19,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Fleisch"
+  },
+  {
+   "marke": "",
+   "name": "Loin-Ribs vom Schwein, frisch",
+   "packung": "100g",
+   "preis": 0.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Fleisch"
+  },
+  {
+   "marke": "",
+   "name": "Kasselernackenbraten, ohne Knochen, am Stück, goldgelb geräuchert",
+   "packung": "1000g",
+   "preis": 7.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Fleisch"
+  },
+  {
+   "marke": "",
+   "name": "Spießbraten, Schweinenacken ohne Knochen, backofenfertig",
+   "packung": "100g",
+   "preis": 1.19,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Fleisch"
+  },
+  {
+   "marke": "drilander",
+   "name": "Herzhafter Fleischkäse, fein, backofenfertig",
+   "packung": "600g Schale",
+   "preis": 5.0,
+   "alt_preis": null,
+   "grundpreis": 8.33,
+   "gp_einheit": "kg",
+   "kategorie": "Wurst"
+  },
+  {
+   "marke": "drilander",
+   "name": "Bolognese oder Chili Con Carne, fix und fertig",
+   "packung": "500g Schlauchbeutel",
+   "preis": 5.99,
+   "alt_preis": null,
+   "grundpreis": 11.98,
+   "gp_einheit": "kg",
+   "kategorie": "Fertiggericht"
+  },
+  {
+   "marke": "Heidegold",
+   "name": "Hähnchenschenkel ohne Rückenstück, gewürzt oder mariniert",
+   "packung": "1000g",
+   "preis": 6.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Geflügel"
+  },
+  {
+   "marke": "Heidegold",
+   "name": "Hähnchenschenkel ohne Rückenstück",
+   "packung": "1000g",
+   "preis": 5.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Geflügel"
+  },
+  {
+   "marke": "drilander",
+   "name": "Luftgetrocknete Mettwurst",
+   "packung": "100g",
+   "preis": 1.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Wurst"
+  },
+  {
+   "marke": "drilander",
+   "name": "Frischwurstaufschnitt, verschiedene Sorten",
+   "packung": "100g",
+   "preis": 1.39,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Wurst"
+  },
+  {
+   "marke": "drilander",
+   "name": "Mettwürstchen, geräuchert und ungeräuchert",
+   "packung": "100g",
+   "preis": 1.29,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Wurst"
+  },
+  {
+   "marke": "drilander",
+   "name": "Mediterraner Lachsschinken",
+   "packung": "100g",
+   "preis": 2.29,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Wurst"
+  },
+  {
+   "marke": "drilander",
+   "name": "Gekochter Hinterschinken, ungeräuchert",
+   "packung": "100g",
+   "preis": 1.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Schinken"
+  },
+  {
+   "marke": "drilander",
+   "name": "Kalbfleisch Leberwurst im Golddarm",
+   "packung": "100g",
+   "preis": 1.29,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Wurst"
+  },
+  {
+   "marke": "drilander",
+   "name": "Zwiebelmettwurst, frisch und würzig",
+   "packung": "100g",
+   "preis": 1.59,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Wurst"
+  },
+  {
+   "marke": "drilander",
+   "name": "Delikatess Fleischsalat, herzhaft lecker",
+   "packung": "400g Becher",
+   "preis": 3.99,
+   "alt_preis": null,
+   "grundpreis": 9.98,
+   "gp_einheit": "kg",
+   "kategorie": "Feinkost"
+  },
+  {
+   "marke": "drilander",
+   "name": "Delikatess Fleischsalat",
+   "packung": "200g Becher",
+   "preis": 2.49,
+   "alt_preis": null,
+   "grundpreis": 12.45,
+   "gp_einheit": "kg",
+   "kategorie": "Feinkost"
+  },
+  {
+   "marke": "drilander",
+   "name": "Sauerkrautpfanne mit Kasseler vom Schwein",
+   "packung": "1000g",
+   "preis": 5.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Fleisch"
+  },
+  {
+   "marke": "",
+   "name": "Kohlrabi",
+   "packung": "je Stück",
+   "preis": 0.59,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Gemüse"
+  },
+  {
+   "marke": "",
+   "name": "Tafeläpfel Elstar und Braeburn",
+   "packung": "je 1,5kg Beutel",
+   "preis": 2.49,
+   "alt_preis": null,
+   "grundpreis": 1.66,
+   "gp_einheit": "kg",
+   "kategorie": "Obst"
+  },
+  {
+   "marke": "Brün",
+   "name": "Speisemöhren",
+   "packung": "1kg Schale",
+   "preis": 0.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Gemüse"
+  },
+  {
+   "marke": "",
+   "name": "Pflücksalat oder Rucolasalat",
+   "packung": "125g Schale",
+   "preis": 1.49,
+   "alt_preis": null,
+   "grundpreis": 11.92,
+   "gp_einheit": "kg",
+   "kategorie": "Salat"
+  },
+  {
+   "marke": "",
+   "name": "Kulturchampignons braun",
+   "packung": "200g Schale",
+   "preis": 1.99,
+   "alt_preis": null,
+   "grundpreis": 9.95,
+   "gp_einheit": "kg",
+   "kategorie": "Pilze"
+  },
+  {
+   "marke": "",
+   "name": "Spitzkohl",
+   "packung": "1kg",
+   "preis": 0.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Gemüse"
+  },
+  {
+   "marke": "Natura",
+   "name": "Strauchtomaten",
+   "packung": "1kg",
+   "preis": 2.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Gemüse"
+  },
+  {
+   "marke": "",
+   "name": "Speisekartoffeln",
+   "packung": "3kg Netz",
+   "preis": 2.99,
+   "alt_preis": null,
+   "grundpreis": 1.0,
+   "gp_einheit": "kg",
+   "kategorie": "Kartoffeln"
+  },
+  {
+   "marke": "",
+   "name": "Rote Zwiebeln",
+   "packung": "350g Netz",
+   "preis": 0.99,
+   "alt_preis": null,
+   "grundpreis": 2.83,
+   "gp_einheit": "kg",
+   "kategorie": "Gemüse"
+  },
+  {
+   "marke": "",
+   "name": "Rosenkohl",
+   "packung": "500g Flowpack",
+   "preis": 1.49,
+   "alt_preis": null,
+   "grundpreis": 2.98,
+   "gp_einheit": "kg",
+   "kategorie": "Gemüse"
+  },
+  {
+   "marke": "iglo",
+   "name": "Junger Spinat oder Rahmspinat, portionierbar",
+   "packung": "750g Packung",
+   "preis": 2.49,
+   "alt_preis": 2.99,
+   "grundpreis": 3.32,
+   "gp_einheit": "kg",
+   "kategorie": "Gemüse"
+  },
+  {
+   "marke": "iglo",
+   "name": "Fischstäbchen oder Backfisch-Stäbchen",
+   "packung": "15 Stück = 450g oder 13 Stück = 364g Packung",
+   "preis": 2.99,
+   "alt_preis": 4.89,
+   "grundpreis": null,
+   "gp_einheit": "kg",
+   "kategorie": "Fisch"
+  },
+  {
+   "marke": "Dr. Oetker",
+   "name": "Bistro Baguettes, verschiedene Sorten",
+   "packung": "250g Packung",
+   "preis": 1.49,
+   "alt_preis": 2.29,
+   "grundpreis": 5.96,
+   "gp_einheit": "kg",
+   "kategorie": "Fertiggericht"
+  },
+  {
+   "marke": "Wagner",
+   "name": "Die Backfrische, verschiedene Sorten",
+   "packung": "320g–370g Packung",
+   "preis": 2.79,
+   "alt_preis": 3.49,
+   "grundpreis": null,
+   "gp_einheit": "kg",
+   "kategorie": "Pizza"
+  },
+  {
+   "marke": "agrarfrost",
+   "name": "Pommes Juliennes, Back-Frites, Knusperfrites",
+   "packung": "750g Beutel",
+   "preis": 1.49,
+   "alt_preis": 2.49,
+   "grundpreis": 1.99,
+   "gp_einheit": "kg",
+   "kategorie": "Pommes frites"
+  },
+  {
+   "marke": "Coppenrath & Wiese",
+   "name": "Sahne Rollen, verschiedene Sorten",
+   "packung": "400g Packung",
+   "preis": 2.99,
+   "alt_preis": 3.99,
+   "grundpreis": 7.48,
+   "gp_einheit": "kg",
+   "kategorie": "Kuchen"
+  },
+  {
+   "marke": "FRoSTA",
+   "name": "Gemüsepfannen, verschiedene Sorten",
+   "packung": "480g Beutel",
+   "preis": 2.99,
+   "alt_preis": 3.79,
+   "grundpreis": 6.23,
+   "gp_einheit": "kg",
+   "kategorie": "Gemüse"
+  },
+  {
+   "marke": "FRoSTA",
+   "name": "Fertiggerichte oder Veggie, verschiedene Sorten",
+   "packung": "450g–500g Beutel",
+   "preis": 2.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "kg",
+   "kategorie": "Fertiggericht"
+  },
+  {
+   "marke": "Weidegläck",
+   "name": "Landjoghurt mild 3,5% oder 1,5%",
+   "packung": "1-kg-Eimer",
+   "preis": 1.99,
+   "alt_preis": 2.89,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Joghurt"
+  },
+  {
+   "marke": "Ehrmann",
+   "name": "Grand Dessert, verschiedene Sorten",
+   "packung": "190-g-Becher",
+   "preis": 0.69,
+   "alt_preis": 1.19,
+   "grundpreis": 3.63,
+   "gp_einheit": "kg",
+   "kategorie": "Dessert"
+  },
+  {
+   "marke": "müller",
+   "name": "Reine Buttermilch",
+   "packung": "500-g-Flasche",
+   "preis": 0.79,
+   "alt_preis": 1.19,
+   "grundpreis": 1.58,
+   "gp_einheit": "kg",
+   "kategorie": "Buttermilch"
+  },
+  {
+   "marke": "Ehrmann",
+   "name": "Almighurt, Joghurt nach griechischer Art oder Joghurt 3,8% Fett, versch. Sorten",
+   "packung": "470-g-Glas / 500-g-Glas",
+   "preis": 1.49,
+   "alt_preis": 1.99,
+   "grundpreis": 3.17,
+   "gp_einheit": "kg",
+   "kategorie": "Joghurt"
+  },
+  {
+   "marke": "Zott",
+   "name": "Monte Maxi oder Mega",
+   "packung": "4 x 100-g / 400-g-Becher",
+   "preis": 1.79,
+   "alt_preis": 2.99,
+   "grundpreis": 4.48,
+   "gp_einheit": "kg",
+   "kategorie": "Dessert"
+  },
+  {
+   "marke": "Weihenstephan",
+   "name": "Rahmjoghurt, verschiedene Sorten",
+   "packung": "150-g-Becher",
+   "preis": 0.69,
+   "alt_preis": 0.99,
+   "grundpreis": 4.6,
+   "gp_einheit": "kg",
+   "kategorie": "Joghurt"
+  },
+  {
+   "marke": "Arla",
+   "name": "Kaergården gesalzen und ungesalzen",
+   "packung": "200-g-Becher",
+   "preis": 1.29,
+   "alt_preis": 2.69,
+   "grundpreis": 6.45,
+   "gp_einheit": "kg",
+   "kategorie": "Butter"
+  },
+  {
+   "marke": "Rama",
+   "name": "Rama 100% natürliche Zutaten",
+   "packung": "400-g-Becher",
+   "preis": 1.29,
+   "alt_preis": 2.29,
+   "grundpreis": 3.23,
+   "gp_einheit": "kg",
+   "kategorie": "Margarine"
+  },
+  {
+   "marke": "Herta",
+   "name": "Saftschinken und andere Sorten",
+   "packung": "100-g-Packung",
+   "preis": 1.99,
+   "alt_preis": 2.59,
+   "grundpreis": 19.9,
+   "gp_einheit": "kg",
+   "kategorie": "Aufschnitt"
+  },
+  {
+   "marke": "Golden Toast",
+   "name": "Toastbrot Butter oder Vollkorn",
+   "packung": "500-g-Packung",
+   "preis": 1.49,
+   "alt_preis": 1.89,
+   "grundpreis": 2.98,
+   "gp_einheit": "kg",
+   "kategorie": "Toastbrot"
+  },
+  {
+   "marke": "Brandt",
+   "name": "Vollkorn-Zwieback und andere Sorten",
+   "packung": "200-g–225-g-Packung",
+   "preis": 1.99,
+   "alt_preis": 2.29,
+   "grundpreis": 8.84,
+   "gp_einheit": "kg",
+   "kategorie": "Zwieback"
+  },
+  {
+   "marke": "Lieken Urkorn",
+   "name": "Fit und Vital Brote",
+   "packung": "400-g–500-g-Packung",
+   "preis": 1.49,
+   "alt_preis": 1.89,
+   "grundpreis": 2.98,
+   "gp_einheit": "kg",
+   "kategorie": "Brot"
+  },
+  {
+   "marke": "Arla Starbucks",
+   "name": "Frappuccino oder Discoveries, verschiedene Sorten",
+   "packung": "220-ml–250-ml-Becher / -Flasche",
+   "preis": 1.99,
+   "alt_preis": 2.49,
+   "grundpreis": 7.96,
+   "gp_einheit": "l",
+   "kategorie": "Kaffee"
+  },
+  {
+   "marke": "yfood",
+   "name": "Trinkmahlzeit, verschiedene Sorten",
+   "packung": "500-ml-Flasche",
+   "preis": 3.49,
+   "alt_preis": 3.99,
+   "grundpreis": 6.98,
+   "gp_einheit": "l",
+   "kategorie": "Trinkmahlzeit"
+  },
+  {
+   "marke": "Meßmer",
+   "name": "Ländertees, Wohlfühltees, verschiedene Sorten",
+   "packung": "20er Packung Aufgussbeutel",
+   "preis": 1.79,
+   "alt_preis": 2.45,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Tee"
+  },
+  {
+   "marke": "Fol Epi",
+   "name": "Classic Scheiben",
+   "packung": "150g Packung",
+   "preis": 2.49,
+   "alt_preis": 2.99,
+   "grundpreis": 16.6,
+   "gp_einheit": "kg",
+   "kategorie": "Käse"
+  },
+  {
+   "marke": "Hochland",
+   "name": "Sandwich Scheiben, verschiedene Sorten",
+   "packung": "150g–200g Packung",
+   "preis": 1.99,
+   "alt_preis": 2.69,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Käse"
+  },
+  {
+   "marke": "Alpenhain",
+   "name": "Unser Back-Camembert Classic oder Unser Back-Mozzarella Sticks",
+   "packung": "200g Packung",
+   "preis": 2.49,
+   "alt_preis": 3.49,
+   "grundpreis": 12.45,
+   "gp_einheit": "kg",
+   "kategorie": "Käse"
+  },
+  {
+   "marke": "miree",
+   "name": "verschiedene Sorten",
+   "packung": "135g–150g Becher",
+   "preis": 1.11,
+   "alt_preis": 1.89,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Frischkäse"
+  },
+  {
+   "marke": "Président",
+   "name": "Le Crémiot Weichkäse 60% Fett i. Tr.",
+   "packung": "200g Packung",
+   "preis": 2.49,
+   "alt_preis": 2.99,
+   "grundpreis": 12.45,
+   "gp_einheit": "kg",
+   "kategorie": "Käse"
+  },
+  {
+   "marke": "Henglein",
+   "name": "Reibekuchenteig",
+   "packung": "1kg Eimer",
+   "preis": 2.79,
+   "alt_preis": 3.49,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Teig"
+  },
+  {
+   "marke": "Casa Pietra",
+   "name": "Tortelloni und andere Sorten",
+   "packung": "400g–500g Packung",
+   "preis": 1.59,
+   "alt_preis": 1.89,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Teigwaren"
+  },
+  {
+   "marke": "Meica",
+   "name": "Volle Kelle verschiedene Sorten oder Kohlkönig",
+   "packung": "400g–515g Schale",
+   "preis": 2.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Fertiggericht"
+  },
+  {
+   "marke": "Dr. Oetker",
+   "name": "Vitalis Müsli verschiedene Sorten oder Paula Müslispaß",
+   "packung": "330g–600g Packung",
+   "preis": 2.99,
+   "alt_preis": 3.99,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Müsli"
+  },
+  {
+   "marke": "Alpro",
+   "name": "Not M*lk pflanzlich und fettarm 1,8% oder Schokoladengeschmack",
+   "packung": "1 l Packung",
+   "preis": 1.99,
+   "alt_preis": 2.79,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Milchersatz"
+  },
+  {
+   "marke": "Kellogg's",
+   "name": "Cerealien verschiedene Sorten",
+   "packung": "375g–500g Packung",
+   "preis": 3.49,
+   "alt_preis": 4.49,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Müsli"
+  },
+  {
+   "marke": "Nescafé",
+   "name": "Cappuccino verschiedene Sorten",
+   "packung": "220g–250g Dose",
+   "preis": 3.99,
+   "alt_preis": 4.99,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Kaffee"
+  },
+  {
+   "marke": "Kölln",
+   "name": "Flocken Blütenzarte oder Echte Kölln Kernige",
+   "packung": "500g Packung",
+   "preis": 1.39,
+   "alt_preis": 1.69,
+   "grundpreis": 2.78,
+   "gp_einheit": "kg",
+   "kategorie": "Haferflocken"
+  },
+  {
+   "marke": "Jacobs",
+   "name": "Tassimo verschiedene Sorten",
+   "packung": "132g–270g Packung",
+   "preis": 4.99,
+   "alt_preis": 6.49,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Kaffee"
+  },
+  {
+   "marke": "Sonnen Bassermann",
+   "name": "Hühner-Nudel-Eintopf und andere Sorten",
+   "packung": "400-g-Dose",
+   "preis": 1.49,
+   "alt_preis": 1.89,
+   "grundpreis": 3.73,
+   "gp_einheit": "kg",
+   "kategorie": "Eintopf"
+  },
+  {
+   "marke": "Sonnen Bassermann",
+   "name": "Hochzeitssuppe und andere Sorten",
+   "packung": "400-ml-Dose",
+   "preis": 1.49,
+   "alt_preis": 1.99,
+   "grundpreis": 3.73,
+   "gp_einheit": "l",
+   "kategorie": "Suppe"
+  },
+  {
+   "marke": "Böklunder",
+   "name": "Landbockwurst",
+   "packung": "8 Stück, 720-g-Glas",
+   "preis": 4.99,
+   "alt_preis": 6.99,
+   "grundpreis": 6.93,
+   "gp_einheit": "kg",
+   "kategorie": "Wurst"
+  },
+  {
+   "marke": "Bonduelle",
+   "name": "Junge Erbsen, Erbsen mit Möhren, Grüne Bohnen feine Auslese",
+   "packung": "425-ml-Dose",
+   "preis": 1.49,
+   "alt_preis": 1.89,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Gemüse"
+  },
+  {
+   "marke": "Maggi",
+   "name": "Delikatess Saucen, Rahmsauce zu Braten und andere Sorten",
+   "packung": "2er-Packung",
+   "preis": 1.19,
+   "alt_preis": 1.49,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Soße"
+  },
+  {
+   "marke": "Rügenwalder",
+   "name": "Rügenwürmer",
+   "packung": "100-g-Packung",
+   "preis": 1.49,
+   "alt_preis": 1.89,
+   "grundpreis": 14.9,
+   "gp_einheit": "kg",
+   "kategorie": "Wurst"
+  },
+  {
+   "marke": "Heinz",
+   "name": "Feinkostsaucen, verschiedene Sorten",
+   "packung": "220-ml-Flasche",
+   "preis": 1.49,
+   "alt_preis": 2.29,
+   "grundpreis": 6.77,
+   "gp_einheit": "l",
+   "kategorie": "Soße"
+  },
+  {
+   "marke": "reis-fit",
+   "name": "Express-Reis oder Feelgood Linsen, versch. Sorten",
+   "packung": "250-g-Packung",
+   "preis": 1.69,
+   "alt_preis": 1.99,
+   "grundpreis": 6.76,
+   "gp_einheit": "kg",
+   "kategorie": "Reis"
+  },
+  {
+   "marke": "reis-fit",
+   "name": "Basis, verschiedene Sorten",
+   "packung": "4 x 125-g-Kochbeutel",
+   "preis": 1.69,
+   "alt_preis": 2.29,
+   "grundpreis": 3.38,
+   "gp_einheit": "kg",
+   "kategorie": "Reis"
+  },
+  {
+   "marke": "Kinder",
+   "name": "Riegel oder Duplo 10+1 gratis",
+   "packung": "200,2 g – 231 g Packung",
+   "preis": 2.99,
+   "alt_preis": 3.69,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Süßware"
+  },
+  {
+   "marke": "Amicelli",
+   "name": "Amicelli",
+   "packung": "200-g-Packung",
+   "preis": 2.99,
+   "alt_preis": 3.99,
+   "grundpreis": 14.95,
+   "gp_einheit": "kg",
+   "kategorie": "Süßware"
+  },
+  {
+   "marke": "Katjes",
+   "name": "Yoghurt-Gums, versch. Sorten",
+   "packung": "210-g-Beutel",
+   "preis": 0.89,
+   "alt_preis": 1.39,
+   "grundpreis": 4.24,
+   "gp_einheit": "kg",
+   "kategorie": "Fruchtgummi"
+  },
+  {
+   "marke": "Kinder",
+   "name": "Bueno 6+2 gratis",
+   "packung": "172-g-Packung",
+   "preis": 2.49,
+   "alt_preis": 3.29,
+   "grundpreis": 14.48,
+   "gp_einheit": "kg",
+   "kategorie": "Schokolade"
+  },
+  {
+   "marke": "Kinder",
+   "name": "Country 9+1 gratis",
+   "packung": "235-g-Packung",
+   "preis": 2.99,
+   "alt_preis": 3.49,
+   "grundpreis": 12.72,
+   "gp_einheit": "kg",
+   "kategorie": "Schokolade"
+  },
+  {
+   "marke": "",
+   "name": "Minis (Mars, Snickers, Twix, Bounty oder Milky Way)",
+   "packung": "227-g-Beutel",
+   "preis": 2.79,
+   "alt_preis": 3.99,
+   "grundpreis": 12.29,
+   "gp_einheit": "kg",
+   "kategorie": "Schokolade"
+  },
+  {
+   "marke": "Birkel",
+   "name": "3 Glocken Genuss Pur",
+   "packung": "500-g-Beutel",
+   "preis": 1.49,
+   "alt_preis": 1.89,
+   "grundpreis": 2.98,
+   "gp_einheit": "kg",
+   "kategorie": "Nudeln"
+  },
+  {
+   "marke": "Mirácoli",
+   "name": "Klassiker Spaghetti 5 Portionen",
+   "packung": "616-g-Packung",
+   "preis": 3.79,
+   "alt_preis": 4.29,
+   "grundpreis": 6.15,
+   "gp_einheit": "kg",
+   "kategorie": "Nudeln"
+  },
+  {
+   "marke": "Dr. Oetker",
+   "name": "Kleine Backideen inkl. my little bites oder Standard Kuchenmischungen",
+   "packung": "280-g–580-g-Packung",
+   "preis": 2.99,
+   "alt_preis": 3.79,
+   "grundpreis": null,
+   "gp_einheit": "kg",
+   "kategorie": "Backmischung"
+  },
+  {
+   "marke": "HOMANN",
+   "name": "Paprika Sauce und andere Sorten",
+   "packung": "400-ml-Glas",
+   "preis": 1.79,
+   "alt_preis": 2.49,
+   "grundpreis": 4.48,
+   "gp_einheit": "l",
+   "kategorie": "Sauce"
+  },
+  {
+   "marke": "Knorr",
+   "name": "Fertiggerichte versch. Sorten",
+   "packung": "121-g–164-g-Beutel",
+   "preis": 1.69,
+   "alt_preis": 1.99,
+   "grundpreis": null,
+   "gp_einheit": "kg",
+   "kategorie": "Fertiggericht"
+  },
+  {
+   "marke": "KIKKOMAN",
+   "name": "Soja Sauce",
+   "packung": "150-ml-Flasche",
+   "preis": 2.49,
+   "alt_preis": 2.79,
+   "grundpreis": 16.6,
+   "gp_einheit": "l",
+   "kategorie": "Sauce"
+  },
+  {
+   "marke": "TABASCO",
+   "name": "Red Pepper Sauce",
+   "packung": "60-ml-Flasche",
+   "preis": 2.49,
+   "alt_preis": 3.49,
+   "grundpreis": 41.5,
+   "gp_einheit": "l",
+   "kategorie": "Sauce"
+  },
+  {
+   "marke": "Birkel",
+   "name": "Minuto XXL verschiedene Sorten",
+   "packung": "72-g–82-g-Becher",
+   "preis": 0.99,
+   "alt_preis": 1.59,
+   "grundpreis": null,
+   "gp_einheit": "kg",
+   "kategorie": "Fertiggericht"
+  },
+  {
+   "marke": "BelSun",
+   "name": "Aprikosen 1/2 Frucht",
+   "packung": "850-ml-Dose (ATG 480 g)",
+   "preis": 1.79,
+   "alt_preis": 1.99,
+   "grundpreis": 3.73,
+   "gp_einheit": "kg",
+   "kategorie": "Obst"
+  },
+  {
+   "marke": "m&m's",
+   "name": "Maxi verschiedene Sorten",
+   "packung": "281-g–330-g-Beutel",
+   "preis": 3.49,
+   "alt_preis": 4.99,
+   "grundpreis": null,
+   "gp_einheit": "kg",
+   "kategorie": "Schokolade"
+  },
+  {
+   "marke": "OREO",
+   "name": "Original versch. Sorten",
+   "packung": "154-g–157-g-Rolle",
+   "preis": 1.39,
+   "alt_preis": 1.89,
+   "grundpreis": null,
+   "gp_einheit": "kg",
+   "kategorie": "Keks"
+  },
+  {
+   "marke": "GRIESSON",
+   "name": "Soft Cake Orange und andere Sorten",
+   "packung": "300-g-Packung",
+   "preis": 1.99,
+   "alt_preis": 2.49,
+   "grundpreis": 6.63,
+   "gp_einheit": "kg",
+   "kategorie": "Kuchen"
+  },
+  {
+   "marke": "Schwartau",
+   "name": "Corny versch. Sorten",
+   "packung": "96-g–150-g-Packung",
+   "preis": 1.79,
+   "alt_preis": 2.59,
+   "grundpreis": null,
+   "gp_einheit": "kg",
+   "kategorie": "Müsliriegel"
+  },
+  {
+   "marke": "Trumpf",
+   "name": "Edle Tropfen in Nuss versch. Sorten",
+   "packung": "200-g-Packung",
+   "preis": 2.99,
+   "alt_preis": 3.79,
+   "grundpreis": 14.95,
+   "gp_einheit": "kg",
+   "kategorie": "Pralinen"
+  },
+  {
+   "marke": "Ritter SPORT",
+   "name": "Bunte Vielfalt versch. Sorten",
+   "packung": "100-g-Tafel",
+   "preis": 1.29,
+   "alt_preis": 1.99,
+   "grundpreis": 12.9,
+   "gp_einheit": "kg",
+   "kategorie": "Schokolade"
+  },
+  {
+   "marke": "Ritter SPORT",
+   "name": "Nuss-Klasse versch. Sorten",
+   "packung": "100-g-Tafel",
+   "preis": 1.69,
+   "alt_preis": 2.29,
+   "grundpreis": 16.9,
+   "gp_einheit": "kg",
+   "kategorie": "Schokolade"
+  },
+  {
+   "marke": "nippon",
+   "name": "Häppchen versch. Sorten",
+   "packung": "200-g-Packung",
+   "preis": 1.99,
+   "alt_preis": 2.69,
+   "grundpreis": 9.95,
+   "gp_einheit": "kg",
+   "kategorie": "Waffelgebäck"
+  },
+  {
+   "marke": "De Beukelaer",
+   "name": "Prinzen Rolle Minis",
+   "packung": "187,5-g-Packung",
+   "preis": 1.59,
+   "alt_preis": 1.99,
+   "grundpreis": 8.48,
+   "gp_einheit": "kg",
+   "kategorie": "Keks"
+  },
+  {
+   "marke": "ARIEL",
+   "name": "Waschmittel Pulver oder Flüssig, verschiedene Sorten",
+   "packung": "36 WL / 40 WL",
+   "preis": 10.99,
+   "alt_preis": 13.99,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Waschmittel"
+  },
+  {
+   "marke": "Meister Proper",
+   "name": "Allzweckreiniger, verschiedene Sorten",
+   "packung": "1l Flasche",
+   "preis": 1.79,
+   "alt_preis": 2.69,
+   "grundpreis": 1.79,
+   "gp_einheit": "l",
+   "kategorie": "Reiniger"
+  },
+  {
+   "marke": "Domestos",
+   "name": "WC Stein, verschiedene Sorten",
+   "packung": "55g Packung",
+   "preis": 1.39,
+   "alt_preis": 1.99,
+   "grundpreis": 25.27,
+   "gp_einheit": "kg",
+   "kategorie": "WC-Reiniger"
+  },
+  {
+   "marke": "NIVEA",
+   "name": "Pflegedusche, verschiedene Sorten",
+   "packung": "250ml Flasche",
+   "preis": 1.99,
+   "alt_preis": 2.69,
+   "grundpreis": 7.96,
+   "gp_einheit": "l",
+   "kategorie": "Duschgel"
+  },
+  {
+   "marke": "AXE",
+   "name": "Duschgel, verschiedene Sorten",
+   "packung": "250ml Flasche",
+   "preis": 1.99,
+   "alt_preis": 2.99,
+   "grundpreis": 7.96,
+   "gp_einheit": "l",
+   "kategorie": "Duschgel"
+  },
+  {
+   "marke": "Fa",
+   "name": "Deospray, verschiedene Sorten",
+   "packung": "150ml Dose",
+   "preis": 1.19,
+   "alt_preis": 1.89,
+   "grundpreis": 7.93,
+   "gp_einheit": "l",
+   "kategorie": "Deodorant"
+  },
+  {
+   "marke": "Dr. BEST",
+   "name": "Original Zahnbürste, verschiedene Sorten",
+   "packung": "je Packung",
+   "preis": 1.49,
+   "alt_preis": 1.79,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Zahnbürste"
+  },
+  {
+   "marke": "Colgate",
+   "name": "Komplett Zahncreme Extra Frisch oder Ultra Weiß",
+   "packung": "75ml Tube",
+   "preis": 1.29,
+   "alt_preis": 1.69,
+   "grundpreis": 17.2,
+   "gp_einheit": "l",
+   "kategorie": "Zahncreme"
+  },
+  {
+   "marke": "Batiste",
+   "name": "Trockenshampoo, verschiedene Sorten",
+   "packung": "200ml Dose",
+   "preis": 2.99,
+   "alt_preis": 3.99,
+   "grundpreis": 14.95,
+   "gp_einheit": "l",
+   "kategorie": "Trockenshampoo"
+  },
+  {
+   "marke": "Zewa",
+   "name": "Toilettenpapier 4lagig, Ultra Soft oder Ultra Senses",
+   "packung": "8x150 Blatt / 8x135 Blatt",
+   "preis": 3.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Toilettenpapier"
+  },
+  {
+   "marke": "Tempo",
+   "name": "Taschentücher Original",
+   "packung": "42x10 Tücher",
+   "preis": 4.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Taschentücher"
+  },
+  {
+   "marke": "Zewa",
+   "name": "Wisch&Weg Smart, Original oder Reinweiß",
+   "packung": "2x90 Blatt oder Original oder Reinweiß 4x45 Blatt",
+   "preis": 2.99,
+   "alt_preis": 3.49,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Küchenrolle"
+  },
+  {
+   "marke": "Dreamies / whiskas",
+   "name": "Snacks für Katzen, verschiedene Sorten",
+   "packung": "40g-100g Beutel",
+   "preis": 0.99,
+   "alt_preis": 1.49,
+   "grundpreis": 24.75,
+   "gp_einheit": "kg",
+   "kategorie": "Katzensnack"
+  },
+  {
+   "marke": "Pedigree",
+   "name": "Snacks für Hunde",
+   "packung": "40g-180g Beutel",
+   "preis": 0.99,
+   "alt_preis": 1.69,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Hundesnack"
+  },
+  {
+   "marke": "my KARLO",
+   "name": "Grauburgunder trocken und andere Sorten",
+   "packung": "1-l-Flasche",
+   "preis": 3.99,
+   "alt_preis": 5.49,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Wein"
+  },
+  {
+   "marke": "GOSCH",
+   "name": "Insel Brise Rosé halbtrocken, Blanc de Blancs trocken, Insel Brause Secco Blanc und Rosé",
+   "packung": "0,75-l-Flasche",
+   "preis": 3.49,
+   "alt_preis": 4.99,
+   "grundpreis": 4.65,
+   "gp_einheit": "l",
+   "kategorie": "Wein"
+  },
+  {
+   "marke": "Blanchet",
+   "name": "Blanc de Blancs",
+   "packung": "0,75-l-Flasche",
+   "preis": 3.33,
+   "alt_preis": 4.49,
+   "grundpreis": 4.44,
+   "gp_einheit": "l",
+   "kategorie": "Wein"
+  },
+  {
+   "marke": "ROTWILD",
+   "name": "Dornfelder halbtrocken und andere Sorten",
+   "packung": "0,75-l-Flasche",
+   "preis": 2.99,
+   "alt_preis": 3.99,
+   "grundpreis": 3.99,
+   "gp_einheit": "l",
+   "kategorie": "Wein"
+  },
+  {
+   "marke": "Jules Mumm",
+   "name": "Sekt verschiedene Sorten",
+   "packung": "0,75-l-Flasche",
+   "preis": 3.99,
+   "alt_preis": 5.49,
+   "grundpreis": 5.32,
+   "gp_einheit": "l",
+   "kategorie": "Sekt"
+  },
+  {
+   "marke": "MM, Jules Mumm oder Rotkäppchen",
+   "name": "Piccolo",
+   "packung": "0,2-l-Flaschen",
+   "preis": 1.49,
+   "alt_preis": 1.59,
+   "grundpreis": 7.45,
+   "gp_einheit": "l",
+   "kategorie": "Sekt"
+  },
+  {
+   "marke": "St. Hubertus",
+   "name": "Tropfen Kräuter-Likör",
+   "packung": "24 x 0,02 l",
+   "preis": 6.99,
+   "alt_preis": 7.99,
+   "grundpreis": 14.56,
+   "gp_einheit": "l",
+   "kategorie": "Likör"
+  },
+  {
+   "marke": "Bacardí",
+   "name": "Carta Blanca und andere Sorten",
+   "packung": "0,7-l-Flasche",
+   "preis": 10.99,
+   "alt_preis": 14.99,
+   "grundpreis": 15.7,
+   "gp_einheit": "l",
+   "kategorie": "Rum"
+  },
+  {
+   "marke": "Strothmann",
+   "name": "Weizenkorn",
+   "packung": "0,7-l-Flasche",
+   "preis": 5.49,
+   "alt_preis": 7.29,
+   "grundpreis": 7.84,
+   "gp_einheit": "l",
+   "kategorie": "Korn"
+  },
+  {
+   "marke": "Strothmann",
+   "name": "Kräuter",
+   "packung": "0,7-l-Flasche",
+   "preis": 5.99,
+   "alt_preis": 7.79,
+   "grundpreis": 8.56,
+   "gp_einheit": "l",
+   "kategorie": "Kräuterlikör"
+  },
+  {
+   "marke": "Martini",
+   "name": "Bianco und andere Sorten oder Frizzante",
+   "packung": "0,75-l-Flasche",
+   "preis": 7.99,
+   "alt_preis": 8.99,
+   "grundpreis": 10.65,
+   "gp_einheit": "l",
+   "kategorie": "Wermut"
+  },
+  {
+   "marke": "Jack Daniel's",
+   "name": "Tennessee Whiskey oder Honey",
+   "packung": "0,7-l-Flasche",
+   "preis": 17.99,
+   "alt_preis": 21.99,
+   "grundpreis": 25.7,
+   "gp_einheit": "l",
+   "kategorie": "Whiskey"
+  },
+  {
+   "marke": "Lorenz",
+   "name": "Saltletts verschiedene Sorten",
+   "packung": "100 g bis 250 g Packung",
+   "preis": 1.49,
+   "alt_preis": 2.29,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Salzgebäck"
+  },
+  {
+   "marke": "Lay's",
+   "name": "Paprika und andere Sorten",
+   "packung": "150-g-Beutel",
+   "preis": 1.49,
+   "alt_preis": 1.99,
+   "grundpreis": 9.93,
+   "gp_einheit": "kg",
+   "kategorie": "Chips"
+  },
+  {
+   "marke": "Chester's",
+   "name": "Original und andere Sorten",
+   "packung": "85-g-Beutel",
+   "preis": 1.49,
+   "alt_preis": 1.99,
+   "grundpreis": 17.53,
+   "gp_einheit": "kg",
+   "kategorie": "Chips"
+  },
+  {
+   "marke": "Valensina",
+   "name": "Valensina verschiedene Sorten",
+   "packung": "1 l PET-Flasche",
+   "preis": 1.79,
+   "alt_preis": 2.49,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Saft"
+  },
+  {
+   "marke": "VILSA",
+   "name": "Brunnen Classic, Medium, Naturelle oder Leichtperlig",
+   "packung": "12 PET-Flaschen à 1 l",
+   "preis": 6.99,
+   "alt_preis": 7.99,
+   "grundpreis": 0.58,
+   "gp_einheit": "l",
+   "kategorie": "Mineralwasser"
+  },
+  {
+   "marke": "Römerwall",
+   "name": "Classic, Medium oder Naturelle",
+   "packung": "12 Glasflaschen à 0,75 l",
+   "preis": 4.49,
+   "alt_preis": 4.99,
+   "grundpreis": 0.5,
+   "gp_einheit": "l",
+   "kategorie": "Mineralwasser"
+  },
+  {
+   "marke": "vivaris",
+   "name": "Sport Grapefruit-Zitrone",
+   "packung": "0,7 l Glasflasche",
+   "preis": 0.79,
+   "alt_preis": 1.05,
+   "grundpreis": 1.13,
+   "gp_einheit": "l",
+   "kategorie": "Limonade"
+  },
+  {
+   "marke": "Coca-Cola",
+   "name": "Coca-Cola, Sprite und andere Sorten",
+   "packung": "12 PET-Flaschen à 1 l",
+   "preis": 12.99,
+   "alt_preis": 16.99,
+   "grundpreis": 1.08,
+   "gp_einheit": "l",
+   "kategorie": "Erfrischungsgetränk"
+  },
+  {
+   "marke": "Erdinger",
+   "name": "Weißbier verschiedene Sorten oder Brauhaus",
+   "packung": "20 Flaschen à 0,5 l",
+   "preis": 14.99,
+   "alt_preis": 21.99,
+   "grundpreis": 1.5,
+   "gp_einheit": "l",
+   "kategorie": "Bier"
+  },
+  {
+   "marke": "Bitburger",
+   "name": "Premium Pils",
+   "packung": "24 Flaschen à 0,33 l / 20 Flaschen à 0,5 l",
+   "preis": 12.99,
+   "alt_preis": 16.99,
+   "grundpreis": 1.64,
+   "gp_einheit": "l",
+   "kategorie": "Bier"
+  },
+  {
+   "marke": "Brinkhoff's",
+   "name": "No.1 Pils",
+   "packung": "24 Flaschen à 0,33 l / 20 Flaschen à 0,5 l",
+   "preis": 11.99,
+   "alt_preis": 13.99,
+   "grundpreis": 1.51,
+   "gp_einheit": "l",
+   "kategorie": "Bier"
+  },
+  {
+   "marke": "König",
+   "name": "Pilsener",
+   "packung": "24 Flaschen à 0,33 l / 20 Flaschen à 0,5 l",
+   "preis": 12.99,
+   "alt_preis": 16.99,
+   "grundpreis": 1.64,
+   "gp_einheit": "l",
+   "kategorie": "Bier"
+  },
+  {
+   "marke": "5.0 Original",
+   "name": "Original versch. Sorten oder 2,5 Original Radler naturtrüb",
+   "packung": "5 x 0,5 l Dose",
+   "preis": 2.79,
+   "alt_preis": 3.45,
+   "grundpreis": 1.12,
+   "gp_einheit": "l",
+   "kategorie": "Bier"
+  },
+  {
+   "marke": "bolsius",
+   "name": "MEMENTO Dauerbrenner Nr. 3 mit Deckel oder Kompo Öllicht Nr. 3, rot oder weiß",
+   "packung": "3 Stück",
+   "preis": 1.99,
+   "alt_preis": 2.37,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Kerze"
+  },
+  {
+   "marke": "bolsius",
+   "name": "MEMENTO Kompo Öllicht Nr. 7, rot oder weiß",
+   "packung": "3 Stück",
+   "preis": 3.33,
+   "alt_preis": 4.17,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Kerze"
+  }
+ ]
+}

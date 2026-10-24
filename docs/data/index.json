@@ -1,1 +1,55 @@
-{"stand":null,"regionen":[]}
+{
+ "stand": "2026-10-24T14:14+02:00",
+ "regionen": [
+  {
+   "id": "steinfurt",
+   "name": "Emsdetten / Steinfurt",
+   "maerkte": [
+    "Aldi",
+    "Combi",
+    "Edeka",
+    "K+K",
+    "Kaufland",
+    "Lidl",
+    "Netto",
+    "Penny",
+    "Rossmann"
+   ],
+   "anzahl": 2983
+  },
+  {
+   "id": "winsen",
+   "name": "Winsen (Luhe)",
+   "maerkte": [
+    "Aldi",
+    "Edeka",
+    "Kaufland",
+    "Lidl",
+    "Netto",
+    "Penny",
+    "Rewe",
+    "Rossmann",
+    "budni"
+   ],
+   "anzahl": 3241
+  },
+  {
+   "id": "harburg",
+   "name": "Hamburg-Harburg",
+   "maerkte": [
+    "Aldi",
+    "Edeka",
+    "Kaufland",
+    "Lidl",
+    "Netto",
+    "Penny",
+    "Rewe",
+    "Rossmann",
+    "budni",
+    "dm",
+    "nahkauf"
+   ],
+   "anzahl": 3620
+  }
+ ]
+}
