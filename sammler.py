@@ -166,9 +166,12 @@ def angebot(markt, marke, name, preis, alt_preis, gp, ge, packung, von, bis, kat
             gp, ge = grundpreis_berechnen(preis, packung)
         else:
             gp, ge = None, ""
+    marke = (marke or "").strip()
+    if re.fullmatch(r"(?i)thisisnobrand\d*|no ?brand|ohne marke", marke):
+        marke = ""  # Platzhalter von marktguru für Produkte ohne Marke
     return {
         "h": markt,
-        "m": (marke or "").strip(),
+        "m": marke,
         "n": (name or "").strip(),
         "p": preis,
         "ap": alt_preis,
