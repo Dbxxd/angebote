@@ -763,6 +763,8 @@ Wichtig:
 - Adventskalender nach Inhalt: Schokolade -> Schokolade & Riegel, Chips -> Chips & Knabbereien,
   Spiele/Spielzeug -> Spielzeug.
 - Lesebrillen, Rollatoren, Rollstühle, Blutdruckmessgeräte -> Gesundheit & Nahrungsergänzung.
+- Getränke immer nach Inhalt, auch bei seltsamen Namen ("Near Water", "Infused Water" -> Wasser).
+- Grillanzünder, Anzündholz, Holzbriketts, Grillkohle -> Garten & Pflanzen (kein Fleisch!).
 - Prozent-Aktionen ohne Produkt ("20 % Rabatt auf ...") -> Rabatte & Coupons.
 
 Antworte NUR mit einer Zeile pro Produkt im Format "Nummer: Code", z.B.
