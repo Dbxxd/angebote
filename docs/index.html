@@ -599,6 +599,19 @@ function sortiere(liste) {
 /* Liefert {passend, weitere}: "passend" = Kategorie trifft den Begriff.
    Mit "gruppe" wird nur innerhalb dieser Kategorie gesucht. */
 function suche(begriff, maerkte, gruppe) {
+  // Andere Wörter für dasselbe (Klopapier = Toilettenpapier) mitsuchen
+  const andere = SYNONYME[norm(begriff.trim()).replace(/\s+/g, " ")] || [];
+  if (!andere.length) return sucheEinzeln(begriff, maerkte, gruppe);
+  const passend = new Map(), weitere = new Map();
+  for (const b of [begriff, ...andere]) {
+    const e = sucheEinzeln(b, maerkte, gruppe);
+    for (const a of e.passend) passend.set(a.id, a);
+    for (const a of e.weitere) if (!passend.has(a.id)) weitere.set(a.id, a);
+  }
+  for (const id of passend.keys()) weitere.delete(id);
+  return { passend: sortiere([...passend.values()]), weitere: sortiere([...weitere.values()]) };
+}
+function sucheEinzeln(begriff, maerkte, gruppe) {
   const woerter = norm(begriff).split(/\s+/).filter(Boolean);
   if (!woerter.length) return { passend: [], weitere: [] };
   const erlaubt = new Set(maerkte);
