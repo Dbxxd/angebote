@@ -600,16 +600,32 @@ function sortiere(liste) {
    Mit "gruppe" wird nur innerhalb dieser Kategorie gesucht. */
 function suche(begriff, maerkte, gruppe) {
   // Andere Wörter für dasselbe (Klopapier = Toilettenpapier) mitsuchen
-  const andere = SYNONYME[norm(begriff.trim()).replace(/\s+/g, " ")] || [];
-  if (!andere.length) return sucheEinzeln(begriff, maerkte, gruppe);
+  const schluessel = norm(begriff.trim()).replace(/\s+/g, " ");
+  const andere = SYNONYME[schluessel] || [];
+  const marken = MARKEN[schluessel] || [];
+  const ohne = AUSSCHLUSS[schluessel] || [];
+  if (!andere.length && !marken.length && !ohne.length) return sucheEinzeln(begriff, maerkte, gruppe);
   const passend = new Map(), weitere = new Map();
   for (const b of [begriff, ...andere]) {
     const e = sucheEinzeln(b, maerkte, gruppe);
     for (const a of e.passend) passend.set(a.id, a);
     for (const a of e.weitere) if (!passend.has(a.id)) weitere.set(a.id, a);
   }
+  // Typische Marken (Pril, Fairy) zählen als passend, auch wenn "Spülmittel" nicht im Namen steht
+  if (marken.length) {
+    const erlaubt = new Set(maerkte);
+    for (const a of angebote) {
+      if (erlaubt.has(a.h) && (!gruppe || gruppeVon(a) === gruppe) && marken.includes(norm(a.m))) passend.set(a.id, a);
+    }
+  }
+  // Bei klar abgegrenzten Begriffen zählt auch "Spülmittel-Konzentrat" (Wort steckt im Namen)
+  if (ohne.length) for (const a of weitere.values()) if (norm(a.n).includes(schluessel)) passend.set(a.id, a);
   for (const id of passend.keys()) weitere.delete(id);
-  return { passend: sortiere([...passend.values()]), weitere: sortiere([...weitere.values()]) };
+  // Was mit dem Begriff gemeint ist, aber anders heißt: Spülmittel ≠ Spülmaschinen-Tabs
+  const raus = (a) => ohne.some((w) => a.such.includes(w));
+  const p = [...passend.values()].filter((a) => !raus(a));
+  const w = [...weitere.values()].concat([...passend.values()].filter(raus));
+  return { passend: sortiere(p), weitere: sortiere(w) };
 }
 function sucheEinzeln(begriff, maerkte, gruppe) {
   const woerter = norm(begriff).split(/\s+/).filter(Boolean);
@@ -876,7 +892,21 @@ const SYNONYME = {
   spueli: ["spuelmittel"], waschpulver: ["waschmittel"],
   taschentuecher: ["taschentuch"], muellbeutel: ["muellsack", "abfallbeutel", "muellbeutel"],
   spuelmaschinentabs: ["geschirrspueltabs", "spuelmaschinen", "maschinengeschirr"],
+  spuelmittel: ["geschirrspuelmittel", "handspuelmittel"],
   duschgel: ["duschbad", "dusche"], nudeln: ["pasta", "spaghetti", "penne", "fusilli"],
+};
+
+// Marken, die für den Begriff stehen (auch ohne das Wort im Namen)
+const MARKEN = { spuelmittel: ["pril", "fairy"], spueli: ["pril", "fairy"] };
+// Wörter, die beim Begriff etwas anderes meinen; solche Angebote stehen nur unter "Weitere Treffer"
+const AUSSCHLUSS = {
+  spuelmittel: ["tabs", "caps", "maschine", "klarspuel", "finish", "somat", "geschirr-reiniger", "spueltuch", "spueltuecher", "pulver", "weichspuel"],
+  spueli: ["tabs", "caps", "maschine", "klarspuel", "finish", "somat", "geschirr-reiniger"],
+  klopapier: ["feucht"], toilettenpapier: ["feucht"],
+  waschmittel: ["weichspuel", "waeschepar", "fleckent", "enthaert", "hygienespuel"],
+  butter: ["margarine", "rama"],
+  milch: ["muellermilch", "shake", "buttermilch", "kondens", "kaffee-milch", "kaffeemilch", "milchreis", "schokolade"],
+  kaffee: ["maschine", "vollautomat", "becher", "filtertuete", "entkalker"],
 };
 
 if (!Array.isArray(zustand.vorrat)) zustand.vorrat = [];
@@ -893,7 +923,22 @@ function vorratAngebote(eintrag) {
   for (const b of vorratBegriffe(eintrag.name)) {
     for (const a of suche(b, maerkte).passend) gesehen.set(a.id, a);
   }
-  const alle = sortiere([...gesehen.values()]);
+  // Genauer als die Suche: Was heißt wirklich so ("Toilettenpapier", "Röstkaffee")?
+  // In deren Unterkategorien bleibt alles, der Rest (Cappuccino-Pulver, Kaffeemaschine) fällt raus.
+  const begriffe = vorratBegriffe(eintrag.name).map((b) => norm(b).replace(/\s+/g, ""));
+  const ohne = vorratBegriffe(eintrag.name).flatMap((b) => AUSSCHLUSS[norm(b).trim()] || []);
+  const kandidaten = [...gesehen.values()].filter((a) => !ohne.some((w) => a.such.includes(w)));
+  const kern = kandidaten.filter((a) => norm(a.n).split(/[\s,&/()+]+/).some((w) => begriffe.some((b) => w.endsWith(b))));
+  let treffer = kandidaten;
+  if (kern.length) {
+    const zahl = {};
+    for (const a of kern) if (a.u) zahl[a.u] = (zahl[a.u] || 0) + 1;
+    const rang = Object.keys(zahl).sort((x, y) => zahl[y] - zahl[x]);
+    const unter = new Set(rang.filter((u, i) => i === 0 || zahl[u] >= kern.length * 0.25));
+    const kernIds = new Set(kern.map((a) => a.id));
+    treffer = kandidaten.filter((a) => a.u ? unter.has(a.u) : kernIds.has(a.id));
+  }
+  const alle = sortiere(treffer);
   const gut = alle.filter((a) => rabatt(a) >= VORRAT_RABATT);
   return { alle, gut, relevant: eintrag.leer ? alle : gut };
 }
