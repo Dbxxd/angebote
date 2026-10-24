@@ -691,7 +691,7 @@ UNTERGRUPPEN = {
     "Fisch": ["Frischer Fisch", "Räucherfisch", "Fischkonserven & Feinkost", "Garnelen & Meeresfrüchte"],
     "Milch, Käse & Eier": ["Milch & Milchgetränke", "Butter & Margarine", "Käse", "Joghurt & Quark",
                            "Sahne & Desserts", "Eier"],
-    "Brot & Backwaren": ["Brot & Brötchen", "Toast & Sandwich", "Kuchen & Feingebäck"],
+    "Brot & Backwaren": ["Brot & Brötchen", "Toast & Sandwich", "Zwieback & Knäckebrot"],
     "Tiefkühl": ["Tiefkühl-Pizza & Snacks", "Tiefkühl-Gemüse & -Obst", "Pommes & Kartoffelprodukte",
                  "Eis", "Tiefkühl-Fisch & -Fleisch", "Tiefkühl-Fertiggerichte"],
     "Fertiggerichte & Konserven": ["Fertiggerichte", "Suppen & Eintöpfe", "Gemüse- & Obstkonserven",
@@ -700,7 +700,7 @@ UNTERGRUPPEN = {
                         "Saucen, Ketchup & Senf", "Gewürze & Brühe"],
     "Frühstück & Aufstriche": ["Müsli & Cerealien", "Marmelade & Honig", "Nuss-Nougat- & Brotaufstriche"],
     "Süßes & Snacks": ["Schokolade & Riegel", "Fruchtgummi & Bonbons", "Kekse & Gebäck",
-                       "Chips & Knabbereien", "Nüsse & Trockenobst"],
+                       "Kuchen & Feingebäck", "Chips & Knabbereien", "Nüsse & Trockenobst"],
     "Kaffee & Tee": ["Kaffeebohnen", "Gemahlener Kaffee", "Pads & Kapseln", "Instantkaffee", "Tee & Kakao"],
     "Getränke": ["Wasser", "Saft & Schorle", "Limonade & Cola", "Energy- & Sportgetränke",
                  "Kaffee- & Teegetränke"],
@@ -728,7 +728,13 @@ OPTIONEN = {
     for gi, (g, us) in enumerate(UNTERGRUPPEN.items(), 1)
     for ui, u in enumerate(us, 1)
 }
-WEITERES_CODE = next(c for c, v in OPTIONEN.items() if v == ("Sonstiges", "Weiteres"))
+CODE_VON = {v: c for c, v in OPTIONEN.items()}
+
+
+def _als_name(gu: tuple[str, str]) -> str:
+    """Im Cache stehen Namen ('Gruppe|Unter'), keine Codes – so überlebt der Cache
+    Änderungen an der Liste. Nicht mehr existierende Einträge werden neu gefragt."""
+    return f"{gu[0]}|{gu[1]}"
 
 GRUPPEN_PROMPT = """Ordne jedes Produkt aus einem Supermarkt-Prospekt genau EINER Unterkategorie zu.
 Antworte mit deren Code.
@@ -741,6 +747,8 @@ Wichtig:
 - "Kaffee & Tee" nur für Bohnen, Pulver, Pads, Kapseln, Instant, Teebeutel, Kakaopulver.
 - Butter und Margarine -> Butter & Margarine. Buttermilch, Kakaodrink -> Milch & Milchgetränke.
 - Kaffeemaschinen, Wasserkocher usw. -> Haushaltsgeräte.
+- Zwieback, Knäckebrot, Grissini -> Zwieback & Knäckebrot (bei Brot & Backwaren).
+- Kuchen, Stollen, Torten, Muffins, Croissants, Berliner -> Kuchen & Feingebäck (bei Süßes & Snacks).
 - Prozent-Aktionen ohne Produkt ("20 % Rabatt auf ...") -> Rabatte & Coupons.
 
 Antworte NUR mit einer Zeile pro Produkt im Format "Nummer: Code", z.B.
@@ -770,6 +778,9 @@ def gruppen_zuordnen(angebote: list[dict]) -> None:
     Entschieden wird pro Produkt (Marke + Name + Kategorie); Ergebnisse werden gecacht."""
     cache_datei = CACHE_DIR / "untergruppen.json"
     cache = json.loads(cache_datei.read_text(encoding="utf-8")) if cache_datei.exists() else {}
+    # Nur Einträge behalten, deren Gruppe/Unterkategorie es (noch) gibt
+    gueltig = {_als_name(v) for v in OPTIONEN.values()}
+    cache = {k: v for k, v in cache.items() if v in gueltig}
 
     def schluessel(a):
         return f"{a['m']} {a['n']} [{a['k']}]".strip().lower()
@@ -791,7 +802,7 @@ def gruppen_zuordnen(angebote: list[dict]) -> None:
             text = "".join(b.text for b in antwort.content if getattr(b, "type", "") == "text")
             # Robust lesen: "0: 11.3", "0 = 11.3", {"0": "11.3"} oder {"0": 11.3}
             zuordnung = dict(re.findall(r'"?(\d+)"?\s*[:=]\s*"?(\d+\.\d+)', text))
-            return {s: zuordnung[str(i)] for i, s in enumerate(teil)
+            return {s: _als_name(OPTIONEN[zuordnung[str(i)]]) for i, s in enumerate(teil)
                     if zuordnung.get(str(i)) in OPTIONEN}
 
         from concurrent.futures import ThreadPoolExecutor
@@ -817,8 +828,8 @@ def gruppen_zuordnen(angebote: list[dict]) -> None:
             f"{sum(1 for s in offen if s not in cache)} weiterhin offen")
 
     for a in angebote:
-        g, u = OPTIONEN.get(cache.get(schluessel(a), ""), ("Sonstiges", "Weiteres"))
-        a["g"], a["u"] = g, u
+        wert = cache.get(schluessel(a), "Sonstiges|Weiteres")
+        a["g"], a["u"] = wert.split("|", 1)
 
 
 # =============================================================================
