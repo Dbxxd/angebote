@@ -136,6 +136,16 @@ main { max-width: 640px; margin: 0 auto; padding: 12px 16px 24px; }
   padding: 2px 6px; border-radius: 3px; font-stretch: 80%;
 }
 .gp { font-size: 13px; color: var(--tinte); font-weight: 600; white-space: nowrap; }
+.vl-tief { font-size: 12px; font-weight: 700; color: #fff; background: var(--gruen); border-radius: 6px; padding: 2px 6px; white-space: nowrap; }
+.vl-hinweis { font-size: 14px; color: var(--grau); }
+.vl-hinweis strong { color: var(--tinte); }
+.verlauf { border-top: 1px solid var(--linie); padding-top: 10px; }
+.verlauf h3 { margin: 0 0 6px; font-size: 16px; }
+.verlauf table { width: 100%; border-collapse: collapse; font-size: 14px; }
+.verlauf td { padding: 5px 0; border-bottom: 1px solid var(--linie); }
+.verlauf td:last-child { text-align: right; font-weight: 600; white-space: nowrap; }
+.verlauf tr.jetzt td { font-weight: 800; }
+.verlauf .klein { color: var(--grau); font-size: 13px; margin: 6px 0 0; }
 .preiszeile { display: flex; gap: 6px; align-items: center; }
 
 .angebot .links { display: flex; gap: 10px; align-items: flex-start; }
@@ -203,7 +213,7 @@ button.bild { padding: 0; cursor: zoom-in; font: inherit; }
   border-radius: 16px 16px 0 0;
   padding: 12px max(16px, env(safe-area-inset-left, 0px)) calc(20px + env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-right, 0px));
   box-shadow: inset 0 5px 0 var(--mf, transparent);
-  display: grid; gap: 12px;
+  display: grid; gap: 12px; grid-auto-rows: max-content;
 }
 .detail-kopf { display: flex; justify-content: space-between; align-items: center; }
 .detail-kopf .markt { font-size: 15px; font-weight: 800; color: var(--mf, var(--grau)); }
@@ -523,7 +533,7 @@ function norm(s) {
     .replace(/ä/g, "ae").replace(/ö/g, "oe").replace(/ü/g, "ue").replace(/ß/g, "ss")
     .normalize("NFD").replace(/[̀-ͯ]/g, "");
 }
-function eur(x) { return x == null ? "" : x.toFixed(2).replace(".", ",") + " €"; }
+function eur(x) { return x == null ? "" : x.toFixed(2).replace(".", ",") + "\u00a0€"; }
 function datumKurz(iso) {
   if (!iso) return "";
   const d = new Date(iso + "T12:00:00");
@@ -737,6 +747,55 @@ function grossesBildUrl(a) {
   return bildUrl(a);
 }
 
+/* ---------- Preisverlauf ---------- */
+function wochenText(w) {
+  if (w >= 52) return Math.floor(w / 52) === 1 ? "1 Jahr" : Math.floor(w / 52) + " Jahren";
+  return w + " Wo.";
+}
+function vlBadge(a) {
+  return a.vl && a.vl[0] === "tief" ? `<span class="vl-tief">Tiefstpreis seit ${wochenText(a.vl[1])}</span>` : "";
+}
+function vlSatz(a) {
+  if (!a.vl) return "";
+  if (a.vl[0] === "tief") {
+    const w = a.vl[1];
+    return `<p class="vl-hinweis"><strong>So günstig war es seit ${w >= 52 ? wochenText(w) : w + " Wochen"} nicht.</strong></p>`;
+  }
+  const [, datum, markt, preis, ge] = a.vl;
+  return `<p class="vl-hinweis">Am ${esc(datumKurz(datum))} gab es das bei ${esc(markt)} günstiger: <strong>${eur(preis)}${ge ? "/" + esc(ge) : ""}</strong></p>`;
+}
+let verlauf = null, verlaufRegion = null;
+async function ladeVerlauf() {
+  if (verlauf && verlaufRegion === zustand.region) return verlauf;
+  try {
+    const r = await fetch(`data/verlauf-${zustand.region}.json`, { cache: "no-cache" });
+    verlauf = r.ok ? await r.json() : { p: {} };
+  } catch (e) { verlauf = { p: {} }; }
+  verlaufRegion = zustand.region;
+  return verlauf;
+}
+function verlaufSchluessel(a) {
+  return `${a.m || ""} ${a.n || ""}`.toLowerCase().split(/\s+/).filter(Boolean).join(" ");
+}
+async function zeigeVerlauf(a) {
+  const v = await ladeVerlauf();
+  const ziel = document.getElementById("verlauf-" + a.id);
+  if (!ziel) return;
+  const eintraege = (v.p[verlaufSchluessel(a)] || []).slice().sort((x, y) => y[0].localeCompare(x[0]));
+  const seit = v.seit ? datumKurz(v.seit).replace(/^\S+\s/, "") : "";
+  if (eintraege.length <= 1) {
+    ziel.innerHTML = `<h3>Preisverlauf</h3><p class="klein">Bisher keine früheren Angebote${seit ? " (Preise werden seit " + esc(seit) + " gesammelt)" : ""}.</p>`;
+    return;
+  }
+  const d = a.von || heute();
+  ziel.innerHTML = `<h3>Preisverlauf</h3><table>${eintraege.slice(0, 12).map((e) => {
+      const jetzt = e[1] === a.h && e[2] === a.p && e[0] === (a.von || e[0]);
+      return `<tr class="${jetzt ? "jetzt" : ""}"><td>${esc(datumKurz(e[0]))}${jetzt ? " (jetzt)" : ""}</td><td>${esc(e[1])}</td>
+        <td>${eur(e[2])}${e[3] != null && e[4] ? ` <span style="color:var(--grau);font-weight:400">· ${eur(e[3])}/${esc(e[4])}</span>` : ""}</td></tr>`;
+    }).join("")}</table>
+    ${seit ? `<p class="klein">Preise werden seit ${esc(seit)} gesammelt.</p>` : ""}`;
+}
+
 /* ---------- Detailansicht ---------- */
 let detailId = null;
 function detailHTML(a) {
@@ -763,12 +822,14 @@ function detailHTML(a) {
       ${a.ap ? `<span class="alt">${eur(a.ap)}</span>${spar >= 5 ? `<span class="spar">−${spar} %</span>` : ""}` : ""}
       ${a.gp != null && a.ge ? `<span class="gp">${eur(a.gp)}/${a.ge}</span>` : ""}
     </div>
+    ${vlSatz(a)}
     <button class="knopf detail-aktion" data-merken="${a.id}" aria-pressed="${gemerkt}">${gemerkt ? "Auf der Wochenliste ✓" : "Auf die Wochenliste"}</button>
     <div class="detail-knoepfe">
       <button class="knopf leise detail-fav" data-favorit="${a.id}" aria-pressed="${!!favoritVon(a)}">${favoritVon(a) ? "★ Favorit" : "☆ Als Favorit"}</button>
       <button class="knopf leise" data-nie="${a.id}">Nie anzeigen</button>
     </div>
     <p class="nie-hinweis">Favoriten erscheinen oben unter „Für dich“, sobald sie im Angebot sind – in jedem Markt.</p>
+    <div class="verlauf" id="verlauf-${a.id}"><h3>Preisverlauf</h3><p class="klein">Wird geladen …</p></div>
   </div>`;
 }
 function oeffneDetail(id) {
@@ -781,6 +842,7 @@ function oeffneDetail(id) {
   document.body.style.overflow = "hidden";
   history.pushState(Object.assign({}, history.state, { detail: id }), "");
   el.querySelector(".detail-zu").focus();
+  zeigeVerlauf(a);
 }
 function schliesseDetail() {
   if (!detailId) return;
@@ -810,6 +872,7 @@ function angebotHTML(a) {
       ${schild(a)}
       ${a.ap ? `<div class="preiszeile"><span class="alt">${eur(a.ap)}</span>${spar >= 5 ? `<span class="spar">−${spar} %</span>` : ""}</div>` : ""}
       ${a.gp != null && a.ge ? `<span class="gp">${eur(a.gp)}/${a.ge}</span>` : ""}
+      ${vlBadge(a)}
     </div>
   </li>`;
 }
@@ -955,7 +1018,7 @@ function vorratAngebote(eintrag) {
     treffer = kandidaten.filter((a) => a.u ? unter.has(a.u) : kernIds.has(a.id));
   }
   const alle = sortiere(treffer);
-  const gut = alle.filter((a) => rabatt(a) >= VORRAT_RABATT);
+  const gut = alle.filter((a) => rabatt(a) >= VORRAT_RABATT || (a.vl && a.vl[0] === "tief" && a.vl[1] >= 8));
   return { alle, gut, relevant: eintrag.leer ? alle : gut };
 }
 
@@ -1367,6 +1430,15 @@ const HILFE = [
       <li>ein Wort: „feucht“ blendet feuchtes Toilettenpapier aus</li>
     </ul>
     <p>Die Zahl in Klammern zeigt, wie viele Angebote ein Eintrag gerade ausblendet. Mit × wird alles wieder angezeigt.</p>`],
+  ["verlauf", "Preisverlauf", `
+    <p>Die App merkt sich jeden Tag, welches Produkt wann in welchem Markt wie viel gekostet hat. So siehst du, ob ein Angebot wirklich gut ist:</p>
+    <ul>
+      <li>Ein grünes <strong>„Tiefstpreis seit 8 Wo.“</strong> heißt: So günstig gab es das Produkt seit 8 Wochen nirgends.</li>
+      <li>In der Detailansicht steht unten der <strong>Preisverlauf</strong> mit den letzten Angeboten, auch aus anderen Märkten.</li>
+      <li>War es vor Kurzem woanders günstiger, steht das direkt unter dem Preis.</li>
+      <li>Im Vorrat zählt ein Tiefstpreis seit mindestens 8 Wochen auch als gutes Angebot, selbst ohne 20 % Rabatt.</li>
+    </ul>
+    <p class="tipp">Die Preise werden seit Ende Oktober 2026 gesammelt. Die Hinweise werden deshalb mit jeder Woche aussagekräftiger.</p>`],
   ["einst", "Märkte und Ort", `
     <p>In den Einstellungen wählst du deinen <strong>Ort</strong> (Emsdetten/Steinfurt, Winsen, Harburg) und welche <strong>Märkte</strong> angezeigt werden. Für jeden Ort merkt sich die App die Märkte getrennt.</p>`],
   ["wissen", "Gut zu wissen", `

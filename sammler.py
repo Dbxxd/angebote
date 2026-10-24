@@ -26,7 +26,7 @@ import os
 import re
 import sys
 import time
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 import requests
@@ -877,6 +877,78 @@ def versuche(name: str, funktion, status: dict) -> list[dict]:
         return []
 
 
+# =============================================================================
+# Preisverlauf: jedes Angebot wird einmal pro Markt und Aktionsbeginn gemerkt
+# =============================================================================
+VERLAUF_TAGE = 400
+
+
+def verlauf_schluessel(a: dict) -> str:
+    """Dasselbe Produkt in jedem Markt: Marke + Name, klein, ohne doppelte Leerzeichen."""
+    return " ".join(f"{a.get('m') or ''} {a.get('n') or ''}".lower().split())
+
+
+def _vergleich(e_p, e_gp, e_ge, a):
+    """Preis eines früheren Eintrags, vergleichbar mit Angebot a (Grundpreis, wenn möglich)."""
+    if a.get("gp") is not None and a.get("ge") and e_gp is not None and e_ge == a["ge"]:
+        return e_gp, a["gp"], a["ge"]
+    return e_p, a.get("p"), None
+
+
+def verlauf_aktualisieren(rid: str, angebote: list[dict], heute: str) -> None:
+    datei = DATEN_DIR / f"verlauf-{rid}.json"
+    try:
+        verlauf = json.loads(datei.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        verlauf = {"seit": heute, "p": {}}
+    produkte = verlauf["p"]
+
+    # 1. Neue Angebote eintragen: [datum, markt, preis, grundpreis, einheit]
+    for a in angebote:
+        if a.get("p") is None:
+            continue
+        d = a.get("von") or heute
+        liste = produkte.setdefault(verlauf_schluessel(a), [])
+        if not any(e[0] == d and e[1] == a["h"] and e[2] == a["p"] for e in liste):
+            liste.append([d, a["h"], a["p"], a.get("gp"), a.get("ge")])
+
+    # 2. Für jedes aktuelle Angebot: wie steht der Preis im Vergleich zu früher?
+    for a in angebote:
+        if a.get("p") is None:
+            continue
+        d = a.get("von") or heute
+        frueher = [e for e in produkte.get(verlauf_schluessel(a), []) if e[0] < d]
+        if not frueher:
+            continue
+        werte = [(e, *_vergleich(e[2], e[3], e[4], a)) for e in frueher]
+        werte = [(e, w, jetzt, ge) for e, w, jetzt, ge in werte if w is not None and jetzt is not None]
+        if not werte:
+            continue
+        tage = lambda x: (datetime.fromisoformat(d) - datetime.fromisoformat(x)).days
+        guenstiger = [(e, w, ge) for e, w, jetzt, ge in werte if w < jetzt - 0.005]
+        if not guenstiger:
+            wochen = tage(min(e[0] for e, *_ in werte)) // 7
+            if wochen >= 2:
+                a["vl"] = ["tief", wochen]
+        else:
+            e, w, ge = max(guenstiger, key=lambda x: x[0][0])
+            wochen = tage(e[0]) // 7
+            if wochen >= 4:
+                a["vl"] = ["tief", wochen]
+            elif tage(e[0]) <= 60:
+                a["vl"] = ["frueher", e[0], e[1], round(w, 2), ge]
+
+    # 3. Alte Einträge entfernen
+    grenze = (datetime.fromisoformat(heute) - timedelta(days=VERLAUF_TAGE)).date().isoformat()
+    for k in list(produkte):
+        produkte[k] = sorted(e for e in produkte[k] if e[0] >= grenze)
+        if not produkte[k]:
+            del produkte[k]
+    datei.write_text(json.dumps(verlauf, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
+    log(f"  Preisverlauf: {len(produkte)} Produkte seit {verlauf['seit']}, "
+        f"{datei.stat().st_size / 1024:.0f} KB")
+
+
 def main():
     parser = argparse.ArgumentParser(description="Angebote für die Prospekt-App sammeln")
     parser.add_argument("--region", choices=REGIONEN.keys(), help="Nur eine Region")
@@ -912,6 +984,7 @@ def main():
 
         angebote = doppelte_entfernen(angebote)
         gruppen_zuordnen(angebote)  # Cache wird über alle Regionen geteilt
+        verlauf_aktualisieren(rid, angebote, stand[:10])
         maerkte = sorted({a["h"] for a in angebote}, key=str.lower)
         datei = DATEN_DIR / f"{rid}.json"
         datei.write_text(
