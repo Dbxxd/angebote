@@ -477,7 +477,7 @@ def kaufda_markt_angebote(markt: str, seite: str, latlng: tuple[str, str] = EMSD
                     a.get("grundpreis"), a.get("gp_einheit"),
                     a.get("packung"),
                     prospekt["von"], prospekt["bis"],
-                    a.get("kategorie"), "kaufDA+KI",
+                    a.get("kategorie"), "kaufDA+KI", ki_bildausschnitt(a),
                 ))
             ergebnis = ki_doppelte_entfernen(ergebnis)
     return ergebnis
@@ -503,8 +503,13 @@ Antworte NUR mit einem JSON-Array, ohne weiteren Text. Jedes Element:
   "alt_preis": durchgestrichener/vorheriger Preis als Zahl oder null,
   "grundpreis": Preis pro kg bzw. l als Zahl oder null,
   "gp_einheit": "kg" oder "l" oder "",
-  "kategorie": "ein allgemeines deutsches Wort für die Produktart, z.B. Butter, Bier, Kaffee, Käse, Obst, Fleisch"
+  "kategorie": "ein allgemeines deutsches Wort für die Produktart, z.B. Butter, Bier, Kaffee, Käse, Obst, Fleisch",
+  "bereich": [links, oben, rechts, unten]
 }
+
+"bereich" ist der Rahmen um das PRODUKTFOTO dieses Angebots auf der Seite (ohne Preisschild
+und Text), in Prozent der Seitenbreite bzw. -höhe als ganze Zahlen von 0 bis 100.
+Beispiel: ein Foto im linken oberen Viertel wäre etwa [3, 4, 45, 30]. Gibt es kein Foto: null.
 
 Regeln:
 - Preise mit Punkt als Dezimaltrennzeichen (1.99, nicht 1,99).
@@ -546,15 +551,17 @@ def kk_seite_auslesen(client, bild_url: str) -> tuple[list[dict], int, int]:
 
 
 MAX_KI_SEITEN = 40  # Schutz vor sehr dicken Prospekten (Kosten)
+KI_CACHE_VERSION = 2  # 2 = mit Bildbereich je Angebot; ältere Caches werden neu ausgelesen
 
 
 def ki_prospekt_auslesen(markt: str, prospekt: dict, seiten: list[dict]) -> list[dict]:
     """Liest einen Prospekt per Claude aus. Ergebnis wird pro Prospekt gecacht."""
     cache = CACHE_DIR / f"ki_{prospekt['id']}.json"
-    alt = CACHE_DIR / f"kk_{prospekt['id']}.json"  # Cache-Name aus früherer Version
-    for c in (cache, alt):
-        if c.exists():
-            return json.loads(c.read_text(encoding="utf-8"))["angebote"]
+    if cache.exists():
+        daten = json.loads(cache.read_text(encoding="utf-8"))
+        if daten.get("version", 1) >= KI_CACHE_VERSION:
+            return daten["angebote"]
+    (CACHE_DIR / f"kk_{prospekt['id']}.json").unlink(missing_ok=True)  # Cache der Vorversion
 
     if not os.environ.get("ANTHROPIC_API_KEY"):
         raise RuntimeError(f"ANTHROPIC_API_KEY fehlt – {markt} übersprungen")
@@ -576,17 +583,34 @@ def ki_prospekt_auslesen(markt: str, prospekt: dict, seiten: list[dict]) -> list
     for i, url in enumerate(bilder, 1):
         daten, a, b = kk_seite_auslesen(client, url)
         log(f"    Seite {i}: {len(daten)} Angebote")
+        for d in daten:
+            d["seiten_bild"] = url
         alle.extend(daten)
         ti, to = ti + a, to + b
     log(f"  {markt}: {len(alle)} Angebote, {ti} Tokens rein / {to} raus")
 
     CACHE_DIR.mkdir(exist_ok=True)
     cache.write_text(
-        json.dumps({"markt": markt, "prospekt": prospekt, "modell": KK_MODELL, "angebote": alle},
+        json.dumps({"version": KI_CACHE_VERSION, "markt": markt, "prospekt": prospekt,
+                    "modell": KK_MODELL, "angebote": alle},
                    ensure_ascii=False, indent=1),
         encoding="utf-8",
     )
     return alle
+
+
+def ki_bildausschnitt(a: dict) -> str:
+    """'ks:<Seitenbild-URL>#l,o,r,u' – die App zeigt daraus den Ausschnitt der Prospektseite."""
+    url, b = a.get("seiten_bild") or "", a.get("bereich")
+    if not url.startswith("https://") or not isinstance(b, list) or len(b) != 4:
+        return ""
+    try:
+        l, o, r, u = (max(0.0, min(100.0, float(x))) for x in b)
+    except (TypeError, ValueError):
+        return ""
+    if r - l < 3 or u - o < 3:  # zu klein / unsinnig
+        return ""
+    return f"ks:{url}#{l:g},{o:g},{r:g},{u:g}"
 
 
 def ki_doppelte_entfernen(angebote: list[dict]) -> list[dict]:
