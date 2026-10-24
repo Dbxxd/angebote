@@ -637,6 +637,72 @@ def kategorien_ergaenzen(angebote: list[dict]) -> None:
 
 
 # =============================================================================
+# Feste Gruppen zum Stöbern in der App
+# =============================================================================
+
+GRUPPEN = [
+    "Obst & Gemüse", "Fleisch & Wurst", "Fisch", "Milch, Käse & Eier", "Brot & Backwaren",
+    "Tiefkühl", "Fertiggerichte & Konserven", "Vorrat & Backen", "Frühstück & Aufstriche",
+    "Süßes & Snacks", "Kaffee & Tee", "Getränke", "Bier", "Wein & Sekt", "Spirituosen",
+    "Drogerie & Pflege", "Baby & Kind", "Haushalt & Reinigung", "Tierbedarf",
+    "Kleidung & Schuhe", "Haus, Garten & Deko", "Elektronik & Technik", "Sonstiges",
+]
+
+GRUPPEN_PROMPT = """Ordne jeden Eintrag genau einer dieser Gruppen eines Supermarkt-Prospekts zu:
+{gruppen}
+
+Hinweise: "Getränke" = alkoholfrei (Wasser, Saft, Limo, Energy). Butter und Margarine
+gehören zu "Milch, Käse & Eier". Nudeln, Reis, Mehl, Zucker, Öl, Gewürze, Saucen
+gehören zu "Vorrat & Backen". Müsli, Marmelade, Honig, Nuss-Nougat-Creme gehören zu
+"Frühstück & Aufstriche". Wenn nichts passt: "Sonstiges".
+
+Antworte NUR mit einem JSON-Objekt {{"Nummer": "Gruppe", ...}} und verwende die
+Gruppennamen exakt wie oben geschrieben.
+
+Einträge:
+"""
+
+
+def gruppen_zuordnen(angebote: list[dict]) -> None:
+    """Setzt a['g'] (eine der GRUPPEN) für jedes Angebot. Ergebnisse werden gecacht."""
+    cache_datei = CACHE_DIR / "gruppen.json"
+    cache = json.loads(cache_datei.read_text(encoding="utf-8")) if cache_datei.exists() else {}
+
+    def schluessel(a):
+        # Meist reicht die Kategorie; ohne Kategorie entscheidet der Produktname
+        return f"k:{a['k'].lower()}" if a["k"] else f"n:{a['m']} {a['n']}".lower()
+
+    offen = sorted({schluessel(a) for a in angebote} - set(cache))
+    if offen and os.environ.get("ANTHROPIC_API_KEY"):
+        try:
+            import anthropic
+            client = anthropic.Anthropic()
+            prompt = GRUPPEN_PROMPT.format(gruppen="\n".join(f"- {g}" for g in GRUPPEN))
+            for start in range(0, len(offen), 200):
+                teil = offen[start:start + 200]
+                liste = "\n".join(f"{i}: {s[2:]}" for i, s in enumerate(teil))
+                antwort = client.messages.create(
+                    model=KK_MODELL, max_tokens=8000,
+                    messages=[{"role": "user", "content": prompt + liste}],
+                )
+                text = "".join(b.text for b in antwort.content if getattr(b, "type", "") == "text")
+                a, b = text.find("{"), text.rfind("}")
+                zuordnung = json.loads(text[a:b + 1]) if a >= 0 and b > a else {}
+                for i, s in enumerate(teil):
+                    g = zuordnung.get(str(i))
+                    # Ungültige Antworten als "Sonstiges" merken, damit nicht täglich neu gefragt wird
+                    cache[s] = g if g in GRUPPEN else "Sonstiges"
+            log(f"  Gruppen: {len(offen)} Begriffe neu zugeordnet")
+            CACHE_DIR.mkdir(exist_ok=True)
+            cache_datei.write_text(json.dumps(cache, ensure_ascii=False, indent=0), encoding="utf-8")
+        except Exception as e:
+            log(f"  Gruppen: FEHLER – {e}")
+
+    for a in angebote:
+        a["g"] = cache.get(schluessel(a), "Sonstiges")
+
+
+# =============================================================================
 # Ablauf
 # =============================================================================
 
@@ -688,7 +754,8 @@ def main():
             )
 
         angebote = doppelte_entfernen(angebote)
-        maerkte = sorted({a["h"] for a in angebote})
+        gruppen_zuordnen(angebote)  # Cache wird über alle Regionen geteilt
+        maerkte = sorted({a["h"] for a in angebote}, key=str.lower)
         datei = DATEN_DIR / f"{rid}.json"
         datei.write_text(
             json.dumps(
