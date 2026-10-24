@@ -759,6 +759,10 @@ Wichtig:
 - Fertige Salate aus dem Kühlregal (Kartoffel-, Nudel-, Fleisch-, Kraut-, Gurken-, Beilagensalat),
   Dips, Tzatziki, Hummus, Antipasti -> Feinkost & Salate (bei Fertiggerichte & Konserven).
   "Salat & Kräuter" (Obst & Gemüse) nur für frischen Salat wie Eisberg, Rucola, Feldsalat.
+- Herzhafte Brotaufstriche (Brunch, Popp Brotaufstrich) -> Nuss-Nougat- & Brotaufstriche.
+- Adventskalender nach Inhalt: Schokolade -> Schokolade & Riegel, Chips -> Chips & Knabbereien,
+  Spiele/Spielzeug -> Spielzeug.
+- Lesebrillen, Rollatoren, Rollstühle, Blutdruckmessgeräte -> Gesundheit & Nahrungsergänzung.
 - Prozent-Aktionen ohne Produkt ("20 % Rabatt auf ...") -> Rabatte & Coupons.
 
 Antworte NUR mit einer Zeile pro Produkt im Format "Nummer: Code", z.B.
