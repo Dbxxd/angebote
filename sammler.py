@@ -358,6 +358,17 @@ ROSSMANN_SEITE = "/Emsdetten/Rossmann/p-r98"  # Rossmann-Prospekt ist bundesweit
 KAUFDA_PAGES_API = "https://content-viewer-be.kaufda.de/v1/brochures/{id}/pages"
 EMSDETTEN = ("52.1758", "7.52741")
 MIN_EINZELANGEBOTE = 5  # darunter gilt der Prospekt als "nur Bilder" -> KI
+KAUFDA_DIAGNOSE: dict[str, list[str]] = {}  # Händlerseite -> gefundene Prospekte
+
+
+def menge_aus_text(text: str) -> str:
+    """Holt die Mengenangabe aus einem Werbetext: 'Praktisch grätenfrei. 100 g' -> '100 g'."""
+    m = re.search(
+        r"(?:je\s+)?\d+(?:[.,]\d+)?\s*(?:x\s*\d+(?:[.,]\d+)?\s*)?-?\s*"
+        r"(?:kg|g|ml|l|cl|Stück|Stk\.?|St\.)(?:-[A-Za-zäöü]+)?\b",
+        text or "", re.I,
+    )
+    return m.group(0).strip() if m else ""
 
 
 def kaufda_datum(s: str) -> str:
@@ -377,16 +388,28 @@ def kaufda_prospekte(seite: str) -> list[dict]:
     if not m:
         raise RuntimeError("kaufDA: keine Seitendaten gefunden")
     d = json.loads(m.group(1))
-    viewer = d["props"]["pageProps"]["pageInformation"]["brochures"].get("viewer") or []
-    return [
-        {
-            "id": b["contentId"],
-            "titel": b.get("title", ""),
-            "von": kaufda_datum(b.get("validFrom", "")),
-            "bis": kaufda_datum(b.get("validUntil", "")),
-        }
-        for b in viewer
-    ]
+    broschueren = d["props"]["pageProps"]["pageInformation"]["brochures"]
+
+    # "viewer" ist nur der oben gezeigte Prospekt; "publisher" enthält alle des Händlers
+    heute = datetime.now().date().isoformat()
+    gefunden: dict[str, dict] = {}
+    for schluessel in ("viewer", "publisher"):
+        wert = broschueren.get(schluessel) or []
+        eintraege = wert.get("items", []) if isinstance(wert, dict) else wert
+        for b in eintraege:
+            if not isinstance(b, dict) or not b.get("contentId"):
+                continue
+            p = {
+                "id": b["contentId"],
+                "titel": b.get("title", ""),
+                "von": kaufda_datum(b.get("validFrom", "")),
+                "bis": kaufda_datum(b.get("validUntil", "")),
+            }
+            if p["bis"] and p["bis"] < heute:
+                continue  # abgelaufen
+            gefunden.setdefault(p["id"], p)
+    KAUFDA_DIAGNOSE[url] = [f"{p['titel']} ({p['von']} bis {p['bis']})" for p in gefunden.values()]
+    return list(gefunden.values())
 
 
 def kaufda_seiten(prospekt_id: str, latlng: tuple[str, str] = EMSDETTEN) -> list[dict]:
@@ -412,7 +435,7 @@ def kaufda_einzelangebot(markt: str, o: dict, prospekt: dict) -> dict:
         p.get("brandName"), p.get("name"),
         preise.get("SALES_PRICE") or None, preise.get("REGULAR_PRICE") or None,
         None, "",
-        beschreibung[:80],
+        menge_aus_text(beschreibung),
         kaufda_datum(gueltig.get("startDate", "")) or prospekt["von"],
         kaufda_datum(gueltig.get("endDate", "")) or prospekt["bis"],
         kats[-1] if kats else "", "kaufDA",
@@ -690,6 +713,9 @@ def main():
     index_datei.write_text(json.dumps(index, ensure_ascii=False, indent=1), encoding="utf-8")
 
     # Diagnose-Datei: alle Händler, die marktguru pro PLZ liefert (auch aussortierte)
+    (BASIS / "cache" / "kaufda_prospekte.json").write_text(
+        json.dumps(KAUFDA_DIAGNOSE, ensure_ascii=False, indent=1), encoding="utf-8"
+    )
     (BASIS / "cache" / "marktguru_haendler.json").write_text(
         json.dumps(MG_HAENDLER_DIAGNOSE, ensure_ascii=False, indent=1), encoding="utf-8"
     )
