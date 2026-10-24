@@ -78,6 +78,7 @@ MAERKTE = {
     "K+K": ["klaas", "k+k"],
     "Combi": ["combi"],
     "famila": ["famila"],
+    "Norma": ["norma"],
     "nahkauf": ["nahkauf"],
     "Rossmann": ["rossmann"],
     "budni": ["budni"],
@@ -188,6 +189,7 @@ def doppelte_entfernen(angebote: list[dict]) -> list[dict]:
 
 MG_API = "https://api.marktguru.de/api/v1"
 _mg_session = None
+MG_HAENDLER_DIAGNOSE: dict[str, dict[str, int]] = {}  # PLZ -> {Händlername: Anzahl}
 
 
 def mg_session() -> requests.Session:
@@ -242,6 +244,13 @@ def mg_alle_angebote(plz: str) -> list[dict]:
         roh.extend(teil)
         offset += len(teil)
         time.sleep(0.3)  # höflich bleiben
+
+    # Diagnose: welche Händler liefert marktguru für diese PLZ insgesamt?
+    zaehler: dict[str, int] = {}
+    for o in roh:
+        n = (o.get("advertisers") or [{}])[0].get("name", "?")
+        zaehler[n] = zaehler.get(n, 0) + 1
+    MG_HAENDLER_DIAGNOSE[plz] = dict(sorted(zaehler.items(), key=lambda x: -x[1]))
 
     ergebnis = []
     for o in roh:
@@ -649,6 +658,11 @@ def main():
         index["regionen"] += [x for x in alt.get("regionen", []) if x["id"] not in neu_ids]
     index["regionen"].sort(key=lambda x: list(REGIONEN).index(x["id"]))
     index_datei.write_text(json.dumps(index, ensure_ascii=False, indent=1), encoding="utf-8")
+
+    # Diagnose-Datei: alle Händler, die marktguru pro PLZ liefert (auch aussortierte)
+    (BASIS / "cache" / "marktguru_haendler.json").write_text(
+        json.dumps(MG_HAENDLER_DIAGNOSE, ensure_ascii=False, indent=1), encoding="utf-8"
+    )
     log("\nFertig.")
 
 
