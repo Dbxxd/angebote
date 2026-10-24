@@ -1,6 +1,6 @@
 // Service Worker: App funktioniert auch bei schlechtem Netz im Laden.
 // App-Dateien: aus dem Cache. Angebotsdaten: erst Netz, bei Fehler der letzte Stand.
-const CACHE = "angebote-v1";
+const CACHE = "angebote-v2";
 const APP = ["./", "index.html", "manifest.json", "icon.svg", "icon-192.png", "icon-512.png"];
 
 self.addEventListener("install", (e) => {
@@ -22,7 +22,9 @@ self.addEventListener("fetch", (e) => {
   // Angebotsdaten und die Seite selbst: Netz zuerst, damit neue Angebote sofort da sind
   if (url.pathname.includes("/data/") || e.request.mode === "navigate") {
     e.respondWith(
-      fetch(e.request)
+      // cache: "no-store" umgeht den Browser-Zwischenspeicher (GitHub Pages erlaubt bis zu 10 min),
+      // damit neue Versionen und Angebote sofort ankommen
+      fetch(url.href, { cache: "no-store", credentials: "same-origin" })
         .then((r) => {
           const kopie = r.clone();
           caches.open(CACHE).then((c) => c.put(e.request, kopie));
