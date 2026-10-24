@@ -631,6 +631,29 @@ function zeige(name) {
   window.scrollTo(0, 0);
 }
 
+/* ---------- Zurück-Taste: Navigation im Browser-Verlauf ----------
+   Jeder Schritt (Tab wechseln, Kategorie öffnen) wird ein Verlaufseintrag.
+   "Zurück" führt so erst aus der Kategorie, dann zum vorigen Tab; erst auf
+   der Startseite verlässt man die App. */
+function aktuellerSchritt() {
+  return { ansicht: aktuelleAnsicht, gruppe: sucheGruppe };
+}
+function geheZu(schritt) {
+  const vorher = aktuellerSchritt();
+  if (vorher.ansicht === schritt.ansicht && vorher.gruppe === (schritt.gruppe || null)) return;
+  history.pushState(schritt, "");
+  wendeAn(schritt);
+}
+function wendeAn(schritt) {
+  const gruppe = schritt.gruppe || null;
+  if (gruppe !== sucheGruppe) { sucheGruppe = gruppe; sucheUnter = null; anzeigeLimit = 50; }
+  if (!gruppe && schritt.ansicht === "suche" && aktuelleAnsicht === "suche") $("#such").value = "";
+  zeige(schritt.ansicht);
+}
+window.addEventListener("popstate", (e) => {
+  if (e.state && e.state.ansicht && aktuelleAnsicht && aktuelleAnsicht !== "start") wendeAn(e.state);
+});
+
 /* ---------- Erster Start ---------- */
 function zeichneStart() {
   $("#startOrte").innerHTML = index.regionen.map((r) =>
@@ -897,8 +920,8 @@ document.addEventListener("click", async (ev) => {
   if (!t) return;
   const d = t.dataset;
 
-  if (d.ziel) zeige(d.ziel);
-  else if (d.gehe) zeige(d.gehe);
+  if (d.ziel) geheZu({ ansicht: d.ziel, gruppe: d.ziel === "suche" ? sucheGruppe : null });
+  else if (d.gehe) geheZu({ ansicht: d.gehe, gruppe: null });
   else if (d.region) {
     zustand.region = d.region; speichern();
     await start();
@@ -906,7 +929,8 @@ document.addEventListener("click", async (ev) => {
   else if (d.merken) merken(d.merken);
   else if (d.suche !== undefined) {
     $("#such").value = d.suche;
-    zeige("suche");
+    if (aktuelleAnsicht === "suche" && !sucheGruppe) zeichneSuche();
+    else geheZu({ ansicht: "suche", gruppe: null });
   }
   else if (d.klappen) {
     ausgeklappt.has(d.klappen) ? ausgeklappt.delete(d.klappen) : ausgeklappt.add(d.klappen);
@@ -923,12 +947,14 @@ document.addEventListener("click", async (ev) => {
     zeichneSuche();
   }
   else if (d.gruppe !== undefined) {
-    sucheGruppe = d.gruppe || null;
-    sucheUnter = null;
-    anzeigeLimit = 50;
-    if (!sucheGruppe) $("#such").value = "";
-    zeichneSuche();
-    window.scrollTo(0, 0);
+    if (d.gruppe) {
+      $("#such").value = "";
+      geheZu({ ansicht: "suche", gruppe: d.gruppe });
+    } else if (history.state && history.state.gruppe) {
+      history.back();  // Pfeil in der Kategorie = Zurück-Taste
+    } else {
+      wendeAn({ ansicht: "suche", gruppe: null });
+    }
   }
   else if (d.sort) {
     sortierung = d.sort;
@@ -972,7 +998,7 @@ document.addEventListener("click", async (ev) => {
   }
   else if (d.aktion === "teilen") listeTeilen();
   else if (t.id === "leeren") { $("#such").value = ""; zeichneSuche(); $("#such").focus(); }
-  else if (t.id === "ortKnopf") zeige("einst");
+  else if (t.id === "ortKnopf") geheZu({ ansicht: "einst", gruppe: null });
 });
 
 document.addEventListener("change", async (ev) => {
@@ -1031,6 +1057,7 @@ async function start() {
   }
   if (await ladeRegionSicher()) {
     listenZaehler();
+    history.replaceState({ ansicht: "fuerdich", gruppe: null }, "");
     zeige("fuerdich");
   }
 }
