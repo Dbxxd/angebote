@@ -752,6 +752,19 @@ Produkte:
 """
 
 
+KAT_MODELL = os.environ.get("KATEGORIE_MODELL", "claude-sonnet-5-5")  # genauer als Haiku
+KAT_PAKET = 50  # Produkte pro Anfrage; bei großen Paketen bricht das Modell gern ab
+
+
+def _sicher(funktion, *args):
+    """Fehler eines Pakets protokollieren statt den ganzen Lauf abzubrechen."""
+    try:
+        return funktion(*args)
+    except Exception as e:
+        log(f"  Untergruppen: FEHLER – {e}")
+        return {}
+
+
 def gruppen_zuordnen(angebote: list[dict]) -> None:
     """Setzt a['g'] (Gruppe) und a['u'] (Untergruppe) für jedes Angebot.
     Entschieden wird pro Produkt (Marke + Name + Kategorie); Ergebnisse werden gecacht."""
@@ -767,39 +780,41 @@ def gruppen_zuordnen(angebote: list[dict]) -> None:
         client = anthropic.Anthropic()
         optionen = "\n".join(f"{c} {g} > {u}" for c, (g, u) in OPTIONEN.items())
         prompt = GRUPPEN_PROMPT.format(optionen=optionen)
-        neu = 0
-        for start in range(0, len(offen), 150):
-            teil = offen[start:start + 150]
+        def frage(teil: list[str]) -> dict[str, str]:
+            """Ein Paket einordnen; liefert {Schlüssel: Code} nur für gültige Antworten."""
             liste = "\n".join(f"{i}: {s}" for i, s in enumerate(teil))
-            try:
-                antwort = client.messages.create(
-                    model=KK_MODELL, max_tokens=4000,
-                    messages=[{"role": "user", "content": prompt + liste}],
-                )
-                text = "".join(b.text for b in antwort.content if getattr(b, "type", "") == "text")
-            except Exception as e:
-                log(f"  Untergruppen: FEHLER bei Paket {start // 150 + 1} – {e}")
-                continue
-            if start == 0:  # Beispielantwort zur Kontrolle aufheben
-                CACHE_DIR.mkdir(exist_ok=True)
-                (CACHE_DIR / "untergruppen_beispiel.txt").write_text(
-                    liste[:1500] + "\n\n--- Antwort ---\n" + text[:3000], encoding="utf-8")
+            hinweis = f"\nEs sind {len(teil)} Produkte (0 bis {len(teil) - 1}). Beantworte ALLE.\n"
+            antwort = client.messages.create(
+                model=KAT_MODELL, max_tokens=2000,
+                messages=[{"role": "user", "content": prompt + liste + hinweis}],
+            )
+            text = "".join(b.text for b in antwort.content if getattr(b, "type", "") == "text")
             # Robust lesen: "0: 11.3", "0 = 11.3", {"0": "11.3"} oder {"0": 11.3}
             zuordnung = dict(re.findall(r'"?(\d+)"?\s*[:=]\s*"?(\d+\.\d+)', text))
-            treffer = 0
-            for i, s in enumerate(teil):
-                code = zuordnung.get(str(i), "")
-                if code in OPTIONEN:
-                    cache[s] = code
-                    treffer += 1
-                # Ohne gültigen Code nichts speichern -> nächster Lauf versucht es erneut
-            neu += treffer
-            if treffer < len(teil) // 2:
-                log(f"  Untergruppen: Paket {start // 150 + 1} nur {treffer}/{len(teil)} lesbar")
-            # nach jedem Paket speichern, damit ein Abbruch nichts verliert
-            CACHE_DIR.mkdir(exist_ok=True)
-            cache_datei.write_text(json.dumps(cache, ensure_ascii=False, indent=0), encoding="utf-8")
-        log(f"  Untergruppen: {neu} Produkte neu zugeordnet")
+            return {s: zuordnung[str(i)] for i, s in enumerate(teil)
+                    if zuordnung.get(str(i)) in OPTIONEN}
+
+        from concurrent.futures import ThreadPoolExecutor
+
+        neu = 0
+        for runde in (1, 2):  # Runde 2: was in Runde 1 unbeantwortet blieb
+            rest = [s for s in offen if s not in cache]
+            if not rest:
+                break
+            pakete = [rest[i:i + KAT_PAKET] for i in range(0, len(rest), KAT_PAKET)]
+            with ThreadPoolExecutor(max_workers=4) as pool:
+                for nr, ergebnis in enumerate(pool.map(lambda t: _sicher(frage, t), pakete), 1):
+                    cache.update(ergebnis)
+                    neu += len(ergebnis)
+                    if nr % 20 == 0 or nr == len(pakete):
+                        # zwischendurch speichern, damit ein Abbruch nichts verliert
+                        CACHE_DIR.mkdir(exist_ok=True)
+                        cache_datei.write_text(json.dumps(cache, ensure_ascii=False, indent=0),
+                                               encoding="utf-8")
+            log(f"  Untergruppen Runde {runde}: {len(rest)} offen, jetzt "
+                f"{sum(1 for s in rest if s in cache)} zugeordnet")
+        log(f"  Untergruppen: {neu} Produkte neu zugeordnet, "
+            f"{sum(1 for s in offen if s not in cache)} weiterhin offen")
 
     for a in angebote:
         g, u = OPTIONEN.get(cache.get(schluessel(a), ""), ("Sonstiges", "Weiteres"))
