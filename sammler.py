@@ -607,6 +607,7 @@ def main():
     kategorien_ergaenzen(aldi)
     rossmann = versuche("Rossmann", rossmann_alle_angebote, global_status)
     kk = None  # erst bei Bedarf
+    kk_status: dict = {}
 
     index = {"stand": stand, "regionen": []}
     for rid in regionen:
@@ -620,8 +621,8 @@ def main():
 
         if r["kk"]:
             if kk is None:
-                kk = versuche("K+K", kk_alle_angebote, global_status)
-            status["K+K"] = global_status["K+K"]
+                kk = versuche("K+K", kk_alle_angebote, kk_status)
+            status["K+K"] = kk_status["K+K"]
             angebote += kk
 
         angebote = doppelte_entfernen(angebote)
