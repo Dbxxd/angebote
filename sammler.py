@@ -687,7 +687,7 @@ def kategorien_ergaenzen(angebote: list[dict]) -> None:
 UNTERGRUPPEN = {
     "Obst & Gemüse": ["Obst", "Gemüse", "Kartoffeln & Zwiebeln", "Salat & Kräuter"],
     "Fleisch & Wurst": ["Rind", "Schwein", "Geflügel", "Hackfleisch", "Grillgut & Bratwurst",
-                        "Aufschnitt & Wurst", "Schinken & Salami", "Fleischersatz"],
+                        "Lamm & Wild", "Aufschnitt & Wurst", "Schinken & Salami", "Fleischersatz"],
     "Fisch": ["Frischer Fisch", "Räucherfisch", "Fischkonserven & Feinkost", "Garnelen & Meeresfrüchte"],
     "Milch, Käse & Eier": ["Milch & Milchgetränke", "Butter & Margarine", "Scheibenkäse",
                            "Käse am Stück & gerieben", "Weichkäse", "Frischkäse & Streichkäse",
@@ -770,6 +770,8 @@ Wichtig:
   Kräuterquark -> Naturjoghurt & Quark; mit Frucht, Geschmack oder Sahne (Fruchtzwerge,
   Almighurt, Sahnejoghurt, Fruchtquark, Joghurt mit der Ecke) -> Frucht- & Sahnejoghurt;
   Trinkjoghurt, Actimel, Skyr-Drink -> Milch & Milchgetränke.
+- Frisches Lamm, Wild, Hirsch, Reh, Wildschwein, Kaninchen -> Lamm & Wild (tiefgekühlt -> Tiefkühl).
+  Nuggets, Schnitzel usw. nach Tierart: "Schweine-Nuggets" -> Schwein, "Chicken Nuggets" -> Geflügel.
 - Prozent-Aktionen ohne Produkt ("20 % Rabatt auf ...") -> Rabatte & Coupons.
 
 Antworte NUR mit einer Zeile pro Produkt im Format "Nummer: Code", z.B.
