@@ -3,7 +3,8 @@ name: Angebote sammeln
 on:
   schedule:
     # Täglich um 4:17 UTC (= 6:17 Uhr Sommerzeit / 5:17 Uhr Winterzeit)
-    - cron: "17 4 * * *"
+    - cron: "17 4 * * *"   # morgens
+    - cron: "17 13 * * *"  # nachmittags: Prospekte, die erst im Laufe des Tages erscheinen
   workflow_dispatch: {}  # Manuell starten über "Actions" -> "Run workflow"
 
 permissions:

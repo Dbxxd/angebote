@@ -588,6 +588,10 @@ def ki_prospekt_auslesen(markt: str, prospekt: dict, seiten: list[dict]) -> list
         alle.extend(daten)
         ti, to = ti + a, to + b
     log(f"  {markt}: {len(alle)} Angebote, {ti} Tokens rein / {to} raus")
+    if not alle:
+        # Nichts gefunden (Seiten noch nicht online o.ä.): nicht merken, beim nächsten Lauf neu versuchen
+        log(f"  {markt}: keine Angebote erkannt – wird beim nächsten Lauf erneut versucht")
+        return alle
 
     CACHE_DIR.mkdir(exist_ok=True)
     cache.write_text(
