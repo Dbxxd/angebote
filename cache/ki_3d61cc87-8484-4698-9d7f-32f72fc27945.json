@@ -1,0 +1,12 @@
+{
+ "version": 2,
+ "markt": "K+K",
+ "prospekt": {
+  "id": "3d61cc87-8484-4698-9d7f-32f72fc27945",
+  "titel": "Modern Classics",
+  "von": "2026-10-26",
+  "bis": "2026-10-31"
+ },
+ "modell": "claude-haiku-5-5",
+ "angebote": []
+}

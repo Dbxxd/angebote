@@ -1,7 +1,8 @@
 {
  "48282": {
   "XXXLutz": 1497,
-  "Lidl": 824,
+  "Lidl": 822,
+  "Kaufland": 430,
   "Netto Marken-Discount": 356,
   "toom Baumarkt": 319,
   "SB-Möbel BOSS": 309,
@@ -20,7 +21,8 @@
  },
  "48341": {
   "XXXLutz": 1497,
-  "Lidl": 824,
+  "Lidl": 822,
+  "Kaufland": 430,
   "Netto Marken-Discount": 356,
   "toom Baumarkt": 303,
   "PENNY": 251,
@@ -38,7 +40,8 @@
  },
  "48356": {
   "XXXLutz": 1497,
-  "Lidl": 824,
+  "Lidl": 822,
+  "Kaufland": 430,
   "Netto Marken-Discount": 356,
   "toom Baumarkt": 319,
   "Combi": 278,
@@ -54,7 +57,7 @@
  },
  "48565": {
   "XXXLutz": 1497,
-  "Lidl": 824,
+  "Lidl": 822,
   "Netto Marken-Discount": 356,
   "SB-Möbel BOSS": 309,
   "PENNY": 251,
@@ -70,7 +73,8 @@
  },
  "21423": {
   "XXXLutz": 1498,
-  "Lidl": 824,
+  "Lidl": 822,
+  "Kaufland": 440,
   "Opti Wohnwelt": 398,
   "mömax": 387,
   "Netto Marken-Discount": 366,
@@ -94,14 +98,15 @@
  },
  "21073": {
   "XXXLutz": 1498,
-  "Lidl": 824,
+  "Lidl": 822,
+  "Kaufland": 469,
   "mömax": 387,
   "REWE Center": 374,
   "Netto Marken-Discount": 366,
   "toom Baumarkt": 319,
   "SB-Möbel BOSS": 309,
+  "EDEKA": 277,
   "Handelshof": 270,
-  "EDEKA": 266,
   "PENNY": 253,
   "REWE": 242,
   "EDEKA Frischemarkt": 213,
