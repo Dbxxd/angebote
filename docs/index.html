@@ -553,10 +553,19 @@ function meldung(text) {
 }
 
 /* Märkte, die in dieser Region angezeigt werden (Standard: alle) */
+// Märkte, die erst später dazugekommen sind: für alle, die schon eine Auswahl gespeichert haben, neu
+const SPAETER_DAZU = ["E center"];
 function aktiveMaerkte() {
   const alle = daten ? daten.maerkte : [];
   const gew = zustand.maerkte[zustand.region];
-  return gew ? alle.filter((m) => gew.includes(m)) : alle;
+  if (!gew) return alle;
+  // Neue Märkte (bei der letzten Auswahl noch unbekannt) sind automatisch an
+  const bekannt = (zustand.maerkteBekannt || {})[zustand.region] || alle.filter((m) => !SPAETER_DAZU.includes(m));
+  return alle.filter((m) => gew.includes(m) || !bekannt.includes(m));
+}
+function maerkteMerken(aktiv) {
+  zustand.maerkte[zustand.region] = [...aktiv];
+  (zustand.maerkteBekannt ||= {})[zustand.region] = [...daten.maerkte];
 }
 
 /* =========================================================================
@@ -702,7 +711,7 @@ function schild(a) {
 /* Eigene Kennfarben je Markt – bewusst NICHT die Firmenfarben */
 const MARKT_FARBE = {
   "Lidl": "#2E7D6B", "Aldi": "#7A4FB3", "Penny": "#B5577D", "Netto": "#5E7A2E",
-  "Rewe": "#8A5A3C", "Edeka": "#2F6F8F", "Kaufland": "#C26A2E", "K+K": "#3E8E5A",
+  "Rewe": "#8A5A3C", "Edeka": "#2F6F8F", "E center": "#3B5C9E", "Kaufland": "#C26A2E", "K+K": "#3E8E5A",
   "Combi": "#9C6B1F", "famila": "#A2475A", "Norma": "#546E7A", "nahkauf": "#6D8C3A",
   "Rossmann": "#8E5BA0", "budni": "#1F7F86", "dm": "#7D6B5D",
 };
@@ -1602,14 +1611,14 @@ document.addEventListener("click", async (ev) => {
   else if (d.marktSchalter) {
     const aktiv = new Set(aktiveMaerkte());
     aktiv.has(d.marktSchalter) ? aktiv.delete(d.marktSchalter) : aktiv.add(d.marktSchalter);
-    zustand.maerkte[zustand.region] = [...aktiv];
+    maerkteMerken(aktiv);
     vorratZaehler();
     if (sucheMarkt && !aktiv.has(sucheMarkt)) sucheMarkt = null;
     speichern();
     zeichneEinstellungen();
   }
   else if (d.alleMaerkte) {
-    zustand.maerkte[zustand.region] = d.alleMaerkte === "an" ? [...daten.maerkte] : [];
+    maerkteMerken(d.alleMaerkte === "an" ? daten.maerkte : []);
     vorratZaehler();
     sucheMarkt = null;
     speichern();
