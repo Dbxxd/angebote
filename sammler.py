@@ -550,6 +550,7 @@ def kk_seite_auslesen(client, bild_url: str) -> tuple[list[dict], int, int]:
     return daten, antwort.usage.input_tokens, antwort.usage.output_tokens
 
 
+KI_DIAGNOSE: dict = {}  # landet in cache/ki_diagnose.json
 MAX_KI_SEITEN = 40  # Schutz vor sehr dicken Prospekten (Kosten)
 KI_CACHE_VERSION = 2  # 2 = mit Bildbereich je Angebot; ältere Caches werden neu ausgelesen
 
@@ -579,9 +580,18 @@ def ki_prospekt_auslesen(markt: str, prospekt: dict, seiten: list[dict]) -> list
         bilder = bilder[:MAX_KI_SEITEN]
 
     log(f"  {markt}: lese '{prospekt['titel']}' ({len(bilder)} Seiten) mit {KK_MODELL} aus ...")
+    diag = KI_DIAGNOSE.setdefault(f"{markt} {prospekt['id']}", {
+        "titel": prospekt["titel"], "seiten_api": len(seiten), "bilder": len(bilder),
+        "bildgroessen": sorted({i.get("size") for s in seiten for i in s.get("images", [])} - {None}),
+        "seitenschluessel": sorted({k for s in seiten for k in s})[:20], "je_seite": []})
     alle, ti, to = [], 0, 0
     for i, url in enumerate(bilder, 1):
-        daten, a, b = kk_seite_auslesen(client, url)
+        try:
+            daten, a, b = kk_seite_auslesen(client, url)
+        except Exception as e:  # eine kaputte Seite soll nicht den ganzen Prospekt kosten
+            diag["je_seite"].append(f"Fehler: {type(e).__name__}: {e}"[:200])
+            continue
+        diag["je_seite"].append(len(daten))
         log(f"    Seite {i}: {len(daten)} Angebote")
         for d in daten:
             d["seiten_bild"] = url
@@ -1024,6 +1034,8 @@ def main():
     index["regionen"].sort(key=lambda x: list(REGIONEN).index(x["id"]))
     index_datei.write_text(json.dumps(index, ensure_ascii=False, indent=1), encoding="utf-8")
 
+    (BASIS / "cache" / "ki_diagnose.json").write_text(
+        json.dumps(KI_DIAGNOSE, ensure_ascii=False, indent=1), encoding="utf-8")
     # Diagnose-Datei: alle Händler, die marktguru pro PLZ liefert (auch aussortierte)
     (BASIS / "cache" / "kaufda_prospekte.json").write_text(
         json.dumps(KAUFDA_DIAGNOSE, ensure_ascii=False, indent=1), encoding="utf-8"
