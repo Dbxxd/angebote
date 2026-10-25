@@ -439,6 +439,13 @@ def kaufda_seiten(prospekt_id: str, latlng: tuple[str, str] = EMSDETTEN) -> list
     return r.json().get("contents", [])
 
 
+# Herkunftsländer stehen bei Obst/Gemüse manchmal im Markenfeld ("Niederlande Rosenkohl")
+LAENDER = {"deutschland", "niederlande", "spanien", "italien", "frankreich", "griechenland", "türkei",
+           "marokko", "ägypten", "peru", "chile", "südafrika", "neuseeland", "costa rica", "kolumbien",
+           "ecuador", "israel", "polen", "belgien", "österreich", "portugal", "brasilien", "argentinien",
+           "mexiko", "indien", "china", "usa", "kenia", "dänemark", "irland", "norwegen"}
+
+
 def kaufda_einzelangebot(markt: str, o: dict, prospekt: dict) -> dict:
     c = o.get("content", {})
     p = (c.get("products") or [{}])[0]
@@ -449,9 +456,12 @@ def kaufda_einzelangebot(markt: str, o: dict, prospekt: dict) -> dict:
     # Produktbild bevorzugen (freigestellt), sonst Ausschnitt aus dem Prospekt
     bilder = [i.get("url") for i in (p.get("images") or []) if isinstance(i, dict) and i.get("url")]
     bild = bilder[0] if bilder else (c.get("image") if isinstance(c.get("image"), str) else "")
+    marke = p.get("brandName") or ""
+    if marke.strip().lower() in LAENDER:
+        marke = ""
     return angebot(
         markt,
-        p.get("brandName"), p.get("name"),
+        marke, p.get("name"),
         preise.get("SALES_PRICE") or None, preise.get("REGULAR_PRICE") or None,
         None, "",
         menge_aus_text(beschreibung),
