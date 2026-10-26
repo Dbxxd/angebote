@@ -505,6 +505,69 @@ def kaufda_markt_angebote(markt: str, seite: str, latlng: tuple[str, str] = EMSD
     return ergebnis
 
 
+# --- K+K direkt von klaas-und-kock.de (Blätterkatalog von COMINTO) ---
+KK_KATALOG = "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/"
+
+
+def kk_webseite_angebote() -> list[dict]:
+    """K+K-Wochenprospekt von der eigenen Webseite: Seitenbilder per KI auslesen."""
+    r = requests.get(KK_KATALOG, headers={"User-Agent": UA}, timeout=30)
+    r.raise_for_status()
+    m = re.search(r'catalog:\s*"([^":]+)::catalog"', r.text)
+    if not m:
+        raise RuntimeError("K+K: Katalogname nicht gefunden")
+    name = m.group(1)
+    titel = (re.search(r"<title>(.*?)</title>", r.text, re.S) or [None, name])[1].strip()
+    basis = f"{KK_KATALOG}catalogs/{name}/"
+    x = requests.get(basis + "xml/catalog.xml", headers={"User-Agent": UA}, timeout=30)
+    x.raise_for_status()
+    seiten_zahl = int(re.search(r'nofpages="(\d+)"', x.text).group(1))
+
+    # Gültigkeit aus der Kalenderwoche im Titel ("K+K_KW 44"): Montag bis Samstag
+    kw = re.search(r"KW\s*_?(\d{1,2})", titel) or re.search(r"kw(\d{1,2})", name)
+    heute = datetime.now().date()
+    von = bis = ""
+    if kw:
+        jahr = heute.year
+        if int(kw.group(1)) < 10 and heute.month == 12:
+            jahr += 1
+        montag = datetime.fromisocalendar(jahr, int(kw.group(1)), 1).date()
+        von, bis = montag.isoformat(), (montag + timedelta(days=5)).isoformat()
+        if bis < heute.isoformat():
+            raise RuntimeError(f"K+K: Prospekt {titel} ist abgelaufen")
+    prospekt = {"id": f"kkweb-{name}-{von}", "titel": titel, "von": von, "bis": bis}
+    seiten = [{"images": [{"size": "1600x1600", "url": f"{basis}large/bk_{i}.jpg"}]}
+              for i in range(1, seiten_zahl + 1)]
+    return ki_prospekt_angebote("K+K", prospekt, seiten)
+
+
+def ki_prospekt_angebote(markt: str, prospekt: dict, seiten: list[dict]) -> list[dict]:
+    ergebnis = []
+    for a in ki_prospekt_auslesen(markt, prospekt, seiten):
+        ergebnis.append(angebot(
+            markt, a.get("marke"), a.get("name"),
+            a.get("preis"), a.get("alt_preis"),
+            a.get("grundpreis"), a.get("gp_einheit"),
+            a.get("packung"),
+            prospekt["von"], prospekt["bis"],
+            a.get("kategorie"), "K+K-Webseite+KI" if prospekt["id"].startswith("kkweb") else "kaufDA+KI",
+            ki_bildausschnitt(a),
+        ))
+    return ki_doppelte_entfernen(ergebnis)
+
+
+def kk_angebote(seite: str, latlng) -> list[dict]:
+    """Erst die K+K-Webseite, bei Problemen kaufDA."""
+    try:
+        web = kk_webseite_angebote()
+        if web:
+            return web
+        log("  K+K-Webseite: keine Angebote, versuche kaufDA")
+    except Exception as e:
+        log(f"  K+K-Webseite fehlgeschlagen ({e}), versuche kaufDA")
+    return kaufda_markt_angebote("K+K", seite, latlng)
+
+
 def rossmann_alle_angebote() -> list[dict]:
     return kaufda_markt_angebote("Rossmann", ROSSMANN_SEITE)
 
@@ -1024,9 +1087,8 @@ def main():
             angebote += [a for a in mg if a["h"] not in eigene]
 
         for markt, seite in r.get("kaufda", {}).items():
-            angebote += versuche(
-                markt, lambda m=markt, s=seite: kaufda_markt_angebote(m, s, r["latlng"]), status
-            )
+            holen = kk_angebote if markt == "K+K" else (lambda s, ll, m=markt: kaufda_markt_angebote(m, s, ll))
+            angebote += versuche(markt, lambda h=holen, s=seite: h(s, r["latlng"]), status)
 
         angebote = doppelte_entfernen(angebote)
         gruppen_zuordnen(angebote)  # Cache wird über alle Regionen geteilt
