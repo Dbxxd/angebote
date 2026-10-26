@@ -23,6 +23,7 @@
   --linie: #DADDD8;
   --rot: #C8102E;
   --rot-dunkel: #9E0B23;
+  --rot-text: #C8102E;
   --gelb: #FFD400;
   --gruen: #1F7A4D;
   --fokus: #1D5FD1;
@@ -39,6 +40,7 @@
     --linie: #333A37;
     --rot: #E0213F;
     --rot-dunkel: #B5142E;
+    --rot-text: #FF6B7D;
     --gruen: #4CC488;
     --fokus: #7FA9FF;
     color-scheme: dark;
@@ -116,7 +118,7 @@ main { max-width: 640px; margin: 0 auto; padding: 12px 16px 24px; }
 .angebot .name { font-size: 16px; font-weight: 600; line-height: 1.25; overflow-wrap: anywhere; }
 .angebot .marke { font-weight: 400; color: var(--grau); }
 .angebot .info { font-size: 13px; color: var(--grau); margin-top: 2px; }
-.angebot .info .bald { color: var(--tinte); font-weight: 600; }
+.bald { color: var(--rot-text); font-weight: 700; }
 .angebot .rechts { display: flex; flex-direction: column; align-items: flex-end; gap: 4px; }
 
 /* Das Preisschild: das eine auffällige Element */
@@ -824,7 +826,7 @@ function detailHTML(a) {
   } else {
     bild = `<div class="detail-bild leer">Kein Bild verfügbar</div>`;
   }
-  const zeit = a.bald ? `ab ${esc(datumKurz(a.von))}` : a.bis ? `gültig bis ${esc(datumKurz(a.bis))}` : "";
+  const zeit = a.bald ? `<span class="bald">ab ${esc(datumKurz(a.von))}</span>` : a.bis ? `gültig bis ${esc(datumKurz(a.bis))}` : "";
   return `<div class="detail-karte" style="--mf:${marktFarbe(a.h)}">
     <div class="detail-kopf"><span class="markt">${esc(a.h)}</span><button class="detail-zu" data-detail-zu aria-label="Schließen">×</button></div>
     ${bild}
