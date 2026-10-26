@@ -283,7 +283,7 @@ def mg_alle_angebote(plz: str) -> list[dict]:
             o.get("price"), o.get("oldPrice"),
             o.get("referencePrice"), einheit,
             mg_packung(o),
-            (v.get("from") or "")[:10], (v.get("to") or "")[:10],
+            mg_datum(v.get("from")), mg_datum(v.get("to")),
             kat, "marktguru",
             f"mg:{o['id']}" if o.get("id") and (o.get("images") or {}).get("count") else "",
         ))
@@ -298,6 +298,16 @@ ALDI_SEITEN = [
     "https://www.aldi-nord.de/angebote.html",
     "https://www.aldi-nord.de/angebote-vorschau.html",
 ]
+
+
+def mg_datum(s) -> str:
+    """marktguru liefert UTC ("2026-11-01T23:00:00Z" = Montag 0 Uhr bei uns) -> lokales Datum."""
+    if not s:
+        return ""
+    try:
+        return datetime.fromisoformat(s.replace("Z", "+00:00")).astimezone().date().isoformat()
+    except ValueError:
+        return s[:10]
 
 
 def aldi_datum(ts) -> str:

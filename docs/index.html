@@ -596,6 +596,7 @@ async function ladeRegion() {
       });
     });
   nieFiltern();
+  listeAbgleichen();
   zeigeKopf();
   vorratZaehler();
 }
@@ -1302,7 +1303,9 @@ function zeichneListe() {
         return `<li class="posten${p.erledigt ? " erledigt" : ""}" style="--mf:${marktFarbe(markt)}">
           <input type="checkbox" data-abhaken="${p.id}" ${p.erledigt ? "checked" : ""} aria-label="${esc(p.a.n)} abhaken">
           <div><div class="pname">${p.a.m ? esc(p.a.m) + " " : ""}${esc(p.a.n)}</div>
-            <div class="pinfo">${[esc(p.a.pk), abgel ? `<span class="abgelaufen">abgelaufen</span>` : p.a.bis ? "bis " + esc(datumKurz(p.a.bis)) : ""].filter(Boolean).join(", ")}</div></div>
+            <div class="pinfo">${[esc(p.a.pk), abgel ? `<span class="abgelaufen">abgelaufen</span>`
+              : p.a.von && p.a.von > t ? `<span class="bald">ab ${esc(datumKurz(p.a.von))}</span>`
+              : p.a.bis ? "bis " + esc(datumKurz(p.a.bis)) : ""].filter(Boolean).join(", ")}</div></div>
           <span class="ppreis">${p.a.p != null ? eur(p.a.p) : "Aktion"}</span>
           <button class="weg" data-entfernen="${p.id}" aria-label="${esc(p.a.n)} entfernen">×</button>
         </li>`;
@@ -1315,6 +1318,19 @@ function zeichneListe() {
        <button class="knopf leise" data-aktion="teilen">Liste teilen</button>
        <button class="knopf leise" data-aktion="leeren">Liste leeren</button>
      </div>`;
+}
+
+// Gültigkeit der gemerkten Angebote aktualisieren (z.B. korrigiertes Startdatum)
+function listeAbgleichen() {
+  const passend = (p) => alleAngebote.find((a) => a.h === p.a.h && a.n === p.a.n && (a.m || "") === (p.a.m || "") && a.p === p.a.p && a.pk === p.a.pk);
+  let geaendert = false;
+  for (const p of zustand.liste) {
+    const a = passend(p);
+    if (a && (p.a.von !== a.von || p.a.bis !== a.bis || p.id !== a.id)) {
+      p.a.von = a.von; p.a.bis = a.bis; p.id = a.id; geaendert = true;  // id hängt am Startdatum
+    }
+  }
+  if (geaendert) speichern();
 }
 
 function listenZaehler() {
@@ -1333,7 +1349,7 @@ function merken(id) {
     const a = angebote.find((x) => x.id === id);
     if (!a) return;
     // Kopie speichern, damit die Liste auch nach dem nächsten Datenabruf stimmt
-    zustand.liste.push({ id, erledigt: false, a: { h: a.h, m: a.m, n: a.n, p: a.p, pk: a.pk, bis: a.bis } });
+    zustand.liste.push({ id, erledigt: false, a: { h: a.h, m: a.m, n: a.n, p: a.p, pk: a.pk, von: a.von, bis: a.bis } });
     meldung(`Auf der Wochenliste (${a.h})`);
   }
   speichern();
