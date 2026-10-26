@@ -415,6 +415,9 @@ def kaufda_prospekte(seite: str) -> list[dict]:
         for b in eintraege:
             if not isinstance(b, dict) or not b.get("contentId"):
                 continue
+            KI_DIAGNOSE.setdefault("broschueren_roh", {})[b["contentId"]] = {
+                k: (v if isinstance(v, (str, int, float, bool)) or v is None else type(v).__name__)
+                for k, v in b.items()}
             p = {
                 "id": b["contentId"],
                 "titel": b.get("title", ""),
@@ -436,7 +439,13 @@ def kaufda_seiten(prospekt_id: str, latlng: tuple[str, str] = EMSDETTEN) -> list
         timeout=30,
     )
     r.raise_for_status()
-    return r.json().get("contents", [])
+    j = r.json()
+    inhalt = j.get("contents", []) if isinstance(j, dict) else []
+    if not inhalt:  # für die Fehlersuche festhalten, was kaufDA stattdessen liefert
+        KI_DIAGNOSE.setdefault("leere_seiten_api", {})[prospekt_id] = {
+            "status": r.status_code, "schluessel": list(j)[:15] if isinstance(j, dict) else type(j).__name__,
+            "anfang": r.text[:600]}
+    return inhalt
 
 
 # Herkunftsländer stehen bei Obst/Gemüse manchmal im Markenfeld ("Niederlande Rosenkohl")
