@@ -373,7 +373,8 @@ button.bild { padding: 0; cursor: zoom-in; font: inherit; }
 .vorrat-details { padding: 0 12px 12px; display: grid; gap: 8px; }
 .vorrat-details .zeile { display: flex; gap: 16px; flex-wrap: wrap; }
 .wunsch { display: flex; align-items: center; gap: 8px; font-size: 14px; color: var(--grau); flex-wrap: wrap; }
-.wunsch input { width: 88px; font: inherit; font-size: 16px; padding: 6px 8px; border-radius: 8px; border: 1px solid var(--linie); background: var(--karte); color: var(--tinte); }
+.wunsch select { font: inherit; font-size: 16px; padding: 6px 8px; border-radius: 8px; border: 1px solid var(--linie); background: var(--karte); color: var(--tinte); }
+.wunsch input { width: 76px; font: inherit; font-size: 16px; padding: 6px 8px; border-radius: 8px; border: 1px solid var(--linie); background: var(--karte); color: var(--tinte); }
 .vorschlag-titel { margin: 18px 0 6px; font-size: 14px; color: var(--grau); }
 @media (prefers-reduced-motion: reduce) { .vorrat-auf svg { transition: none; } }
 
@@ -1039,7 +1040,10 @@ function vorratAngebote(eintrag) {
   const ueblich = ueblicherPreis(alle);
   const unterUeblich = (a) => ueblich && a.gp != null && a.ge === ueblich.ge ? 1 - a.gp / ueblich.preis : 0;
   const ziel = eintrag.ziel;
-  const unterZiel = (a) => ziel != null && a.p != null && a.p <= ziel + 0.001;
+  const zielEinheit = eintrag.zielEinheit || "packung";
+  const unterZiel = (a) => ziel != null && (zielEinheit === "packung"
+    ? a.p != null && a.p <= ziel + 0.001
+    : a.gp != null && a.ge === zielEinheit && a.gp <= ziel + 0.001);
   const gut = alle.filter((a) => unterZiel(a) || rabatt(a) >= VORRAT_RABATT || unterUeblich(a) >= VORRAT_RABATT
     || (a.vl && a.vl[0] === "tief" && a.vl[1] >= 8));
   return { alle, gut, relevant: eintrag.leer ? alle : gut, ueblich, unterUeblich, unterZiel };
@@ -1117,7 +1121,12 @@ function zeichneVorrat() {
     const details = offen ? `<div class="vorrat-details">
         <label class="wunsch">Wunschpreis: höchstens
           <input type="text" inputmode="decimal" data-vorrat-ziel="${i}" value="${v.ziel != null ? String(v.ziel.toFixed(2)).replace(".", ",") : ""}" placeholder="z.B. 8,99" aria-label="Wunschpreis für ${esc(v.name)}">
-          € pro Packung</label>
+          <span style="white-space:nowrap">€&nbsp;pro
+          <select data-vorrat-ziel-einheit="${i}" aria-label="Einheit des Wunschpreises">
+            ${["packung", ...new Set([ueblich && ueblich.ge, ...alle.map((a) => a.ge)].filter((g) => g === "kg" || g === "l")), ...(v.zielEinheit && v.zielEinheit !== "packung" ? [v.zielEinheit] : [])]
+              .filter((x, j, arr) => arr.indexOf(x) === j)
+              .map((e) => `<option value="${e}" ${(v.zielEinheit || "packung") === e ? "selected" : ""}>${e === "packung" ? "Packung" : e === "l" ? "Liter" : "kg"}</option>`).join("")}
+          </select></span></label>
         ${ueblich ? `<p class="vorrat-erkl" style="margin:0">Üblicher Preis: ca. ${eur(ueblich.preis)}/${esc(ueblich.ge)} (aus ${ueblich.n} Angeboten)</p>` : ""}
         ${relevant.length ? listeHTML(relevant, 5) : `<p class="hinweis" style="padding:4px 0">${v.leer ? "Diese Woche kein Angebot." : "Gerade nichts deutlich günstiger als üblich."}</p>`}
         <div class="zeile">
@@ -1485,7 +1494,7 @@ const HILFE = [
     <ul>
       <li><strong>Haken = bald leer</strong>: Du siehst alle Angebote dazu. Die Zahl am Vorrat-Symbol zeigt, wie viele davon gerade im Angebot sind.</li>
       <li><strong>Ohne Haken = genug da</strong>: Die App meldet sich nur bei richtig guten Angeboten, damit du auf Vorrat kaufen kannst. Gut heißt: mindestens 20&nbsp;% Rabatt laut Prospekt <em>oder</em> mindestens 20&nbsp;% unter dem üblichen Preis <em>oder</em> Tiefstpreis seit 8 Wochen.</li>
-      <li>Beim Aufklappen kannst du einen <strong>Wunschpreis</strong> eintragen („höchstens 8,99 € pro Packung“). Jedes Angebot zu diesem Preis oder günstiger zählt dann als gut, praktisch für Markenprodukte wie Aperol, die selten mit Streichpreis im Prospekt stehen.</li>
+      <li>Beim Aufklappen kannst du einen <strong>Wunschpreis</strong> eintragen, wahlweise pro Packung („höchstens 8,99 € pro Packung“) oder pro kg/Liter („höchstens 2,20 € pro kg“, sinnvoll bei unterschiedlichen Packungsgrößen wie bei Quark). Jedes Angebot zu diesem Preis oder günstiger zählt dann als gut, praktisch für Markenprodukte wie Aperol, die selten mit Streichpreis im Prospekt stehen.</li>
       <li>Den <strong>üblichen Preis</strong> berechnet die App selbst (Grundpreis pro kg/l aus allen passenden Angeboten und dem Preisverlauf). Er steht beim Aufklappen eines Eintrags.</li>
       <li>Mit dem Pfeil klappst du die Angebote zu einem Eintrag auf.</li>
     </ul>
@@ -1723,11 +1732,24 @@ document.addEventListener("click", async (ev) => {
 
 document.addEventListener("change", async (ev) => {
   const t = ev.target;
+  if (t.dataset.vorratZielEinheit !== undefined) {
+    const v = zustand.vorrat[+t.dataset.vorratZielEinheit];
+    if (v) {
+      v.zielEinheit = t.value;
+      speichern(); vorratZaehler(); zeichneVorrat();
+      if (v.ziel != null) meldung(`${v.name}: gut bis ${eur(v.ziel)} pro ${t.value === "packung" ? "Packung" : t.value === "l" ? "Liter" : "kg"}`);
+    }
+    return;
+  }
   if (t.dataset.vorratZiel !== undefined) {
     const v = zustand.vorrat[+t.dataset.vorratZiel];
     if (v) {
       const wert = parseFloat(t.value.replace(",", ".").replace(/[^0-9.]/g, ""));
-      if (isFinite(wert) && wert > 0) { v.ziel = Math.round(wert * 100) / 100; meldung(`${v.name}: gut bis ${eur(v.ziel)}`); }
+      if (isFinite(wert) && wert > 0) {
+        v.ziel = Math.round(wert * 100) / 100;
+        const e = v.zielEinheit || "packung";
+        meldung(`${v.name}: gut bis ${eur(v.ziel)} pro ${e === "packung" ? "Packung" : e === "l" ? "Liter" : "kg"}`);
+      }
       else { delete v.ziel; meldung(`${v.name}: Wunschpreis entfernt`); }
       speichern(); vorratZaehler(); zeichneVorrat();
     }
