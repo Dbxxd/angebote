@@ -372,6 +372,8 @@ button.bild { padding: 0; cursor: zoom-in; font: inherit; }
 .vorrat-auf[aria-expanded="true"] svg { transform: rotate(180deg); }
 .vorrat-details { padding: 0 12px 12px; display: grid; gap: 8px; }
 .vorrat-details .zeile { display: flex; gap: 16px; flex-wrap: wrap; }
+.wunsch { display: flex; align-items: center; gap: 8px; font-size: 14px; color: var(--grau); flex-wrap: wrap; }
+.wunsch input { width: 88px; font: inherit; font-size: 16px; padding: 6px 8px; border-radius: 8px; border: 1px solid var(--linie); background: var(--karte); color: var(--tinte); }
 .vorschlag-titel { margin: 18px 0 6px; font-size: 14px; color: var(--grau); }
 @media (prefers-reduced-motion: reduce) { .vorrat-auf svg { transition: none; } }
 
@@ -1036,9 +1038,11 @@ function vorratAngebote(eintrag) {
   const alle = sortiere(treffer);
   const ueblich = ueblicherPreis(alle);
   const unterUeblich = (a) => ueblich && a.gp != null && a.ge === ueblich.ge ? 1 - a.gp / ueblich.preis : 0;
-  const gut = alle.filter((a) => rabatt(a) >= VORRAT_RABATT || unterUeblich(a) >= VORRAT_RABATT
+  const ziel = eintrag.ziel;
+  const unterZiel = (a) => ziel != null && a.p != null && a.p <= ziel + 0.001;
+  const gut = alle.filter((a) => unterZiel(a) || rabatt(a) >= VORRAT_RABATT || unterUeblich(a) >= VORRAT_RABATT
     || (a.vl && a.vl[0] === "tief" && a.vl[1] >= 8));
-  return { alle, gut, relevant: eintrag.leer ? alle : gut, ueblich, unterUeblich };
+  return { alle, gut, relevant: eintrag.leer ? alle : gut, ueblich, unterUeblich, unterZiel };
 }
 
 /* Üblicher Grundpreis: Mittelwert (Median) aus den Angeboten dieser Woche und den früheren
@@ -1097,7 +1101,7 @@ function zeichneVorrat() {
   // "bald leer" zuerst, sonst Reihenfolge beibehalten
   const reihen = zustand.vorrat.map((v, i) => ({ v, i })).sort((x, y) => (y.v.leer ? 1 : 0) - (x.v.leer ? 1 : 0));
   const zeilen = reihen.map(({ v, i }) => {
-    const { alle, gut, relevant, ueblich, unterUeblich } = vorratAngebote(v);
+    const { alle, gut, relevant, ueblich, unterUeblich, unterZiel } = vorratAngebote(v);
     const offen = vorratOffen.has(v.name);
     const bestUnter = Math.round(Math.max(0, ...relevant.map(unterUeblich)) * 100);
     let status;
@@ -1107,10 +1111,13 @@ function zeichneVorrat() {
         : `<span class="leerbald">Bald leer</span> · gerade kein Angebot`;
     } else {
       status = gut.length
-        ? `Genug da · <span class="treffer">${gut.length === 1 ? "1 gutes Angebot" : gut.length + " gute Angebote"}</span> zum Vorratskauf${bestUnter >= 20 ? `, bis ${bestUnter} % unter üblich` : ""}`
+        ? `Genug da · <span class="treffer">${gut.length === 1 ? "1 gutes Angebot" : gut.length + " gute Angebote"}</span> zum Vorratskauf${gut.some(unterZiel) ? ", im Rahmen deines Wunschpreises" : bestUnter >= 20 ? `, bis ${bestUnter} % unter üblich` : ""}`
         : `Genug da · ${alle.length ? `${alle.length === 1 ? "1 Angebot, nicht" : alle.length + " Angebote, keins"} besonders günstig` : "kein Angebot"}`;
     }
     const details = offen ? `<div class="vorrat-details">
+        <label class="wunsch">Wunschpreis: höchstens
+          <input type="text" inputmode="decimal" data-vorrat-ziel="${i}" value="${v.ziel != null ? String(v.ziel.toFixed(2)).replace(".", ",") : ""}" placeholder="z.B. 8,99" aria-label="Wunschpreis für ${esc(v.name)}">
+          € pro Packung</label>
         ${ueblich ? `<p class="vorrat-erkl" style="margin:0">Üblicher Preis: ca. ${eur(ueblich.preis)}/${esc(ueblich.ge)} (aus ${ueblich.n} Angeboten)</p>` : ""}
         ${relevant.length ? listeHTML(relevant, 5) : `<p class="hinweis" style="padding:4px 0">${v.leer ? "Diese Woche kein Angebot." : "Gerade nichts deutlich günstiger als üblich."}</p>`}
         <div class="zeile">
@@ -1478,6 +1485,7 @@ const HILFE = [
     <ul>
       <li><strong>Haken = bald leer</strong>: Du siehst alle Angebote dazu. Die Zahl am Vorrat-Symbol zeigt, wie viele davon gerade im Angebot sind.</li>
       <li><strong>Ohne Haken = genug da</strong>: Die App meldet sich nur bei richtig guten Angeboten, damit du auf Vorrat kaufen kannst. Gut heißt: mindestens 20&nbsp;% Rabatt laut Prospekt <em>oder</em> mindestens 20&nbsp;% unter dem üblichen Preis <em>oder</em> Tiefstpreis seit 8 Wochen.</li>
+      <li>Beim Aufklappen kannst du einen <strong>Wunschpreis</strong> eintragen („höchstens 8,99 € pro Packung“). Jedes Angebot zu diesem Preis oder günstiger zählt dann als gut, praktisch für Markenprodukte wie Aperol, die selten mit Streichpreis im Prospekt stehen.</li>
       <li>Den <strong>üblichen Preis</strong> berechnet die App selbst (Grundpreis pro kg/l aus allen passenden Angeboten und dem Preisverlauf). Er steht beim Aufklappen eines Eintrags.</li>
       <li>Mit dem Pfeil klappst du die Angebote zu einem Eintrag auf.</li>
     </ul>
@@ -1715,6 +1723,16 @@ document.addEventListener("click", async (ev) => {
 
 document.addEventListener("change", async (ev) => {
   const t = ev.target;
+  if (t.dataset.vorratZiel !== undefined) {
+    const v = zustand.vorrat[+t.dataset.vorratZiel];
+    if (v) {
+      const wert = parseFloat(t.value.replace(",", ".").replace(/[^0-9.]/g, ""));
+      if (isFinite(wert) && wert > 0) { v.ziel = Math.round(wert * 100) / 100; meldung(`${v.name}: gut bis ${eur(v.ziel)}`); }
+      else { delete v.ziel; meldung(`${v.name}: Wunschpreis entfernt`); }
+      speichern(); vorratZaehler(); zeichneVorrat();
+    }
+    return;
+  }
   if (t.dataset.vorratHaken !== undefined) {
     const v = zustand.vorrat[+t.dataset.vorratHaken];
     if (v) {
