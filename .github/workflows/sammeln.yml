@@ -2,9 +2,9 @@ name: Angebote sammeln
 
 on:
   schedule:
-    # Täglich um 4:17 UTC (= 6:17 Uhr Sommerzeit / 5:17 Uhr Winterzeit)
-    - cron: "17 4 * * *"   # morgens
-    - cron: "17 13 * * *"  # nachmittags: Prospekte, die erst im Laufe des Tages erscheinen
+    # GitHub startet geplante Läufe oft mehrere Stunden später, daher früh ansetzen (Zeiten in UTC)
+    - cron: "17 1 * * *"   # nachts (meist bis zum Morgen erledigt)
+    - cron: "17 10 * * *"  # mittags: Prospekte, die erst im Laufe des Tages erscheinen
   workflow_dispatch: {}  # Manuell starten über "Actions" -> "Run workflow"
 
 permissions:
