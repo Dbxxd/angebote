@@ -76,25 +76,6 @@
    "contentBadges": "list",
    "externalTracking": "dict"
   },
-  "3d61cc87-8484-4698-9d7f-32f72fc27945": {
-   "title": "Modern Classics",
-   "type": "DYNAMIC",
-   "id": 2501306518,
-   "contentId": "3d61cc87-8484-4698-9d7f-32f72fc27945",
-   "publishedFrom": "2026-10-24T22:00:00.000+0000",
-   "publishedUntil": "2026-10-31T22:00:00.000+0000",
-   "validFrom": "2026-10-26T22:00:00.000+0000",
-   "validUntil": "2026-10-31T22:00:00.000+0000",
-   "hideValidityDate": false,
-   "adFormat": "ad_format__brochure_card_cover",
-   "adPlacement": "ad_placement__seo_brochure_box",
-   "pages": "list",
-   "publisher": "dict",
-   "pageCount": 1,
-   "score": 0.02383,
-   "contentBadges": "list",
-   "externalTracking": "dict"
-  },
   "e058ba1c-29f0-4212-a9c3-6ab08cea7991": {
    "title": "Aktuelle Angebote",
    "type": "BROCHURE",
@@ -190,5 +171,30 @@
    "contentBadges": "list",
    "externalTracking": "dict"
   }
+ },
+ "K+K kkweb-kundk_kw44-2026-10-26": {
+  "titel": "K+K_KW 44",
+  "seiten_api": 12,
+  "bilder": 12,
+  "bildgroessen": [
+   "1600x1600"
+  ],
+  "seitenschluessel": [
+   "images"
+  ],
+  "je_seite": [
+   21,
+   10,
+   12,
+   10,
+   7,
+   13,
+   12,
+   12,
+   14,
+   15,
+   12,
+   13
+  ]
  }
 }

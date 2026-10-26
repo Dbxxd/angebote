@@ -1,5 +1,5 @@
 {
- "stand": "2026-10-26T09:24+01:00",
+ "stand": "2026-10-26T09:26+01:00",
  "regionen": [
   {
    "id": "steinfurt",
@@ -8,13 +8,14 @@
     "Aldi",
     "Combi",
     "E center",
+    "K+K",
     "Kaufland",
     "Lidl",
     "Netto",
     "Penny",
     "Rossmann"
    ],
-   "anzahl": 2914
+   "anzahl": 3065
   },
   {
    "id": "winsen",
