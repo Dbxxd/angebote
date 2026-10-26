@@ -418,6 +418,8 @@ def kaufda_prospekte(seite: str) -> list[dict]:
             KI_DIAGNOSE.setdefault("broschueren_roh", {})[b["contentId"]] = {
                 k: (v if isinstance(v, (str, int, float, bool)) or v is None else type(v).__name__)
                 for k, v in b.items()}
+            if b.get("type") == "DYNAMIC":
+                continue  # Werbekarten ohne Prospektseiten (z.B. "Modern Classics")
             p = {
                 "id": b["contentId"],
                 "titel": b.get("title", ""),
