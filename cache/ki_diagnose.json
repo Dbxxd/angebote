@@ -171,30 +171,5 @@
    "contentBadges": "list",
    "externalTracking": "dict"
   }
- },
- "K+K kkweb-kundk_kw44-2026-10-26": {
-  "titel": "K+K_KW 44",
-  "seiten_api": 12,
-  "bilder": 12,
-  "bildgroessen": [
-   "1600x1600"
-  ],
-  "seitenschluessel": [
-   "images"
-  ],
-  "je_seite": [
-   21,
-   10,
-   12,
-   10,
-   7,
-   13,
-   12,
-   12,
-   14,
-   15,
-   12,
-   13
-  ]
  }
 }
