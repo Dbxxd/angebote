@@ -999,7 +999,7 @@ const AUSSCHLUSS = {
   spueli: ["tabs", "caps", "maschine", "klarspuel", "finish", "somat", "geschirr-reiniger"],
   klopapier: ["feucht"], toilettenpapier: ["feucht"],
   waschmittel: ["weichspuel", "waeschepar", "fleckent", "enthaert", "hygienespuel"],
-  butter: ["margarine", "rama"],
+  butter: ["margarine", "rama", "deli reform", "sanella", "becel", "laetta", "streichfett", "backen"],
   milch: ["muellermilch", "shake", "buttermilch", "kondens", "kaffee-milch", "kaffeemilch", "milchreis", "schokolade"],
   kaffee: ["maschine", "vollautomat", "becher", "filtertuete", "entkalker"],
 };
@@ -1034,8 +1034,34 @@ function vorratAngebote(eintrag) {
     treffer = kandidaten.filter((a) => a.u ? unter.has(a.u) : kernIds.has(a.id));
   }
   const alle = sortiere(treffer);
-  const gut = alle.filter((a) => rabatt(a) >= VORRAT_RABATT || (a.vl && a.vl[0] === "tief" && a.vl[1] >= 8));
-  return { alle, gut, relevant: eintrag.leer ? alle : gut };
+  const ueblich = ueblicherPreis(alle);
+  const unterUeblich = (a) => ueblich && a.gp != null && a.ge === ueblich.ge ? 1 - a.gp / ueblich.preis : 0;
+  const gut = alle.filter((a) => rabatt(a) >= VORRAT_RABATT || unterUeblich(a) >= VORRAT_RABATT
+    || (a.vl && a.vl[0] === "tief" && a.vl[1] >= 8));
+  return { alle, gut, relevant: eintrag.leer ? alle : gut, ueblich, unterUeblich };
+}
+
+/* Üblicher Grundpreis: Mittelwert (Median) aus den Angeboten dieser Woche und den früheren
+   Angeboten derselben Produkte im Preisverlauf. Ersetzt den fehlenden Streichpreis. */
+function ueblicherPreis(alle) {
+  const zahl = {};
+  for (const a of alle) if (a.gp != null && a.ge) zahl[a.ge] = (zahl[a.ge] || 0) + 1;
+  const ge = Object.keys(zahl).sort((x, y) => zahl[y] - zahl[x])[0];
+  if (!ge) return null;
+  const werte = alle.filter((a) => a.gp != null && a.ge === ge).map((a) => a.gp);
+  if (verlauf && verlaufRegion === zustand.region) {
+    const jetzt = new Set(alle.map((a) => [a.h, a.p, a.von || ""].join("|")));
+    for (const k of new Set(alle.map(verlaufSchluessel))) {
+      for (const e of verlauf.p[k] || []) {
+        if (e[3] != null && e[4] === ge && !jetzt.has([e[1], e[2], e[0]].join("|"))) werte.push(e[3]);
+      }
+    }
+  }
+  if (werte.length < 4) return null;  // zu wenig für einen sinnvollen Vergleich
+  werte.sort((x, y) => x - y);
+  const m = werte.length >> 1;
+  const preis = werte.length % 2 ? werte[m] : (werte[m - 1] + werte[m]) / 2;
+  return { ge, preis, n: werte.length };
 }
 
 function vorratZaehler() {
@@ -1064,15 +1090,16 @@ function zeichneVorrat() {
         `<button class="chip" data-vorrat-neu="${esc(v)}">+ ${esc(v)}</button>`).join("")}</div>` : "";
 
   if (!zustand.vorrat.length) {
-    el.innerHTML = formular + `<div class="leer-box"><p>Trag hier ein, was ihr regelmäßig braucht. Hak an, was <strong>bald leer</strong> ist, dann siehst du alle Angebote dazu. Bei allem anderen meldet sich die App nur bei richtig guten Angeboten (ab ${Math.round(VORRAT_RABATT * 100)} % Rabatt), damit du auf Vorrat kaufen kannst.</p></div>` + vorschlagHTML;
+    el.innerHTML = formular + `<div class="leer-box"><p>Trag hier ein, was ihr regelmäßig braucht. Hak an, was <strong>bald leer</strong> ist, dann siehst du alle Angebote dazu. Bei allem anderen meldet sich die App nur bei richtig guten Angeboten (mindestens ${Math.round(VORRAT_RABATT * 100)} % günstiger als sonst), damit du auf Vorrat kaufen kannst.</p></div>` + vorschlagHTML;
     return;
   }
 
   // "bald leer" zuerst, sonst Reihenfolge beibehalten
   const reihen = zustand.vorrat.map((v, i) => ({ v, i })).sort((x, y) => (y.v.leer ? 1 : 0) - (x.v.leer ? 1 : 0));
   const zeilen = reihen.map(({ v, i }) => {
-    const { alle, gut, relevant } = vorratAngebote(v);
+    const { alle, gut, relevant, ueblich, unterUeblich } = vorratAngebote(v);
     const offen = vorratOffen.has(v.name);
+    const bestUnter = Math.round(Math.max(0, ...relevant.map(unterUeblich)) * 100);
     let status;
     if (v.leer) {
       status = alle.length
@@ -1080,11 +1107,12 @@ function zeichneVorrat() {
         : `<span class="leerbald">Bald leer</span> · gerade kein Angebot`;
     } else {
       status = gut.length
-        ? `Genug da · <span class="treffer">${gut.length === 1 ? "1 gutes Angebot" : gut.length + " gute Angebote"}</span> zum Vorratskauf`
+        ? `Genug da · <span class="treffer">${gut.length === 1 ? "1 gutes Angebot" : gut.length + " gute Angebote"}</span> zum Vorratskauf${bestUnter >= 20 ? `, bis ${bestUnter} % unter üblich` : ""}`
         : `Genug da · ${alle.length ? `${alle.length === 1 ? "1 Angebot, nicht" : alle.length + " Angebote, keins"} besonders günstig` : "kein Angebot"}`;
     }
     const details = offen ? `<div class="vorrat-details">
-        ${relevant.length ? listeHTML(relevant, 5) : `<p class="hinweis" style="padding:4px 0">${v.leer ? "Diese Woche kein Angebot." : "Kein Angebot mit mindestens " + Math.round(VORRAT_RABATT * 100) + " % Rabatt."}</p>`}
+        ${ueblich ? `<p class="vorrat-erkl" style="margin:0">Üblicher Preis: ca. ${eur(ueblich.preis)}/${esc(ueblich.ge)} (aus ${ueblich.n} Angeboten)</p>` : ""}
+        ${relevant.length ? listeHTML(relevant, 5) : `<p class="hinweis" style="padding:4px 0">${v.leer ? "Diese Woche kein Angebot." : "Gerade nichts deutlich günstiger als üblich."}</p>`}
         <div class="zeile">
           ${alle.length ? `<button class="textknopf" data-suche="${esc(vorratBegriffe(v.name)[0])}">Alle ${alle.length} in der Suche</button>` : ""}
           <button class="textknopf" data-vorrat-weg="${i}">Entfernen</button>
@@ -1098,7 +1126,7 @@ function zeichneVorrat() {
       </div>${details}</li>`;
   }).join("");
   el.innerHTML = formular +
-    `<p class="vorrat-erkl">Haken = bald leer: alle Angebote. Ohne Haken: nur Angebote ab ${Math.round(VORRAT_RABATT * 100)} % Rabatt. <button class="textknopf" data-hilfe="vorrat">Mehr dazu</button></p>` +
+    `<p class="vorrat-erkl">Haken = bald leer: alle Angebote. Ohne Haken: nur Angebote, die mindestens ${Math.round(VORRAT_RABATT * 100)} % günstiger sind als sonst. <button class="textknopf" data-hilfe="vorrat">Mehr dazu</button></p>` +
     `<ul class="vorrat-liste">${zeilen}</ul>` + vorschlagHTML;
 }
 
@@ -1115,9 +1143,10 @@ function vorratBlockHTML() {
   if (!zustand.vorrat.length) return "";
   const leer = [], vorrat = [];
   for (const v of zustand.vorrat) {
-    const { alle, gut } = vorratAngebote(v);
+    const { alle, gut, unterUeblich } = vorratAngebote(v);
+    const vorteil = (a) => Math.max(rabatt(a), unterUeblich(a));
     if (v.leer && alle.length) leer.push({ v, a: alle[0], n: alle.length });
-    else if (!v.leer && gut.length) vorrat.push({ v, a: gut.slice().sort((a, b) => rabatt(b) - rabatt(a))[0], n: gut.length });
+    else if (!v.leer && gut.length) vorrat.push({ v, a: gut.slice().sort((a, b) => vorteil(b) - vorteil(a))[0], n: gut.length });
   }
   // je Eintrag: Name + Anzahl, darunter das beste Angebot
   const block = (eintraege, einzahl, mehrzahl) => eintraege.map(({ v, a, n }) =>
@@ -1448,7 +1477,8 @@ const HILFE = [
     <p>Eine Liste, die immer bleibt: Dinge, die ihr regelmäßig braucht.</p>
     <ul>
       <li><strong>Haken = bald leer</strong>: Du siehst alle Angebote dazu. Die Zahl am Vorrat-Symbol zeigt, wie viele davon gerade im Angebot sind.</li>
-      <li><strong>Ohne Haken = genug da</strong>: Die App meldet sich nur bei richtig guten Angeboten (ab 20&nbsp;% Rabatt), damit du auf Vorrat kaufen kannst.</li>
+      <li><strong>Ohne Haken = genug da</strong>: Die App meldet sich nur bei richtig guten Angeboten, damit du auf Vorrat kaufen kannst. Gut heißt: mindestens 20&nbsp;% Rabatt laut Prospekt <em>oder</em> mindestens 20&nbsp;% unter dem üblichen Preis <em>oder</em> Tiefstpreis seit 8 Wochen.</li>
+      <li>Den <strong>üblichen Preis</strong> berechnet die App selbst (Grundpreis pro kg/l aus allen passenden Angeboten und dem Preisverlauf). Er steht beim Aufklappen eines Eintrags.</li>
       <li>Mit dem Pfeil klappst du die Angebote zu einem Eintrag auf.</li>
     </ul>
     <p>Die Treffer sind bewusst genau: Bei „Spülmittel“ kommen keine Spülmaschinen-Tabs, bei „Butter“ keine Margarine.</p>
@@ -1765,6 +1795,11 @@ async function start() {
   if (await ladeRegionSicher()) {
     listenZaehler();
     vorratZaehler();
+    ladeVerlauf().then(() => {
+      vorratZaehler();
+      if (aktuelleAnsicht === "vorrat") zeichneVorrat();
+      else if (aktuelleAnsicht === "fuerdich") zeichneFuerDich();
+    });
     history.replaceState({ ansicht: "fuerdich", gruppe: null }, "");
     zeige("fuerdich");
   }
