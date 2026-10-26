@@ -1,0 +1,337 @@
+{
+ "start": {
+  "status": 200,
+  "url": "https://www.klaas-und-kock.de/",
+  "len": 29185
+ },
+ "kandidaten": [
+  "http://www.klaas-und-kock.de/blaetterkatalog.php",
+  "https://www.klaas-und-kock.de/angebote/",
+  "https://www.klaas-und-kock.de/angebote/aktionen/gewinnspiele/",
+  "https://www.klaas-und-kock.de/angebote/aktuelles-flugblatt/hier-unser-aktuelles-prospekt.html",
+  "https://www.klaas-und-kock.de/angebote/news/article-1001.html",
+  "https://www.klaas-und-kock.de/angebote/news/article-1009.html",
+  "https://www.klaas-und-kock.de/angebote/news/article-1019.html",
+  "https://www.klaas-und-kock.de/angebote/news/article-435.html",
+  "https://www.klaas-und-kock.de/angebote/news/article-965.html",
+  "https://www.klaas-und-kock.de/angebote/news/article-966.html",
+  "https://www.klaas-und-kock.de/angebote/news/article-967.html",
+  "https://www.klaas-und-kock.de/angebote/news/article-968.html",
+  "https://www.klaas-und-kock.de/angebote/news/article-969.html",
+  "https://www.klaas-und-kock.de/angebote/news/article-970.html",
+  "https://www.klaas-und-kock.de/angebote/news/article-971.html",
+  "https://www.klaas-und-kock.de/angebote/news/article-972.html",
+  "https://www.klaas-und-kock.de/angebote/news/article-992.html",
+  "https://www.klaas-und-kock.de/angebote/newsletter/abonnieren-sie-unseren-kk-newsletter-jede-woche-neu-und-aktu.html",
+  "https://www.klaas-und-kock.de/angebote/tanken-bei-kk/",
+  "https://www.klaas-und-kock.de/angebote/unsere-angebote/",
+  "https://www.klaas-und-kock.de/karriere-bei-kk/stellenangebote/stellenangebote.html",
+  "https://www.klaas-und-kock.de/kataloge/blaetterkatalog"
+ ],
+ "seiten": {
+  "http://www.klaas-und-kock.de/blaetterkatalog.php": {
+   "status": 200,
+   "url": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/",
+   "typ": "text/html",
+   "len": 3703,
+   "titel": "K+K_KW 44",
+   "iframes": [],
+   "pdf": [],
+   "bilder": [
+    "blaetterkatalog/img/socialmedia_icon.png"
+   ],
+   "kw": [
+    "K+K_KW 44",
+    "Unsere Angebote f&uuml;r die KW 44"
+   ]
+  },
+  "https://www.klaas-und-kock.de/angebote/": {
+   "status": 200,
+   "url": "https://www.klaas-und-kock.de/angebote/news/article-435.html",
+   "typ": "text/html; Charset=utf-8;charset=UTF-8",
+   "len": 30458,
+   "titel": "Wenn Lebensmittel, dann K+K Klaas & Kock - News - Angebote",
+   "iframes": [],
+   "pdf": [],
+   "bilder": [
+    "/img_files/cols2/320/kw/kw44-news-fleisch_6446_1.jpg",
+    "/img_files/cols2/320/kw/kw44-news-gratis_6447_1.jpg",
+    "/img_files/cols2/320/kw/kw44-news-og-01_6448_1.jpg",
+    "/img_files/cols2/320/kw/kw44-news-og-02_6449_1.jpg",
+    "/img_files/cols2/320/kw/kw44-news-spitze-1_6450_1.jpg",
+    "/img_files/cols2/320/kw/kw44-news-spitze-2_6451_1.jpg",
+    "/img_files/cols2/320/kw/kw44-news-spitze-3_6452_1.jpg",
+    "/img_files/cols2/320/kw/kw44-news-spitze-4_6453_1.jpg",
+    "/img_files/cols2/320/kw/kw44-news-spitze-5_6454_1.jpg",
+    "/img_files/cols2/320/kw/kw44-news-spitze-6_6455_1.jpg",
+    "/img_files/cols2/320/kw/kw44-news-spitze-7_6456_1.jpg",
+    "/img_files/cols2/320/kw/kw44-news-wurst_6457_1.jpg",
+    "apple-touch-icon.png",
+    "img/logo-border.png",
+    "img/logo-grey.png",
+    "img/logo.png",
+    "img_files/conndynamic/640/kw44-news-fleisch_6446_1.jpg 640w,\nimg_files/conndynamic/320/kw44-news-fleisch_6446_1.jpg 320w,\nimg_files/conndynamic/640/kw44-news-fleisch_6446_1.jpg 640w,\nimg_files/conndynamic/320/kw44-news-fleisch_6446_1.jpg 320w,\nimg_files/conndynamic/444/kw44-news-fleisch_6446_1.jpg 444w,\nimg_files/conndynamic/222/kw44-news-fleisch_6446_1.jpg 222w,\nimg_files/conndynamic/560/kw44-news-fleisch_6446_1.jpg 560w,\nimg_files/conndynamic/280/kw44-news-fleisch_6446_1.jpg 280w",
+    "img_files/conndynamic/640/kw44-news-gratis_6447_1.jpg 640w,\nimg_files/conndynamic/320/kw44-news-gratis_6447_1.jpg 320w,\nimg_files/conndynamic/640/kw44-news-gratis_6447_1.jpg 640w,\nimg_files/conndynamic/320/kw44-news-gratis_6447_1.jpg 320w,\nimg_files/conndynamic/444/kw44-news-gratis_6447_1.jpg 444w,\nimg_files/conndynamic/222/kw44-news-gratis_6447_1.jpg 222w,\nimg_files/conndynamic/560/kw44-news-gratis_6447_1.jpg 560w,\nimg_files/conndynamic/280/kw44-news-gratis_6447_1.jpg 280w",
+    "img_files/conndynamic/640/kw44-news-og-01_6448_1.jpg 640w,\nimg_files/conndynamic/320/kw44-news-og-01_6448_1.jpg 320w,\nimg_files/conndynamic/640/kw44-news-og-01_6448_1.jpg 640w,\nimg_files/conndynamic/320/kw44-news-og-01_6448_1.jpg 320w,\nimg_files/conndynamic/444/kw44-news-og-01_6448_1.jpg 444w,\nimg_files/conndynamic/222/kw44-news-og-01_6448_1.jpg 222w,\nimg_files/conndynamic/560/kw44-news-og-01_6448_1.jpg 560w,\nimg_files/conndynamic/280/kw44-news-og-01_6448_1.jpg 280w",
+    "img_files/conndynamic/640/kw44-news-og-02_6449_1.jpg 640w,\nimg_files/conndynamic/320/kw44-news-og-02_6449_1.jpg 320w,\nimg_files/conndynamic/640/kw44-news-og-02_6449_1.jpg 640w,\nimg_files/conndynamic/320/kw44-news-og-02_6449_1.jpg 320w,\nimg_files/conndynamic/444/kw44-news-og-02_6449_1.jpg 444w,\nimg_files/conndynamic/222/kw44-news-og-02_6449_1.jpg 222w,\nimg_files/conndynamic/560/kw44-news-og-02_6449_1.jpg 560w,\nimg_files/conndynamic/280/kw44-news-og-02_6449_1.jpg 280w",
+    "img_files/conndynamic/640/kw44-news-spitze-1_6450_1.jpg 640w,\nimg_files/conndynamic/320/kw44-news-spitze-1_6450_1.jpg 320w,\nimg_files/conndynamic/640/kw44-news-spitze-1_6450_1.jpg 640w,\nimg_files/conndynamic/320/kw44-news-spitze-1_6450_1.jpg 320w,\nimg_files/conndynamic/444/kw44-news-spitze-1_6450_1.jpg 444w,\nimg_files/conndynamic/222/kw44-news-spitze-1_6450_1.jpg 222w,\nimg_files/conndynamic/560/kw44-news-spitze-1_6450_1.jpg 560w,\nimg_files/conndynamic/280/kw44-news-spitze-1_6450_1.jpg 280w",
+    "img_files/conndynamic/640/kw44-news-spitze-2_6451_1.jpg 640w,\nimg_files/conndynamic/320/kw44-news-spitze-2_6451_1.jpg 320w,\nimg_files/conndynamic/640/kw44-news-spitze-2_6451_1.jpg 640w,\nimg_files/conndynamic/320/kw44-news-spitze-2_6451_1.jpg 320w,\nimg_files/conndynamic/444/kw44-news-spitze-2_6451_1.jpg 444w,\nimg_files/conndynamic/222/kw44-news-spitze-2_6451_1.jpg 222w,\nimg_files/conndynamic/560/kw44-news-spitze-2_6451_1.jpg 560w,\nimg_files/conndynamic/280/kw44-news-spitze-2_6451_1.jpg 280w",
+    "img_files/conndynamic/640/kw44-news-spitze-3_6452_1.jpg 640w,\nimg_files/conndynamic/320/kw44-news-spitze-3_6452_1.jpg 320w,\nimg_files/conndynamic/640/kw44-news-spitze-3_6452_1.jpg 640w,\nimg_files/conndynamic/320/kw44-news-spitze-3_6452_1.jpg 320w,\nimg_files/conndynamic/444/kw44-news-spitze-3_6452_1.jpg 444w,\nimg_files/conndynamic/222/kw44-news-spitze-3_6452_1.jpg 222w,\nimg_files/conndynamic/560/kw44-news-spitze-3_6452_1.jpg 560w,\nimg_files/conndynamic/280/kw44-news-spitze-3_6452_1.jpg 280w",
+    "img_files/conndynamic/640/kw44-news-spitze-4_6453_1.jpg 640w,\nimg_files/conndynamic/320/kw44-news-spitze-4_6453_1.jpg 320w,\nimg_files/conndynamic/640/kw44-news-spitze-4_6453_1.jpg 640w,\nimg_files/conndynamic/320/kw44-news-spitze-4_6453_1.jpg 320w,\nimg_files/conndynamic/444/kw44-news-spitze-4_6453_1.jpg 444w,\nimg_files/conndynamic/222/kw44-news-spitze-4_6453_1.jpg 222w,\nimg_files/conndynamic/560/kw44-news-spitze-4_6453_1.jpg 560w,\nimg_files/conndynamic/280/kw44-news-spitze-4_6453_1.jpg 280w",
+    "img_files/conndynamic/640/kw44-news-spitze-5_6454_1.jpg 640w,\nimg_files/conndynamic/320/kw44-news-spitze-5_6454_1.jpg 320w,\nimg_files/conndynamic/640/kw44-news-spitze-5_6454_1.jpg 640w,\nimg_files/conndynamic/320/kw44-news-spitze-5_6454_1.jpg 320w,\nimg_files/conndynamic/444/kw44-news-spitze-5_6454_1.jpg 444w,\nimg_files/conndynamic/222/kw44-news-spitze-5_6454_1.jpg 222w,\nimg_files/conndynamic/560/kw44-news-spitze-5_6454_1.jpg 560w,\nimg_files/conndynamic/280/kw44-news-spitze-5_6454_1.jpg 280w",
+    "img_files/conndynamic/640/kw44-news-spitze-6_6455_1.jpg 640w,\nimg_files/conndynamic/320/kw44-news-spitze-6_6455_1.jpg 320w,\nimg_files/conndynamic/640/kw44-news-spitze-6_6455_1.jpg 640w,\nimg_files/conndynamic/320/kw44-news-spitze-6_6455_1.jpg 320w,\nimg_files/conndynamic/444/kw44-news-spitze-6_6455_1.jpg 444w,\nimg_files/conndynamic/222/kw44-news-spitze-6_6455_1.jpg 222w,\nimg_files/conndynamic/560/kw44-news-spitze-6_6455_1.jpg 560w,\nimg_files/conndynamic/280/kw44-news-spitze-6_6455_1.jpg 280w",
+    "img_files/conndynamic/640/kw44-news-spitze-7_6456_1.jpg 640w,\nimg_files/conndynamic/320/kw44-news-spitze-7_6456_1.jpg 320w,\nimg_files/conndynamic/640/kw44-news-spitze-7_6456_1.jpg 640w,\nimg_files/conndynamic/320/kw44-news-spitze-7_6456_1.jpg 320w,\nimg_files/conndynamic/444/kw44-news-spitze-7_6456_1.jpg 444w,\nimg_files/conndynamic/222/kw44-news-spitze-7_6456_1.jpg 222w,\nimg_files/conndynamic/560/kw44-news-spitze-7_6456_1.jpg 560w,\nimg_files/conndynamic/280/kw44-news-spitze-7_6456_1.jpg 280w",
+    "img_files/conndynamic/640/kw44-news-wurst_6457_1.jpg 640w,\nimg_files/conndynamic/320/kw44-news-wurst_6457_1.jpg 320w,\nimg_files/conndynamic/640/kw44-news-wurst_6457_1.jpg 640w,\nimg_files/conndynamic/320/kw44-news-wurst_6457_1.jpg 320w,\nimg_files/conndynamic/444/kw44-news-wurst_6457_1.jpg 444w,\nimg_files/conndynamic/222/kw44-news-wurst_6457_1.jpg 222w,\nimg_files/conndynamic/560/kw44-news-wurst_6457_1.jpg 560w,\nimg_files/conndynamic/280/kw44-news-wurst_6457_1.jpg 280w"
+   ],
+   "kw": []
+  },
+  "https://www.klaas-und-kock.de/angebote/aktionen/gewinnspiele/": {
+   "status": 200,
+   "url": "https://www.klaas-und-kock.de/angebote/aktionen/gewinnspiele/",
+   "typ": "text/html; Charset=utf-8;charset=UTF-8",
+   "len": 17786,
+   "titel": "Wenn Lebensmittel, dann K+K Klaas & Kock - Gewinnspiele - Coupons & Gewinnspiele - Angebote",
+   "iframes": [],
+   "pdf": [],
+   "bilder": [
+    "/img_files/full-width/660/filialen/filiale-47-rheine_191_1.jpg",
+    "apple-touch-icon.png",
+    "img/logo-border.png",
+    "img/logo-grey.png",
+    "img/logo.png",
+    "img_files/conndynamic/1320/filiale-47-rheine_191_1.jpg 1320w,\nimg_files/conndynamic/660/filiale-47-rheine_191_1.jpg 660w,\nimg_files/conndynamic/1320/filiale-47-rheine_191_1.jpg 1320w,\nimg_files/conndynamic/660/filiale-47-rheine_191_1.jpg 660w,\nimg_files/conndynamic/906/filiale-47-rheine_191_1.jpg 906w,\nimg_files/conndynamic/453/filiale-47-rheine_191_1.jpg 453w,\nimg_files/conndynamic/560/filiale-47-rheine_191_1.jpg 560w,\nimg_files/conndynamic/280/filiale-47-rheine_191_1.jpg 280w"
+   ],
+   "kw": []
+  },
+  "https://www.klaas-und-kock.de/angebote/aktuelles-flugblatt/hier-unser-aktuelles-prospekt.html": {
+   "status": 200,
+   "url": "https://www.klaas-und-kock.de/angebote/aktuelles-flugblatt/hier-unser-aktuelles-prospekt.html",
+   "typ": "text/html; Charset=utf-8;charset=UTF-8",
+   "len": 17628,
+   "titel": "Wenn Lebensmittel, dann K+K Klaas & Kock - Aktueller Prospekt - Angebote",
+   "iframes": [],
+   "pdf": [],
+   "bilder": [
+    "apple-touch-icon.png",
+    "img/logo-border.png",
+    "img/logo-grey.png",
+    "img/logo.png"
+   ],
+   "kw": []
+  },
+  "https://www.klaas-und-kock.de/angebote/news/article-1001.html": {
+   "status": 200,
+   "url": "https://www.klaas-und-kock.de/angebote/news/article-1001.html",
+   "typ": "text/html; Charset=utf-8;charset=UTF-8",
+   "len": 18021,
+   "titel": "Wenn Lebensmittel, dann K+K Klaas & Kock - News - Angebote",
+   "iframes": [],
+   "pdf": [],
+   "bilder": [
+    "/img_files/cols3/213/drilander-logo_404_1.png",
+    "/img_files/xxl/1200/kw/kw44-news-wurst_6457_1.jpg",
+    "apple-touch-icon.png",
+    "img/logo-border.png",
+    "img/logo-grey.png",
+    "img/logo.png",
+    "img_files/conndynamic/426/drilander-logo_404_1.png 426w,\nimg_files/conndynamic/213/drilander-logo_404_1.png 213w,\nimg_files/conndynamic/426/drilander-logo_404_1.png 426w,\nimg_files/conndynamic/213/drilander-logo_404_1.png 213w,\nimg_files/conndynamic/288/drilander-logo_404_1.png 288w,\nimg_files/conndynamic/144/drilander-logo_404_1.png 144w,\nimg_files/conndynamic/560/drilander-logo_404_1.png 560w,\nimg_files/conndynamic/280/drilander-logo_404_1.png 280w"
+   ],
+   "kw": []
+  },
+  "https://www.klaas-und-kock.de/angebote/news/article-1009.html": {
+   "status": 200,
+   "url": "https://www.klaas-und-kock.de/angebote/news/article-1009.html",
+   "typ": "text/html; Charset=utf-8;charset=UTF-8",
+   "len": 18023,
+   "titel": "Wenn Lebensmittel, dann K+K Klaas & Kock - News - Angebote",
+   "iframes": [],
+   "pdf": [],
+   "bilder": [
+    "/img_files/cols3/213/drilander-logo_404_1.png",
+    "/img_files/xxl/1200/kw/kw44-news-fleisch_6446_1.jpg",
+    "apple-touch-icon.png",
+    "img/logo-border.png",
+    "img/logo-grey.png",
+    "img/logo.png",
+    "img_files/conndynamic/426/drilander-logo_404_1.png 426w,\nimg_files/conndynamic/213/drilander-logo_404_1.png 213w,\nimg_files/conndynamic/426/drilander-logo_404_1.png 426w,\nimg_files/conndynamic/213/drilander-logo_404_1.png 213w,\nimg_files/conndynamic/288/drilander-logo_404_1.png 288w,\nimg_files/conndynamic/144/drilander-logo_404_1.png 144w,\nimg_files/conndynamic/560/drilander-logo_404_1.png 560w,\nimg_files/conndynamic/280/drilander-logo_404_1.png 280w"
+   ],
+   "kw": []
+  },
+  "https://www.klaas-und-kock.de/angebote/news/article-1019.html": {
+   "status": 200,
+   "url": "https://www.klaas-und-kock.de/angebote/news/article-1019.html",
+   "typ": "text/html; Charset=utf-8;charset=UTF-8",
+   "len": 17183,
+   "titel": "Wenn Lebensmittel, dann K+K Klaas & Kock - News - Angebote",
+   "iframes": [],
+   "pdf": [],
+   "bilder": [
+    "/img_files/xxl/1200/kw/kw44-news-spitze-7_6456_1.jpg",
+    "apple-touch-icon.png",
+    "img/logo-border.png",
+    "img/logo-grey.png",
+    "img/logo.png"
+   ],
+   "kw": []
+  },
+  "https://www.klaas-und-kock.de/angebote/news/article-435.html": {
+   "status": 200,
+   "url": "https://www.klaas-und-kock.de/angebote/news/article-435.html",
+   "typ": "text/html; Charset=utf-8;charset=UTF-8",
+   "len": 30458,
+   "titel": "Wenn Lebensmittel, dann K+K Klaas & Kock - News - Angebote",
+   "iframes": [],
+   "pdf": [],
+   "bilder": [
+    "/img_files/cols2/320/kw/kw44-news-fleisch_6446_1.jpg",
+    "/img_files/cols2/320/kw/kw44-news-gratis_6447_1.jpg",
+    "/img_files/cols2/320/kw/kw44-news-og-01_6448_1.jpg",
+    "/img_files/cols2/320/kw/kw44-news-og-02_6449_1.jpg",
+    "/img_files/cols2/320/kw/kw44-news-spitze-1_6450_1.jpg",
+    "/img_files/cols2/320/kw/kw44-news-spitze-2_6451_1.jpg",
+    "/img_files/cols2/320/kw/kw44-news-spitze-3_6452_1.jpg",
+    "/img_files/cols2/320/kw/kw44-news-spitze-4_6453_1.jpg",
+    "/img_files/cols2/320/kw/kw44-news-spitze-5_6454_1.jpg",
+    "/img_files/cols2/320/kw/kw44-news-spitze-6_6455_1.jpg",
+    "/img_files/cols2/320/kw/kw44-news-spitze-7_6456_1.jpg",
+    "/img_files/cols2/320/kw/kw44-news-wurst_6457_1.jpg",
+    "apple-touch-icon.png",
+    "img/logo-border.png",
+    "img/logo-grey.png",
+    "img/logo.png",
+    "img_files/conndynamic/640/kw44-news-fleisch_6446_1.jpg 640w,\nimg_files/conndynamic/320/kw44-news-fleisch_6446_1.jpg 320w,\nimg_files/conndynamic/640/kw44-news-fleisch_6446_1.jpg 640w,\nimg_files/conndynamic/320/kw44-news-fleisch_6446_1.jpg 320w,\nimg_files/conndynamic/444/kw44-news-fleisch_6446_1.jpg 444w,\nimg_files/conndynamic/222/kw44-news-fleisch_6446_1.jpg 222w,\nimg_files/conndynamic/560/kw44-news-fleisch_6446_1.jpg 560w,\nimg_files/conndynamic/280/kw44-news-fleisch_6446_1.jpg 280w",
+    "img_files/conndynamic/640/kw44-news-gratis_6447_1.jpg 640w,\nimg_files/conndynamic/320/kw44-news-gratis_6447_1.jpg 320w,\nimg_files/conndynamic/640/kw44-news-gratis_6447_1.jpg 640w,\nimg_files/conndynamic/320/kw44-news-gratis_6447_1.jpg 320w,\nimg_files/conndynamic/444/kw44-news-gratis_6447_1.jpg 444w,\nimg_files/conndynamic/222/kw44-news-gratis_6447_1.jpg 222w,\nimg_files/conndynamic/560/kw44-news-gratis_6447_1.jpg 560w,\nimg_files/conndynamic/280/kw44-news-gratis_6447_1.jpg 280w",
+    "img_files/conndynamic/640/kw44-news-og-01_6448_1.jpg 640w,\nimg_files/conndynamic/320/kw44-news-og-01_6448_1.jpg 320w,\nimg_files/conndynamic/640/kw44-news-og-01_6448_1.jpg 640w,\nimg_files/conndynamic/320/kw44-news-og-01_6448_1.jpg 320w,\nimg_files/conndynamic/444/kw44-news-og-01_6448_1.jpg 444w,\nimg_files/conndynamic/222/kw44-news-og-01_6448_1.jpg 222w,\nimg_files/conndynamic/560/kw44-news-og-01_6448_1.jpg 560w,\nimg_files/conndynamic/280/kw44-news-og-01_6448_1.jpg 280w",
+    "img_files/conndynamic/640/kw44-news-og-02_6449_1.jpg 640w,\nimg_files/conndynamic/320/kw44-news-og-02_6449_1.jpg 320w,\nimg_files/conndynamic/640/kw44-news-og-02_6449_1.jpg 640w,\nimg_files/conndynamic/320/kw44-news-og-02_6449_1.jpg 320w,\nimg_files/conndynamic/444/kw44-news-og-02_6449_1.jpg 444w,\nimg_files/conndynamic/222/kw44-news-og-02_6449_1.jpg 222w,\nimg_files/conndynamic/560/kw44-news-og-02_6449_1.jpg 560w,\nimg_files/conndynamic/280/kw44-news-og-02_6449_1.jpg 280w",
+    "img_files/conndynamic/640/kw44-news-spitze-1_6450_1.jpg 640w,\nimg_files/conndynamic/320/kw44-news-spitze-1_6450_1.jpg 320w,\nimg_files/conndynamic/640/kw44-news-spitze-1_6450_1.jpg 640w,\nimg_files/conndynamic/320/kw44-news-spitze-1_6450_1.jpg 320w,\nimg_files/conndynamic/444/kw44-news-spitze-1_6450_1.jpg 444w,\nimg_files/conndynamic/222/kw44-news-spitze-1_6450_1.jpg 222w,\nimg_files/conndynamic/560/kw44-news-spitze-1_6450_1.jpg 560w,\nimg_files/conndynamic/280/kw44-news-spitze-1_6450_1.jpg 280w",
+    "img_files/conndynamic/640/kw44-news-spitze-2_6451_1.jpg 640w,\nimg_files/conndynamic/320/kw44-news-spitze-2_6451_1.jpg 320w,\nimg_files/conndynamic/640/kw44-news-spitze-2_6451_1.jpg 640w,\nimg_files/conndynamic/320/kw44-news-spitze-2_6451_1.jpg 320w,\nimg_files/conndynamic/444/kw44-news-spitze-2_6451_1.jpg 444w,\nimg_files/conndynamic/222/kw44-news-spitze-2_6451_1.jpg 222w,\nimg_files/conndynamic/560/kw44-news-spitze-2_6451_1.jpg 560w,\nimg_files/conndynamic/280/kw44-news-spitze-2_6451_1.jpg 280w",
+    "img_files/conndynamic/640/kw44-news-spitze-3_6452_1.jpg 640w,\nimg_files/conndynamic/320/kw44-news-spitze-3_6452_1.jpg 320w,\nimg_files/conndynamic/640/kw44-news-spitze-3_6452_1.jpg 640w,\nimg_files/conndynamic/320/kw44-news-spitze-3_6452_1.jpg 320w,\nimg_files/conndynamic/444/kw44-news-spitze-3_6452_1.jpg 444w,\nimg_files/conndynamic/222/kw44-news-spitze-3_6452_1.jpg 222w,\nimg_files/conndynamic/560/kw44-news-spitze-3_6452_1.jpg 560w,\nimg_files/conndynamic/280/kw44-news-spitze-3_6452_1.jpg 280w",
+    "img_files/conndynamic/640/kw44-news-spitze-4_6453_1.jpg 640w,\nimg_files/conndynamic/320/kw44-news-spitze-4_6453_1.jpg 320w,\nimg_files/conndynamic/640/kw44-news-spitze-4_6453_1.jpg 640w,\nimg_files/conndynamic/320/kw44-news-spitze-4_6453_1.jpg 320w,\nimg_files/conndynamic/444/kw44-news-spitze-4_6453_1.jpg 444w,\nimg_files/conndynamic/222/kw44-news-spitze-4_6453_1.jpg 222w,\nimg_files/conndynamic/560/kw44-news-spitze-4_6453_1.jpg 560w,\nimg_files/conndynamic/280/kw44-news-spitze-4_6453_1.jpg 280w",
+    "img_files/conndynamic/640/kw44-news-spitze-5_6454_1.jpg 640w,\nimg_files/conndynamic/320/kw44-news-spitze-5_6454_1.jpg 320w,\nimg_files/conndynamic/640/kw44-news-spitze-5_6454_1.jpg 640w,\nimg_files/conndynamic/320/kw44-news-spitze-5_6454_1.jpg 320w,\nimg_files/conndynamic/444/kw44-news-spitze-5_6454_1.jpg 444w,\nimg_files/conndynamic/222/kw44-news-spitze-5_6454_1.jpg 222w,\nimg_files/conndynamic/560/kw44-news-spitze-5_6454_1.jpg 560w,\nimg_files/conndynamic/280/kw44-news-spitze-5_6454_1.jpg 280w",
+    "img_files/conndynamic/640/kw44-news-spitze-6_6455_1.jpg 640w,\nimg_files/conndynamic/320/kw44-news-spitze-6_6455_1.jpg 320w,\nimg_files/conndynamic/640/kw44-news-spitze-6_6455_1.jpg 640w,\nimg_files/conndynamic/320/kw44-news-spitze-6_6455_1.jpg 320w,\nimg_files/conndynamic/444/kw44-news-spitze-6_6455_1.jpg 444w,\nimg_files/conndynamic/222/kw44-news-spitze-6_6455_1.jpg 222w,\nimg_files/conndynamic/560/kw44-news-spitze-6_6455_1.jpg 560w,\nimg_files/conndynamic/280/kw44-news-spitze-6_6455_1.jpg 280w",
+    "img_files/conndynamic/640/kw44-news-spitze-7_6456_1.jpg 640w,\nimg_files/conndynamic/320/kw44-news-spitze-7_6456_1.jpg 320w,\nimg_files/conndynamic/640/kw44-news-spitze-7_6456_1.jpg 640w,\nimg_files/conndynamic/320/kw44-news-spitze-7_6456_1.jpg 320w,\nimg_files/conndynamic/444/kw44-news-spitze-7_6456_1.jpg 444w,\nimg_files/conndynamic/222/kw44-news-spitze-7_6456_1.jpg 222w,\nimg_files/conndynamic/560/kw44-news-spitze-7_6456_1.jpg 560w,\nimg_files/conndynamic/280/kw44-news-spitze-7_6456_1.jpg 280w",
+    "img_files/conndynamic/640/kw44-news-wurst_6457_1.jpg 640w,\nimg_files/conndynamic/320/kw44-news-wurst_6457_1.jpg 320w,\nimg_files/conndynamic/640/kw44-news-wurst_6457_1.jpg 640w,\nimg_files/conndynamic/320/kw44-news-wurst_6457_1.jpg 320w,\nimg_files/conndynamic/444/kw44-news-wurst_6457_1.jpg 444w,\nimg_files/conndynamic/222/kw44-news-wurst_6457_1.jpg 222w,\nimg_files/conndynamic/560/kw44-news-wurst_6457_1.jpg 560w,\nimg_files/conndynamic/280/kw44-news-wurst_6457_1.jpg 280w"
+   ],
+   "kw": []
+  },
+  "https://www.klaas-und-kock.de/angebote/news/article-965.html": {
+   "status": 200,
+   "url": "https://www.klaas-und-kock.de/angebote/news/article-965.html",
+   "typ": "text/html; Charset=utf-8;charset=UTF-8",
+   "len": 17192,
+   "titel": "Wenn Lebensmittel, dann K+K Klaas & Kock - News - Angebote",
+   "iframes": [],
+   "pdf": [],
+   "bilder": [
+    "/img_files/xxl/1200/kw/kw44-news-spitze-1_6450_1.jpg",
+    "apple-touch-icon.png",
+    "img/logo-border.png",
+    "img/logo-grey.png",
+    "img/logo.png"
+   ],
+   "kw": []
+  },
+  "https://www.klaas-und-kock.de/angebote/news/article-966.html": {
+   "status": 200,
+   "url": "https://www.klaas-und-kock.de/angebote/news/article-966.html",
+   "typ": "text/html; Charset=utf-8;charset=UTF-8",
+   "len": 17159,
+   "titel": "Wenn Lebensmittel, dann K+K Klaas & Kock - News - Angebote",
+   "iframes": [],
+   "pdf": [],
+   "bilder": [
+    "/img_files/xxl/1200/kw/kw44-news-spitze-2_6451_1.jpg",
+    "apple-touch-icon.png",
+    "img/logo-border.png",
+    "img/logo-grey.png",
+    "img/logo.png"
+   ],
+   "kw": []
+  },
+  "https://www.klaas-und-kock.de/angebote/news/article-967.html": {
+   "status": 200,
+   "url": "https://www.klaas-und-kock.de/angebote/news/article-967.html",
+   "typ": "text/html; Charset=utf-8;charset=UTF-8",
+   "len": 17144,
+   "titel": "Wenn Lebensmittel, dann K+K Klaas & Kock - News - Angebote",
+   "iframes": [],
+   "pdf": [],
+   "bilder": [
+    "/img_files/xxl/1200/kw/kw44-news-spitze-3_6452_1.jpg",
+    "apple-touch-icon.png",
+    "img/logo-border.png",
+    "img/logo-grey.png",
+    "img/logo.png"
+   ],
+   "kw": []
+  },
+  "https://www.klaas-und-kock.de/angebote/news/article-968.html": {
+   "status": 200,
+   "url": "https://www.klaas-und-kock.de/angebote/news/article-968.html",
+   "typ": "text/html; Charset=utf-8;charset=UTF-8",
+   "len": 17124,
+   "titel": "Wenn Lebensmittel, dann K+K Klaas & Kock - News - Angebote",
+   "iframes": [],
+   "pdf": [],
+   "bilder": [
+    "/img_files/xxl/1200/kw/kw44-news-spitze-4_6453_1.jpg",
+    "apple-touch-icon.png",
+    "img/logo-border.png",
+    "img/logo-grey.png",
+    "img/logo.png"
+   ],
+   "kw": []
+  },
+  "https://www.klaas-und-kock.de/angebote/news/article-969.html": {
+   "status": 200,
+   "url": "https://www.klaas-und-kock.de/angebote/news/article-969.html",
+   "typ": "text/html; Charset=utf-8;charset=UTF-8",
+   "len": 17365,
+   "titel": "Wenn Lebensmittel, dann K+K Klaas & Kock - News - Angebote",
+   "iframes": [],
+   "pdf": [],
+   "bilder": [
+    "/img_files/xxl/1200/kw/kw44-news-spitze-5_6454_1.jpg",
+    "apple-touch-icon.png",
+    "img/logo-border.png",
+    "img/logo-grey.png",
+    "img/logo.png"
+   ],
+   "kw": []
+  },
+  "https://www.klaas-und-kock.de/angebote/news/article-970.html": {
+   "status": 200,
+   "url": "https://www.klaas-und-kock.de/angebote/news/article-970.html",
+   "typ": "text/html; Charset=utf-8;charset=UTF-8",
+   "len": 17181,
+   "titel": "Wenn Lebensmittel, dann K+K Klaas & Kock - News - Angebote",
+   "iframes": [],
+   "pdf": [],
+   "bilder": [
+    "/img_files/xxl/1200/kw/kw44-news-spitze-6_6455_1.jpg",
+    "apple-touch-icon.png",
+    "img/logo-border.png",
+    "img/logo-grey.png",
+    "img/logo.png"
+   ],
+   "kw": []
+  },
+  "https://www.klaas-und-kock.de/angebote/news/article-971.html": {
+   "status": 200,
+   "url": "https://www.klaas-und-kock.de/angebote/news/article-971.html",
+   "typ": "text/html; Charset=utf-8;charset=UTF-8",
+   "len": 17226,
+   "titel": "Wenn Lebensmittel, dann K+K Klaas & Kock - News - Angebote",
+   "iframes": [],
+   "pdf": [],
+   "bilder": [
+    "/img_files/xxl/1200/kw/kw44-news-og-01_6448_1.jpg",
+    "apple-touch-icon.png",
+    "img/logo-border.png",
+    "img/logo-grey.png",
+    "img/logo.png"
+   ],
+   "kw": []
+  }
+ }
+}

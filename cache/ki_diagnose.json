@@ -91,7 +91,7 @@
    "pages": "list",
    "publisher": "dict",
    "pageCount": 1,
-   "score": 0.02421,
+   "score": 0.02383,
    "contentBadges": "list",
    "externalTracking": "dict"
   },
@@ -190,22 +190,5 @@
    "contentBadges": "list",
    "externalTracking": "dict"
   }
- },
- "leere_seiten_api": {
-  "3d61cc87-8484-4698-9d7f-32f72fc27945": {
-   "status": 200,
-   "schluessel": [
-    "contents"
-   ],
-   "anfang": "{\"contents\":[]}"
-  }
- },
- "K+K 3d61cc87-8484-4698-9d7f-32f72fc27945": {
-  "titel": "Modern Classics",
-  "seiten_api": 0,
-  "bilder": 0,
-  "bildgroessen": [],
-  "seitenschluessel": [],
-  "je_seite": []
  }
 }
