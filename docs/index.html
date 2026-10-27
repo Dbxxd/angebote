@@ -621,9 +621,26 @@ function zeigeKopf() {
    ========================================================================= */
 function vergleichswert(a) {
   // Erst nach Grundpreis (kg/l), Stückartikel danach nach Preis
-  return a.gp != null && a.ge ? [0, a.gp] : [1, a.p ?? 9999];
+  if (a.gp != null && a.ge) return [0, a.gp];
+  const st = stueckpreis(a);  // Küchenrolle & Co.: nach Preis pro Stück
+  return st != null ? [1, st] : [2, a.p ?? 9999];
 }
 let sortierung = "gp"; // "gp" = Grundpreis, "rabatt" = größter Rabatt zuerst
+
+/* Anzahl Stück/Rollen aus der Packungsangabe: "8 x 1 Stk", "76-Stück-Packung", "8er-Packung", "4x 43 Blatt", "50 WL" */
+function stueckzahl(a) {
+  if (a._st !== undefined) return a._st;
+  const pk = String(a.pk || "");
+  let m = pk.match(/^\s*(\d+)\s*[x×]/i)
+    || pk.match(/(\d+)\s*(?:-\s*)?(?:stück|stk|rollen?|wl\b|waschladungen|tabs|beutel)/i)
+    || pk.match(/(\d+)er\b/i) || String(a.n || "").match(/(\d+)er[- ]?(?:pack|rolle)/i);
+  const n = m ? parseInt(m[1], 10) : 0;
+  return (a._st = n > 1 && n < 2000 ? n : null);
+}
+function stueckpreis(a) {
+  const n = stueckzahl(a);
+  return n && a.p != null ? a.p / n : null;
+}
 
 function rabatt(a) { return a.ap && a.p ? 1 - a.p / a.ap : 0; }
 
@@ -840,7 +857,7 @@ function detailHTML(a) {
     <div class="detail-preis">
       ${schild(a)}
       ${a.ap ? `<span class="alt">${eur(a.ap)}</span>${spar >= 5 ? `<span class="spar">−${spar} %</span>` : ""}` : ""}
-      ${a.gp != null && a.ge ? `<span class="gp">${eur(a.gp)}/${a.ge}</span>` : ""}
+      ${a.gp != null && a.ge ? `<span class="gp">${eur(a.gp)}/${a.ge}</span>` : stueckpreis(a) != null ? `<span class="gp">${eur(stueckpreis(a))}/Stk</span>` : ""}
     </div>
     ${vlSatz(a)}
     <button class="knopf detail-aktion" data-merken="${a.id}" aria-pressed="${gemerkt}">${gemerkt ? "Auf der Wochenliste ✓" : "Auf die Wochenliste"}</button>
@@ -891,7 +908,7 @@ function angebotHTML(a) {
     <div class="rechts">
       ${schild(a)}
       ${a.ap ? `<div class="preiszeile"><span class="alt">${eur(a.ap)}</span>${spar >= 5 ? `<span class="spar">−${spar} %</span>` : ""}</div>` : ""}
-      ${a.gp != null && a.ge ? `<span class="gp">${eur(a.gp)}/${a.ge}</span>` : ""}
+      ${a.gp != null && a.ge ? `<span class="gp">${eur(a.gp)}/${a.ge}</span>` : stueckpreis(a) != null ? `<span class="gp">${eur(stueckpreis(a))}/Stk</span>` : ""}
       ${vlBadge(a)}
     </div>
   </li>`;
@@ -981,6 +998,7 @@ const KEINE_MAERKTE = `<div class="leer-box"><p>Es ist kein Markt ausgewählt. W
    sonst nur besonders gute Angebote (ab VORRAT_RABATT) zum Vorratskauf
    ========================================================================= */
 const VORRAT_RABATT = 0.2;
+const EINHEIT_NAME = { packung: "Packung", kg: "kg", l: "Liter", stk: "Stück/Rolle" };
 const VORRAT_VORSCHLAEGE = ["Klopapier", "Küchenrolle", "Haferflocken", "Kaffee", "Spülmittel",
   "Waschmittel", "Zahnpasta", "Duschgel", "Müllbeutel", "Nudeln", "Milch", "Butter"];
 // Wie es im Prospekt heißt (Schlüssel normalisiert: ä->ae usw.)
@@ -1039,11 +1057,14 @@ function vorratAngebote(eintrag) {
   }
   const alle = sortiere(treffer);
   const ueblich = ueblicherPreis(alle);
-  const unterUeblich = (a) => ueblich && a.gp != null && a.ge === ueblich.ge ? 1 - a.gp / ueblich.preis : 0;
+  const unterUeblich = (a) => !ueblich ? 0
+    : ueblich.ge === "Stk" ? (stueckpreis(a) != null ? 1 - stueckpreis(a) / ueblich.preis : 0)
+    : a.gp != null && a.ge === ueblich.ge ? 1 - a.gp / ueblich.preis : 0;
   const ziel = eintrag.ziel;
   const zielEinheit = eintrag.zielEinheit || "packung";
   const unterZiel = (a) => ziel != null && (zielEinheit === "packung"
     ? a.p != null && a.p <= ziel + 0.001
+    : zielEinheit === "stk" ? stueckpreis(a) != null && stueckpreis(a) <= ziel + 0.0001
     : a.gp != null && a.ge === zielEinheit && a.gp <= ziel + 0.001);
   const gut = alle.filter((a) => unterZiel(a) || rabatt(a) >= VORRAT_RABATT || unterUeblich(a) >= VORRAT_RABATT
     || (a.vl && a.vl[0] === "tief" && a.vl[1] >= 8));
@@ -1056,7 +1077,13 @@ function ueblicherPreis(alle) {
   const zahl = {};
   for (const a of alle) if (a.gp != null && a.ge) zahl[a.ge] = (zahl[a.ge] || 0) + 1;
   const ge = Object.keys(zahl).sort((x, y) => zahl[y] - zahl[x])[0];
-  if (!ge) return null;
+  if (!ge) {
+    // z.B. Küchenrolle, Klopapier: pro Stück/Rolle vergleichen (nur aktuelle Angebote)
+    const st = alle.map(stueckpreis).filter((x) => x != null).sort((x, y) => x - y);
+    if (st.length < 4) return null;
+    const m = st.length >> 1;
+    return { ge: "Stk", preis: st.length % 2 ? st[m] : (st[m - 1] + st[m]) / 2, n: st.length };
+  }
   const werte = alle.filter((a) => a.gp != null && a.ge === ge).map((a) => a.gp);
   if (verlauf && verlaufRegion === zustand.region) {
     const jetzt = new Set(alle.map((a) => [a.h, a.p, a.von || ""].join("|")));
@@ -1125,9 +1152,10 @@ function zeichneVorrat() {
           <input type="text" inputmode="decimal" data-vorrat-ziel="${i}" value="${v.ziel != null ? String(v.ziel.toFixed(2)).replace(".", ",") : ""}" placeholder="8,99" aria-label="Wunschpreis für ${esc(v.name)}">
           €&nbsp;pro
           <select data-vorrat-ziel-einheit="${i}" aria-label="Einheit des Wunschpreises">
-            ${["packung", ...new Set([ueblich && ueblich.ge, ...alle.map((a) => a.ge)].filter((g) => g === "kg" || g === "l")), ...(v.zielEinheit && v.zielEinheit !== "packung" ? [v.zielEinheit] : [])]
+            ${["packung", ...new Set([ueblich && ueblich.ge, ...alle.map((a) => a.ge)].filter((g) => g === "kg" || g === "l")),
+               ...(alle.some((a) => stueckpreis(a) != null) ? ["stk"] : []), ...(v.zielEinheit && v.zielEinheit !== "packung" ? [v.zielEinheit] : [])]
               .filter((x, j, arr) => arr.indexOf(x) === j)
-              .map((e) => `<option value="${e}" ${(v.zielEinheit || "packung") === e ? "selected" : ""}>${e === "packung" ? "Packung" : e === "l" ? "Liter" : "kg"}</option>`).join("")}
+              .map((e) => `<option value="${e}" ${(v.zielEinheit || "packung") === e ? "selected" : ""}>${EINHEIT_NAME[e] || e}</option>`).join("")}
           </select></span></label>
         ${ueblich ? `<p class="vorrat-erkl" style="margin:0">Üblicher Preis: ca. ${eur(ueblich.preis)}/${esc(ueblich.ge)} (aus ${ueblich.n} Angeboten)</p>` : ""}
         ${relevant.length ? listeHTML(relevant, 5) : `<p class="hinweis" style="padding:4px 0">${v.leer ? "Diese Woche kein Angebot." : "Gerade nichts deutlich günstiger als üblich."}</p>`}
@@ -1496,7 +1524,7 @@ const HILFE = [
     <ul>
       <li><strong>Haken = bald leer</strong>: Du siehst alle Angebote dazu. Die Zahl am Vorrat-Symbol zeigt, wie viele davon gerade im Angebot sind.</li>
       <li><strong>Ohne Haken = genug da</strong>: Die App meldet sich nur bei richtig guten Angeboten, damit du auf Vorrat kaufen kannst. Gut heißt: mindestens 20&nbsp;% Rabatt laut Prospekt <em>oder</em> mindestens 20&nbsp;% unter dem üblichen Preis <em>oder</em> Tiefstpreis seit 8 Wochen.</li>
-      <li>Beim Aufklappen kannst du einen <strong>Wunschpreis</strong> eintragen, wahlweise pro Packung („höchstens 8,99 € pro Packung“) oder pro kg/Liter („höchstens 2,20 € pro kg“, sinnvoll bei unterschiedlichen Packungsgrößen wie bei Quark). Jedes Angebot zu diesem Preis oder günstiger zählt dann als gut, praktisch für Markenprodukte wie Aperol, die selten mit Streichpreis im Prospekt stehen.</li>
+      <li>Beim Aufklappen kannst du einen <strong>Wunschpreis</strong> eintragen, wahlweise pro Packung („höchstens 8,99 € pro Packung“), pro kg/Liter („höchstens 2,20 € pro kg“, z.B. bei Quark) oder pro Stück/Rolle („höchstens 0,40 € pro Rolle“, z.B. bei Küchenrolle). Jedes Angebot zu diesem Preis oder günstiger zählt dann als gut, praktisch für Markenprodukte wie Aperol, die selten mit Streichpreis im Prospekt stehen.</li>
       <li>Den <strong>üblichen Preis</strong> berechnet die App selbst (Grundpreis pro kg/l aus allen passenden Angeboten und dem Preisverlauf). Er steht beim Aufklappen eines Eintrags.</li>
       <li>Mit dem Pfeil klappst du die Angebote zu einem Eintrag auf.</li>
     </ul>
@@ -1739,7 +1767,7 @@ document.addEventListener("change", async (ev) => {
     if (v) {
       v.zielEinheit = t.value;
       speichern(); vorratZaehler(); zeichneVorrat();
-      if (v.ziel != null) meldung(`${v.name}: gut bis ${eur(v.ziel)} pro ${t.value === "packung" ? "Packung" : t.value === "l" ? "Liter" : "kg"}`);
+      if (v.ziel != null) meldung(`${v.name}: gut bis ${eur(v.ziel)} pro ${EINHEIT_NAME[t.value] || t.value}`);
     }
     return;
   }
@@ -1750,7 +1778,7 @@ document.addEventListener("change", async (ev) => {
       if (isFinite(wert) && wert > 0) {
         v.ziel = Math.round(wert * 100) / 100;
         const e = v.zielEinheit || "packung";
-        meldung(`${v.name}: gut bis ${eur(v.ziel)} pro ${e === "packung" ? "Packung" : e === "l" ? "Liter" : "kg"}`);
+        meldung(`${v.name}: gut bis ${eur(v.ziel)} pro ${EINHEIT_NAME[e] || e}`);
       }
       else { delete v.ziel; meldung(`${v.name}: Wunschpreis entfernt`); }
       speichern(); vorratZaehler(); zeichneVorrat();
