@@ -372,9 +372,10 @@ button.bild { padding: 0; cursor: zoom-in; font: inherit; }
 .vorrat-auf[aria-expanded="true"] svg { transform: rotate(180deg); }
 .vorrat-details { padding: 0 12px 12px; display: grid; gap: 8px; }
 .vorrat-details .zeile { display: flex; gap: 16px; flex-wrap: wrap; }
-.wunsch { display: flex; align-items: center; gap: 8px; font-size: 14px; color: var(--grau); flex-wrap: wrap; }
+.wunsch { display: grid; gap: 6px; font-size: 14px; color: var(--grau); }
+.wunsch .reihe { display: flex; align-items: center; gap: 8px; white-space: nowrap; }
 .wunsch select { font: inherit; font-size: 16px; padding: 6px 8px; border-radius: 8px; border: 1px solid var(--linie); background: var(--karte); color: var(--tinte); }
-.wunsch input { width: 76px; font: inherit; font-size: 16px; padding: 6px 8px; border-radius: 8px; border: 1px solid var(--linie); background: var(--karte); color: var(--tinte); }
+.wunsch input { width: 96px; font: inherit; font-size: 16px; padding: 6px 8px; border-radius: 8px; border: 1px solid var(--linie); background: var(--karte); color: var(--tinte); }
 .vorschlag-titel { margin: 18px 0 6px; font-size: 14px; color: var(--grau); }
 @media (prefers-reduced-motion: reduce) { .vorrat-auf svg { transition: none; } }
 
@@ -1119,9 +1120,10 @@ function zeichneVorrat() {
         : `Genug da · ${alle.length ? `${alle.length === 1 ? "1 Angebot, nicht" : alle.length + " Angebote, keins"} besonders günstig` : "kein Angebot"}`;
     }
     const details = offen ? `<div class="vorrat-details">
-        <label class="wunsch">Wunschpreis: höchstens
-          <input type="text" inputmode="decimal" data-vorrat-ziel="${i}" value="${v.ziel != null ? String(v.ziel.toFixed(2)).replace(".", ",") : ""}" placeholder="z.B. 8,99" aria-label="Wunschpreis für ${esc(v.name)}">
-          <span style="white-space:nowrap">€&nbsp;pro
+        <label class="wunsch">Wunschpreis (gutes Angebot, wenn höchstens):
+          <span class="reihe">
+          <input type="text" inputmode="decimal" data-vorrat-ziel="${i}" value="${v.ziel != null ? String(v.ziel.toFixed(2)).replace(".", ",") : ""}" placeholder="8,99" aria-label="Wunschpreis für ${esc(v.name)}">
+          €&nbsp;pro
           <select data-vorrat-ziel-einheit="${i}" aria-label="Einheit des Wunschpreises">
             ${["packung", ...new Set([ueblich && ueblich.ge, ...alle.map((a) => a.ge)].filter((g) => g === "kg" || g === "l")), ...(v.zielEinheit && v.zielEinheit !== "packung" ? [v.zielEinheit] : [])]
               .filter((x, j, arr) => arr.indexOf(x) === j)
