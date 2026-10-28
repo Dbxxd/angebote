@@ -1,43 +1,5 @@
 {
  "broschueren_roh": {
-  "9e68f35c-40c7-433a-acd8-ea15f413a541": {
-   "title": "Mein Drogeriemarkt",
-   "type": "BROCHURE",
-   "id": 2501298221,
-   "contentId": "9e68f35c-40c7-433a-acd8-ea15f413a541",
-   "publishedFrom": "2026-10-16T22:00:00.000+0000",
-   "publishedUntil": "2026-10-30T21:00:00.000+0000",
-   "validFrom": "2026-10-18T22:00:00.000+0000",
-   "validUntil": "2026-10-30T21:00:00.000+0000",
-   "hideValidityDate": false,
-   "adFormat": "ad_format__brochure_card_cover",
-   "adPlacement": "ad_placement__seo_brochure_box",
-   "pages": "list",
-   "publisher": "dict",
-   "pageCount": 7,
-   "score": 2e-05,
-   "contentBadges": "list",
-   "externalTracking": "dict"
-  },
-  "54d0a7f0-bb07-4a41-a900-adedd9e37667": {
-   "title": "Mein Drogeriemarkt",
-   "type": "BROCHURE",
-   "id": 2501306414,
-   "contentId": "54d0a7f0-bb07-4a41-a900-adedd9e37667",
-   "publishedFrom": "2026-10-23T22:00:00.000+0000",
-   "publishedUntil": "2026-10-30T21:00:00.000+0000",
-   "validFrom": "2026-10-25T23:00:00.000+0000",
-   "validUntil": "2026-10-30T21:00:00.000+0000",
-   "hideValidityDate": false,
-   "adFormat": "ad_format__brochure_card_cover",
-   "adPlacement": "ad_placement__seo_brochure_box",
-   "pages": "list",
-   "publisher": "dict",
-   "pageCount": 8,
-   "score": 2e-05,
-   "contentBadges": "list",
-   "externalTracking": "dict"
-  },
   "3ed9f8ac-56ea-48bf-83f2-701527602a79": {
    "title": "Mein Drogeriemarkt",
    "type": "BROCHURE",
@@ -91,7 +53,7 @@
    "pages": "list",
    "publisher": "dict",
    "pageCount": 25,
-   "score": 0.0022,
+   "score": 0.00185,
    "contentBadges": "list",
    "externalTracking": "dict"
   },
