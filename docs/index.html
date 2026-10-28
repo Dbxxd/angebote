@@ -380,7 +380,11 @@ button.bild { padding: 0; cursor: zoom-in; font: inherit; }
 .rezept-form textarea { min-height: 70px; resize: vertical; }
 .rezept-form .zeile { display: flex; gap: 8px; justify-content: flex-end; }
 .zutaten { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
-.zutat { display: grid; grid-template-columns: auto 1fr auto; gap: 10px; align-items: center; font-size: 15px; }
+.zutat { display: grid; grid-template-columns: auto 1fr auto auto; gap: 8px; align-items: center; font-size: 15px;
+  padding: 6px 0 6px 10px; box-shadow: inset 4px 0 0 var(--mf, transparent); border-radius: 4px; }
+.zutat .zmarkt { color: var(--mf); font-weight: 700; }
+.zutat .vorrat-auf { padding: 6px; }
+.zutat-liste { padding: 4px 0 6px; }
 .zutat input[type=checkbox] { width: 22px; height: 22px; margin: 0; accent-color: var(--gruen); }
 .zutat .wo { font-size: 13px; color: var(--grau); }
 .zutat .preis { font-weight: 700; white-space: nowrap; }
@@ -1214,21 +1218,37 @@ function zutatAngebote(name) {
   }
   return alle;
 }
+let zutatCache = new Map();  // pro Zeichnen neu, damit jede Zutat nur einmal gesucht wird
+function zutatAngeboteGemerkt(z) {
+  if (!zutatCache.has(z)) zutatCache.set(z, zutatAngebote(z));
+  return zutatCache.get(z);
+}
+function bestesAngebot(alle) {
+  // günstigstes nach Grundpreis (€/kg, €/l, €/Stück) – "alle" ist schon so sortiert.
+  // Riesenpackungen (5-kg-Sack) nur, wenn es nichts anderes gibt
+  const preise = alle.filter((a) => a.p != null).map((a) => a.p).sort((a, b) => a - b);
+  const mitte = preise.length ? preise[preise.length >> 1] : 0;
+  return alle.find((a) => a.p != null && a.p <= mitte * 2) || alle.find((a) => a.p != null) || null;
+}
+function rezeptMarkt() {
+  const m = zustand.rezeptMarkt;
+  return m && aktiveMaerkte().includes(m) ? m : null;
+}
 function rezeptAuswertung(r) {
+  const markt = rezeptMarkt();
   const zeilen = r.zutaten.map((z) => {
     const da = (r.da || []).includes(z);
-    const alle = da ? [] : zutatAngebote(z);
-    // günstigstes Angebot nach Grundpreis (€/kg, €/l, €/Stück) – "alle" ist schon so sortiert.
-    // Riesenpackungen (5-kg-Sack) nur, wenn es nichts anderes gibt
-    const preise = alle.filter((a) => a.p != null).map((a) => a.p).sort((a, b) => a - b);
-    const mitte = preise.length ? preise[preise.length >> 1] : 0;
-    const best = alle.find((a) => a.p != null && a.p <= mitte * 2) || alle.find((a) => a.p != null) || null;
-    return { z, da, alle, best };
+    const ueberall = da ? [] : zutatAngeboteGemerkt(z);
+    const alle = markt ? ueberall.filter((a) => a.h === markt) : ueberall;
+    return { z, da, alle, ueberall, best: bestesAngebot(alle) };
   });
   const offen = zeilen.filter((x) => !x.da);
   const mit = offen.filter((x) => x.best);
-  const summe = mit.reduce((s2, x) => s2 + x.best.p, 0);
-  return { zeilen, offen, mit, summe };
+  // Welche Märkte haben die meisten Zutaten?
+  const proMarkt = {};
+  for (const x of offen) for (const h of new Set(x.ueberall.map((a) => a.h))) proMarkt[h] = (proMarkt[h] || 0) + 1;
+  const topMaerkte = Object.entries(proMarkt).sort((a, b) => b[1] - a[1]).slice(0, 2);
+  return { zeilen, offen, mit, topMaerkte, markt };
 }
 
 function rezeptFormHTML(r, idx) {
@@ -1245,29 +1265,53 @@ function rezeptFormHTML(r, idx) {
   </form>`;
 }
 
+const zutatOffen = new Set();
+
 function rezepteHTML() {
+  zutatCache = new Map();
   let html = `<div class="rezepte-kopf"><h2>Rezepte</h2>${rezeptBearbeiten === null ? `<button class="textknopf" data-rezept-neu>+ Neues Rezept</button>` : ""}</div>`;
   if (rezeptBearbeiten === "neu") html += rezeptFormHTML(null, "neu");
   if (!zustand.rezepte.length && rezeptBearbeiten !== "neu") {
     return html + `<p class="vorrat-erkl">Trag eure Gerichte mit Zutaten ein. Die App zeigt dann, welche Zutaten gerade wo im Angebot sind, und setzt die günstigsten auf Wunsch direkt auf die Wochenliste.</p>`;
   }
+  const markt = rezeptMarkt();
+  if (zustand.rezepte.length) {
+    html += `<div class="chips" role="group" aria-label="Markt für Rezepte" style="margin-bottom:10px">
+      <button class="chip" data-rezept-markt="" aria-pressed="${!markt}">Alle Märkte</button>
+      ${aktiveMaerkte().map((m) => `<button class="chip" data-rezept-markt="${esc(m)}" aria-pressed="${markt === m}">${esc(m)}</button>`).join("")}
+    </div>`;
+  }
+  const bei = markt ? ` bei ${esc(markt)}` : " im Angebot";
   const zeilen = zustand.rezepte.map((r, i) => {
     if (rezeptBearbeiten === i) return `<li style="padding:8px">${rezeptFormHTML(r, i)}</li>`;
-    const { zeilen: zs, offen, mit, summe } = rezeptAuswertung(r);
+    const { zeilen: zs, offen, mit, topMaerkte } = rezeptAuswertung(r);
     const auf = rezeptOffen.has(i);
+    const top = !markt && topMaerkte.length && topMaerkte[0][1] > 1
+      ? `<br>Am meisten bei ${topMaerkte.map(([h, n]) => `<span style="color:${marktFarbe(h)};font-weight:700">${esc(h)}</span> (${n})`).join(" und ")}` : "";
     const status = !offen.length ? "Alles da"
-      : `<span class="treffer">${mit.length} von ${offen.length}</span> ${offen.length === 1 ? "Zutat" : "Zutaten"} im Angebot`;
+      : `<span class="treffer">${mit.length} von ${offen.length}</span> ${offen.length === 1 ? "Zutat" : "Zutaten"}${bei}${top}`;
     const details = auf ? `<div class="vorrat-details">
-        <ul class="zutaten">${zs.map((x) => `<li class="zutat${x.da ? " da" : ""}">
-            <input type="checkbox" data-rezept-da="${i}" data-zutat="${esc(x.z)}" ${x.da ? "checked" : ""} aria-label="${esc(x.z)} ist schon da">
-            <div><div class="zname">${esc(x.z)}</div>${x.da ? `<div class="wo">schon da</div>` : x.best
-              ? `<div class="wo">${esc(x.best.h)}: ${esc((x.best.m ? x.best.m + " " : "") + x.best.n)}${x.best.pk ? ", " + esc(x.best.pk) : ""}${x.best.bald ? ` · <span class="bald">ab ${esc(datumKurz(x.best.von))}</span>` : ""}${x.alle.length > 1 ? ` · <button class="textknopf" style="font-size:13px" data-suche="${esc(vorratBegriffe(x.z)[0])}">${x.alle.length} Angebote</button>` : ""}</div>`
-              : `<div class="kein">gerade nicht im Angebot</div>`}</div>
-            <span class="preis">${!x.da && x.best ? eur(x.best.p) : ""}</span>
-          </li>`).join("")}</ul>
-        <p class="vorrat-erkl" style="margin:0">Je Zutat das günstigste Angebot nach Kilo-/Literpreis. Haken = schon zu Hause, wird übersprungen.</p>
+        <ul class="zutaten">${zs.map((x) => {
+          const k = i + "|" + x.z;
+          const zOffen = zutatOffen.has(k);
+          const b = x.best;
+          const wo = x.da ? `<div class="wo">schon da</div>`
+            : b ? `<div class="wo"><span class="zmarkt">${esc(b.h)}</span> ${esc((b.m ? b.m + " " : "") + b.n)}${b.pk ? ", " + esc(b.pk) : ""}${b.bald ? ` · <span class="bald">ab ${esc(datumKurz(b.von))}</span>` : ""}</div>`
+            : `<div class="kein">${markt ? `nicht bei ${esc(markt)}` : "gerade nicht im Angebot"}${markt && x.ueberall.length ? ` · ${x.ueberall.length === 1 ? "1 Angebot" : x.ueberall.length + " Angebote"} woanders` : ""}</div>`;
+          const liste = markt && !x.alle.length ? x.ueberall : x.alle;
+          return `<li class="zutat-eintrag">
+            <div class="zutat${x.da ? " da" : ""}" style="--mf:${b ? marktFarbe(b.h) : "transparent"}">
+              <input type="checkbox" data-rezept-da="${i}" data-zutat="${esc(x.z)}" ${x.da ? "checked" : ""} aria-label="${esc(x.z)} ist schon da">
+              <div><div class="zname">${esc(x.z)}</div>${wo}</div>
+              <span class="preis">${!x.da && b ? eur(b.p) : ""}</span>
+              ${!x.da && liste.length ? `<button class="vorrat-auf" data-zutat-auf="${esc(k)}" aria-expanded="${zOffen}" aria-label="Alle Angebote zu ${esc(x.z)}">${ICON_AUF}</button>` : `<span></span>`}
+            </div>
+            ${zOffen && !x.da && liste.length ? `<div class="zutat-liste">${markt && !x.alle.length ? `<p class="vorrat-erkl" style="margin:4px 0">In anderen Märkten:</p>` : ""}${listeHTML(liste, 8)}${liste.length > 8 ? `<button class="textknopf" data-suche="${esc(vorratBegriffe(x.z)[0])}">Alle ${liste.length} in der Suche</button>` : ""}</div>` : ""}
+          </li>`;
+        }).join("")}</ul>
+        <p class="vorrat-erkl" style="margin:0">Je Zutat das günstigste Angebot${markt ? " bei " + esc(markt) : ""} nach Kilo-/Literpreis. Pfeil = alle Angebote. Haken = schon zu Hause.</p>
         <div class="zeile">
-          ${mit.length ? `<button class="knopf" data-rezept-liste="${i}">Günstigste auf die Wochenliste</button>` : ""}
+          ${mit.length ? `<button class="knopf" data-rezept-liste="${i}">${markt ? `Alles von ${esc(markt)} auf die Wochenliste` : "Günstigste auf die Wochenliste"}</button>` : ""}
           <button class="textknopf" data-rezept-bearbeiten="${i}">Bearbeiten</button>
         </div>
       </div>` : "";
@@ -1288,6 +1332,16 @@ function rezeptAufListe(i) {
     if (!zustand.liste.some((p) => p.id === x.best.id)) { merken(x.best.id); neu++; }
   }
   meldung(neu ? `${neu} ${neu === 1 ? "Zutat" : "Zutaten"} für „${r.name}“ auf der Wochenliste` : "Steht schon alles auf der Wochenliste");
+}
+
+function zeichneVorratBehalten() {
+  const y = window.scrollY;
+  const chips = document.querySelector('#v-vorrat .chips[aria-label="Markt für Rezepte"]');
+  const x = chips ? chips.scrollLeft : 0;
+  zeichneVorrat();
+  window.scrollTo(0, y);
+  const neu = document.querySelector('#v-vorrat .chips[aria-label="Markt für Rezepte"]');
+  if (neu) neu.scrollLeft = x;
 }
 
 function vorratHinzufuegen(name) {
@@ -1648,7 +1702,8 @@ const HILFE = [
     <p>Unter dem Vorrat kannst du eure <strong>Gerichte</strong> mit Zutaten eintragen, z.B. „Spaghetti Bolognese: Hackfleisch, Spaghetti, passierte Tomaten, Zwiebeln, Parmesan“.</p>
     <ul>
       <li>Zu jedem Rezept steht, wie viele Zutaten gerade im Angebot sind.</li>
-      <li>Aufgeklappt siehst du zu jeder Zutat das günstigste Angebot mit Markt.</li>
+      <li>Aufgeklappt siehst du zu jeder Zutat das günstigste Angebot mit Markt (farbig markiert). Der Pfeil an einer Zutat zeigt alle passenden Angebote.</li>
+      <li>Über den Rezepten wählst du einen <strong>Markt</strong>: Dann siehst du nur dessen Angebote, z.B. „4 von 6 Zutaten bei Kaufland“, und kannst alles von dort auf die Wochenliste setzen. Bei „Alle Märkte“ steht, wo es die meisten Zutaten gibt.</li>
       <li>Hak Zutaten ab, die schon da sind, dann werden sie übersprungen.</li>
       <li><strong>„Günstigste auf die Wochenliste“</strong> setzt für jede Zutat das beste Angebot auf deine Einkaufsliste.</li>
     </ul>
@@ -1852,12 +1907,17 @@ document.addEventListener("click", async (ev) => {
       speichern(); zeichneVorrat(); meldung(`„${r.name}“ gelöscht`);
     }
   }
+  else if (d.rezeptMarkt !== undefined) { zustand.rezeptMarkt = d.rezeptMarkt || null; speichern(); zeichneVorratBehalten(); }
+  else if (d.zutatAuf !== undefined) {
+    zutatOffen.has(d.zutatAuf) ? zutatOffen.delete(d.zutatAuf) : zutatOffen.add(d.zutatAuf);
+    zeichneVorratBehalten();
+  }
   else if (d.rezeptAuf !== undefined) {
     const i = +d.rezeptAuf;
     rezeptOffen.has(i) ? rezeptOffen.delete(i) : rezeptOffen.add(i);
-    zeichneVorrat();
+    zeichneVorratBehalten();
   }
-  else if (d.rezeptListe !== undefined) { rezeptAufListe(+d.rezeptListe); zeichneVorrat(); }
+  else if (d.rezeptListe !== undefined) { rezeptAufListe(+d.rezeptListe); zeichneVorratBehalten(); }
   else if (d.vorratNeu) {
     vorratHinzufuegen(d.vorratNeu);
     meldung(`„${d.vorratNeu}“ zum Vorrat hinzugefügt`);
@@ -1907,7 +1967,7 @@ document.addEventListener("change", async (ev) => {
       const z = t.dataset.zutat;
       r.da = (r.da || []).filter((x) => x !== z);
       if (t.checked) r.da.push(z);
-      speichern(); zeichneVorrat();
+      speichern(); zeichneVorratBehalten();
     }
     return;
   }
