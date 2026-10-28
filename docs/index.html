@@ -372,6 +372,20 @@ button.bild { padding: 0; cursor: zoom-in; font: inherit; }
 .vorrat-auf[aria-expanded="true"] svg { transform: rotate(180deg); }
 .vorrat-details { padding: 0 12px 12px; display: grid; gap: 8px; }
 .vorrat-details .zeile { display: flex; gap: 16px; flex-wrap: wrap; }
+/* ---------- Rezepte ---------- */
+.rezepte-kopf { display: flex; justify-content: space-between; align-items: baseline; margin: 26px 0 8px; }
+.rezepte-kopf h2 { margin: 0; font-size: 22px; font-stretch: 75%; font-weight: 800; }
+.rezept-form { display: grid; gap: 8px; margin-bottom: 12px; background: var(--karte); border: 1px solid var(--linie); border-radius: var(--r); padding: 12px; }
+.rezept-form input, .rezept-form textarea { font: inherit; font-size: 16px; padding: 10px; border-radius: 8px; border: 1px solid var(--linie); background: var(--papier); color: var(--tinte); width: 100%; box-sizing: border-box; }
+.rezept-form textarea { min-height: 70px; resize: vertical; }
+.rezept-form .zeile { display: flex; gap: 8px; justify-content: flex-end; }
+.zutaten { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+.zutat { display: grid; grid-template-columns: auto 1fr auto; gap: 10px; align-items: center; font-size: 15px; }
+.zutat input[type=checkbox] { width: 22px; height: 22px; margin: 0; accent-color: var(--gruen); }
+.zutat .wo { font-size: 13px; color: var(--grau); }
+.zutat .preis { font-weight: 700; white-space: nowrap; }
+.zutat.da .zname { text-decoration: line-through; color: var(--grau); }
+.zutat .kein { color: var(--grau); font-size: 13px; }
 .wunsch { display: grid; gap: 6px; font-size: 14px; color: var(--grau); }
 .wunsch .reihe { display: flex; align-items: center; gap: 8px; white-space: nowrap; }
 .wunsch select { font: inherit; font-size: 16px; padding: 6px 8px; border-radius: 8px; border: 1px solid var(--linie); background: var(--karte); color: var(--tinte); }
@@ -1010,7 +1024,10 @@ const SYNONYME = {
   taschentuecher: ["taschentuch"], muellbeutel: ["muellsack", "abfallbeutel", "muellbeutel"],
   spuelmaschinentabs: ["geschirrspueltabs", "spuelmaschinen", "maschinengeschirr"],
   spuelmittel: ["geschirrspuelmittel", "handspuelmittel"],
-  duschgel: ["duschbad", "dusche"], nudeln: ["pasta", "spaghetti", "penne", "fusilli"],
+  duschgel: ["duschbad", "dusche"],
+  spaghetti: ["pasta", "nudeln"], penne: ["pasta", "nudeln"], fusilli: ["pasta", "nudeln"],
+  hackfleisch: ["gehacktes", "hack"], moehren: ["karotten"], karotten: ["moehren"],
+  parmesan: ["grana padano"], sahne: ["schlagsahne", "kochsahne"], nudeln: ["pasta", "spaghetti", "penne", "fusilli"],
 };
 
 // Marken, die für den Begriff stehen (auch ohne das Wort im Namen)
@@ -1126,7 +1143,7 @@ function zeichneVorrat() {
         `<button class="chip" data-vorrat-neu="${esc(v)}">+ ${esc(v)}</button>`).join("")}</div>` : "";
 
   if (!zustand.vorrat.length) {
-    el.innerHTML = formular + `<div class="leer-box"><p>Trag hier ein, was ihr regelmäßig braucht. Hak an, was <strong>bald leer</strong> ist, dann siehst du alle Angebote dazu. Bei allem anderen meldet sich die App nur bei richtig guten Angeboten (mindestens ${Math.round(VORRAT_RABATT * 100)} % günstiger als sonst), damit du auf Vorrat kaufen kannst.</p></div>` + vorschlagHTML;
+    el.innerHTML = formular + `<div class="leer-box"><p>Trag hier ein, was ihr regelmäßig braucht. Hak an, was <strong>bald leer</strong> ist, dann siehst du alle Angebote dazu. Bei allem anderen meldet sich die App nur bei richtig guten Angeboten (mindestens ${Math.round(VORRAT_RABATT * 100)} % günstiger als sonst), damit du auf Vorrat kaufen kannst.</p></div>` + vorschlagHTML + rezepteHTML();
     return;
   }
 
@@ -1173,7 +1190,104 @@ function zeichneVorrat() {
   }).join("");
   el.innerHTML = formular +
     `<p class="vorrat-erkl">Haken = bald leer: alle Angebote. Ohne Haken: nur Angebote, die mindestens ${Math.round(VORRAT_RABATT * 100)} % günstiger sind als sonst. <button class="textknopf" data-hilfe="vorrat">Mehr dazu</button></p>` +
-    `<ul class="vorrat-liste">${zeilen}</ul>` + vorschlagHTML;
+    `<ul class="vorrat-liste">${zeilen}</ul>` + vorschlagHTML + rezepteHTML();
+}
+
+/* =========================================================================
+   Rezepte: Gerichte mit Zutaten; zu jeder Zutat das günstigste Angebot
+   ========================================================================= */
+if (!Array.isArray(zustand.rezepte)) zustand.rezepte = [];
+const rezeptOffen = new Set();
+let rezeptBearbeiten = null;  // Index oder "neu"
+
+function zutatenAus(text) {
+  return [...new Set(String(text).split(/[,;\n]/).map((x) => x.trim()).filter(Boolean))];
+}
+function zutatAngebote(name) {
+  // Würzmischungen ("Knorr Fix Spaghetti Bolognese") sind keine Zutat, außer man sucht sie
+  const ohneFix = (l) => /\bfix\b/i.test(name) ? l : l.filter((a) => !/\bfix\b|würzmischung|gewürzmischung/i.test(a.n));
+  let alle = ohneFix(vorratAngebote({ name, leer: true }).alle);
+  if (!alle.length) {
+    // andere Wortform: "passierte Tomaten" findet "Tomaten passiert"
+    const stamm = name.split(/\s+/).map((w) => w.length > 4 ? w.replace(/(en|e|n|s)$/i, "") : w).join(" ");
+    if (stamm !== name) { const t = suche(stamm, aktiveMaerkte()); alle = ohneFix(sortiere([...t.passend, ...t.weitere])); }
+  }
+  return alle;
+}
+function rezeptAuswertung(r) {
+  const zeilen = r.zutaten.map((z) => {
+    const da = (r.da || []).includes(z);
+    const alle = da ? [] : zutatAngebote(z);
+    // günstigstes Angebot nach Grundpreis (€/kg, €/l, €/Stück) – "alle" ist schon so sortiert.
+    // Riesenpackungen (5-kg-Sack) nur, wenn es nichts anderes gibt
+    const preise = alle.filter((a) => a.p != null).map((a) => a.p).sort((a, b) => a - b);
+    const mitte = preise.length ? preise[preise.length >> 1] : 0;
+    const best = alle.find((a) => a.p != null && a.p <= mitte * 2) || alle.find((a) => a.p != null) || null;
+    return { z, da, alle, best };
+  });
+  const offen = zeilen.filter((x) => !x.da);
+  const mit = offen.filter((x) => x.best);
+  const summe = mit.reduce((s2, x) => s2 + x.best.p, 0);
+  return { zeilen, offen, mit, summe };
+}
+
+function rezeptFormHTML(r, idx) {
+  return `<form class="rezept-form" id="rezeptForm" data-idx="${idx}">
+    <label class="sr" for="rezeptName">Name des Gerichts</label>
+    <input id="rezeptName" placeholder="Gericht, z.B. Spaghetti Bolognese" value="${esc(r ? r.name : "")}" autocomplete="off">
+    <label class="sr" for="rezeptZutaten">Zutaten</label>
+    <textarea id="rezeptZutaten" placeholder="Zutaten mit Komma getrennt, z.B. Hackfleisch, Spaghetti, passierte Tomaten, Zwiebeln, Parmesan">${esc(r ? r.zutaten.join(", ") : "")}</textarea>
+    <div class="zeile">
+      ${r ? `<button type="button" class="textknopf" data-rezept-weg="${idx}">Rezept löschen</button>` : ""}
+      <button type="button" class="knopf leise" data-rezept-abbruch>Abbrechen</button>
+      <button type="submit" class="knopf">Speichern</button>
+    </div>
+  </form>`;
+}
+
+function rezepteHTML() {
+  let html = `<div class="rezepte-kopf"><h2>Rezepte</h2>${rezeptBearbeiten === null ? `<button class="textknopf" data-rezept-neu>+ Neues Rezept</button>` : ""}</div>`;
+  if (rezeptBearbeiten === "neu") html += rezeptFormHTML(null, "neu");
+  if (!zustand.rezepte.length && rezeptBearbeiten !== "neu") {
+    return html + `<p class="vorrat-erkl">Trag eure Gerichte mit Zutaten ein. Die App zeigt dann, welche Zutaten gerade wo im Angebot sind, und setzt die günstigsten auf Wunsch direkt auf die Wochenliste.</p>`;
+  }
+  const zeilen = zustand.rezepte.map((r, i) => {
+    if (rezeptBearbeiten === i) return `<li style="padding:8px">${rezeptFormHTML(r, i)}</li>`;
+    const { zeilen: zs, offen, mit, summe } = rezeptAuswertung(r);
+    const auf = rezeptOffen.has(i);
+    const status = !offen.length ? "Alles da"
+      : `<span class="treffer">${mit.length} von ${offen.length}</span> ${offen.length === 1 ? "Zutat" : "Zutaten"} im Angebot`;
+    const details = auf ? `<div class="vorrat-details">
+        <ul class="zutaten">${zs.map((x) => `<li class="zutat${x.da ? " da" : ""}">
+            <input type="checkbox" data-rezept-da="${i}" data-zutat="${esc(x.z)}" ${x.da ? "checked" : ""} aria-label="${esc(x.z)} ist schon da">
+            <div><div class="zname">${esc(x.z)}</div>${x.da ? `<div class="wo">schon da</div>` : x.best
+              ? `<div class="wo">${esc(x.best.h)}: ${esc((x.best.m ? x.best.m + " " : "") + x.best.n)}${x.best.pk ? ", " + esc(x.best.pk) : ""}${x.best.bald ? ` · <span class="bald">ab ${esc(datumKurz(x.best.von))}</span>` : ""}${x.alle.length > 1 ? ` · <button class="textknopf" style="font-size:13px" data-suche="${esc(vorratBegriffe(x.z)[0])}">${x.alle.length} Angebote</button>` : ""}</div>`
+              : `<div class="kein">gerade nicht im Angebot</div>`}</div>
+            <span class="preis">${!x.da && x.best ? eur(x.best.p) : ""}</span>
+          </li>`).join("")}</ul>
+        <p class="vorrat-erkl" style="margin:0">Je Zutat das günstigste Angebot nach Kilo-/Literpreis. Haken = schon zu Hause, wird übersprungen.</p>
+        <div class="zeile">
+          ${mit.length ? `<button class="knopf" data-rezept-liste="${i}">Günstigste auf die Wochenliste</button>` : ""}
+          <button class="textknopf" data-rezept-bearbeiten="${i}">Bearbeiten</button>
+        </div>
+      </div>` : "";
+    return `<li>
+      <div class="vorrat-zeile" style="grid-template-columns:1fr auto">
+        <div><div class="vorrat-name">${esc(r.name)}</div><div class="vorrat-status">${status}</div></div>
+        <button class="vorrat-auf" data-rezept-auf="${i}" aria-expanded="${auf}" aria-label="Zutaten zu ${esc(r.name)} ${auf ? "zuklappen" : "zeigen"}">${ICON_AUF}</button>
+      </div>${details}</li>`;
+  }).join("");
+  return html + (zeilen ? `<ul class="vorrat-liste">${zeilen}</ul>` : "");
+}
+
+function rezeptAufListe(i) {
+  const r = zustand.rezepte[i];
+  if (!r) return;
+  let neu = 0;
+  for (const x of rezeptAuswertung(r).mit) {
+    if (!zustand.liste.some((p) => p.id === x.best.id)) { merken(x.best.id); neu++; }
+  }
+  meldung(neu ? `${neu} ${neu === 1 ? "Zutat" : "Zutaten"} für „${r.name}“ auf der Wochenliste` : "Steht schon alles auf der Wochenliste");
 }
 
 function vorratHinzufuegen(name) {
@@ -1530,6 +1644,15 @@ const HILFE = [
     </ul>
     <p>Die Treffer sind bewusst genau: Bei „Spülmittel“ kommen keine Spülmaschinen-Tabs, bei „Butter“ keine Margarine.</p>
     <p class="tipp">Trag es so ein, wie du es kaufst: „Kaffeebohnen“ statt „Kaffee“, wenn ihr Bohnen kauft. Mehrere Varianten trennst du mit Komma: „Haferflocken, Porridge“.</p>`],
+  ["rezepte", "Rezepte", `
+    <p>Unter dem Vorrat kannst du eure <strong>Gerichte</strong> mit Zutaten eintragen, z.B. „Spaghetti Bolognese: Hackfleisch, Spaghetti, passierte Tomaten, Zwiebeln, Parmesan“.</p>
+    <ul>
+      <li>Zu jedem Rezept steht, wie viele Zutaten gerade im Angebot sind.</li>
+      <li>Aufgeklappt siehst du zu jeder Zutat das günstigste Angebot mit Markt.</li>
+      <li>Hak Zutaten ab, die schon da sind, dann werden sie übersprungen.</li>
+      <li><strong>„Günstigste auf die Wochenliste“</strong> setzt für jede Zutat das beste Angebot auf deine Einkaufsliste.</li>
+    </ul>
+    <p class="tipp">Wie beim Vorrat: Trag die Zutat so ein, wie sie im Laden heißt („Spaghetti“, „Sahne“, „Parmesan“). Sehr allgemeine Wörter wie „Gewürze“ finden wenig.</p>`],
   ["favoriten", "Favoriten und Nie anzeigen", `
     <p><strong>Favoriten</strong> sind bestimmte Produkte, die du gern kaufst. Sobald eins davon in irgendeinem Markt im Angebot ist, steht es oben unter „Für dich“ und bekommt überall einen ★.</p>
     <p><strong>Nie anzeigen</strong> blendet Produkte überall aus, auch in der Suche und im Vorrat. In den Einstellungen kannst du auch selbst Wörter eintragen:</p>
@@ -1719,6 +1842,22 @@ document.addEventListener("click", async (ev) => {
     speichern();
     zeichneEinstellungen();
   }
+  else if (d.rezeptNeu !== undefined) { rezeptBearbeiten = "neu"; zeichneVorrat(); $("#rezeptName").focus(); }
+  else if (d.rezeptAbbruch !== undefined) { rezeptBearbeiten = null; zeichneVorrat(); }
+  else if (d.rezeptBearbeiten !== undefined) { rezeptBearbeiten = +d.rezeptBearbeiten; zeichneVorrat(); }
+  else if (d.rezeptWeg !== undefined) {
+    const r = zustand.rezepte[+d.rezeptWeg];
+    if (r && confirm(`Rezept „${r.name}“ löschen?`)) {
+      zustand.rezepte.splice(+d.rezeptWeg, 1); rezeptOffen.clear(); rezeptBearbeiten = null;
+      speichern(); zeichneVorrat(); meldung(`„${r.name}“ gelöscht`);
+    }
+  }
+  else if (d.rezeptAuf !== undefined) {
+    const i = +d.rezeptAuf;
+    rezeptOffen.has(i) ? rezeptOffen.delete(i) : rezeptOffen.add(i);
+    zeichneVorrat();
+  }
+  else if (d.rezeptListe !== undefined) { rezeptAufListe(+d.rezeptListe); zeichneVorrat(); }
   else if (d.vorratNeu) {
     vorratHinzufuegen(d.vorratNeu);
     meldung(`„${d.vorratNeu}“ zum Vorrat hinzugefügt`);
@@ -1762,6 +1901,16 @@ document.addEventListener("click", async (ev) => {
 
 document.addEventListener("change", async (ev) => {
   const t = ev.target;
+  if (t.dataset.rezeptDa !== undefined) {
+    const r = zustand.rezepte[+t.dataset.rezeptDa];
+    if (r) {
+      const z = t.dataset.zutat;
+      r.da = (r.da || []).filter((x) => x !== z);
+      if (t.checked) r.da.push(z);
+      speichern(); zeichneVorrat();
+    }
+    return;
+  }
   if (t.dataset.vorratZielEinheit !== undefined) {
     const v = zustand.vorrat[+t.dataset.vorratZielEinheit];
     if (v) {
@@ -1813,6 +1962,24 @@ document.addEventListener("submit", (ev) => {
     if (vorratHinzufuegen(inp.value)) meldung(`„${inp.value.trim()}“ zum Vorrat hinzugefügt`);
     zeichneVorrat(); vorratZaehler();
     $("#vorratNeu").focus();
+    return;
+  }
+  if (ev.target.id === "rezeptForm") {
+    ev.preventDefault();
+    const name = $("#rezeptName").value.trim();
+    const zutaten = zutatenAus($("#rezeptZutaten").value);
+    if (!name || !zutaten.length) { meldung("Bitte Name und mindestens eine Zutat eintragen"); return; }
+    const idx = ev.target.dataset.idx;
+    if (idx === "neu") {
+      zustand.rezepte.push({ name, zutaten, da: [] });
+      rezeptOffen.add(zustand.rezepte.length - 1);
+    } else {
+      const r = zustand.rezepte[+idx];
+      r.name = name; r.zutaten = zutaten; r.da = (r.da || []).filter((z) => zutaten.includes(z));
+    }
+    rezeptBearbeiten = null;
+    speichern(); zeichneVorrat();
+    meldung(`„${name}“ gespeichert`);
     return;
   }
   if (ev.target.id === "nieForm") {
