@@ -1,5 +1,8 @@
 {
- "https://www.kaufda.de/Emsdetten/Rossmann/p-r98": [],
+ "https://www.kaufda.de/Emsdetten/Rossmann/p-r98": [
+  "Mein Drogeriemarkt (2026-11-02 bis 2026-11-06)",
+  "Mein Drogeriemarkt (2026-11-02 bis 2026-11-13)"
+ ],
  "https://www.kaufda.de/Steinfurt/E-center/p-r110": [
   "Aktuelle Angebote (2026-10-26 bis 2026-10-31)"
  ],
@@ -8,6 +11,7 @@
   "Fischmarkt (2026-10-26 bis 2026-11-07)"
  ],
  "https://www.kaufda.de/Winsen-Luhe/Norma/p-r78": [
-  "Mehr fürs Geld (2026-10-26 bis 2026-10-31)"
+  "Mehr fürs Geld (2026-10-26 bis 2026-10-31)",
+  "Mehr fürs Geld (2026-11-02 bis 2026-11-07)"
  ]
 }

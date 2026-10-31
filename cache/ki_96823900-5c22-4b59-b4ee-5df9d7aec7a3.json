@@ -1,0 +1,6088 @@
+{
+ "version": 2,
+ "markt": "Norma",
+ "prospekt": {
+  "id": "96823900-5c22-4b59-b4ee-5df9d7aec7a3",
+  "titel": "Mehr fürs Geld",
+  "von": "2026-11-02",
+  "bis": "2026-11-07"
+ },
+ "modell": "claude-haiku-5-5",
+ "angebote": [
+  {
+   "marke": "Dreamer",
+   "name": "Edel-Flanell-Bettwäsche Sevilla",
+   "packung": "Bezug ca. 135 x 200 cm, Kissen ca. 80 x 80 cm",
+   "preis": 19.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Bettwäsche",
+   "bereich": [
+    26,
+    3,
+    100,
+    47
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/e22485aa-7990-4b06-98b3-6e58bd54ccf7/zoomlarge_page_0.jpg?impolicy=large"
+  },
+  {
+   "marke": "",
+   "name": "Interlock Doppeljersey-Spannbettuch",
+   "packung": "ca. 90-100 x 200 cm",
+   "preis": 9.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Spannbetttuch",
+   "bereich": [
+    12,
+    34,
+    26,
+    47
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/e22485aa-7990-4b06-98b3-6e58bd54ccf7/zoomlarge_page_0.jpg?impolicy=large"
+  },
+  {
+   "marke": "",
+   "name": "Interlock Doppeljersey-Spannbettuch",
+   "packung": "ca. 140-160 x 200 cm",
+   "preis": 12.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Spannbetttuch",
+   "bereich": [
+    12,
+    34,
+    26,
+    47
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/e22485aa-7990-4b06-98b3-6e58bd54ccf7/zoomlarge_page_0.jpg?impolicy=large"
+  },
+  {
+   "marke": "",
+   "name": "Interlock Doppeljersey-Spannbettuch",
+   "packung": "ca. 180-200 x 200 cm",
+   "preis": 14.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Spannbetttuch",
+   "bereich": [
+    12,
+    34,
+    26,
+    47
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/e22485aa-7990-4b06-98b3-6e58bd54ccf7/zoomlarge_page_0.jpg?impolicy=large"
+  },
+  {
+   "marke": "Ronley",
+   "name": "Supersoft Schlaf-/Hausanzug für Herren",
+   "packung": "",
+   "preis": 9.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Hausanzug",
+   "bereich": [
+    13,
+    54,
+    34,
+    66
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/e22485aa-7990-4b06-98b3-6e58bd54ccf7/zoomlarge_page_0.jpg?impolicy=large"
+  },
+  {
+   "marke": "",
+   "name": "Pyjama-Set für Damen",
+   "packung": "",
+   "preis": 9.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Schlafanzug",
+   "bereich": [
+    46,
+    53,
+    67,
+    66
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/e22485aa-7990-4b06-98b3-6e58bd54ccf7/zoomlarge_page_0.jpg?impolicy=large"
+  },
+  {
+   "marke": "",
+   "name": "Wellness-Fleecehose für Damen",
+   "packung": "",
+   "preis": 7.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Hose",
+   "bereich": [
+    70,
+    53,
+    92,
+    66
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/e22485aa-7990-4b06-98b3-6e58bd54ccf7/zoomlarge_page_0.jpg?impolicy=large"
+  },
+  {
+   "marke": "",
+   "name": "Kopfkissen mit Zirbenholz",
+   "packung": "ca. 80 x 80 cm",
+   "preis": 12.99,
+   "alt_preis": 15.99,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Kopfkissen",
+   "bereich": [
+    12,
+    68,
+    34,
+    80
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/e22485aa-7990-4b06-98b3-6e58bd54ccf7/zoomlarge_page_0.jpg?impolicy=large"
+  },
+  {
+   "marke": "",
+   "name": "Bambus-Topper-Spannbetttuch",
+   "packung": "ca. 180-200 x 200 cm",
+   "preis": 9.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Spannbetttuch",
+   "bereich": [
+    47,
+    67,
+    66,
+    79
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/e22485aa-7990-4b06-98b3-6e58bd54ccf7/zoomlarge_page_0.jpg?impolicy=large"
+  },
+  {
+   "marke": "",
+   "name": "Bambus-Boxspringbett-Spannbetttuch",
+   "packung": "ca. 180-200 x 200 cm",
+   "preis": 14.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Spannbetttuch",
+   "bereich": [
+    47,
+    67,
+    66,
+    79
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/e22485aa-7990-4b06-98b3-6e58bd54ccf7/zoomlarge_page_0.jpg?impolicy=large"
+  },
+  {
+   "marke": "",
+   "name": "Kopfkissen Dream Deluxe",
+   "packung": "ca. 80 x 80 cm",
+   "preis": 19.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Kopfkissen",
+   "bereich": [
+    35,
+    80,
+    52,
+    91
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/e22485aa-7990-4b06-98b3-6e58bd54ccf7/zoomlarge_page_0.jpg?impolicy=large"
+  },
+  {
+   "marke": "",
+   "name": "Langarm-Nachthemd Minky-Fleece",
+   "packung": "",
+   "preis": 8.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Nachthemd",
+   "bereich": [
+    74,
+    70,
+    100,
+    84
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/e22485aa-7990-4b06-98b3-6e58bd54ccf7/zoomlarge_page_0.jpg?impolicy=large"
+  },
+  {
+   "marke": "campagne",
+   "name": "Filz-Hausschuhe für Damen und Herren",
+   "packung": "",
+   "preis": 12.99,
+   "alt_preis": 24.95,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Hausschuhe",
+   "bereich": [
+    72,
+    87,
+    96,
+    95
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/e22485aa-7990-4b06-98b3-6e58bd54ccf7/zoomlarge_page_0.jpg?impolicy=large"
+  },
+  {
+   "marke": "",
+   "name": "Softe Kuschel-Hausschuhe",
+   "packung": "",
+   "preis": 4.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Hausschuhe",
+   "bereich": [
+    36,
+    88,
+    55,
+    95
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/e22485aa-7990-4b06-98b3-6e58bd54ccf7/zoomlarge_page_0.jpg?impolicy=large"
+  },
+  {
+   "marke": "",
+   "name": "Kassettenbett",
+   "packung": "Bezug ca. 135 x 200 cm",
+   "preis": 39.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Bettdecke",
+   "bereich": [
+    2,
+    88,
+    16,
+    96
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/e22485aa-7990-4b06-98b3-6e58bd54ccf7/zoomlarge_page_0.jpg?impolicy=large"
+  },
+  {
+   "marke": "TOPTEX",
+   "name": "2in1 Reflektierende Steppjacke für Damen und Herren",
+   "packung": "",
+   "preis": 29.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Jacke",
+   "bereich": [
+    3,
+    25,
+    36,
+    76
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/e5064fcb-c595-47d6-95dd-dfc22b045e1b/zoomlarge_page_1.jpg?impolicy=large"
+  },
+  {
+   "marke": "Ronley",
+   "name": "Stretch-Jeans für Herren",
+   "packung": "",
+   "preis": 9.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Jeans",
+   "bereich": [
+    76,
+    7,
+    97,
+    17
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/e5064fcb-c595-47d6-95dd-dfc22b045e1b/zoomlarge_page_1.jpg?impolicy=large"
+  },
+  {
+   "marke": "",
+   "name": "Leggings für Damen",
+   "packung": "",
+   "preis": 5.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Leggings",
+   "bereich": [
+    75,
+    22,
+    92,
+    35
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/e5064fcb-c595-47d6-95dd-dfc22b045e1b/zoomlarge_page_1.jpg?impolicy=large"
+  },
+  {
+   "marke": "TOPTEX",
+   "name": "Seamless Thermo-Unterhemd/-hose für Damen und Herren",
+   "packung": "",
+   "preis": 7.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Unterwäsche",
+   "bereich": [
+    23,
+    44,
+    34,
+    56
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/e5064fcb-c595-47d6-95dd-dfc22b045e1b/zoomlarge_page_1.jpg?impolicy=large"
+  },
+  {
+   "marke": "Ronley",
+   "name": "Strick-Troyer Uni Schwarz für Herren",
+   "packung": "",
+   "preis": 11.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Pullover",
+   "bereich": [
+    36,
+    42,
+    62,
+    56
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/e5064fcb-c595-47d6-95dd-dfc22b045e1b/zoomlarge_page_1.jpg?impolicy=large"
+  },
+  {
+   "marke": "Ronley",
+   "name": "Strick-Troyer mit Norwegermuster für Herren",
+   "packung": "",
+   "preis": 14.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Pullover",
+   "bereich": [
+    36,
+    42,
+    62,
+    56
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/e5064fcb-c595-47d6-95dd-dfc22b045e1b/zoomlarge_page_1.jpg?impolicy=large"
+  },
+  {
+   "marke": "",
+   "name": "Feinripp-Unterhemd mit breiten Trägern für Damen",
+   "packung": "3er-Pack",
+   "preis": 9.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Unterhemd",
+   "bereich": [
+    67,
+    42,
+    78,
+    53
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/e5064fcb-c595-47d6-95dd-dfc22b045e1b/zoomlarge_page_1.jpg?impolicy=large"
+  },
+  {
+   "marke": "",
+   "name": "Ripp-Home-/Loungewear-Hose für Damen",
+   "packung": "",
+   "preis": 7.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Hose",
+   "bereich": [
+    14,
+    57,
+    30,
+    67
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/e5064fcb-c595-47d6-95dd-dfc22b045e1b/zoomlarge_page_1.jpg?impolicy=large"
+  },
+  {
+   "marke": "",
+   "name": "Winter-Leggings für Damen",
+   "packung": "",
+   "preis": 5.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Leggings",
+   "bereich": [
+    40,
+    58,
+    58,
+    68
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/e5064fcb-c595-47d6-95dd-dfc22b045e1b/zoomlarge_page_1.jpg?impolicy=large"
+  },
+  {
+   "marke": "Luigi Lamberto",
+   "name": "Jeans-Ledergürtel für Damen und Herren",
+   "packung": "",
+   "preis": 9.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Gürtel",
+   "bereich": [
+    68,
+    59,
+    97,
+    68
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/e5064fcb-c595-47d6-95dd-dfc22b045e1b/zoomlarge_page_1.jpg?impolicy=large"
+  },
+  {
+   "marke": "",
+   "name": "Winter-Stiefelette für Damen",
+   "packung": "",
+   "preis": 19.99,
+   "alt_preis": 39.95,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Stiefelette",
+   "bereich": [
+    2,
+    69,
+    32,
+    78
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/e5064fcb-c595-47d6-95dd-dfc22b045e1b/zoomlarge_page_1.jpg?impolicy=large"
+  },
+  {
+   "marke": "",
+   "name": "Winter-Boots für Herren",
+   "packung": "",
+   "preis": 19.99,
+   "alt_preis": 39.95,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Winterstiefel",
+   "bereich": [
+    35,
+    69,
+    66,
+    79
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/e5064fcb-c595-47d6-95dd-dfc22b045e1b/zoomlarge_page_1.jpg?impolicy=large"
+  },
+  {
+   "marke": "Luigi Lamberto",
+   "name": "Leder-Geldbörse für Damen und Herren",
+   "packung": "",
+   "preis": 9.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Geldbörse",
+   "bereich": [
+    68,
+    69,
+    97,
+    76
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/e5064fcb-c595-47d6-95dd-dfc22b045e1b/zoomlarge_page_1.jpg?impolicy=large"
+  },
+  {
+   "marke": "MAUI",
+   "name": "Outdoor-Schuhe für Damen und Herren",
+   "packung": "",
+   "preis": 19.99,
+   "alt_preis": 44.95,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Schuhe",
+   "bereich": [
+    68,
+    75,
+    97,
+    84
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/e5064fcb-c595-47d6-95dd-dfc22b045e1b/zoomlarge_page_1.jpg?impolicy=large"
+  },
+  {
+   "marke": "Ronley",
+   "name": "Socken für Herren",
+   "packung": "10 Paar",
+   "preis": 7.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Socken",
+   "bereich": [
+    12,
+    87,
+    27,
+    96
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/e5064fcb-c595-47d6-95dd-dfc22b045e1b/zoomlarge_page_1.jpg?impolicy=large"
+  },
+  {
+   "marke": "TOPTEX",
+   "name": "Norweger-Socken für Damen und Herren",
+   "packung": "6 Paar",
+   "preis": 7.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Socken",
+   "bereich": [
+    38,
+    87,
+    47,
+    95
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/e5064fcb-c595-47d6-95dd-dfc22b045e1b/zoomlarge_page_1.jpg?impolicy=large"
+  },
+  {
+   "marke": "TOPTEX",
+   "name": "Kurzschaft-Socken für Damen und Herren",
+   "packung": "5 Paar",
+   "preis": 6.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Socken",
+   "bereich": [
+    56,
+    87,
+    66,
+    93
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/e5064fcb-c595-47d6-95dd-dfc22b045e1b/zoomlarge_page_1.jpg?impolicy=large"
+  },
+  {
+   "marke": "",
+   "name": "Profi-Backformen (Springform)",
+   "packung": "ca. 24x24 cm oder ca. 35x24 cm",
+   "preis": 4.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Backform",
+   "bereich": [
+    3,
+    4,
+    55,
+    19
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/fb13c1d3-df92-41fa-8e3b-12293f2d9f55/zoomlarge_page_2.jpg?impolicy=large"
+  },
+  {
+   "marke": "",
+   "name": "Profi-Backformen (Muffinform, Springform)",
+   "packung": "",
+   "preis": 6.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Backform",
+   "bereich": [
+    3,
+    4,
+    55,
+    19
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/fb13c1d3-df92-41fa-8e3b-12293f2d9f55/zoomlarge_page_2.jpg?impolicy=large"
+  },
+  {
+   "marke": "Rival",
+   "name": "Küchen- und Backhelfer, Messbecher 3er-Set",
+   "packung": "3er-Set",
+   "preis": 3.99,
+   "alt_preis": 7.99,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Messbecher",
+   "bereich": [
+    55,
+    4,
+    73,
+    18
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/fb13c1d3-df92-41fa-8e3b-12293f2d9f55/zoomlarge_page_2.jpg?impolicy=large"
+  },
+  {
+   "marke": "Rival",
+   "name": "Rührschüssel-Set",
+   "packung": "3er-Set",
+   "preis": 4.99,
+   "alt_preis": 9.99,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Rührschüssel",
+   "bereich": [
+    73,
+    8,
+    92,
+    19
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/fb13c1d3-df92-41fa-8e3b-12293f2d9f55/zoomlarge_page_2.jpg?impolicy=large"
+  },
+  {
+   "marke": "Zenker",
+   "name": "Backhelfer, Einweg-Spritzbeutel",
+   "packung": "20 Einweg-Spritzbeutel + 3 Tüllen",
+   "preis": 1.99,
+   "alt_preis": 3.49,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Backhelfer",
+   "bereich": [
+    2,
+    24,
+    16,
+    31
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/fb13c1d3-df92-41fa-8e3b-12293f2d9f55/zoomlarge_page_2.jpg?impolicy=large"
+  },
+  {
+   "marke": "",
+   "name": "Backpinsel 2er oder Teigschaber 2er",
+   "packung": "2er",
+   "preis": 2.99,
+   "alt_preis": 4.95,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Backzubehör",
+   "bereich": [
+    25,
+    24,
+    38,
+    30
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/fb13c1d3-df92-41fa-8e3b-12293f2d9f55/zoomlarge_page_2.jpg?impolicy=large"
+  },
+  {
+   "marke": "",
+   "name": "Dekorier-/Garnierspritze",
+   "packung": "",
+   "preis": 3.99,
+   "alt_preis": 6.99,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Garnierspritze",
+   "bereich": [
+    48,
+    24,
+    57,
+    30
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/fb13c1d3-df92-41fa-8e3b-12293f2d9f55/zoomlarge_page_2.jpg?impolicy=large"
+  },
+  {
+   "marke": "",
+   "name": "Dekorierschablone 2-tlg.",
+   "packung": "5 x 25,5 cm, 2-tlg.",
+   "preis": 5.99,
+   "alt_preis": 6.99,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Dekorierschablone",
+   "bereich": [
+    84,
+    24,
+    97,
+    31
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/fb13c1d3-df92-41fa-8e3b-12293f2d9f55/zoomlarge_page_2.jpg?impolicy=large"
+  },
+  {
+   "marke": "",
+   "name": "Frischhaltedosen 4er-Set",
+   "packung": "4er-Set",
+   "preis": 6.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Frischhaltedose",
+   "bereich": [
+    2,
+    35,
+    33,
+    48
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/fb13c1d3-df92-41fa-8e3b-12293f2d9f55/zoomlarge_page_2.jpg?impolicy=large"
+  },
+  {
+   "marke": "",
+   "name": "Edelstahl-Frischhaltedose",
+   "packung": "650 ml",
+   "preis": 7.99,
+   "alt_preis": 9.99,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Frischhaltedose",
+   "bereich": [
+    35,
+    37,
+    51,
+    45
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/fb13c1d3-df92-41fa-8e3b-12293f2d9f55/zoomlarge_page_2.jpg?impolicy=large"
+  },
+  {
+   "marke": "",
+   "name": "Edelstahl-Frischhaltedose",
+   "packung": "1300 ml",
+   "preis": 9.99,
+   "alt_preis": 14.99,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Frischhaltedose",
+   "bereich": [
+    35,
+    37,
+    51,
+    45
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/fb13c1d3-df92-41fa-8e3b-12293f2d9f55/zoomlarge_page_2.jpg?impolicy=large"
+  },
+  {
+   "marke": "",
+   "name": "Edelstahl-Frischhaltedose",
+   "packung": "2250 ml",
+   "preis": 11.99,
+   "alt_preis": 17.99,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Frischhaltedose",
+   "bereich": [
+    35,
+    37,
+    51,
+    45
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/fb13c1d3-df92-41fa-8e3b-12293f2d9f55/zoomlarge_page_2.jpg?impolicy=large"
+  },
+  {
+   "marke": "",
+   "name": "Einkaufstasche in Filzoptik",
+   "packung": "",
+   "preis": 5.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Einkaufstasche",
+   "bereich": [
+    68,
+    35,
+    97,
+    46
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/fb13c1d3-df92-41fa-8e3b-12293f2d9f55/zoomlarge_page_2.jpg?impolicy=large"
+  },
+  {
+   "marke": "",
+   "name": "Edelstahl-Metallic-Isolierflasche",
+   "packung": "500 ml oder 750 ml",
+   "preis": 9.99,
+   "alt_preis": 14.99,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Isolierflasche",
+   "bereich": [
+    12,
+    52,
+    28,
+    66
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/fb13c1d3-df92-41fa-8e3b-12293f2d9f55/zoomlarge_page_2.jpg?impolicy=large"
+  },
+  {
+   "marke": "",
+   "name": "XXL-Geschirrtuch 7er-Set",
+   "packung": "7er-Set, ca. 50x70 cm",
+   "preis": 3.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Geschirrtuch",
+   "bereich": [
+    38,
+    52,
+    52,
+    65
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/fb13c1d3-df92-41fa-8e3b-12293f2d9f55/zoomlarge_page_2.jpg?impolicy=large"
+  },
+  {
+   "marke": "",
+   "name": "Emaille Becher/Flachmann",
+   "packung": "Becher ca. 350 ml oder Flachmann ca. 125 ml",
+   "preis": 6.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Becher",
+   "bereich": [
+    68,
+    52,
+    98,
+    63
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/fb13c1d3-df92-41fa-8e3b-12293f2d9f55/zoomlarge_page_2.jpg?impolicy=large"
+  },
+  {
+   "marke": "bella casa",
+   "name": "Tischwäsche mit Spitze",
+   "packung": "Mitteldecke ca. 80x80 cm oder Tischläufer ca. 40x150 cm",
+   "preis": 7.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Tischwäsche",
+   "bereich": [
+    2,
+    67,
+    33,
+    78
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/fb13c1d3-df92-41fa-8e3b-12293f2d9f55/zoomlarge_page_2.jpg?impolicy=large"
+  },
+  {
+   "marke": "bella casa",
+   "name": "Digitaldruck-Tischwäsche \"Mink\" (Mitteldecke/Tischläufer)",
+   "packung": "Mitteldecke ca. 85x85 cm oder Tischläufer ca. 48x150 cm",
+   "preis": 3.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Tischwäsche",
+   "bereich": [
+    44,
+    67,
+    65,
+    78
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/fb13c1d3-df92-41fa-8e3b-12293f2d9f55/zoomlarge_page_2.jpg?impolicy=large"
+  },
+  {
+   "marke": "bella casa",
+   "name": "Digitaldruck-Tischwäsche \"Mink\" (Tischdecke)",
+   "packung": "Tischdecke ca. 130x180 cm",
+   "preis": 7.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Tischwäsche",
+   "bereich": [
+    44,
+    67,
+    65,
+    78
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/fb13c1d3-df92-41fa-8e3b-12293f2d9f55/zoomlarge_page_2.jpg?impolicy=large"
+  },
+  {
+   "marke": "bella casa",
+   "name": "Filz-Tischwäsche und -Deko (Wichtel zum Befüllen)",
+   "packung": "Tischläufer ca. 135x30 cm, Platzdeckchen 2er-Set ca. 35 cm",
+   "preis": 3.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Tischwäsche",
+   "bereich": [
+    68,
+    67,
+    86,
+    76
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/fb13c1d3-df92-41fa-8e3b-12293f2d9f55/zoomlarge_page_2.jpg?impolicy=large"
+  },
+  {
+   "marke": "bella casa",
+   "name": "Jacquard-Tischdecke",
+   "packung": "ca. 45x138 cm oder 50x90 cm",
+   "preis": 7.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Tischdecke",
+   "bereich": [
+    70,
+    80,
+    100,
+    91
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/fb13c1d3-df92-41fa-8e3b-12293f2d9f55/zoomlarge_page_2.jpg?impolicy=large"
+  },
+  {
+   "marke": "bella casa",
+   "name": "Jacquard-Tischdecke",
+   "packung": "ca. 130x160 cm",
+   "preis": 16.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Tischdecke",
+   "bereich": [
+    70,
+    80,
+    100,
+    91
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/fb13c1d3-df92-41fa-8e3b-12293f2d9f55/zoomlarge_page_2.jpg?impolicy=large"
+  },
+  {
+   "marke": "bella casa",
+   "name": "Jacquard-Tischdecke",
+   "packung": "ca. 138x280 cm",
+   "preis": 19.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Tischdecke",
+   "bereich": [
+    70,
+    80,
+    100,
+    91
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/fb13c1d3-df92-41fa-8e3b-12293f2d9f55/zoomlarge_page_2.jpg?impolicy=large"
+  },
+  {
+   "marke": "Lifetex",
+   "name": "XXL-Schmutzfangläufer",
+   "packung": "ca. 80x250 cm",
+   "preis": 17.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Läufer",
+   "bereich": [
+    3,
+    85,
+    54,
+    94
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/fb13c1d3-df92-41fa-8e3b-12293f2d9f55/zoomlarge_page_2.jpg?impolicy=large"
+  },
+  {
+   "marke": "Casa Royale",
+   "name": "Edelstahl-Kochtopf Timaru",
+   "packung": "",
+   "preis": 7.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Kochtopf",
+   "bereich": [
+    2,
+    3,
+    51,
+    25
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/35c7f58e-f3f0-456b-8fd0-8013d43a60f4/zoomlarge_page_3.jpg?impolicy=large"
+  },
+  {
+   "marke": "Casa Royale",
+   "name": "Edelstahl-Wok Tropea, ca. 30 cm",
+   "packung": "",
+   "preis": 24.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Wok",
+   "bereich": [
+    55,
+    3,
+    100,
+    25
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/35c7f58e-f3f0-456b-8fd0-8013d43a60f4/zoomlarge_page_3.jpg?impolicy=large"
+  },
+  {
+   "marke": "Casa Royale",
+   "name": "Edelstahl-Topf/Pfanne Tropea, ca. 20 cm / 28 cm",
+   "packung": "",
+   "preis": 29.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Topf",
+   "bereich": [
+    55,
+    3,
+    100,
+    25
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/35c7f58e-f3f0-456b-8fd0-8013d43a60f4/zoomlarge_page_3.jpg?impolicy=large"
+  },
+  {
+   "marke": "Casa Royale",
+   "name": "Aluminium-Hochrandpfanne Vaasa, ca. 20 cm",
+   "packung": "",
+   "preis": 15.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Pfanne",
+   "bereich": [
+    5,
+    27,
+    55,
+    42
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/35c7f58e-f3f0-456b-8fd0-8013d43a60f4/zoomlarge_page_3.jpg?impolicy=large"
+  },
+  {
+   "marke": "Casa Royale",
+   "name": "Aluminium-Hochrandpfanne Vaasa, ca. 26 cm",
+   "packung": "",
+   "preis": 17.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Pfanne",
+   "bereich": [
+    5,
+    27,
+    55,
+    42
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/35c7f58e-f3f0-456b-8fd0-8013d43a60f4/zoomlarge_page_3.jpg?impolicy=large"
+  },
+  {
+   "marke": "Casa Royale",
+   "name": "Aluminium-Hochrandpfanne Vaasa, ca. 28 cm",
+   "packung": "",
+   "preis": 19.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Pfanne",
+   "bereich": [
+    5,
+    27,
+    55,
+    42
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/35c7f58e-f3f0-456b-8fd0-8013d43a60f4/zoomlarge_page_3.jpg?impolicy=large"
+  },
+  {
+   "marke": "Casa Royale",
+   "name": "Rechteckbräter Lulea / Viereckbräter Vimmerby",
+   "packung": "",
+   "preis": 29.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Bräter",
+   "bereich": [
+    60,
+    27,
+    100,
+    42
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/35c7f58e-f3f0-456b-8fd0-8013d43a60f4/zoomlarge_page_3.jpg?impolicy=large"
+  },
+  {
+   "marke": "",
+   "name": "Bambus-Eck-Küchenregal",
+   "packung": "ca. 25 x 25 x 27 cm",
+   "preis": 9.99,
+   "alt_preis": 14.99,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Küchenregal",
+   "bereich": [
+    1,
+    43,
+    22,
+    56
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/35c7f58e-f3f0-456b-8fd0-8013d43a60f4/zoomlarge_page_3.jpg?impolicy=large"
+  },
+  {
+   "marke": "",
+   "name": "Messerblock aus Kunststoffborsten",
+   "packung": "ca. 20,5 x 23 x 7,5 cm",
+   "preis": 14.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Messerblock",
+   "bereich": [
+    33,
+    43,
+    53,
+    56
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/35c7f58e-f3f0-456b-8fd0-8013d43a60f4/zoomlarge_page_3.jpg?impolicy=large"
+  },
+  {
+   "marke": "",
+   "name": "XXL-Schneide- und Abdeckplatte",
+   "packung": "ca. 56 x 50 x 4 cm",
+   "preis": 14.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Schneidebrett",
+   "bereich": [
+    52,
+    43,
+    72,
+    56
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/35c7f58e-f3f0-456b-8fd0-8013d43a60f4/zoomlarge_page_3.jpg?impolicy=large"
+  },
+  {
+   "marke": "",
+   "name": "Brotkasten Bambus",
+   "packung": "ca. 36 x 20 x 14 cm",
+   "preis": 19.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Brotkasten",
+   "bereich": [
+    77,
+    43,
+    100,
+    56
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/35c7f58e-f3f0-456b-8fd0-8013d43a60f4/zoomlarge_page_3.jpg?impolicy=large"
+  },
+  {
+   "marke": "Severin",
+   "name": "Filterkaffeemaschine mit 2 Isolierkannen",
+   "packung": "",
+   "preis": 39.99,
+   "alt_preis": 79.99,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Kaffeemaschine",
+   "bereich": [
+    1,
+    58,
+    37,
+    73
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/35c7f58e-f3f0-456b-8fd0-8013d43a60f4/zoomlarge_page_3.jpg?impolicy=large"
+  },
+  {
+   "marke": "Insta Sharp",
+   "name": "Profi-Schleifer Insta Sharp",
+   "packung": "",
+   "preis": 14.99,
+   "alt_preis": 19.99,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Messerschärfer",
+   "bereich": [
+    39,
+    59,
+    68,
+    73
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/35c7f58e-f3f0-456b-8fd0-8013d43a60f4/zoomlarge_page_3.jpg?impolicy=large"
+  },
+  {
+   "marke": "",
+   "name": "Nitril-Handschuhe 100er",
+   "packung": "100 Stück",
+   "preis": 5.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Handschuhe",
+   "bereich": [
+    70,
+    58,
+    100,
+    70
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/35c7f58e-f3f0-456b-8fd0-8013d43a60f4/zoomlarge_page_3.jpg?impolicy=large"
+  },
+  {
+   "marke": "",
+   "name": "Spritz-Überkochschutz 4 in 1",
+   "packung": "12er-Set",
+   "preis": 6.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Überkochschutz",
+   "bereich": [
+    1,
+    74,
+    37,
+    87
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/35c7f58e-f3f0-456b-8fd0-8013d43a60f4/zoomlarge_page_3.jpg?impolicy=large"
+  },
+  {
+   "marke": "",
+   "name": "USB-Lade-Adapter",
+   "packung": "",
+   "preis": 7.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Steckdosenadapter",
+   "bereich": [
+    38,
+    74,
+    68,
+    88
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/35c7f58e-f3f0-456b-8fd0-8013d43a60f4/zoomlarge_page_3.jpg?impolicy=large"
+  },
+  {
+   "marke": "CleanMaxx",
+   "name": "Akku-Sauger 3 in 1",
+   "packung": "",
+   "preis": 19.99,
+   "alt_preis": 49.99,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Akku-Sauger",
+   "bereich": [
+    70,
+    74,
+    100,
+    87
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/35c7f58e-f3f0-456b-8fd0-8013d43a60f4/zoomlarge_page_3.jpg?impolicy=large"
+  },
+  {
+   "marke": "",
+   "name": "XXL-Bodenschoner-/Schutzpuffer-Set",
+   "packung": "",
+   "preis": 2.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Bodenschoner",
+   "bereich": [
+    1,
+    88,
+    37,
+    96
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/35c7f58e-f3f0-456b-8fd0-8013d43a60f4/zoomlarge_page_3.jpg?impolicy=large"
+  },
+  {
+   "marke": "bella case",
+   "name": "Deko-Stadtsilhouette",
+   "packung": "ca. 60 x 24 cm",
+   "preis": 5.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Dekoration",
+   "bereich": [
+    11,
+    3,
+    57,
+    21
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/f87aa2b2-11a3-47b5-984f-557c68bc80ae/zoomlarge_page_4.jpg?impolicy=large"
+  },
+  {
+   "marke": "bella case",
+   "name": "Handgefertigte Mangoholz-Dekoration",
+   "packung": "Jedes Teil ein Unikat",
+   "preis": 9.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Dekoration",
+   "bereich": [
+    68,
+    6,
+    97,
+    19
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/f87aa2b2-11a3-47b5-984f-557c68bc80ae/zoomlarge_page_4.jpg?impolicy=large"
+  },
+  {
+   "marke": "bella case",
+   "name": "Weihnachtliche Dekofigur",
+   "packung": "Höhe ca. 14 cm bis 15 cm",
+   "preis": 3.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Dekoration",
+   "bereich": [
+    68,
+    21,
+    97,
+    34
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/f87aa2b2-11a3-47b5-984f-557c68bc80ae/zoomlarge_page_4.jpg?impolicy=large"
+  },
+  {
+   "marke": "bella case",
+   "name": "Winterliches Fensterbild",
+   "packung": "ca. 46 x 16 cm",
+   "preis": 1.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Fensterbild",
+   "bereich": [
+    42,
+    27,
+    66,
+    33
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/f87aa2b2-11a3-47b5-984f-557c68bc80ae/zoomlarge_page_4.jpg?impolicy=large"
+  },
+  {
+   "marke": "",
+   "name": "LED-Weihnachtssilhouette",
+   "packung": "",
+   "preis": 2.49,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Beleuchtung",
+   "bereich": [
+    1,
+    35,
+    33,
+    44
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/f87aa2b2-11a3-47b5-984f-557c68bc80ae/zoomlarge_page_4.jpg?impolicy=large"
+  },
+  {
+   "marke": "",
+   "name": "LED-Lichtzweige (20 LEDs)",
+   "packung": "Höhe ca. 40 cm",
+   "preis": 6.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Beleuchtung",
+   "bereich": [
+    35,
+    35,
+    67,
+    50
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/f87aa2b2-11a3-47b5-984f-557c68bc80ae/zoomlarge_page_4.jpg?impolicy=large"
+  },
+  {
+   "marke": "",
+   "name": "LED-Lichtzweige (80 LEDs)",
+   "packung": "Höhe ca. 110 cm",
+   "preis": 9.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Beleuchtung",
+   "bereich": [
+    35,
+    35,
+    67,
+    50
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/f87aa2b2-11a3-47b5-984f-557c68bc80ae/zoomlarge_page_4.jpg?impolicy=large"
+  },
+  {
+   "marke": "bella case",
+   "name": "Teleskop-Weihnachtsfigur",
+   "packung": "Höhenverstellbar ca. 80 cm",
+   "preis": 7.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Dekoration",
+   "bereich": [
+    68,
+    35,
+    97,
+    51
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/f87aa2b2-11a3-47b5-984f-557c68bc80ae/zoomlarge_page_4.jpg?impolicy=large"
+  },
+  {
+   "marke": "bella case",
+   "name": "Floristik-Zubehör",
+   "packung": "",
+   "preis": 2.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Floristik",
+   "bereich": [
+    1,
+    55,
+    33,
+    72
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/f87aa2b2-11a3-47b5-984f-557c68bc80ae/zoomlarge_page_4.jpg?impolicy=large"
+  },
+  {
+   "marke": "bella case",
+   "name": "Deko-Schneemann",
+   "packung": "Höhe ca. 10 cm",
+   "preis": 2.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Dekoration",
+   "bereich": [
+    35,
+    57,
+    66,
+    70
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/f87aa2b2-11a3-47b5-984f-557c68bc80ae/zoomlarge_page_4.jpg?impolicy=large"
+  },
+  {
+   "marke": "",
+   "name": "LED-Akku-Tischlampe",
+   "packung": "Höhe ca. 38 cm",
+   "preis": 7.99,
+   "alt_preis": 9.99,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Lampe",
+   "bereich": [
+    87,
+    56,
+    95,
+    71
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/f87aa2b2-11a3-47b5-984f-557c68bc80ae/zoomlarge_page_4.jpg?impolicy=large"
+  },
+  {
+   "marke": "",
+   "name": "Extrabreites Geschenkpapier",
+   "packung": "4 m x 1 m",
+   "preis": 1.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Geschenkpapier",
+   "bereich": [
+    1,
+    74,
+    34,
+    85
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/f87aa2b2-11a3-47b5-984f-557c68bc80ae/zoomlarge_page_4.jpg?impolicy=large"
+  },
+  {
+   "marke": "",
+   "name": "Geschenktüten",
+   "packung": "3er-Set",
+   "preis": 1.49,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Geschenktüten",
+   "bereich": [
+    38,
+    74,
+    66,
+    85
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/f87aa2b2-11a3-47b5-984f-557c68bc80ae/zoomlarge_page_4.jpg?impolicy=large"
+  },
+  {
+   "marke": "",
+   "name": "XXL-Kleb- und Dichtstoffe",
+   "packung": "je Ausführung",
+   "preis": 2.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Klebstoff",
+   "bereich": [
+    69,
+    74,
+    97,
+    85
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/f87aa2b2-11a3-47b5-984f-557c68bc80ae/zoomlarge_page_4.jpg?impolicy=large"
+  },
+  {
+   "marke": "",
+   "name": "Roman, viele verschiedene Titel",
+   "packung": "",
+   "preis": 3.99,
+   "alt_preis": 9.95,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Buch",
+   "bereich": [
+    1,
+    89,
+    18,
+    96
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/f87aa2b2-11a3-47b5-984f-557c68bc80ae/zoomlarge_page_4.jpg?impolicy=large"
+  },
+  {
+   "marke": "",
+   "name": "Rätselbuch, viele verschiedene Titel",
+   "packung": "",
+   "preis": 3.99,
+   "alt_preis": 9.95,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Buch",
+   "bereich": [
+    52,
+    89,
+    68,
+    96
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/f87aa2b2-11a3-47b5-984f-557c68bc80ae/zoomlarge_page_4.jpg?impolicy=large"
+  },
+  {
+   "marke": "",
+   "name": "Soundbuch, viele verschiedene Titel",
+   "packung": "",
+   "preis": 7.99,
+   "alt_preis": 9.99,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Buch",
+   "bereich": [
+    68,
+    89,
+    88,
+    96
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/f87aa2b2-11a3-47b5-984f-557c68bc80ae/zoomlarge_page_4.jpg?impolicy=large"
+  },
+  {
+   "marke": "",
+   "name": "LED-Tier",
+   "packung": "",
+   "preis": 19.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Weihnachtsdeko",
+   "bereich": [
+    20,
+    0,
+    55,
+    11
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/4090929a-398b-4612-8cd8-27be133cbd8d/zoomlarge_page_5.jpg?impolicy=large"
+  },
+  {
+   "marke": "ZOLIGHT",
+   "name": "Lichterkette ca. 18 m mit 240 LEDs",
+   "packung": "",
+   "preis": 7.99,
+   "alt_preis": 12.95,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Lichterkette",
+   "bereich": [
+    70,
+    3,
+    97,
+    17
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/4090929a-398b-4612-8cd8-27be133cbd8d/zoomlarge_page_5.jpg?impolicy=large"
+  },
+  {
+   "marke": "ZOLIGHT",
+   "name": "Lichterkette ca. 20 m mit 1000 LEDs",
+   "packung": "",
+   "preis": 14.99,
+   "alt_preis": 29.99,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Lichterkette",
+   "bereich": null,
+   "seiten_bild": "https://content-media.bonial.biz/4090929a-398b-4612-8cd8-27be133cbd8d/zoomlarge_page_5.jpg?impolicy=large"
+  },
+  {
+   "marke": "Winterworld",
+   "name": "XXL-LED-Weihnachtsfigur",
+   "packung": "ca. 62 x 35 x 65 cm",
+   "preis": 17.99,
+   "alt_preis": 24.99,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Weihnachtsdeko",
+   "bereich": [
+    5,
+    18,
+    30,
+    29
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/4090929a-398b-4612-8cd8-27be133cbd8d/zoomlarge_page_5.jpg?impolicy=large"
+  },
+  {
+   "marke": "",
+   "name": "LED-Schneeball Ø 8 cm",
+   "packung": "Ø 8 cm",
+   "preis": 1.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Dekoration",
+   "bereich": [
+    38,
+    18,
+    63,
+    30
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/4090929a-398b-4612-8cd8-27be133cbd8d/zoomlarge_page_5.jpg?impolicy=large"
+  },
+  {
+   "marke": "",
+   "name": "LED-Schneeball Ø 12 cm",
+   "packung": "Ø 12 cm",
+   "preis": 3.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Dekoration",
+   "bereich": [
+    38,
+    18,
+    63,
+    30
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/4090929a-398b-4612-8cd8-27be133cbd8d/zoomlarge_page_5.jpg?impolicy=large"
+  },
+  {
+   "marke": "",
+   "name": "LED-Schneeball Ø 20 cm",
+   "packung": "Ø 20 cm",
+   "preis": 5.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Dekoration",
+   "bereich": [
+    38,
+    18,
+    63,
+    30
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/4090929a-398b-4612-8cd8-27be133cbd8d/zoomlarge_page_5.jpg?impolicy=large"
+  },
+  {
+   "marke": "",
+   "name": "LED-Teelichte 16er-Set",
+   "packung": "16er-Set",
+   "preis": 9.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Teelichte",
+   "bereich": [
+    67,
+    33,
+    100,
+    46
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/4090929a-398b-4612-8cd8-27be133cbd8d/zoomlarge_page_5.jpg?impolicy=large"
+  },
+  {
+   "marke": "",
+   "name": "LED-Lichterzauber aus Glas",
+   "packung": "",
+   "preis": 12.99,
+   "alt_preis": 19.99,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Dekoration",
+   "bereich": [
+    18,
+    36,
+    82,
+    45
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/4090929a-398b-4612-8cd8-27be133cbd8d/zoomlarge_page_5.jpg?impolicy=large"
+  },
+  {
+   "marke": "TECHNAXX",
+   "name": "Power-Schnellladegerät TX-342 20W",
+   "packung": "",
+   "preis": 4.99,
+   "alt_preis": 14.99,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Ladegerät",
+   "bereich": null,
+   "seiten_bild": "https://content-media.bonial.biz/4090929a-398b-4612-8cd8-27be133cbd8d/zoomlarge_page_5.jpg?impolicy=large"
+  },
+  {
+   "marke": "TECHNAXX",
+   "name": "Power-Schnellladegerät TX-345 45W",
+   "packung": "",
+   "preis": 9.99,
+   "alt_preis": 24.99,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Ladegerät",
+   "bereich": null,
+   "seiten_bild": "https://content-media.bonial.biz/4090929a-398b-4612-8cd8-27be133cbd8d/zoomlarge_page_5.jpg?impolicy=large"
+  },
+  {
+   "marke": "Lindt",
+   "name": "Tischadventskalender",
+   "packung": "115-g-Packung",
+   "preis": 7.99,
+   "alt_preis": 9.99,
+   "grundpreis": 69.48,
+   "gp_einheit": "kg",
+   "kategorie": "Adventskalender",
+   "bereich": [
+    3,
+    58,
+    21,
+    72
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/4090929a-398b-4612-8cd8-27be133cbd8d/zoomlarge_page_5.jpg?impolicy=large"
+  },
+  {
+   "marke": "kinder",
+   "name": "Tischadventskalender mit kinder Mini Eggs Haselnuss oder Milch und Love Minis",
+   "packung": "113-g-Packung",
+   "preis": 4.44,
+   "alt_preis": 4.95,
+   "grundpreis": 39.29,
+   "gp_einheit": "kg",
+   "kategorie": "Adventskalender",
+   "bereich": [
+    35,
+    58,
+    56,
+    73
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/4090929a-398b-4612-8cd8-27be133cbd8d/zoomlarge_page_5.jpg?impolicy=large"
+  },
+  {
+   "marke": "kinder bueno",
+   "name": "Adventskalender mit kinder bueno classic, mini, white mini und eggs",
+   "packung": "181-g-Packung",
+   "preis": 6.99,
+   "alt_preis": 7.99,
+   "grundpreis": 38.62,
+   "gp_einheit": "kg",
+   "kategorie": "Adventskalender",
+   "bereich": [
+    80,
+    58,
+    100,
+    75
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/4090929a-398b-4612-8cd8-27be133cbd8d/zoomlarge_page_5.jpg?impolicy=large"
+  },
+  {
+   "marke": "Dominos",
+   "name": "Dominosteine mit Chociva",
+   "packung": "125-g-Packung",
+   "preis": 1.49,
+   "alt_preis": 1.89,
+   "grundpreis": 11.92,
+   "gp_einheit": "kg",
+   "kategorie": "Schokolade",
+   "bereich": [
+    56,
+    78,
+    75,
+    88
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/4090929a-398b-4612-8cd8-27be133cbd8d/zoomlarge_page_5.jpg?impolicy=large"
+  },
+  {
+   "marke": "kinder",
+   "name": "Adventskalender mit 24 kinder Produkten und tollen Stickern zum Sammeln",
+   "packung": "198-g-Packung",
+   "preis": 8.99,
+   "alt_preis": 12.99,
+   "grundpreis": 45.4,
+   "gp_einheit": "kg",
+   "kategorie": "Adventskalender",
+   "bereich": [
+    81,
+    80,
+    97,
+    88
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/4090929a-398b-4612-8cd8-27be133cbd8d/zoomlarge_page_5.jpg?impolicy=large"
+  },
+  {
+   "marke": "bella casa",
+   "name": "Premium Teelichte, 18er-Pack",
+   "packung": "18er-Pack",
+   "preis": 2.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Teelichte",
+   "bereich": [
+    5,
+    78,
+    24,
+    90
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/4090929a-398b-4612-8cd8-27be133cbd8d/zoomlarge_page_5.jpg?impolicy=large"
+  },
+  {
+   "marke": "bella casa",
+   "name": "Handgemachte Kerzen",
+   "packung": "",
+   "preis": 4.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Kerzen",
+   "bereich": [
+    29,
+    77,
+    50,
+    90
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/4090929a-398b-4612-8cd8-27be133cbd8d/zoomlarge_page_5.jpg?impolicy=large"
+  },
+  {
+   "marke": "Cat",
+   "name": "Zarte Stücke in Gelee, Huhn in Karottenpflee",
+   "packung": "415 g",
+   "preis": 0.79,
+   "alt_preis": 0.99,
+   "grundpreis": 1.9,
+   "gp_einheit": "kg",
+   "kategorie": "Katzennahrung",
+   "bereich": [
+    18,
+    6,
+    33,
+    18
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/3a271dff-e782-44a5-aa72-1747672f98fa/zoomlarge_page_6.jpg?impolicy=large"
+  },
+  {
+   "marke": "Cat",
+   "name": "Premium Trockenfutter mit Lachs, Geflügel oder Senior",
+   "packung": "800 g",
+   "preis": 1.59,
+   "alt_preis": 1.89,
+   "grundpreis": 1.99,
+   "gp_einheit": "kg",
+   "kategorie": "Katzennahrung",
+   "bereich": [
+    46,
+    9,
+    63,
+    21
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/3a271dff-e782-44a5-aa72-1747672f98fa/zoomlarge_page_6.jpg?impolicy=large"
+  },
+  {
+   "marke": "Cat",
+   "name": "Katzenkissen mit Lachs, Huhn und Käse oder Anti Hairball",
+   "packung": "400 g",
+   "preis": 2.39,
+   "alt_preis": null,
+   "grundpreis": 5.98,
+   "gp_einheit": "kg",
+   "kategorie": "Katzensnacks",
+   "bereich": [
+    77,
+    6,
+    97,
+    22
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/3a271dff-e782-44a5-aa72-1747672f98fa/zoomlarge_page_6.jpg?impolicy=large"
+  },
+  {
+   "marke": "Roy",
+   "name": "Filet-Snacks XXL, Hähnchen- oder Entenbrustfilets",
+   "packung": "450 g",
+   "preis": 4.99,
+   "alt_preis": null,
+   "grundpreis": 11.09,
+   "gp_einheit": "kg",
+   "kategorie": "Hundesnacks",
+   "bereich": [
+    12,
+    25,
+    31,
+    39
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/3a271dff-e782-44a5-aa72-1747672f98fa/zoomlarge_page_6.jpg?impolicy=large"
+  },
+  {
+   "marke": "Roy",
+   "name": "Snacks Fisch- & Hühnchenstreifen",
+   "packung": "360 g",
+   "preis": 4.99,
+   "alt_preis": null,
+   "grundpreis": 13.86,
+   "gp_einheit": "kg",
+   "kategorie": "Hundesnacks",
+   "bereich": [
+    48,
+    25,
+    62,
+    40
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/3a271dff-e782-44a5-aa72-1747672f98fa/zoomlarge_page_6.jpg?impolicy=large"
+  },
+  {
+   "marke": "Roy",
+   "name": "Kau Donuts XXL, Small oder Large",
+   "packung": "8 x 50 g oder 4 x 100 g",
+   "preis": 6.99,
+   "alt_preis": null,
+   "grundpreis": 17.48,
+   "gp_einheit": "kg",
+   "kategorie": "Hundesnacks",
+   "bereich": [
+    71,
+    25,
+    90,
+    40
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/3a271dff-e782-44a5-aa72-1747672f98fa/zoomlarge_page_6.jpg?impolicy=large"
+  },
+  {
+   "marke": "Roy",
+   "name": "Kaustangen mit Entenfleisch oder Hühnerbrust",
+   "packung": "240 g",
+   "preis": 3.59,
+   "alt_preis": null,
+   "grundpreis": 14.96,
+   "gp_einheit": "kg",
+   "kategorie": "Hundesnacks",
+   "bereich": [
+    8,
+    43,
+    27,
+    57
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/3a271dff-e782-44a5-aa72-1747672f98fa/zoomlarge_page_6.jpg?impolicy=large"
+  },
+  {
+   "marke": "Roy",
+   "name": "Steakfilet, Lachs und Kabeljau oder Hähnchen und Kabeljau",
+   "packung": "200 g",
+   "preis": 2.99,
+   "alt_preis": null,
+   "grundpreis": 14.95,
+   "gp_einheit": "kg",
+   "kategorie": "Hundesnacks",
+   "bereich": [
+    37,
+    43,
+    48,
+    57
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/3a271dff-e782-44a5-aa72-1747672f98fa/zoomlarge_page_6.jpg?impolicy=large"
+  },
+  {
+   "marke": "Gourmet",
+   "name": "Twisted Kaustangen, Ente & Rind oder Huhn & Rind",
+   "packung": "350 g",
+   "preis": 4.79,
+   "alt_preis": null,
+   "grundpreis": 13.69,
+   "gp_einheit": "kg",
+   "kategorie": "Hundesnacks",
+   "bereich": [
+    61,
+    43,
+    71,
+    57
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/3a271dff-e782-44a5-aa72-1747672f98fa/zoomlarge_page_6.jpg?impolicy=large"
+  },
+  {
+   "marke": "Roy",
+   "name": "Kaugenuss, Ente und Rind, Lamm und Rind, Huhn und Rind",
+   "packung": "400 g",
+   "preis": 4.99,
+   "alt_preis": null,
+   "grundpreis": 12.48,
+   "gp_einheit": "kg",
+   "kategorie": "Hundesnacks",
+   "bereich": [
+    80,
+    43,
+    97,
+    57
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/3a271dff-e782-44a5-aa72-1747672f98fa/zoomlarge_page_6.jpg?impolicy=large"
+  },
+  {
+   "marke": "Kneipp",
+   "name": "Badekristalle Rücken & Schulter",
+   "packung": "720 g",
+   "preis": 3.95,
+   "alt_preis": 5.95,
+   "grundpreis": 5.49,
+   "gp_einheit": "kg",
+   "kategorie": "Badezusatz",
+   "bereich": [
+    24,
+    66,
+    36,
+    82
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/3a271dff-e782-44a5-aa72-1747672f98fa/zoomlarge_page_6.jpg?impolicy=large"
+  },
+  {
+   "marke": "tetesept",
+   "name": "Reizhusten Stiller Direkt Liquid-Sticks",
+   "packung": "10 x 5 ml",
+   "preis": 2.89,
+   "alt_preis": 2.99,
+   "grundpreis": 57.8,
+   "gp_einheit": "l",
+   "kategorie": "Hustenmittel",
+   "bereich": [
+    50,
+    65,
+    62,
+    80
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/3a271dff-e782-44a5-aa72-1747672f98fa/zoomlarge_page_6.jpg?impolicy=large"
+  },
+  {
+   "marke": "tetesept",
+   "name": "Reizhusten & Hals Lutschtabletten, 3-Phasen-Wirkung",
+   "packung": "20 Stück",
+   "preis": 2.89,
+   "alt_preis": 3.49,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Hustenmittel",
+   "bereich": [
+    80,
+    65,
+    92,
+    79
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/3a271dff-e782-44a5-aa72-1747672f98fa/zoomlarge_page_6.jpg?impolicy=large"
+  },
+  {
+   "marke": "Kneipp",
+   "name": "AktivGel für Beine",
+   "packung": "100 ml",
+   "preis": 3.95,
+   "alt_preis": 4.99,
+   "grundpreis": 39.5,
+   "gp_einheit": "l",
+   "kategorie": "Gel",
+   "bereich": [
+    14,
+    83,
+    29,
+    97
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/3a271dff-e782-44a5-aa72-1747672f98fa/zoomlarge_page_6.jpg?impolicy=large"
+  },
+  {
+   "marke": "Kneipp",
+   "name": "Gesundheitsbad Rücken & Schulter",
+   "packung": "100 ml",
+   "preis": 3.95,
+   "alt_preis": 4.45,
+   "grundpreis": 39.5,
+   "gp_einheit": "l",
+   "kategorie": "Badezusatz",
+   "bereich": [
+    48,
+    83,
+    57,
+    96
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/3a271dff-e782-44a5-aa72-1747672f98fa/zoomlarge_page_6.jpg?impolicy=large"
+  },
+  {
+   "marke": "tetesept",
+   "name": "Anginosan Halstabletten mit Kirsche oder Zitrone",
+   "packung": "20 Stück",
+   "preis": 2.89,
+   "alt_preis": 3.29,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Halstabletten",
+   "bereich": [
+    72,
+    84,
+    86,
+    94
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/3a271dff-e782-44a5-aa72-1747672f98fa/zoomlarge_page_6.jpg?impolicy=large"
+  },
+  {
+   "marke": "Chio",
+   "name": "Red Paprika Chips",
+   "packung": "150 g + 25 g gratis",
+   "preis": 1.29,
+   "alt_preis": 1.99,
+   "grundpreis": 7.37,
+   "gp_einheit": "kg",
+   "kategorie": "Chips",
+   "bereich": [
+    21,
+    18,
+    32,
+    31
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/2de8e010-2c78-4e1a-a859-4d550188be3b/zoomlarge_page_7.jpg?impolicy=large"
+  },
+  {
+   "marke": "Gut Langenhof",
+   "name": "Chicken Pops XXL",
+   "packung": "800 g",
+   "preis": 5.99,
+   "alt_preis": null,
+   "grundpreis": 7.49,
+   "gp_einheit": "kg",
+   "kategorie": "Geflügel",
+   "bereich": [
+    45,
+    19,
+    59,
+    30
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/2de8e010-2c78-4e1a-a859-4d550188be3b/zoomlarge_page_7.jpg?impolicy=large"
+  },
+  {
+   "marke": "Femeg",
+   "name": "Die Fischkiste",
+   "packung": "700 g",
+   "preis": 7.99,
+   "alt_preis": 8.99,
+   "grundpreis": 11.41,
+   "gp_einheit": "kg",
+   "kategorie": "Fisch",
+   "bereich": [
+    74,
+    18,
+    97,
+    31
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/2de8e010-2c78-4e1a-a859-4d550188be3b/zoomlarge_page_7.jpg?impolicy=large"
+  },
+  {
+   "marke": "Goldhahn",
+   "name": "Hamburger Brötchen XXL / Hot-Dog Brötchen",
+   "packung": "4er Pack",
+   "preis": 0.99,
+   "alt_preis": null,
+   "grundpreis": 3.3,
+   "gp_einheit": "kg",
+   "kategorie": "Brötchen",
+   "bereich": [
+    2,
+    33,
+    33,
+    50
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/2de8e010-2c78-4e1a-a859-4d550188be3b/zoomlarge_page_7.jpg?impolicy=large"
+  },
+  {
+   "marke": "Caffeciao",
+   "name": "Kaffeegetränk XXL Latte Macchiato / Espresso",
+   "packung": "370 ml",
+   "preis": 1.11,
+   "alt_preis": null,
+   "grundpreis": 3.0,
+   "gp_einheit": "l",
+   "kategorie": "Kaffee",
+   "bereich": [
+    45,
+    33,
+    66,
+    50
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/2de8e010-2c78-4e1a-a859-4d550188be3b/zoomlarge_page_7.jpg?impolicy=large"
+  },
+  {
+   "marke": "Gut Langenhof",
+   "name": "Hauchfein Geflügel-Filetroulade XXL",
+   "packung": "200 g",
+   "preis": 2.29,
+   "alt_preis": null,
+   "grundpreis": 11.45,
+   "gp_einheit": "kg",
+   "kategorie": "Geflügelwurst",
+   "bereich": [
+    83,
+    34,
+    98,
+    50
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/2de8e010-2c78-4e1a-a859-4d550188be3b/zoomlarge_page_7.jpg?impolicy=large"
+  },
+  {
+   "marke": "TUC",
+   "name": "Cracker Original oder Paprika",
+   "packung": "3x100 g",
+   "preis": 1.99,
+   "alt_preis": 2.99,
+   "grundpreis": 6.63,
+   "gp_einheit": "kg",
+   "kategorie": "Cracker",
+   "bereich": [
+    18,
+    59,
+    33,
+    74
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/2de8e010-2c78-4e1a-a859-4d550188be3b/zoomlarge_page_7.jpg?impolicy=large"
+  },
+  {
+   "marke": "Cook",
+   "name": "Fix-Produkte (z. B. Nudel-Schinken Gratin)",
+   "packung": "Maxi Pack",
+   "preis": 0.69,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Fertiggericht",
+   "bereich": [
+    50,
+    59,
+    64,
+    74
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/2de8e010-2c78-4e1a-a859-4d550188be3b/zoomlarge_page_7.jpg?impolicy=large"
+  },
+  {
+   "marke": "Storck",
+   "name": "Mini Dickmann's Schoko Trio",
+   "packung": "200 g",
+   "preis": 1.59,
+   "alt_preis": 2.29,
+   "grundpreis": 7.95,
+   "gp_einheit": "kg",
+   "kategorie": "Süßwaren",
+   "bereich": [
+    70,
+    62,
+    97,
+    73
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/2de8e010-2c78-4e1a-a859-4d550188be3b/zoomlarge_page_7.jpg?impolicy=large"
+  },
+  {
+   "marke": "Gut Langenhof",
+   "name": "Puten Filetstreifen",
+   "packung": "800 g",
+   "preis": 8.79,
+   "alt_preis": null,
+   "grundpreis": 10.99,
+   "gp_einheit": "kg",
+   "kategorie": "Fleisch",
+   "bereich": [
+    0,
+    76,
+    28,
+    94
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/2de8e010-2c78-4e1a-a859-4d550188be3b/zoomlarge_page_7.jpg?impolicy=large"
+  },
+  {
+   "marke": "Daunasoft",
+   "name": "Taschentücher Triobox XXL, 3-lagig",
+   "packung": "3er Pack",
+   "preis": 3.49,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Taschentücher",
+   "bereich": [
+    29,
+    81,
+    44,
+    95
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/2de8e010-2c78-4e1a-a859-4d550188be3b/zoomlarge_page_7.jpg?impolicy=large"
+  },
+  {
+   "marke": "",
+   "name": "Soldatenfliegenlarven",
+   "packung": "500 g",
+   "preis": 8.99,
+   "alt_preis": null,
+   "grundpreis": 17.98,
+   "gp_einheit": "kg",
+   "kategorie": "Tierfutter",
+   "bereich": [
+    51,
+    82,
+    67,
+    94
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/2de8e010-2c78-4e1a-a859-4d550188be3b/zoomlarge_page_7.jpg?impolicy=large"
+  },
+  {
+   "marke": "multiTEC",
+   "name": "Profi-Abfallsäcke extra stark",
+   "packung": "30x120 Liter",
+   "preis": 5.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Müllbeutel",
+   "bereich": [
+    76,
+    81,
+    95,
+    94
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/2de8e010-2c78-4e1a-a859-4d550188be3b/zoomlarge_page_7.jpg?impolicy=large"
+  },
+  {
+   "marke": "Old Spice",
+   "name": "3in1 Duschgel Extra-XL (Wolfhorn, Cold Spice oder Captain)",
+   "packung": "1 Liter",
+   "preis": 6.99,
+   "alt_preis": null,
+   "grundpreis": 6.99,
+   "gp_einheit": "l",
+   "kategorie": "Duschgel",
+   "bereich": [
+    16,
+    11,
+    34,
+    26
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/cf8dd69e-44ca-4a90-9647-322aa6446c36/zoomlarge_page_8.jpg?impolicy=large"
+  },
+  {
+   "marke": "",
+   "name": "Chicken Tulips BBQ",
+   "packung": "800 g",
+   "preis": 6.99,
+   "alt_preis": null,
+   "grundpreis": 8.74,
+   "gp_einheit": "kg",
+   "kategorie": "Hähnchen",
+   "bereich": [
+    46,
+    12,
+    64,
+    25
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/cf8dd69e-44ca-4a90-9647-322aa6446c36/zoomlarge_page_8.jpg?impolicy=large"
+  },
+  {
+   "marke": "windau",
+   "name": "Nussschinken XXL, geräuchert",
+   "packung": "250 g",
+   "preis": 2.99,
+   "alt_preis": null,
+   "grundpreis": 11.96,
+   "gp_einheit": "kg",
+   "kategorie": "Schinken",
+   "bereich": [
+    68,
+    11,
+    99,
+    31
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/cf8dd69e-44ca-4a90-9647-322aa6446c36/zoomlarge_page_8.jpg?impolicy=large"
+  },
+  {
+   "marke": "Table Foods",
+   "name": "Antipasti XXL, Grüne Peperoni mit Frischkäse",
+   "packung": "300 g",
+   "preis": 3.49,
+   "alt_preis": 3.99,
+   "grundpreis": 11.63,
+   "gp_einheit": "kg",
+   "kategorie": "Antipasti",
+   "bereich": [
+    12,
+    35,
+    33,
+    50
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/cf8dd69e-44ca-4a90-9647-322aa6446c36/zoomlarge_page_8.jpg?impolicy=large"
+  },
+  {
+   "marke": "hella",
+   "name": "Mineralwasser Sunny Melon, Birne, Himbeere-Wassermelon",
+   "packung": "6 x 0,75 l",
+   "preis": 3.49,
+   "alt_preis": 5.1,
+   "grundpreis": 0.78,
+   "gp_einheit": "l",
+   "kategorie": "Mineralwasser",
+   "bereich": [
+    48,
+    35,
+    67,
+    50
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/cf8dd69e-44ca-4a90-9647-322aa6446c36/zoomlarge_page_8.jpg?impolicy=large"
+  },
+  {
+   "marke": "Mutters Beste",
+   "name": "Frischer Blätterteig XXL, auf Backpapier",
+   "packung": "375 g",
+   "preis": 1.29,
+   "alt_preis": null,
+   "grundpreis": 3.44,
+   "gp_einheit": "kg",
+   "kategorie": "Blätterteig",
+   "bereich": [
+    68,
+    36,
+    91,
+    49
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/cf8dd69e-44ca-4a90-9647-322aa6446c36/zoomlarge_page_8.jpg?impolicy=large"
+  },
+  {
+   "marke": "Knorr",
+   "name": "Jäger Soße / Soße zu Braten",
+   "packung": "2 l",
+   "preis": 2.49,
+   "alt_preis": 2.89,
+   "grundpreis": 1.25,
+   "gp_einheit": "l",
+   "kategorie": "Soße",
+   "bereich": [
+    5,
+    60,
+    22,
+    74
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/cf8dd69e-44ca-4a90-9647-322aa6446c36/zoomlarge_page_8.jpg?impolicy=large"
+  },
+  {
+   "marke": "Camelion",
+   "name": "Batterien Plus Alkaline 24er, Micro AAA",
+   "packung": "24er Pack",
+   "preis": 5.55,
+   "alt_preis": 9.99,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Batterien",
+   "bereich": [
+    28,
+    60,
+    47,
+    75
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/cf8dd69e-44ca-4a90-9647-322aa6446c36/zoomlarge_page_8.jpg?impolicy=large"
+  },
+  {
+   "marke": "Oase der Gewürze",
+   "name": "XXL Gewürze, Pfeffer schwarz ganz",
+   "packung": "145 g",
+   "preis": 1.99,
+   "alt_preis": null,
+   "grundpreis": 13.72,
+   "gp_einheit": "kg",
+   "kategorie": "Gewürze",
+   "bereich": [
+    51,
+    60,
+    75,
+    78
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/cf8dd69e-44ca-4a90-9647-322aa6446c36/zoomlarge_page_8.jpg?impolicy=large"
+  },
+  {
+   "marke": "Jomo",
+   "name": "Kuchenroulade XXL, Marille oder Kakao",
+   "packung": "520 g",
+   "preis": 2.29,
+   "alt_preis": 3.49,
+   "grundpreis": 4.4,
+   "gp_einheit": "kg",
+   "kategorie": "Kuchen",
+   "bereich": [
+    90,
+    58,
+    99,
+    77
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/cf8dd69e-44ca-4a90-9647-322aa6446c36/zoomlarge_page_8.jpg?impolicy=large"
+  },
+  {
+   "marke": "",
+   "name": "Clementinen mit Blatt, Spanien",
+   "packung": "2 kg",
+   "preis": 3.99,
+   "alt_preis": null,
+   "grundpreis": 2.0,
+   "gp_einheit": "kg",
+   "kategorie": "Obst",
+   "bereich": [
+    27,
+    82,
+    50,
+    95
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/cf8dd69e-44ca-4a90-9647-322aa6446c36/zoomlarge_page_8.jpg?impolicy=large"
+  },
+  {
+   "marke": "",
+   "name": "Kartoffeln \"Drillinge\", festkochend",
+   "packung": "1,5 kg",
+   "preis": 1.95,
+   "alt_preis": null,
+   "grundpreis": 1.3,
+   "gp_einheit": "kg",
+   "kategorie": "Kartoffeln",
+   "bereich": [
+    52,
+    80,
+    75,
+    96
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/cf8dd69e-44ca-4a90-9647-322aa6446c36/zoomlarge_page_8.jpg?impolicy=large"
+  },
+  {
+   "marke": "",
+   "name": "Paprika Sweet Mix, Kl. 1",
+   "packung": "1 kg",
+   "preis": 2.99,
+   "alt_preis": null,
+   "grundpreis": 2.99,
+   "gp_einheit": "kg",
+   "kategorie": "Paprika",
+   "bereich": [
+    76,
+    80,
+    99,
+    94
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/cf8dd69e-44ca-4a90-9647-322aa6446c36/zoomlarge_page_8.jpg?impolicy=large"
+  },
+  {
+   "marke": "Kometa",
+   "name": "Ungarische Salami XXL, Classic",
+   "packung": "1 kg",
+   "preis": 10.99,
+   "alt_preis": 13.99,
+   "grundpreis": 10.99,
+   "gp_einheit": "kg",
+   "kategorie": "Wurst",
+   "bereich": [
+    1,
+    6,
+    38,
+    27
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/8e792d1d-5c86-49cd-990a-005ce2911a85/zoomlarge_page_9.jpg?impolicy=large"
+  },
+  {
+   "marke": "Krupnik",
+   "name": "Polnischer Wódka, 40% vol",
+   "packung": "1 Liter",
+   "preis": 9.99,
+   "alt_preis": 12.49,
+   "grundpreis": 9.99,
+   "gp_einheit": "l",
+   "kategorie": "Wodka",
+   "bereich": [
+    55,
+    6,
+    74,
+    27
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/8e792d1d-5c86-49cd-990a-005ce2911a85/zoomlarge_page_9.jpg?impolicy=large"
+  },
+  {
+   "marke": "Dovgan",
+   "name": "XXL Gurken Malosol / eingelegte Tomaten",
+   "packung": "1,9 kg",
+   "preis": 3.79,
+   "alt_preis": 4.99,
+   "grundpreis": 3.99,
+   "gp_einheit": "kg",
+   "kategorie": "Eingelegtes Gemüse",
+   "bereich": [
+    8,
+    29,
+    33,
+    50
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/8e792d1d-5c86-49cd-990a-005ce2911a85/zoomlarge_page_9.jpg?impolicy=large"
+  },
+  {
+   "marke": "Dovgan",
+   "name": "Sprotten in Rapsöl",
+   "packung": "160 g",
+   "preis": 1.79,
+   "alt_preis": 1.99,
+   "grundpreis": 11.19,
+   "gp_einheit": "kg",
+   "kategorie": "Fisch",
+   "bereich": [
+    36,
+    31,
+    63,
+    46
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/8e792d1d-5c86-49cd-990a-005ce2911a85/zoomlarge_page_9.jpg?impolicy=large"
+  },
+  {
+   "marke": "Best Time",
+   "name": "Gebäck XXL",
+   "packung": "400 g",
+   "preis": 1.99,
+   "alt_preis": 2.99,
+   "grundpreis": 4.98,
+   "gp_einheit": "kg",
+   "kategorie": "Gebäck",
+   "bereich": [
+    72,
+    31,
+    97,
+    50
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/8e792d1d-5c86-49cd-990a-005ce2911a85/zoomlarge_page_9.jpg?impolicy=large"
+  },
+  {
+   "marke": "Roshen",
+   "name": "Soft Cream Cookies",
+   "packung": "127 g",
+   "preis": 0.99,
+   "alt_preis": 1.29,
+   "grundpreis": 7.8,
+   "gp_einheit": "kg",
+   "kategorie": "Gebäck",
+   "bereich": [
+    2,
+    60,
+    25,
+    73
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/8e792d1d-5c86-49cd-990a-005ce2911a85/zoomlarge_page_9.jpg?impolicy=large"
+  },
+  {
+   "marke": "Krakus",
+   "name": "Eisbein-/Frühstücksfleisch",
+   "packung": "300 g",
+   "preis": 2.49,
+   "alt_preis": 2.99,
+   "grundpreis": 8.3,
+   "gp_einheit": "kg",
+   "kategorie": "Fleischkonserve",
+   "bereich": [
+    27,
+    63,
+    48,
+    73
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/8e792d1d-5c86-49cd-990a-005ce2911a85/zoomlarge_page_9.jpg?impolicy=large"
+  },
+  {
+   "marke": "Jelinek",
+   "name": "Obst-Spirituose, Birne oder Pflaume, 58% vol",
+   "packung": "0,5 l",
+   "preis": 6.99,
+   "alt_preis": 9.99,
+   "grundpreis": 13.98,
+   "gp_einheit": "l",
+   "kategorie": "Spirituose",
+   "bereich": [
+    62,
+    57,
+    73,
+    77
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/8e792d1d-5c86-49cd-990a-005ce2911a85/zoomlarge_page_9.jpg?impolicy=large"
+  },
+  {
+   "marke": "Morliny",
+   "name": "Bockwurst XXL",
+   "packung": "9 Stück, 850 g",
+   "preis": 5.99,
+   "alt_preis": 7.19,
+   "grundpreis": 7.05,
+   "gp_einheit": "kg",
+   "kategorie": "Wurst",
+   "bereich": [
+    75,
+    62,
+    97,
+    80
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/8e792d1d-5c86-49cd-990a-005ce2911a85/zoomlarge_page_9.jpg?impolicy=large"
+  },
+  {
+   "marke": "Volro",
+   "name": "Pralinen",
+   "packung": "750 g",
+   "preis": 6.99,
+   "alt_preis": null,
+   "grundpreis": 9.32,
+   "gp_einheit": "kg",
+   "kategorie": "Süßwaren",
+   "bereich": [
+    8,
+    81,
+    22,
+    96
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/8e792d1d-5c86-49cd-990a-005ce2911a85/zoomlarge_page_9.jpg?impolicy=large"
+  },
+  {
+   "marke": "Dovgan",
+   "name": "Kondensmilch, gezuckert, 8% Fett",
+   "packung": "397 g",
+   "preis": 1.49,
+   "alt_preis": 1.89,
+   "grundpreis": 3.75,
+   "gp_einheit": "kg",
+   "kategorie": "Milchprodukt",
+   "bereich": [
+    27,
+    85,
+    46,
+    96
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/8e792d1d-5c86-49cd-990a-005ce2911a85/zoomlarge_page_9.jpg?impolicy=large"
+  },
+  {
+   "marke": "Krimskoye",
+   "name": "Sekt, halbtrocken oder rot-mild",
+   "packung": "0,75 l",
+   "preis": 9.99,
+   "alt_preis": 12.99,
+   "grundpreis": 13.32,
+   "gp_einheit": "l",
+   "kategorie": "Sekt",
+   "bereich": [
+    58,
+    81,
+    73,
+    96
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/8e792d1d-5c86-49cd-990a-005ce2911a85/zoomlarge_page_9.jpg?impolicy=large"
+  },
+  {
+   "marke": "Balcerzak",
+   "name": "Cabanossi XXL, Klassik oder mit Schmelzkäse",
+   "packung": "4 Stück, 600 g",
+   "preis": 4.99,
+   "alt_preis": 5.99,
+   "grundpreis": 8.32,
+   "gp_einheit": "kg",
+   "kategorie": "Wurst",
+   "bereich": [
+    76,
+    81,
+    100,
+    96
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/8e792d1d-5c86-49cd-990a-005ce2911a85/zoomlarge_page_9.jpg?impolicy=large"
+  },
+  {
+   "marke": "Krakus",
+   "name": "Würstchen XXL",
+   "packung": "800 g",
+   "preis": 5.99,
+   "alt_preis": 7.29,
+   "grundpreis": 7.49,
+   "gp_einheit": "kg",
+   "kategorie": "Würstchen",
+   "bereich": [
+    27,
+    6,
+    58,
+    28
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/abe4feb0-b0dc-4897-9589-2ed7032ef126/zoomlarge_page_10.jpg?impolicy=large"
+  },
+  {
+   "marke": "Morliny",
+   "name": "Schlesische Wurst",
+   "packung": "735 g",
+   "preis": 5.79,
+   "alt_preis": 6.79,
+   "grundpreis": 7.88,
+   "gp_einheit": "kg",
+   "kategorie": "Wurst",
+   "bereich": [
+    2,
+    29,
+    33,
+    44
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/abe4feb0-b0dc-4897-9589-2ed7032ef126/zoomlarge_page_10.jpg?impolicy=large"
+  },
+  {
+   "marke": "Pick",
+   "name": "Echt ungarische Kolbasz/Balaton Salami",
+   "packung": "200 g",
+   "preis": 2.79,
+   "alt_preis": 4.19,
+   "grundpreis": 13.95,
+   "gp_einheit": "kg",
+   "kategorie": "Salami",
+   "bereich": [
+    49,
+    28,
+    66,
+    49
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/abe4feb0-b0dc-4897-9589-2ed7032ef126/zoomlarge_page_10.jpg?impolicy=large"
+  },
+  {
+   "marke": "Dilek",
+   "name": "Weinblätter/Weiße Bohnen",
+   "packung": "400 g",
+   "preis": 2.79,
+   "alt_preis": null,
+   "grundpreis": 6.98,
+   "gp_einheit": "kg",
+   "kategorie": "Konserve",
+   "bereich": [
+    81,
+    29,
+    98,
+    40
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/abe4feb0-b0dc-4897-9589-2ed7032ef126/zoomlarge_page_10.jpg?impolicy=large"
+  },
+  {
+   "marke": "Dilek",
+   "name": "Gefüllte Weinblätter",
+   "packung": "400 g",
+   "preis": 2.29,
+   "alt_preis": null,
+   "grundpreis": 5.73,
+   "gp_einheit": "kg",
+   "kategorie": "Konserve",
+   "bereich": [
+    81,
+    39,
+    98,
+    49
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/abe4feb0-b0dc-4897-9589-2ed7032ef126/zoomlarge_page_10.jpg?impolicy=large"
+  },
+  {
+   "marke": "Unicum",
+   "name": "Anno 1790 Kräuterlikör",
+   "packung": "0,7 l",
+   "preis": 12.99,
+   "alt_preis": 15.99,
+   "grundpreis": 18.56,
+   "gp_einheit": "l",
+   "kategorie": "Likör",
+   "bereich": [
+    8,
+    58,
+    26,
+    76
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/abe4feb0-b0dc-4897-9589-2ed7032ef126/zoomlarge_page_10.jpg?impolicy=large"
+  },
+  {
+   "marke": "Lewandowski",
+   "name": "Salzdillgurken",
+   "packung": "820 g",
+   "preis": 2.99,
+   "alt_preis": 3.29,
+   "grundpreis": 5.75,
+   "gp_einheit": "kg",
+   "kategorie": "Gurken",
+   "bereich": [
+    34,
+    57,
+    49,
+    76
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/abe4feb0-b0dc-4897-9589-2ed7032ef126/zoomlarge_page_10.jpg?impolicy=large"
+  },
+  {
+   "marke": "Krupnik",
+   "name": "Wodka-Mix-Getränk Impress",
+   "packung": "0,33 l",
+   "preis": 1.69,
+   "alt_preis": 2.49,
+   "grundpreis": 5.12,
+   "gp_einheit": "l",
+   "kategorie": "Mixgetränk",
+   "bereich": [
+    61,
+    59,
+    73,
+    77
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/abe4feb0-b0dc-4897-9589-2ed7032ef126/zoomlarge_page_10.jpg?impolicy=large"
+  },
+  {
+   "marke": "Feiny Biscuits",
+   "name": "Spritzgebäck",
+   "packung": "450 g",
+   "preis": 2.39,
+   "alt_preis": 3.29,
+   "grundpreis": 5.31,
+   "gp_einheit": "kg",
+   "kategorie": "Gebäck",
+   "bereich": [
+    76,
+    58,
+    97,
+    74
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/abe4feb0-b0dc-4897-9589-2ed7032ef126/zoomlarge_page_10.jpg?impolicy=large"
+  },
+  {
+   "marke": "",
+   "name": "Primitivo Susumaniello Salento IGT",
+   "packung": "1 Liter",
+   "preis": 4.99,
+   "alt_preis": null,
+   "grundpreis": 4.99,
+   "gp_einheit": "l",
+   "kategorie": "Wein",
+   "bereich": [
+    32,
+    78,
+    43,
+    97
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/abe4feb0-b0dc-4897-9589-2ed7032ef126/zoomlarge_page_10.jpg?impolicy=large"
+  },
+  {
+   "marke": "Soraya",
+   "name": "Appassimento Puglia IGP",
+   "packung": "0,75 l",
+   "preis": 3.99,
+   "alt_preis": null,
+   "grundpreis": 5.32,
+   "gp_einheit": "l",
+   "kategorie": "Wein",
+   "bereich": [
+    44,
+    78,
+    54,
+    97
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/abe4feb0-b0dc-4897-9589-2ed7032ef126/zoomlarge_page_10.jpg?impolicy=large"
+  },
+  {
+   "marke": "Gabbia d'Oro",
+   "name": "Valpolicella Ripasso Superiore DOC",
+   "packung": "0,75 l",
+   "preis": 5.99,
+   "alt_preis": null,
+   "grundpreis": 7.99,
+   "gp_einheit": "l",
+   "kategorie": "Wein",
+   "bereich": [
+    56,
+    78,
+    65,
+    97
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/abe4feb0-b0dc-4897-9589-2ed7032ef126/zoomlarge_page_10.jpg?impolicy=large"
+  },
+  {
+   "marke": "SEWA Feinkost",
+   "name": "Pelmeni",
+   "packung": "900 g",
+   "preis": 4.99,
+   "alt_preis": 5.69,
+   "grundpreis": 5.54,
+   "gp_einheit": "kg",
+   "kategorie": "Teigwaren",
+   "bereich": [
+    65,
+    7,
+    90,
+    27
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/abe4feb0-b0dc-4897-9589-2ed7032ef126/zoomlarge_page_10.jpg?impolicy=large"
+  },
+  {
+   "marke": "",
+   "name": "Feinherbes Pilsner",
+   "packung": "20 x 0,5 l",
+   "preis": 10.8,
+   "alt_preis": 16.2,
+   "grundpreis": 1.08,
+   "gp_einheit": "l",
+   "kategorie": "Bier",
+   "bereich": [
+    3,
+    8,
+    30,
+    30
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/de6c7ef6-f0de-4b62-bacf-fa152064dda7/zoomlarge_page_11.jpg?impolicy=large"
+  },
+  {
+   "marke": "Coca-Cola",
+   "name": "Erfrischungsgetränk, teilweise koffeinhaltig (Coca-Cola, Fanta, Sprite u. a.)",
+   "packung": "1,25 l",
+   "preis": 0.99,
+   "alt_preis": null,
+   "grundpreis": 0.79,
+   "gp_einheit": "l",
+   "kategorie": "Erfrischungsgetränk",
+   "bereich": [
+    32,
+    3,
+    62,
+    27
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/de6c7ef6-f0de-4b62-bacf-fa152064dda7/zoomlarge_page_11.jpg?impolicy=large"
+  },
+  {
+   "marke": "Philadelphia",
+   "name": "Frischkäsezubereitung",
+   "packung": "195 g",
+   "preis": 1.11,
+   "alt_preis": 2.29,
+   "grundpreis": 5.69,
+   "gp_einheit": "kg",
+   "kategorie": "Frischkäse",
+   "bereich": [
+    55,
+    14,
+    74,
+    22
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/de6c7ef6-f0de-4b62-bacf-fa152064dda7/zoomlarge_page_11.jpg?impolicy=large"
+  },
+  {
+   "marke": "Argeta",
+   "name": "Aufstrich, Huhn Pikant oder Huhn",
+   "packung": "95 g",
+   "preis": 1.19,
+   "alt_preis": 1.49,
+   "grundpreis": 12.53,
+   "gp_einheit": "kg",
+   "kategorie": "Aufstrich",
+   "bereich": [
+    1,
+    29,
+    24,
+    48
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/de6c7ef6-f0de-4b62-bacf-fa152064dda7/zoomlarge_page_11.jpg?impolicy=large"
+  },
+  {
+   "marke": "Excelsior",
+   "name": "Erfrischungsstäbchen Orange-Zitrone",
+   "packung": "150 g",
+   "preis": 1.69,
+   "alt_preis": null,
+   "grundpreis": 11.27,
+   "gp_einheit": "kg",
+   "kategorie": "Süßwaren",
+   "bereich": [
+    30,
+    31,
+    49,
+    39
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/de6c7ef6-f0de-4b62-bacf-fa152064dda7/zoomlarge_page_11.jpg?impolicy=large"
+  },
+  {
+   "marke": "",
+   "name": "Butter-Spekulatius",
+   "packung": "250 g",
+   "preis": 1.99,
+   "alt_preis": 2.49,
+   "grundpreis": 7.96,
+   "gp_einheit": "kg",
+   "kategorie": "Gebäck",
+   "bereich": [
+    52,
+    30,
+    67,
+    39
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/de6c7ef6-f0de-4b62-bacf-fa152064dda7/zoomlarge_page_11.jpg?impolicy=large"
+  },
+  {
+   "marke": "Stein­burg",
+   "name": "Export, 2 Kästen",
+   "packung": "2 x 20 x 0,5 l",
+   "preis": 14.0,
+   "alt_preis": 19.6,
+   "grundpreis": 0.7,
+   "gp_einheit": "l",
+   "kategorie": "Bier",
+   "bereich": [
+    77,
+    31,
+    97,
+    43
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/de6c7ef6-f0de-4b62-bacf-fa152064dda7/zoomlarge_page_11.jpg?impolicy=large"
+  },
+  {
+   "marke": "",
+   "name": "Delikatess Mayonnaise / Würze Remoulade",
+   "packung": "500 ml",
+   "preis": 1.69,
+   "alt_preis": null,
+   "grundpreis": 3.38,
+   "gp_einheit": "l",
+   "kategorie": "Mayonnaise",
+   "bereich": [
+    5,
+    57,
+    22,
+    72
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/de6c7ef6-f0de-4b62-bacf-fa152064dda7/zoomlarge_page_11.jpg?impolicy=large"
+  },
+  {
+   "marke": "",
+   "name": "Gin, für Longdrinks und Cocktails",
+   "packung": "0,7 l",
+   "preis": 6.49,
+   "alt_preis": 7.99,
+   "grundpreis": 9.27,
+   "gp_einheit": "l",
+   "kategorie": "Spirituosen",
+   "bereich": [
+    38,
+    56,
+    47,
+    75
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/de6c7ef6-f0de-4b62-bacf-fa152064dda7/zoomlarge_page_11.jpg?impolicy=large"
+  },
+  {
+   "marke": "Kinder",
+   "name": "Bueno, 6 Riegel",
+   "packung": "129 g",
+   "preis": 2.22,
+   "alt_preis": 3.29,
+   "grundpreis": 17.21,
+   "gp_einheit": "kg",
+   "kategorie": "Süßwaren",
+   "bereich": [
+    53,
+    58,
+    70,
+    72
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/de6c7ef6-f0de-4b62-bacf-fa152064dda7/zoomlarge_page_11.jpg?impolicy=large"
+  },
+  {
+   "marke": "Frosta",
+   "name": "Pfannengericht (Bami Goreng u. a.)",
+   "packung": "500 g",
+   "preis": 2.99,
+   "alt_preis": 4.79,
+   "grundpreis": 5.98,
+   "gp_einheit": "kg",
+   "kategorie": "Tiefkühlkost",
+   "bereich": [
+    80,
+    58,
+    97,
+    74
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/de6c7ef6-f0de-4b62-bacf-fa152064dda7/zoomlarge_page_11.jpg?impolicy=large"
+  },
+  {
+   "marke": "NORMA connect",
+   "name": "Startpaket",
+   "packung": "",
+   "preis": 1.99,
+   "alt_preis": 9.95,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Mobilfunk",
+   "bereich": null,
+   "seiten_bild": "https://content-media.bonial.biz/de6c7ef6-f0de-4b62-bacf-fa152064dda7/zoomlarge_page_11.jpg?impolicy=large"
+  },
+  {
+   "marke": "NORMA connect",
+   "name": "Smart S 5G, 35 GB",
+   "packung": "35 GB, 4 Wochen",
+   "preis": 8.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Mobilfunk",
+   "bereich": null,
+   "seiten_bild": "https://content-media.bonial.biz/de6c7ef6-f0de-4b62-bacf-fa152064dda7/zoomlarge_page_11.jpg?impolicy=large"
+  },
+  {
+   "marke": "NORMA connect",
+   "name": "Smart M 5G, 60 GB",
+   "packung": "60 GB, 4 Wochen",
+   "preis": 13.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Mobilfunk",
+   "bereich": null,
+   "seiten_bild": "https://content-media.bonial.biz/de6c7ef6-f0de-4b62-bacf-fa152064dda7/zoomlarge_page_11.jpg?impolicy=large"
+  },
+  {
+   "marke": "NORMA connect",
+   "name": "Smart L 5G, 110 GB",
+   "packung": "110 GB, 4 Wochen",
+   "preis": 18.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Mobilfunk",
+   "bereich": null,
+   "seiten_bild": "https://content-media.bonial.biz/de6c7ef6-f0de-4b62-bacf-fa152064dda7/zoomlarge_page_11.jpg?impolicy=large"
+  },
+  {
+   "marke": "head & shoulders",
+   "name": "Anti-Schuppen Shampoo, Classic Clean, Apple Fresh",
+   "packung": "250 ml",
+   "preis": 3.29,
+   "alt_preis": 3.95,
+   "grundpreis": 13.16,
+   "gp_einheit": "l",
+   "kategorie": "Shampoo",
+   "bereich": [
+    62,
+    80,
+    72,
+    96
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/de6c7ef6-f0de-4b62-bacf-fa152064dda7/zoomlarge_page_11.jpg?impolicy=large"
+  },
+  {
+   "marke": "TENA",
+   "name": "Discreet Einlagen, Extra",
+   "packung": "10 Stück",
+   "preis": 2.88,
+   "alt_preis": 3.45,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Inkontinenzprodukte",
+   "bereich": [
+    78,
+    81,
+    97,
+    95
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/de6c7ef6-f0de-4b62-bacf-fa152064dda7/zoomlarge_page_11.jpg?impolicy=large"
+  },
+  {
+   "marke": "Genießerküche",
+   "name": "Regionale Fertiggerichte (verschiedene Sorten, z.B. Kohlrouladen mit Kartoffel-Rohnen-Pfanne)",
+   "packung": "400 g",
+   "preis": 2.99,
+   "alt_preis": 3.49,
+   "grundpreis": 7.48,
+   "gp_einheit": "kg",
+   "kategorie": "Fertiggericht",
+   "bereich": [
+    17,
+    3,
+    34,
+    15
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/1f57e9ac-91c2-47eb-a021-cb52f940aa23/zoomlarge_page_12.jpg?impolicy=large"
+  },
+  {
+   "marke": "Österland",
+   "name": "Dessert Soße mit Vanillegeschmack",
+   "packung": "500 ml",
+   "preis": 1.59,
+   "alt_preis": 2.09,
+   "grundpreis": 3.18,
+   "gp_einheit": "l",
+   "kategorie": "Dessertsoße",
+   "bereich": [
+    39,
+    10,
+    52,
+    18
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/1f57e9ac-91c2-47eb-a021-cb52f940aa23/zoomlarge_page_12.jpg?impolicy=large"
+  },
+  {
+   "marke": "Die Thüringer",
+   "name": "Feldgieker/Eichsfelder Stracke, mild luftgetrocknet",
+   "packung": "400 g",
+   "preis": 6.49,
+   "alt_preis": 8.49,
+   "grundpreis": 16.23,
+   "gp_einheit": "kg",
+   "kategorie": "Wurst",
+   "bereich": [
+    76,
+    3,
+    97,
+    17
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/1f57e9ac-91c2-47eb-a021-cb52f940aa23/zoomlarge_page_12.jpg?impolicy=large"
+  },
+  {
+   "marke": "Dreistern",
+   "name": "Ragout fin/Hühner-Frikassee",
+   "packung": "470 g",
+   "preis": 2.79,
+   "alt_preis": 3.49,
+   "grundpreis": 5.94,
+   "gp_einheit": "kg",
+   "kategorie": "Fertiggericht",
+   "bereich": [
+    19,
+    25,
+    31,
+    33
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/1f57e9ac-91c2-47eb-a021-cb52f940aa23/zoomlarge_page_12.jpg?impolicy=large"
+  },
+  {
+   "marke": "Zitzmann",
+   "name": "Thüringer Jagdwurst",
+   "packung": "500 g",
+   "preis": 3.49,
+   "alt_preis": 5.49,
+   "grundpreis": 6.98,
+   "gp_einheit": "kg",
+   "kategorie": "Wurst",
+   "bereich": [
+    39,
+    24,
+    65,
+    33
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/1f57e9ac-91c2-47eb-a021-cb52f940aa23/zoomlarge_page_12.jpg?impolicy=large"
+  },
+  {
+   "marke": "Thüringer",
+   "name": "Wurstspezialität (Leberwurst, Rotwurst oder Jagdwurst)",
+   "packung": "300 g",
+   "preis": 2.49,
+   "alt_preis": 2.99,
+   "grundpreis": 8.3,
+   "gp_einheit": "kg",
+   "kategorie": "Wurst",
+   "bereich": [
+    84,
+    27,
+    97,
+    38
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/1f57e9ac-91c2-47eb-a021-cb52f940aa23/zoomlarge_page_12.jpg?impolicy=large"
+  },
+  {
+   "marke": "Feldschlößchen",
+   "name": "Schwarzer Steiger Schwarzbier",
+   "packung": "6er Träger",
+   "preis": 4.99,
+   "alt_preis": 5.49,
+   "grundpreis": 1.66,
+   "gp_einheit": "l",
+   "kategorie": "Bier",
+   "bereich": [
+    10,
+    38,
+    33,
+    50
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/1f57e9ac-91c2-47eb-a021-cb52f940aa23/zoomlarge_page_12.jpg?impolicy=large"
+  },
+  {
+   "marke": "Die Thüringer",
+   "name": "Minibeißer (Pfeffer oder Paprika)",
+   "packung": "8 Stück, 160 g",
+   "preis": 2.49,
+   "alt_preis": 3.29,
+   "grundpreis": 15.56,
+   "gp_einheit": "kg",
+   "kategorie": "Wurst",
+   "bereich": [
+    48,
+    40,
+    65,
+    50
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/1f57e9ac-91c2-47eb-a021-cb52f940aa23/zoomlarge_page_12.jpg?impolicy=large"
+  },
+  {
+   "marke": "Loose",
+   "name": "Quäse rustica würzig, mild und aromatisch",
+   "packung": "220 g",
+   "preis": 2.39,
+   "alt_preis": 2.99,
+   "grundpreis": 10.86,
+   "gp_einheit": "kg",
+   "kategorie": "Käse",
+   "bereich": [
+    72,
+    40,
+    82,
+    46
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/1f57e9ac-91c2-47eb-a021-cb52f940aa23/zoomlarge_page_12.jpg?impolicy=large"
+  },
+  {
+   "marke": "Rustica",
+   "name": "Quäse Rustica würzig, mild (NORMA Plus App-Preis)",
+   "packung": "220 g",
+   "preis": 1.99,
+   "alt_preis": null,
+   "grundpreis": 9.05,
+   "gp_einheit": "kg",
+   "kategorie": "Käse",
+   "bereich": [
+    79,
+    44,
+    91,
+    50
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/1f57e9ac-91c2-47eb-a021-cb52f940aa23/zoomlarge_page_12.jpg?impolicy=large"
+  },
+  {
+   "marke": "Filinchen",
+   "name": "Das Knusper-Brot (Original, Vital oder Ballaststoff)",
+   "packung": "225 g",
+   "preis": 3.27,
+   "alt_preis": 3.99,
+   "grundpreis": 10.9,
+   "gp_einheit": "kg",
+   "kategorie": "Brot",
+   "bereich": [
+    3,
+    57,
+    17,
+    65
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/1f57e9ac-91c2-47eb-a021-cb52f940aa23/zoomlarge_page_12.jpg?impolicy=large"
+  },
+  {
+   "marke": "Argenta",
+   "name": "Weihnachtspraline (Träume in Nougat oder Weiße Weihnacht)",
+   "packung": "170 g oder 173 g",
+   "preis": 5.55,
+   "alt_preis": 6.99,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Süßwaren",
+   "bereich": [
+    40,
+    57,
+    60,
+    66
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/1f57e9ac-91c2-47eb-a021-cb52f940aa23/zoomlarge_page_12.jpg?impolicy=large"
+  },
+  {
+   "marke": "Emil Reimann",
+   "name": "Dresdner Christstollen",
+   "packung": "1 kg",
+   "preis": 9.99,
+   "alt_preis": 11.49,
+   "grundpreis": 9.99,
+   "gp_einheit": "kg",
+   "kategorie": "Gebäck",
+   "bereich": [
+    78,
+    55,
+    97,
+    66
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/1f57e9ac-91c2-47eb-a021-cb52f940aa23/zoomlarge_page_12.jpg?impolicy=large"
+  },
+  {
+   "marke": "",
+   "name": "Eingelegte Gurken/Paprika",
+   "packung": "500 g",
+   "preis": 1.59,
+   "alt_preis": 1.79,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Konserve",
+   "bereich": [
+    4,
+    69,
+    18,
+    80
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/1f57e9ac-91c2-47eb-a021-cb52f940aa23/zoomlarge_page_12.jpg?impolicy=large"
+  },
+  {
+   "marke": "St. Hubertus",
+   "name": "Tropfen (Kräuterlikör oder Johannisbeerlikör)",
+   "packung": "24 x 0,02 l",
+   "preis": 6.66,
+   "alt_preis": 7.99,
+   "grundpreis": 13.88,
+   "gp_einheit": "l",
+   "kategorie": "Likör",
+   "bereich": [
+    38,
+    72,
+    52,
+    82
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/1f57e9ac-91c2-47eb-a021-cb52f940aa23/zoomlarge_page_12.jpg?impolicy=large"
+  },
+  {
+   "marke": "Werder",
+   "name": "Tomaten Ketchup",
+   "packung": "450 ml + 50 ml gratis",
+   "preis": 1.49,
+   "alt_preis": 2.29,
+   "grundpreis": 2.98,
+   "gp_einheit": "l",
+   "kategorie": "Ketchup",
+   "bereich": [
+    64,
+    68,
+    74,
+    80
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/1f57e9ac-91c2-47eb-a021-cb52f940aa23/zoomlarge_page_12.jpg?impolicy=large"
+  },
+  {
+   "marke": "Echt Feld",
+   "name": "Bratkartoffeln mit Zwiebeln und Kotenspeck",
+   "packung": "400 g",
+   "preis": 1.49,
+   "alt_preis": 1.79,
+   "grundpreis": 3.73,
+   "gp_einheit": "kg",
+   "kategorie": "Kartoffeln",
+   "bereich": [
+    77,
+    69,
+    95,
+    80
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/1f57e9ac-91c2-47eb-a021-cb52f940aa23/zoomlarge_page_12.jpg?impolicy=large"
+  },
+  {
+   "marke": "",
+   "name": "XL-Teppich Dreaulue",
+   "packung": "ca. 160 x 230 cm",
+   "preis": 49.99,
+   "alt_preis": 79.95,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Teppich",
+   "bereich": [
+    2,
+    6,
+    47,
+    31
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/69518f65-8172-4503-a12e-2a980b90e58f/zoomlarge_page_13.jpg?impolicy=large"
+  },
+  {
+   "marke": "bella casa",
+   "name": "Kissenhülle Elise",
+   "packung": "45 x 45 cm",
+   "preis": 1.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Kissenhülle",
+   "bereich": [
+    62,
+    5,
+    99,
+    17
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/69518f65-8172-4503-a12e-2a980b90e58f/zoomlarge_page_13.jpg?impolicy=large"
+  },
+  {
+   "marke": "EllieNor",
+   "name": "Hausbooties für Damen",
+   "packung": "",
+   "preis": 6.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Hausschuhe",
+   "bereich": [
+    44,
+    18,
+    66,
+    29
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/69518f65-8172-4503-a12e-2a980b90e58f/zoomlarge_page_13.jpg?impolicy=large"
+  },
+  {
+   "marke": "EllieNor",
+   "name": "Home-Shoes für Damen und Kinder",
+   "packung": "",
+   "preis": 3.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Hausschuhe",
+   "bereich": [
+    68,
+    18,
+    99,
+    29
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/69518f65-8172-4503-a12e-2a980b90e58f/zoomlarge_page_13.jpg?impolicy=large"
+  },
+  {
+   "marke": "bella casa",
+   "name": "Sitzkissen Billy",
+   "packung": "ca. 40 x 40 cm",
+   "preis": 3.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Sitzkissen",
+   "bereich": [
+    2,
+    33,
+    34,
+    48
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/69518f65-8172-4503-a12e-2a980b90e58f/zoomlarge_page_13.jpg?impolicy=large"
+  },
+  {
+   "marke": "bella casa",
+   "name": "Dekokissen Billy",
+   "packung": "ca. 48 x 48 cm",
+   "preis": 6.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Dekokissen",
+   "bereich": [
+    35,
+    33,
+    66,
+    48
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/69518f65-8172-4503-a12e-2a980b90e58f/zoomlarge_page_13.jpg?impolicy=large"
+  },
+  {
+   "marke": "by flower",
+   "name": "Drehende LED-Kerze",
+   "packung": "ca. 0 cm",
+   "preis": 7.99,
+   "alt_preis": 9.99,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Kerze",
+   "bereich": [
+    76,
+    33,
+    92,
+    48
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/69518f65-8172-4503-a12e-2a980b90e58f/zoomlarge_page_13.jpg?impolicy=large"
+  },
+  {
+   "marke": "HEITECH",
+   "name": "LED-Nachtlicht",
+   "packung": "",
+   "preis": 3.99,
+   "alt_preis": 6.99,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Nachtlicht",
+   "bereich": [
+    2,
+    50,
+    34,
+    60
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/69518f65-8172-4503-a12e-2a980b90e58f/zoomlarge_page_13.jpg?impolicy=large"
+  },
+  {
+   "marke": "",
+   "name": "Digitale Adapter Stromkosten-Messgerät",
+   "packung": "",
+   "preis": 7.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Adapter",
+   "bereich": [
+    67,
+    50,
+    81,
+    60
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/69518f65-8172-4503-a12e-2a980b90e58f/zoomlarge_page_13.jpg?impolicy=large"
+  },
+  {
+   "marke": "",
+   "name": "Funksteckdosen-Set 4-tlg.",
+   "packung": "4-tlg.",
+   "preis": 9.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Funksteckdose",
+   "bereich": [
+    82,
+    50,
+    92,
+    60
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/69518f65-8172-4503-a12e-2a980b90e58f/zoomlarge_page_13.jpg?impolicy=large"
+  },
+  {
+   "marke": "ADA",
+   "name": "LED-Akku-Glühbirne",
+   "packung": "",
+   "preis": 3.99,
+   "alt_preis": 5.99,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Lampe",
+   "bereich": [
+    84,
+    50,
+    100,
+    60
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/69518f65-8172-4503-a12e-2a980b90e58f/zoomlarge_page_13.jpg?impolicy=large"
+  },
+  {
+   "marke": "",
+   "name": "Minis Maxi-Pack Fruchtgummi",
+   "packung": "350 g",
+   "preis": 2.99,
+   "alt_preis": 4.29,
+   "grundpreis": 8.54,
+   "gp_einheit": "kg",
+   "kategorie": "Süßwaren",
+   "bereich": [
+    5,
+    67,
+    25,
+    76
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/69518f65-8172-4503-a12e-2a980b90e58f/zoomlarge_page_13.jpg?impolicy=large"
+  },
+  {
+   "marke": "Milka",
+   "name": "Weihnachtsmann",
+   "packung": "90 g",
+   "preis": 1.99,
+   "alt_preis": 3.29,
+   "grundpreis": 22.11,
+   "gp_einheit": "kg",
+   "kategorie": "Schokolade",
+   "bereich": [
+    29,
+    66,
+    42,
+    77
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/69518f65-8172-4503-a12e-2a980b90e58f/zoomlarge_page_13.jpg?impolicy=large"
+  },
+  {
+   "marke": "Wernet",
+   "name": "Trachtenhonige Blütenhonig",
+   "packung": "500 g",
+   "preis": 4.79,
+   "alt_preis": 5.99,
+   "grundpreis": 9.58,
+   "gp_einheit": "kg",
+   "kategorie": "Honig",
+   "bereich": [
+    56,
+    66,
+    72,
+    76
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/69518f65-8172-4503-a12e-2a980b90e58f/zoomlarge_page_13.jpg?impolicy=large"
+  },
+  {
+   "marke": "müller",
+   "name": "Pudding mit Soße",
+   "packung": "450 g",
+   "preis": 1.19,
+   "alt_preis": 1.69,
+   "grundpreis": 2.64,
+   "gp_einheit": "kg",
+   "kategorie": "Pudding",
+   "bereich": [
+    83,
+    66,
+    99,
+    75
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/69518f65-8172-4503-a12e-2a980b90e58f/zoomlarge_page_13.jpg?impolicy=large"
+  },
+  {
+   "marke": "Domestos",
+   "name": "Kraft & Frische WC Gel",
+   "packung": "1 Liter",
+   "preis": 1.95,
+   "alt_preis": null,
+   "grundpreis": 1.95,
+   "gp_einheit": "l",
+   "kategorie": "WC-Reiniger",
+   "bereich": [
+    5,
+    82,
+    25,
+    94
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/69518f65-8172-4503-a12e-2a980b90e58f/zoomlarge_page_13.jpg?impolicy=large"
+  },
+  {
+   "marke": "Whiskas",
+   "name": "Dreamies Knuspertasche",
+   "packung": "350 g",
+   "preis": 5.45,
+   "alt_preis": 6.45,
+   "grundpreis": 15.57,
+   "gp_einheit": "kg",
+   "kategorie": "Katzensnack",
+   "bereich": [
+    33,
+    83,
+    49,
+    92
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/69518f65-8172-4503-a12e-2a980b90e58f/zoomlarge_page_13.jpg?impolicy=large"
+  },
+  {
+   "marke": "Rama",
+   "name": "Culinesse Classic oder mit Butternote",
+   "packung": "450 ml",
+   "preis": 1.49,
+   "alt_preis": 2.19,
+   "grundpreis": 3.31,
+   "gp_einheit": "l",
+   "kategorie": "Kochcreme",
+   "bereich": [
+    61,
+    82,
+    74,
+    94
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/69518f65-8172-4503-a12e-2a980b90e58f/zoomlarge_page_13.jpg?impolicy=large"
+  },
+  {
+   "marke": "ültje",
+   "name": "Erdnüsse geröstet und gesalzen",
+   "packung": "180 g",
+   "preis": 1.69,
+   "alt_preis": 2.49,
+   "grundpreis": 9.39,
+   "gp_einheit": "kg",
+   "kategorie": "Nüsse",
+   "bereich": [
+    90,
+    82,
+    97,
+    93
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/69518f65-8172-4503-a12e-2a980b90e58f/zoomlarge_page_13.jpg?impolicy=large"
+  },
+  {
+   "marke": "",
+   "name": "Design-WC-Sitz",
+   "packung": "",
+   "preis": 22.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "WC-Sitz",
+   "bereich": [
+    8,
+    5,
+    47,
+    28
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/30a086b0-ba95-4007-9539-bb507fc1b265/zoomlarge_page_14.jpg?impolicy=large"
+  },
+  {
+   "marke": "",
+   "name": "Frottierwaren Summertime",
+   "packung": "Gästetuch 2er-Set ca. 30x50 cm; Handtuch 2er-Set ca. 50x100 cm; Waschhandschuh 6er-Set ca. 16x21 cm; Duschtuch ca. 70x140 cm",
+   "preis": 5.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Handtücher",
+   "bereich": [
+    50,
+    5,
+    88,
+    26
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/30a086b0-ba95-4007-9539-bb507fc1b265/zoomlarge_page_14.jpg?impolicy=large"
+  },
+  {
+   "marke": "Santosin",
+   "name": "XXL-Mikrofaser-Badteppich",
+   "packung": "ca. 70x120 cm oder 2er-Set ca. 60x90 cm + ca. 60x50 cm",
+   "preis": 14.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Badteppich",
+   "bereich": [
+    3,
+    32,
+    43,
+    43
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/30a086b0-ba95-4007-9539-bb507fc1b265/zoomlarge_page_14.jpg?impolicy=large"
+  },
+  {
+   "marke": "sheepworld",
+   "name": "Frottierwaren Handtuch 2er-Set / Duschtuch",
+   "packung": "Handtuch 2er-Set ca. 50x100 cm; Duschtuch ca. 70x140 cm",
+   "preis": 8.99,
+   "alt_preis": 19.99,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Handtücher",
+   "bereich": [
+    48,
+    31,
+    90,
+    43
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/30a086b0-ba95-4007-9539-bb507fc1b265/zoomlarge_page_14.jpg?impolicy=large"
+  },
+  {
+   "marke": "sheepworld",
+   "name": "Frottierwaren Gästetuch 4er-Set",
+   "packung": "4er-Set ca. 30x50 cm",
+   "preis": 8.99,
+   "alt_preis": 12.99,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Handtücher",
+   "bereich": null,
+   "seiten_bild": "https://content-media.bonial.biz/30a086b0-ba95-4007-9539-bb507fc1b265/zoomlarge_page_14.jpg?impolicy=large"
+  },
+  {
+   "marke": "bruno banani",
+   "name": "Bademantel mit Schalkragen",
+   "packung": "",
+   "preis": 17.99,
+   "alt_preis": 39.99,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Bademantel",
+   "bereich": [
+    2,
+    52,
+    21,
+    72
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/30a086b0-ba95-4007-9539-bb507fc1b265/zoomlarge_page_14.jpg?impolicy=large"
+  },
+  {
+   "marke": "",
+   "name": "Beauty-Artikel",
+   "packung": "in großer Auswahl",
+   "preis": 2.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Kosmetik",
+   "bereich": [
+    28,
+    51,
+    57,
+    65
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/30a086b0-ba95-4007-9539-bb507fc1b265/zoomlarge_page_14.jpg?impolicy=large"
+  },
+  {
+   "marke": "Santosin",
+   "name": "Flanell-Weichschaum-Badematte",
+   "packung": "ca. 60x100 cm",
+   "preis": 5.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Badematte",
+   "bereich": [
+    62,
+    51,
+    95,
+    63
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/30a086b0-ba95-4007-9539-bb507fc1b265/zoomlarge_page_14.jpg?impolicy=large"
+  },
+  {
+   "marke": "",
+   "name": "Luftentfeuchter Starter-Set",
+   "packung": "Starter-Set inkl. 2 Nachfüllpacks à 1200 g",
+   "preis": 6.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Luftentfeuchter",
+   "bereich": [
+    33,
+    66,
+    54,
+    77
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/30a086b0-ba95-4007-9539-bb507fc1b265/zoomlarge_page_14.jpg?impolicy=large"
+  },
+  {
+   "marke": "",
+   "name": "Klarsichtboxen",
+   "packung": "2er-Set ca. 10 Liter; 3er-Set ca. 5 Liter; 1er ca. 20 Liter; 1er ca. 25 Liter; 6er-Set ca. 1,7 Liter; 1er ca. 3 Liter",
+   "preis": 6.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Aufbewahrungsbox",
+   "bereich": [
+    62,
+    66,
+    97,
+    77
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/30a086b0-ba95-4007-9539-bb507fc1b265/zoomlarge_page_14.jpg?impolicy=large"
+  },
+  {
+   "marke": "eisl",
+   "name": "Waschbeckenzubehör",
+   "packung": "",
+   "preis": 7.99,
+   "alt_preis": 11.99,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Sanitärzubehör",
+   "bereich": [
+    3,
+    84,
+    31,
+    91
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/30a086b0-ba95-4007-9539-bb507fc1b265/zoomlarge_page_14.jpg?impolicy=large"
+  },
+  {
+   "marke": "",
+   "name": "Handbrause mit Wassersparchtung",
+   "packung": "",
+   "preis": 7.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Handbrause",
+   "bereich": [
+    40,
+    84,
+    57,
+    93
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/30a086b0-ba95-4007-9539-bb507fc1b265/zoomlarge_page_14.jpg?impolicy=large"
+  },
+  {
+   "marke": "",
+   "name": "Brauseschlauch 2m mit Wassersparchtung",
+   "packung": "2 m",
+   "preis": 3.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Brauseschlauch",
+   "bereich": [
+    64,
+    85,
+    77,
+    93
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/30a086b0-ba95-4007-9539-bb507fc1b265/zoomlarge_page_14.jpg?impolicy=large"
+  },
+  {
+   "marke": "",
+   "name": "Mischdüsen-Ersatzbox",
+   "packung": "18-tlg.",
+   "preis": 6.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Ersatzteile",
+   "bereich": [
+    81,
+    84,
+    97,
+    92
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/30a086b0-ba95-4007-9539-bb507fc1b265/zoomlarge_page_14.jpg?impolicy=large"
+  },
+  {
+   "marke": "",
+   "name": "Grabgesteck aus Rinde in Herzform",
+   "packung": "je Grabgesteck",
+   "preis": 6.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Grabgesteck",
+   "bereich": [
+    1,
+    6,
+    49,
+    23
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/3ef8b847-2fdc-41db-93a9-c0286f768e4d/zoomlarge_page_15.jpg?impolicy=large"
+  },
+  {
+   "marke": "",
+   "name": "Grabstrauß/Grabbesonderheit",
+   "packung": "je Artikel",
+   "preis": 5.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Grabstrauß",
+   "bereich": [
+    50,
+    6,
+    99,
+    23
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/3ef8b847-2fdc-41db-93a9-c0286f768e4d/zoomlarge_page_15.jpg?impolicy=large"
+  },
+  {
+   "marke": "",
+   "name": "Außergewöhnlicher Urnen- und Grabschmuck",
+   "packung": "je Artikel",
+   "preis": 8.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Grabschmuck",
+   "bereich": [
+    1,
+    28,
+    49,
+    45
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/3ef8b847-2fdc-41db-93a9-c0286f768e4d/zoomlarge_page_15.jpg?impolicy=large"
+  },
+  {
+   "marke": "",
+   "name": "Grabstrauß aus gewachsenen Premiumrosen XL",
+   "packung": "je Grabstrauß",
+   "preis": 3.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Grabstrauß",
+   "bereich": [
+    50,
+    28,
+    75,
+    45
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/3ef8b847-2fdc-41db-93a9-c0286f768e4d/zoomlarge_page_15.jpg?impolicy=large"
+  },
+  {
+   "marke": "",
+   "name": "3D LED-Grabkerze",
+   "packung": "je Ausführung",
+   "preis": 3.99,
+   "alt_preis": 5.99,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Grabkerze",
+   "bereich": [
+    77,
+    28,
+    99,
+    45
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/3ef8b847-2fdc-41db-93a9-c0286f768e4d/zoomlarge_page_15.jpg?impolicy=large"
+  },
+  {
+   "marke": "",
+   "name": "Amaryllis XL",
+   "packung": "je Pflanze",
+   "preis": 3.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Zimmerpflanze",
+   "bereich": [
+    1,
+    52,
+    25,
+    69
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/3ef8b847-2fdc-41db-93a9-c0286f768e4d/zoomlarge_page_15.jpg?impolicy=large"
+  },
+  {
+   "marke": "",
+   "name": "Weihnachtsstern",
+   "packung": "je Pflanze",
+   "preis": 1.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Zimmerpflanze",
+   "bereich": [
+    26,
+    52,
+    49,
+    69
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/3ef8b847-2fdc-41db-93a9-c0286f768e4d/zoomlarge_page_15.jpg?impolicy=large"
+  },
+  {
+   "marke": "",
+   "name": "Elefantenfuß XL „Beaucarnea recurvata“/Yucca 2 Stämmig",
+   "packung": "je Pflanze",
+   "preis": 9.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Zimmerpflanze",
+   "bereich": [
+    50,
+    52,
+    74,
+    69
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/3ef8b847-2fdc-41db-93a9-c0286f768e4d/zoomlarge_page_15.jpg?impolicy=large"
+  },
+  {
+   "marke": "",
+   "name": "Tannengrün-Handbund",
+   "packung": "Bund, Länge ca. 60 cm, Gewicht ca. 500 g",
+   "preis": 2.59,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Tannengrün",
+   "bereich": [
+    75,
+    52,
+    99,
+    69
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/3ef8b847-2fdc-41db-93a9-c0286f768e4d/zoomlarge_page_15.jpg?impolicy=large"
+  },
+  {
+   "marke": "",
+   "name": "Flamingoblume XL „Anthurie“",
+   "packung": "je Pflanze",
+   "preis": 5.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Zimmerpflanze",
+   "bereich": [
+    1,
+    74,
+    25,
+    91
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/3ef8b847-2fdc-41db-93a9-c0286f768e4d/zoomlarge_page_15.jpg?impolicy=large"
+  },
+  {
+   "marke": "",
+   "name": "Stephanotis am Bogen „Kranzschlinge“",
+   "packung": "je Pflanze",
+   "preis": 6.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Zimmerpflanze",
+   "bereich": [
+    26,
+    74,
+    49,
+    91
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/3ef8b847-2fdc-41db-93a9-c0286f768e4d/zoomlarge_page_15.jpg?impolicy=large"
+  },
+  {
+   "marke": "",
+   "name": "Alpenveilchen „Traum Trio“",
+   "packung": "je Pflanze",
+   "preis": 2.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Zimmerpflanze",
+   "bereich": [
+    50,
+    74,
+    74,
+    91
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/3ef8b847-2fdc-41db-93a9-c0286f768e4d/zoomlarge_page_15.jpg?impolicy=large"
+  },
+  {
+   "marke": "",
+   "name": "Spezial-Düngestäbchen",
+   "packung": "24 g",
+   "preis": 1.99,
+   "alt_preis": null,
+   "grundpreis": 82.92,
+   "gp_einheit": "kg",
+   "kategorie": "Dünger",
+   "bereich": [
+    75,
+    74,
+    99,
+    91
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/3ef8b847-2fdc-41db-93a9-c0286f768e4d/zoomlarge_page_15.jpg?impolicy=large"
+  },
+  {
+   "marke": "STROH",
+   "name": "Rum 80 (Original 80)",
+   "packung": "0,5 l",
+   "preis": 12.99,
+   "alt_preis": 16.99,
+   "grundpreis": 25.98,
+   "gp_einheit": "l",
+   "kategorie": "Rum",
+   "bereich": [
+    18,
+    23,
+    27,
+    34
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/2429756e-072b-457b-afe8-982a564633fa/zoomlarge_page_16.jpg?impolicy=large"
+  },
+  {
+   "marke": "Sheba",
+   "name": "Katzennassnahrung Geflügel-/Fisch-Variation",
+   "packung": "60 x 85 g",
+   "preis": 21.99,
+   "alt_preis": null,
+   "grundpreis": 4.31,
+   "gp_einheit": "kg",
+   "kategorie": "Katzenfutter",
+   "bereich": [
+    33,
+    22,
+    50,
+    32
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/2429756e-072b-457b-afe8-982a564633fa/zoomlarge_page_16.jpg?impolicy=large"
+  },
+  {
+   "marke": "Bonduelle",
+   "name": "Kidney Bohnen / Erbsen & Möhrchen / Goldmais",
+   "packung": "4 x 200 g bzw. 4 x 150 g (Dosen)",
+   "preis": 3.19,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Gemüsekonserve",
+   "bereich": [
+    74,
+    25,
+    94,
+    33
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/2429756e-072b-457b-afe8-982a564633fa/zoomlarge_page_16.jpg?impolicy=large"
+  },
+  {
+   "marke": "JAMESON",
+   "name": "Irish Whiskey",
+   "packung": "0,7 l",
+   "preis": 14.99,
+   "alt_preis": 21.99,
+   "grundpreis": 21.41,
+   "gp_einheit": "l",
+   "kategorie": "Whiskey",
+   "bereich": [
+    24,
+    42,
+    31,
+    58
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/2429756e-072b-457b-afe8-982a564633fa/zoomlarge_page_16.jpg?impolicy=large"
+  },
+  {
+   "marke": "METAXA",
+   "name": "5 Sterne",
+   "packung": "0,7 l",
+   "preis": 9.99,
+   "alt_preis": 15.99,
+   "grundpreis": 14.27,
+   "gp_einheit": "l",
+   "kategorie": "Weinbrand",
+   "bereich": [
+    56,
+    42,
+    64,
+    58
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/2429756e-072b-457b-afe8-982a564633fa/zoomlarge_page_16.jpg?impolicy=large"
+  },
+  {
+   "marke": "Valensina",
+   "name": "Saft/Nektar",
+   "packung": "1 Liter",
+   "preis": 1.39,
+   "alt_preis": 2.49,
+   "grundpreis": 1.39,
+   "gp_einheit": "l",
+   "kategorie": "Saft",
+   "bereich": [
+    79,
+    42,
+    94,
+    58
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/2429756e-072b-457b-afe8-982a564633fa/zoomlarge_page_16.jpg?impolicy=large"
+  },
+  {
+   "marke": "Berentzen",
+   "name": "Wintercream Likör",
+   "packung": "0,7 l",
+   "preis": 6.99,
+   "alt_preis": 9.99,
+   "grundpreis": 9.99,
+   "gp_einheit": "l",
+   "kategorie": "Likör",
+   "bereich": [
+    18,
+    65,
+    31,
+    79
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/2429756e-072b-457b-afe8-982a564633fa/zoomlarge_page_16.jpg?impolicy=large"
+  },
+  {
+   "marke": "HEARTS",
+   "name": "Cappuccino mit feinem Kakaonote (80 Tassen)",
+   "packung": "1 kg",
+   "preis": 4.59,
+   "alt_preis": 5.99,
+   "grundpreis": 4.59,
+   "gp_einheit": "kg",
+   "kategorie": "Kaffee",
+   "bereich": [
+    53,
+    65,
+    61,
+    79
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/2429756e-072b-457b-afe8-982a564633fa/zoomlarge_page_16.jpg?impolicy=large"
+  },
+  {
+   "marke": "BERTOLLI",
+   "name": "Olivenöl",
+   "packung": "500 ml",
+   "preis": 5.99,
+   "alt_preis": 7.99,
+   "grundpreis": 11.98,
+   "gp_einheit": "l",
+   "kategorie": "Olivenöl",
+   "bereich": [
+    83,
+    65,
+    94,
+    79
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/2429756e-072b-457b-afe8-982a564633fa/zoomlarge_page_16.jpg?impolicy=large"
+  },
+  {
+   "marke": "Meßmer",
+   "name": "Kräutertee XXL",
+   "packung": "50 Aufgussbeutel",
+   "preis": 2.49,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Tee",
+   "bereich": [
+    18,
+    81,
+    33,
+    96
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/2429756e-072b-457b-afe8-982a564633fa/zoomlarge_page_16.jpg?impolicy=large"
+  },
+  {
+   "marke": "dusch das",
+   "name": "Duschgel XXXL (For Men, Noire, Kokos Sheabutter oder Acai Berry)",
+   "packung": "3 x 225 ml",
+   "preis": 2.79,
+   "alt_preis": null,
+   "grundpreis": 4.13,
+   "gp_einheit": "l",
+   "kategorie": "Duschgel",
+   "bereich": [
+    50,
+    81,
+    60,
+    96
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/2429756e-072b-457b-afe8-982a564633fa/zoomlarge_page_16.jpg?impolicy=large"
+  },
+  {
+   "marke": "DAUNASOFT",
+   "name": "Küchentücher mit Motiv Fahrrad",
+   "packung": "6 x 100 Blatt",
+   "preis": 4.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Küchentücher",
+   "bereich": [
+    67,
+    81,
+    85,
+    96
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/2429756e-072b-457b-afe8-982a564633fa/zoomlarge_page_16.jpg?impolicy=large"
+  },
+  {
+   "marke": "Danone",
+   "name": "Activia Frucht oder Ballaststoffe",
+   "packung": "8er Pack",
+   "preis": 2.99,
+   "alt_preis": null,
+   "grundpreis": 3.25,
+   "gp_einheit": "kg",
+   "kategorie": "Joghurt",
+   "bereich": [
+    25,
+    27,
+    49,
+    42
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/3a3f9444-529d-4568-b28a-20c2d207c561/zoomlarge_page_17.jpg?impolicy=large"
+  },
+  {
+   "marke": "Kerrygold",
+   "name": "Extra gesalzen oder ungesalzen",
+   "packung": "400 g",
+   "preis": 1.99,
+   "alt_preis": 3.29,
+   "grundpreis": 4.98,
+   "gp_einheit": "kg",
+   "kategorie": "Butter",
+   "bereich": [
+    62,
+    21,
+    97,
+    39
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/3a3f9444-529d-4568-b28a-20c2d207c561/zoomlarge_page_17.jpg?impolicy=large"
+  },
+  {
+   "marke": "Tempelburger",
+   "name": "Matjesfilethappen, Classic oder mit zarter Rauchnote",
+   "packung": "500 g",
+   "preis": 4.79,
+   "alt_preis": 5.39,
+   "grundpreis": 9.58,
+   "gp_einheit": "kg",
+   "kategorie": "Fisch",
+   "bereich": [
+    8,
+    44,
+    36,
+    57
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/3a3f9444-529d-4568-b28a-20c2d207c561/zoomlarge_page_17.jpg?impolicy=large"
+  },
+  {
+   "marke": "Unsere Goldstücke",
+   "name": "XXL, 20 Weizen-Brötchen",
+   "packung": "1 kg",
+   "preis": 2.99,
+   "alt_preis": 4.59,
+   "grundpreis": 2.99,
+   "gp_einheit": "kg",
+   "kategorie": "Brötchen",
+   "bereich": [
+    50,
+    45,
+    66,
+    57
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/3a3f9444-529d-4568-b28a-20c2d207c561/zoomlarge_page_17.jpg?impolicy=large"
+  },
+  {
+   "marke": "",
+   "name": "Sahne Rolle, Zitrone oder Schwarzwälder Kirsch",
+   "packung": "400 g",
+   "preis": 2.99,
+   "alt_preis": 3.99,
+   "grundpreis": 7.48,
+   "gp_einheit": "kg",
+   "kategorie": "Kuchen",
+   "bereich": [
+    70,
+    45,
+    97,
+    58
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/3a3f9444-529d-4568-b28a-20c2d207c561/zoomlarge_page_17.jpg?impolicy=large"
+  },
+  {
+   "marke": "",
+   "name": "Schweinebauch mit Knochen und Schwarte",
+   "packung": "ca. 2 kg",
+   "preis": 4.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Fleisch",
+   "bereich": [
+    6,
+    62,
+    36,
+    73
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/3a3f9444-529d-4568-b28a-20c2d207c561/zoomlarge_page_17.jpg?impolicy=large"
+  },
+  {
+   "marke": "Gut Langenhof",
+   "name": "Hähnchen Pollo Fino, aus der Oberkeule mit Haut, ohne Knochen",
+   "packung": "800 g",
+   "preis": 6.49,
+   "alt_preis": null,
+   "grundpreis": 8.11,
+   "gp_einheit": "kg",
+   "kategorie": "Geflügel",
+   "bereich": [
+    37,
+    65,
+    58,
+    75
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/3a3f9444-529d-4568-b28a-20c2d207c561/zoomlarge_page_17.jpg?impolicy=large"
+  },
+  {
+   "marke": "Gut Langenhof",
+   "name": "Hähnchen Ministeaks, natur, aus dem Brustfilet geschnitten",
+   "packung": "800 g",
+   "preis": 6.99,
+   "alt_preis": null,
+   "grundpreis": 8.74,
+   "gp_einheit": "kg",
+   "kategorie": "Geflügel",
+   "bereich": [
+    68,
+    65,
+    92,
+    75
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/3a3f9444-529d-4568-b28a-20c2d207c561/zoomlarge_page_17.jpg?impolicy=large"
+  },
+  {
+   "marke": "",
+   "name": "Hackfleisch gemischt, vom Schwein und Rind, zum Braten",
+   "packung": "1 kg",
+   "preis": 6.99,
+   "alt_preis": null,
+   "grundpreis": 6.99,
+   "gp_einheit": "kg",
+   "kategorie": "Hackfleisch",
+   "bereich": [
+    4,
+    82,
+    22,
+    94
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/3a3f9444-529d-4568-b28a-20c2d207c561/zoomlarge_page_17.jpg?impolicy=large"
+  },
+  {
+   "marke": "Cortado",
+   "name": "WPC-Sichtschutzzaun",
+   "packung": "6 Elemente, 6 Pfosten",
+   "preis": 699.0,
+   "alt_preis": 1299.0,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Sichtschutzzaun",
+   "bereich": [
+    1,
+    12,
+    24,
+    28
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/ab74aa06-7b7e-4710-8257-cc773758c2e4/zoomlarge_page_18.jpg?impolicy=large"
+  },
+  {
+   "marke": "Moosgrün",
+   "name": "Doppelstabmatten-Zaun Komplett-Set 10 m",
+   "packung": "10 m",
+   "preis": 199.0,
+   "alt_preis": 399.0,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Gartenzaun",
+   "bereich": [
+    49,
+    12,
+    71,
+    25
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/ab74aa06-7b7e-4710-8257-cc773758c2e4/zoomlarge_page_18.jpg?impolicy=large"
+  },
+  {
+   "marke": "Moosgrün",
+   "name": "Doppelstabmatten-Gartentor",
+   "packung": "ca. 100 x 120 cm",
+   "preis": 119.0,
+   "alt_preis": 379.0,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Gartentor",
+   "bereich": [
+    72,
+    12,
+    87,
+    25
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/ab74aa06-7b7e-4710-8257-cc773758c2e4/zoomlarge_page_18.jpg?impolicy=large"
+  },
+  {
+   "marke": "Greenyard",
+   "name": "Wohnmobil-Carport",
+   "packung": "ca. 760 x 360 x 360 cm",
+   "preis": 1999.0,
+   "alt_preis": 3999.0,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Carport",
+   "bereich": [
+    1,
+    26,
+    24,
+    37
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/ab74aa06-7b7e-4710-8257-cc773758c2e4/zoomlarge_page_18.jpg?impolicy=large"
+  },
+  {
+   "marke": "Greenyard",
+   "name": "Kunststoff-Vordach",
+   "packung": "ca. 120 x 80 x 23,5 cm",
+   "preis": 29.99,
+   "alt_preis": 79.99,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Vordach",
+   "bereich": [
+    25,
+    26,
+    48,
+    37
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/ab74aa06-7b7e-4710-8257-cc773758c2e4/zoomlarge_page_18.jpg?impolicy=large"
+  },
+  {
+   "marke": "Alaska",
+   "name": "Metallgeräteschuppen",
+   "packung": "ca. 604 x 386 x 241 cm",
+   "preis": 999.0,
+   "alt_preis": 1799.0,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Gerätehaus",
+   "bereich": [
+    49,
+    26,
+    71,
+    37
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/ab74aa06-7b7e-4710-8257-cc773758c2e4/zoomlarge_page_18.jpg?impolicy=large"
+  },
+  {
+   "marke": "Powerfix",
+   "name": "Winter-Gewächshaus",
+   "packung": "ca. 90 x 100 cm",
+   "preis": 19.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Gewächshaus",
+   "bereich": [
+    72,
+    26,
+    88,
+    37
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/ab74aa06-7b7e-4710-8257-cc773758c2e4/zoomlarge_page_18.jpg?impolicy=large"
+  },
+  {
+   "marke": "",
+   "name": "Kompaktlader MKL730",
+   "packung": "",
+   "preis": 4999.0,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Lader",
+   "bereich": [
+    1,
+    46,
+    24,
+    59
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/ab74aa06-7b7e-4710-8257-cc773758c2e4/zoomlarge_page_18.jpg?impolicy=large"
+  },
+  {
+   "marke": "Scheppach",
+   "name": "Dumper DP3000",
+   "packung": "",
+   "preis": 999.0,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Dumper",
+   "bereich": [
+    25,
+    46,
+    48,
+    59
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/ab74aa06-7b7e-4710-8257-cc773758c2e4/zoomlarge_page_18.jpg?impolicy=large"
+  },
+  {
+   "marke": "Scheppach",
+   "name": "Holzspalter HL760LS",
+   "packung": "",
+   "preis": 279.0,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Holzspalter",
+   "bereich": [
+    50,
+    46,
+    71,
+    59
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/ab74aa06-7b7e-4710-8257-cc773758c2e4/zoomlarge_page_18.jpg?impolicy=large"
+  },
+  {
+   "marke": "GÜDE",
+   "name": "Vibrationsstampfer GVS 80E",
+   "packung": "",
+   "preis": 599.0,
+   "alt_preis": 899.0,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Stampfer",
+   "bereich": [
+    72,
+    46,
+    88,
+    59
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/ab74aa06-7b7e-4710-8257-cc773758c2e4/zoomlarge_page_18.jpg?impolicy=large"
+  },
+  {
+   "marke": "Scheppach",
+   "name": "Erdbohrer EB2000",
+   "packung": "",
+   "preis": 149.0,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Erdbohrer",
+   "bereich": [
+    1,
+    60,
+    24,
+    71
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/ab74aa06-7b7e-4710-8257-cc773758c2e4/zoomlarge_page_18.jpg?impolicy=large"
+  },
+  {
+   "marke": "Scheppach",
+   "name": "Akku-Kettensäge 20V BC-CS35SDuo-X Set L2",
+   "packung": "",
+   "preis": 149.0,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Kettensäge",
+   "bereich": [
+    25,
+    60,
+    48,
+    71
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/ab74aa06-7b7e-4710-8257-cc773758c2e4/zoomlarge_page_18.jpg?impolicy=large"
+  },
+  {
+   "marke": "",
+   "name": "Benzin-Aufsitzrasenmäher HM200-61",
+   "packung": "",
+   "preis": 979.0,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Rasenmäher",
+   "bereich": [
+    50,
+    60,
+    71,
+    71
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/ab74aa06-7b7e-4710-8257-cc773758c2e4/zoomlarge_page_18.jpg?impolicy=large"
+  },
+  {
+   "marke": "Kärcher",
+   "name": "Akku-Heckenschere HGE 18-50",
+   "packung": "",
+   "preis": 89.99,
+   "alt_preis": 114.99,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Heckenschere",
+   "bereich": [
+    72,
+    60,
+    88,
+    71
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/ab74aa06-7b7e-4710-8257-cc773758c2e4/zoomlarge_page_18.jpg?impolicy=large"
+  },
+  {
+   "marke": "Scheppach",
+   "name": "Kompressor HC53DC",
+   "packung": "",
+   "preis": 99.0,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Kompressor",
+   "bereich": [
+    2,
+    77,
+    24,
+    85
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/ab74aa06-7b7e-4710-8257-cc773758c2e4/zoomlarge_page_18.jpg?impolicy=large"
+  },
+  {
+   "marke": "Scheppach",
+   "name": "Akku-Maschinen-Set 3tlg. CJAD - Set 1",
+   "packung": "3-teilig",
+   "preis": 99.0,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Akku-Maschinen",
+   "bereich": [
+    25,
+    77,
+    48,
+    85
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/ab74aa06-7b7e-4710-8257-cc773758c2e4/zoomlarge_page_18.jpg?impolicy=large"
+  },
+  {
+   "marke": "Scheppach",
+   "name": "Akku Metallbandsäge C-MBS635-X - Set 5",
+   "packung": "",
+   "preis": 119.0,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Bandsäge",
+   "bereich": [
+    50,
+    77,
+    71,
+    85
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/ab74aa06-7b7e-4710-8257-cc773758c2e4/zoomlarge_page_18.jpg?impolicy=large"
+  },
+  {
+   "marke": "Scheppach",
+   "name": "Akku-Trockenbauschrauber BC-DWD400HS-2 Set 5",
+   "packung": "",
+   "preis": 99.0,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Schrauber",
+   "bereich": [
+    72,
+    77,
+    88,
+    85
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/ab74aa06-7b7e-4710-8257-cc773758c2e4/zoomlarge_page_18.jpg?impolicy=large"
+  },
+  {
+   "marke": "KRAFT",
+   "name": "Garagenschrank 6tlg.",
+   "packung": "6-teilig",
+   "preis": 599.0,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Garagenschrank",
+   "bereich": [
+    2,
+    88,
+    24,
+    96
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/ab74aa06-7b7e-4710-8257-cc773758c2e4/zoomlarge_page_18.jpg?impolicy=large"
+  },
+  {
+   "marke": "Scheppach",
+   "name": "Werkstattwagen TW1J00",
+   "packung": "",
+   "preis": 279.0,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Werkstattwagen",
+   "bereich": [
+    25,
+    88,
+    48,
+    96
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/ab74aa06-7b7e-4710-8257-cc773758c2e4/zoomlarge_page_18.jpg?impolicy=large"
+  },
+  {
+   "marke": "Scheppach",
+   "name": "Kapp-, Zug- und Gehrungssäge HM305SL",
+   "packung": "",
+   "preis": 269.0,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Kappsäge",
+   "bereich": [
+    50,
+    88,
+    71,
+    96
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/ab74aa06-7b7e-4710-8257-cc773758c2e4/zoomlarge_page_18.jpg?impolicy=large"
+  },
+  {
+   "marke": "Scheppach",
+   "name": "Elektro-Aschesauger AVC25",
+   "packung": "",
+   "preis": 39.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Aschesauger",
+   "bereich": [
+    72,
+    88,
+    88,
+    96
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/ab74aa06-7b7e-4710-8257-cc773758c2e4/zoomlarge_page_18.jpg?impolicy=large"
+  },
+  {
+   "marke": "Hyundai",
+   "name": "Inverter-Generator HY4500SEi D",
+   "packung": "",
+   "preis": 799.0,
+   "alt_preis": 899.0,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Generator",
+   "bereich": [
+    7,
+    8,
+    28,
+    16
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/c0a4b5ae-4c94-499a-b1db-2c8c65000ed7/zoomlarge_page_19.jpg?impolicy=large"
+  },
+  {
+   "marke": "Kraft",
+   "name": "Werkbank",
+   "packung": "120 x 60 x 85 cm",
+   "preis": 99.0,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Werkbank",
+   "bereich": [
+    30,
+    8,
+    43,
+    16
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/c0a4b5ae-4c94-499a-b1db-2c8c65000ed7/zoomlarge_page_19.jpg?impolicy=large"
+  },
+  {
+   "marke": "",
+   "name": "3-Rad Seniorenmobil SLSMO3",
+   "packung": "",
+   "preis": 1299.0,
+   "alt_preis": 1399.0,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Seniorenmobil",
+   "bereich": [
+    55,
+    8,
+    74,
+    17
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/c0a4b5ae-4c94-499a-b1db-2c8c65000ed7/zoomlarge_page_19.jpg?impolicy=large"
+  },
+  {
+   "marke": "Ridder",
+   "name": "Rollator Comfort Active",
+   "packung": "",
+   "preis": 79.99,
+   "alt_preis": 249.98,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Rollator",
+   "bereich": [
+    76,
+    8,
+    88,
+    17
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/c0a4b5ae-4c94-499a-b1db-2c8c65000ed7/zoomlarge_page_19.jpg?impolicy=large"
+  },
+  {
+   "marke": "Craftsman",
+   "name": "Paletten-Hubwagen 2,5 t",
+   "packung": "2,5 t",
+   "preis": 279.0,
+   "alt_preis": 599.0,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Hubwagen",
+   "bereich": [
+    7,
+    18,
+    27,
+    25
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/c0a4b5ae-4c94-499a-b1db-2c8c65000ed7/zoomlarge_page_19.jpg?impolicy=large"
+  },
+  {
+   "marke": "Scheppach",
+   "name": "Elektro-Hochdruckreiniger 180 bar HCE2500 SE",
+   "packung": "",
+   "preis": 99.0,
+   "alt_preis": 193.9,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Hochdruckreiniger",
+   "bereich": [
+    30,
+    18,
+    43,
+    25
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/c0a4b5ae-4c94-499a-b1db-2c8c65000ed7/zoomlarge_page_19.jpg?impolicy=large"
+  },
+  {
+   "marke": "Scheppach",
+   "name": "Benzin-Kehrmaschine",
+   "packung": "",
+   "preis": 999.0,
+   "alt_preis": 1249.0,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Kehrmaschine",
+   "bereich": [
+    54,
+    18,
+    75,
+    26
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/c0a4b5ae-4c94-499a-b1db-2c8c65000ed7/zoomlarge_page_19.jpg?impolicy=large"
+  },
+  {
+   "marke": "",
+   "name": "Rollstuhl ATS2301 faltbar",
+   "packung": "",
+   "preis": 149.0,
+   "alt_preis": 326.6,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Rollstuhl",
+   "bereich": [
+    76,
+    18,
+    88,
+    25
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/c0a4b5ae-4c94-499a-b1db-2c8c65000ed7/zoomlarge_page_19.jpg?impolicy=large"
+  },
+  {
+   "marke": "",
+   "name": "Relax-Ecksofa",
+   "packung": "",
+   "preis": 699.0,
+   "alt_preis": 1299.0,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Sofa",
+   "bereich": [
+    7,
+    41,
+    28,
+    50
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/c0a4b5ae-4c94-499a-b1db-2c8c65000ed7/zoomlarge_page_19.jpg?impolicy=large"
+  },
+  {
+   "marke": "",
+   "name": "Ecksofa Lederoptik",
+   "packung": "",
+   "preis": 599.0,
+   "alt_preis": 1199.0,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Sofa",
+   "bereich": [
+    30,
+    41,
+    50,
+    50
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/c0a4b5ae-4c94-499a-b1db-2c8c65000ed7/zoomlarge_page_19.jpg?impolicy=large"
+  },
+  {
+   "marke": "",
+   "name": "Verstellbarer Relaxsessel",
+   "packung": "",
+   "preis": 249.0,
+   "alt_preis": 449.0,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Sessel",
+   "bereich": [
+    55,
+    41,
+    75,
+    50
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/c0a4b5ae-4c94-499a-b1db-2c8c65000ed7/zoomlarge_page_19.jpg?impolicy=large"
+  },
+  {
+   "marke": "",
+   "name": "Elektr. TV-Massagesessel",
+   "packung": "",
+   "preis": 299.0,
+   "alt_preis": 699.0,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Massagesessel",
+   "bereich": [
+    76,
+    41,
+    88,
+    50
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/c0a4b5ae-4c94-499a-b1db-2c8c65000ed7/zoomlarge_page_19.jpg?impolicy=large"
+  },
+  {
+   "marke": "",
+   "name": "2-Sitzer-Sofabett",
+   "packung": "",
+   "preis": 279.0,
+   "alt_preis": 499.0,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Sofa",
+   "bereich": [
+    7,
+    52,
+    28,
+    62
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/c0a4b5ae-4c94-499a-b1db-2c8c65000ed7/zoomlarge_page_19.jpg?impolicy=large"
+  },
+  {
+   "marke": "",
+   "name": "Hocker",
+   "packung": "",
+   "preis": 79.99,
+   "alt_preis": 199.99,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Hocker",
+   "bereich": [
+    30,
+    52,
+    43,
+    60
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/c0a4b5ae-4c94-499a-b1db-2c8c65000ed7/zoomlarge_page_19.jpg?impolicy=large"
+  },
+  {
+   "marke": "",
+   "name": "Loungesessel",
+   "packung": "",
+   "preis": 189.0,
+   "alt_preis": 599.0,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Sessel",
+   "bereich": [
+    55,
+    52,
+    74,
+    62
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/c0a4b5ae-4c94-499a-b1db-2c8c65000ed7/zoomlarge_page_19.jpg?impolicy=large"
+  },
+  {
+   "marke": "",
+   "name": "Relaxsessel",
+   "packung": "",
+   "preis": 229.0,
+   "alt_preis": 399.0,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Sessel",
+   "bereich": [
+    76,
+    52,
+    88,
+    62
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/c0a4b5ae-4c94-499a-b1db-2c8c65000ed7/zoomlarge_page_19.jpg?impolicy=large"
+  },
+  {
+   "marke": "Technaxx",
+   "name": "Wildkamera 1080p TX-256",
+   "packung": "",
+   "preis": 39.99,
+   "alt_preis": 69.99,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Wildkamera",
+   "bereich": [
+    7,
+    68,
+    28,
+    78
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/c0a4b5ae-4c94-499a-b1db-2c8c65000ed7/zoomlarge_page_19.jpg?impolicy=large"
+  },
+  {
+   "marke": "Walter",
+   "name": "Feuerrohr",
+   "packung": "",
+   "preis": 79.99,
+   "alt_preis": 149.99,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Feuerrohr",
+   "bereich": [
+    30,
+    68,
+    43,
+    78
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/c0a4b5ae-4c94-499a-b1db-2c8c65000ed7/zoomlarge_page_19.jpg?impolicy=large"
+  },
+  {
+   "marke": "Home Deluxe",
+   "name": "Outdoor Whirlpool Malaga",
+   "packung": "200 x 200 x 88 cm",
+   "preis": 3599.0,
+   "alt_preis": 6990.0,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Whirlpool",
+   "bereich": [
+    56,
+    68,
+    73,
+    78
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/c0a4b5ae-4c94-499a-b1db-2c8c65000ed7/zoomlarge_page_19.jpg?impolicy=large"
+  },
+  {
+   "marke": "Dömitz a Finnisch",
+   "name": "Saunahaus",
+   "packung": "219 x 295 x 228 cm",
+   "preis": 2899.0,
+   "alt_preis": 4089.99,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Saunahaus",
+   "bereich": [
+    76,
+    68,
+    88,
+    78
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/c0a4b5ae-4c94-499a-b1db-2c8c65000ed7/zoomlarge_page_19.jpg?impolicy=large"
+  },
+  {
+   "marke": "",
+   "name": "Entwässerungsrinne",
+   "packung": "3er-Set",
+   "preis": 39.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Entwässerungsrinne",
+   "bereich": [
+    7,
+    84,
+    28,
+    92
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/c0a4b5ae-4c94-499a-b1db-2c8c65000ed7/zoomlarge_page_19.jpg?impolicy=large"
+  },
+  {
+   "marke": "Einhell",
+   "name": "Bohr-Meißelhammer TE-IH 950/1 S",
+   "packung": "",
+   "preis": 79.99,
+   "alt_preis": 139.95,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Bohrhammer",
+   "bereich": [
+    30,
+    84,
+    43,
+    92
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/c0a4b5ae-4c94-499a-b1db-2c8c65000ed7/zoomlarge_page_19.jpg?impolicy=large"
+  },
+  {
+   "marke": "Koenig",
+   "name": "Heißgetränke-Spender SHK800",
+   "packung": "",
+   "preis": 159.0,
+   "alt_preis": 339.0,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Getränkespender",
+   "bereich": [
+    56,
+    84,
+    73,
+    92
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/c0a4b5ae-4c94-499a-b1db-2c8c65000ed7/zoomlarge_page_19.jpg?impolicy=large"
+  },
+  {
+   "marke": "Grafe & Freund",
+   "name": "Emaille Eintopfkefe Gulaschkanone",
+   "packung": "",
+   "preis": 79.99,
+   "alt_preis": 129.99,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Gulaschkanone",
+   "bereich": [
+    76,
+    84,
+    88,
+    92
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/c0a4b5ae-4c94-499a-b1db-2c8c65000ed7/zoomlarge_page_19.jpg?impolicy=large"
+  },
+  {
+   "marke": "NORMA connect",
+   "name": "Prepaid Mobilfunk Startpaket (Tarife Smart S, M, L)",
+   "packung": "Startpaket",
+   "preis": 2.99,
+   "alt_preis": 9.95,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Mobilfunk",
+   "bereich": [
+    2,
+    50,
+    45,
+    90
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/a2cdb44c-741d-4168-8af5-7fcba155bdf2/zoomlarge_page_20.jpg?impolicy=large"
+  },
+  {
+   "marke": "NORMA connect",
+   "name": "Prepaid Mobilfunk Startpaket mit NORMA Plus App",
+   "packung": "Startpaket",
+   "preis": 1.99,
+   "alt_preis": 9.95,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Mobilfunk",
+   "bereich": null,
+   "seiten_bild": "https://content-media.bonial.biz/a2cdb44c-741d-4168-8af5-7fcba155bdf2/zoomlarge_page_20.jpg?impolicy=large"
+  },
+  {
+   "marke": "Pfiff",
+   "name": "Erdnüsse geröstet & gesalzen",
+   "packung": "500 g",
+   "preis": 1.79,
+   "alt_preis": 1.99,
+   "grundpreis": 3.58,
+   "gp_einheit": "kg",
+   "kategorie": "Nüsse",
+   "bereich": [
+    22,
+    32,
+    49,
+    61
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/d68a04f6-9847-4799-a4ce-f7e5fc3efdc6/zoomlarge_page_21.jpg?impolicy=large"
+  },
+  {
+   "marke": "Pfiff",
+   "name": "Erdnüsse geröstet, ohne Salz",
+   "packung": "500 g",
+   "preis": 1.79,
+   "alt_preis": 1.99,
+   "grundpreis": 3.58,
+   "gp_einheit": "kg",
+   "kategorie": "Nüsse",
+   "bereich": [
+    70,
+    32,
+    96,
+    61
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/d68a04f6-9847-4799-a4ce-f7e5fc3efdc6/zoomlarge_page_21.jpg?impolicy=large"
+  },
+  {
+   "marke": "Pfiff",
+   "name": "Erdnüsse geröstet & gesalzen",
+   "packung": "200 g",
+   "preis": 0.79,
+   "alt_preis": 0.99,
+   "grundpreis": 3.95,
+   "gp_einheit": "kg",
+   "kategorie": "Nüsse",
+   "bereich": [
+    19,
+    64,
+    47,
+    89
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/d68a04f6-9847-4799-a4ce-f7e5fc3efdc6/zoomlarge_page_21.jpg?impolicy=large"
+  },
+  {
+   "marke": "Pfiff",
+   "name": "Cashews, verschiedene Sorten",
+   "packung": "150 g",
+   "preis": 1.95,
+   "alt_preis": 2.25,
+   "grundpreis": 13.0,
+   "gp_einheit": "kg",
+   "kategorie": "Nüsse",
+   "bereich": [
+    54,
+    68,
+    97,
+    91
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/d68a04f6-9847-4799-a4ce-f7e5fc3efdc6/zoomlarge_page_21.jpg?impolicy=large"
+  },
+  {
+   "marke": "Excelsior",
+   "name": "Schokoladenriegel Boxer/Runner/Jumper",
+   "packung": "300 g",
+   "preis": 1.99,
+   "alt_preis": 2.09,
+   "grundpreis": 6.63,
+   "gp_einheit": "kg",
+   "kategorie": "Schokoriegel",
+   "bereich": [
+    6,
+    26,
+    48,
+    55
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/4a0e2b95-4df1-4f62-8076-45f25be0eb09/zoomlarge_page_22.jpg?impolicy=large"
+  },
+  {
+   "marke": "Excelsior",
+   "name": "Edel-Sahne-Schokolade z.B. Kaffee-Sahne",
+   "packung": "200 g",
+   "preis": 1.99,
+   "alt_preis": 2.19,
+   "grundpreis": 9.95,
+   "gp_einheit": "kg",
+   "kategorie": "Schokolade",
+   "bereich": [
+    54,
+    27,
+    94,
+    54
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/4a0e2b95-4df1-4f62-8076-45f25be0eb09/zoomlarge_page_22.jpg?impolicy=large"
+  },
+  {
+   "marke": "Excelsior",
+   "name": "Gefüllte Tafel Magie Schokolade z.B. Cookies&Cream",
+   "packung": "190 g / 200 g",
+   "preis": 1.99,
+   "alt_preis": 2.19,
+   "grundpreis": 10.47,
+   "gp_einheit": "kg",
+   "kategorie": "Schokolade",
+   "bereich": [
+    5,
+    61,
+    49,
+    91
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/4a0e2b95-4df1-4f62-8076-45f25be0eb09/zoomlarge_page_22.jpg?impolicy=large"
+  },
+  {
+   "marke": "Excelsior",
+   "name": "Edelnusstafel z.B. Rum Traube Nuss",
+   "packung": "200 g",
+   "preis": 1.99,
+   "alt_preis": 2.19,
+   "grundpreis": 9.95,
+   "gp_einheit": "kg",
+   "kategorie": "Schokolade",
+   "bereich": [
+    55,
+    63,
+    94,
+    91
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/4a0e2b95-4df1-4f62-8076-45f25be0eb09/zoomlarge_page_22.jpg?impolicy=large"
+  },
+  {
+   "marke": "Ardilla",
+   "name": "Nussvariation naturbelassen",
+   "packung": "200 g",
+   "preis": 2.99,
+   "alt_preis": 3.39,
+   "grundpreis": 14.95,
+   "gp_einheit": "kg",
+   "kategorie": "Nüsse",
+   "bereich": [
+    7,
+    38,
+    28,
+    56
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/55699a92-5179-48ee-ad09-94973279fbe5/zoomlarge_page_23.jpg?impolicy=large"
+  },
+  {
+   "marke": "Backen",
+   "name": "Mandeln gemahlen, unblanchiert",
+   "packung": "200 g",
+   "preis": 2.49,
+   "alt_preis": 2.99,
+   "grundpreis": 12.45,
+   "gp_einheit": "kg",
+   "kategorie": "Mandeln",
+   "bereich": [
+    40,
+    40,
+    61,
+    57
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/55699a92-5179-48ee-ad09-94973279fbe5/zoomlarge_page_23.jpg?impolicy=large"
+  },
+  {
+   "marke": "Backen",
+   "name": "Kokos fein geraspelt",
+   "packung": "200 g",
+   "preis": 1.19,
+   "alt_preis": 1.45,
+   "grundpreis": 5.95,
+   "gp_einheit": "kg",
+   "kategorie": "Kokos",
+   "bereich": [
+    77,
+    37,
+    95,
+    60
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/55699a92-5179-48ee-ad09-94973279fbe5/zoomlarge_page_23.jpg?impolicy=large"
+  },
+  {
+   "marke": "Backen",
+   "name": "Haselnusskerne ganz oder gemahlen",
+   "packung": "200 g",
+   "preis": 2.99,
+   "alt_preis": 3.49,
+   "grundpreis": 14.95,
+   "gp_einheit": "kg",
+   "kategorie": "Haselnüsse",
+   "bereich": [
+    16,
+    64,
+    32,
+    89
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/55699a92-5179-48ee-ad09-94973279fbe5/zoomlarge_page_23.jpg?impolicy=large"
+  },
+  {
+   "marke": "Backen",
+   "name": "Mandeln gehackt oder gestiftet",
+   "packung": "100 g",
+   "preis": 1.25,
+   "alt_preis": 1.49,
+   "grundpreis": 12.5,
+   "gp_einheit": "kg",
+   "kategorie": "Mandeln",
+   "bereich": [
+    35,
+    69,
+    64,
+    87
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/55699a92-5179-48ee-ad09-94973279fbe5/zoomlarge_page_23.jpg?impolicy=large"
+  },
+  {
+   "marke": "Backen",
+   "name": "Mandeln gehobelt",
+   "packung": "100 g",
+   "preis": 1.25,
+   "alt_preis": 1.49,
+   "grundpreis": 12.5,
+   "gp_einheit": "kg",
+   "kategorie": "Mandeln",
+   "bereich": [
+    69,
+    69,
+    90,
+    87
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/55699a92-5179-48ee-ad09-94973279fbe5/zoomlarge_page_23.jpg?impolicy=large"
+  },
+  {
+   "marke": "multiTEC",
+   "name": "Gefrierbeutel",
+   "packung": "je 75x3 l / 100x1 l",
+   "preis": 1.15,
+   "alt_preis": 1.45,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Gefrierbeutel",
+   "bereich": [
+    9,
+    39,
+    24,
+    58
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/52add9b6-26c8-495b-8163-8dd5ced63e89/zoomlarge_page_24.jpg?impolicy=large"
+  },
+  {
+   "marke": "multiTEC",
+   "name": "Aluminium-Folie besonders reißfest und hitzebeständig",
+   "packung": "je 50 m",
+   "preis": 2.89,
+   "alt_preis": 3.25,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Alufolie",
+   "bereich": [
+    28,
+    35,
+    49,
+    58
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/52add9b6-26c8-495b-8163-8dd5ced63e89/zoomlarge_page_24.jpg?impolicy=large"
+  },
+  {
+   "marke": "Riva",
+   "name": "Nut/Choco Star",
+   "packung": "je 6x68 ml",
+   "preis": 2.29,
+   "alt_preis": 2.69,
+   "grundpreis": 5.61,
+   "gp_einheit": "l",
+   "kategorie": "Eis",
+   "bereich": [
+    51,
+    42,
+    72,
+    58
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/52add9b6-26c8-495b-8163-8dd5ced63e89/zoomlarge_page_24.jpg?impolicy=large"
+  },
+  {
+   "marke": "Riva",
+   "name": "Watermelon Sticks",
+   "packung": "je 5x73 ml",
+   "preis": 1.49,
+   "alt_preis": 1.89,
+   "grundpreis": 4.08,
+   "gp_einheit": "l",
+   "kategorie": "Eis",
+   "bereich": [
+    75,
+    42,
+    97,
+    58
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/52add9b6-26c8-495b-8163-8dd5ced63e89/zoomlarge_page_24.jpg?impolicy=large"
+  },
+  {
+   "marke": "multiTEC",
+   "name": "Allzweck-/Gefrierbeutel mit Zip",
+   "packung": "je 15x3 l / 20x1 l",
+   "preis": 1.49,
+   "alt_preis": 1.59,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Gefrierbeutel",
+   "bereich": [
+    9,
+    68,
+    24,
+    83
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/52add9b6-26c8-495b-8163-8dd5ced63e89/zoomlarge_page_24.jpg?impolicy=large"
+  },
+  {
+   "marke": "multiTEC",
+   "name": "Müllbeutel mit Tragegriffen",
+   "packung": "je 50x25 l",
+   "preis": 1.15,
+   "alt_preis": 1.19,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Müllbeutel",
+   "bereich": [
+    29,
+    68,
+    49,
+    83
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/52add9b6-26c8-495b-8163-8dd5ced63e89/zoomlarge_page_24.jpg?impolicy=large"
+  },
+  {
+   "marke": "St. Andreas",
+   "name": "Melatonin Spray oder Baldrian-Tropfen",
+   "packung": "je 25 ml oder je 150 ml",
+   "preis": 3.45,
+   "alt_preis": 4.25,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Nahrungsergänzung",
+   "bereich": [
+    51,
+    71,
+    72,
+    90
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/52add9b6-26c8-495b-8163-8dd5ced63e89/zoomlarge_page_24.jpg?impolicy=large"
+  },
+  {
+   "marke": "Riva",
+   "name": "Spaghetti Waffelhörnchen oder Softeis Waffelhörnchen",
+   "packung": "je 4x130 ml oder je 4x140 ml",
+   "preis": 1.99,
+   "alt_preis": 2.29,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Eis",
+   "bereich": [
+    75,
+    72,
+    97,
+    90
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/52add9b6-26c8-495b-8163-8dd5ced63e89/zoomlarge_page_24.jpg?impolicy=large"
+  },
+  {
+   "marke": "Ardilla",
+   "name": "Walnusskerne naturbelassen",
+   "packung": "je 200 g",
+   "preis": 2.49,
+   "alt_preis": 2.99,
+   "grundpreis": 12.45,
+   "gp_einheit": "kg",
+   "kategorie": "Nüsse",
+   "bereich": [
+    77,
+    5,
+    95,
+    20
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/cb896eac-f4bc-4591-ab25-685e66b2b2b0/zoomlarge_page_25.jpg?impolicy=large"
+  },
+  {
+   "marke": "PFIFF",
+   "name": "Macadamia geröstet oder geröstet & gesalzen",
+   "packung": "je 125 g",
+   "preis": 2.99,
+   "alt_preis": 3.49,
+   "grundpreis": 23.92,
+   "gp_einheit": "kg",
+   "kategorie": "Nüsse",
+   "bereich": [
+    34,
+    26,
+    47,
+    38
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/cb896eac-f4bc-4591-ab25-685e66b2b2b0/zoomlarge_page_25.jpg?impolicy=large"
+  },
+  {
+   "marke": "TRIMM",
+   "name": "Orangensaft aus Orangensaftkonzentrat 100% Fruchtgehalt",
+   "packung": "je 1 l",
+   "preis": 1.39,
+   "alt_preis": 1.99,
+   "grundpreis": 1.39,
+   "gp_einheit": "l",
+   "kategorie": "Saft",
+   "bereich": [
+    77,
+    25,
+    94,
+    37
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/cb896eac-f4bc-4591-ab25-685e66b2b2b0/zoomlarge_page_25.jpg?impolicy=large"
+  },
+  {
+   "marke": "TRIMM",
+   "name": "Orangennektar aus Orangensaftkonzentrat mind. 50% Fruchtgehalt",
+   "packung": "je 1,5 l",
+   "preis": 1.39,
+   "alt_preis": 1.69,
+   "grundpreis": 0.93,
+   "gp_einheit": "l",
+   "kategorie": "Nektar",
+   "bereich": [
+    29,
+    39,
+    48,
+    51
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/cb896eac-f4bc-4591-ab25-685e66b2b2b0/zoomlarge_page_25.jpg?impolicy=large"
+  },
+  {
+   "marke": "DAUNASOFT",
+   "name": "Zupfi Taschentücher",
+   "packung": "100 Stück",
+   "preis": 0.85,
+   "alt_preis": 0.95,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Taschentücher",
+   "bereich": [
+    67,
+    40,
+    97,
+    50
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/cb896eac-f4bc-4591-ab25-685e66b2b2b0/zoomlarge_page_25.jpg?impolicy=large"
+  },
+  {
+   "marke": "DAUNASOFT",
+   "name": "Taschentücher",
+   "packung": "30 x 10 Stück",
+   "preis": 2.75,
+   "alt_preis": 2.85,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Taschentücher",
+   "bereich": [
+    26,
+    53,
+    48,
+    64
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/cb896eac-f4bc-4591-ab25-685e66b2b2b0/zoomlarge_page_25.jpg?impolicy=large"
+  },
+  {
+   "marke": "DAUNASOFT",
+   "name": "Balsam Taschentücher",
+   "packung": "15 x 10 Stück",
+   "preis": 1.65,
+   "alt_preis": 1.75,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Taschentücher",
+   "bereich": [
+    64,
+    53,
+    96,
+    64
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/cb896eac-f4bc-4591-ab25-685e66b2b2b0/zoomlarge_page_25.jpg?impolicy=large"
+  },
+  {
+   "marke": "DAUNASOFT",
+   "name": "Küchentücher Effect 3-lagig",
+   "packung": "je 4x64-Blatt",
+   "preis": 2.65,
+   "alt_preis": 2.75,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Küchentücher",
+   "bereich": [
+    26,
+    67,
+    48,
+    78
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/cb896eac-f4bc-4591-ab25-685e66b2b2b0/zoomlarge_page_25.jpg?impolicy=large"
+  },
+  {
+   "marke": "DAUNASOFT",
+   "name": "Toilettenpapier Komfort 3-lagig",
+   "packung": "je 10x220-Blatt",
+   "preis": 3.75,
+   "alt_preis": 3.85,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Toilettenpapier",
+   "bereich": [
+    64,
+    67,
+    96,
+    78
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/cb896eac-f4bc-4591-ab25-685e66b2b2b0/zoomlarge_page_25.jpg?impolicy=large"
+  },
+  {
+   "marke": "DAUNASOFT",
+   "name": "Toilettenpapier Sensation 4-lagig",
+   "packung": "je 10x200-Blatt",
+   "preis": 4.85,
+   "alt_preis": 4.95,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Toilettenpapier",
+   "bereich": [
+    16,
+    82,
+    48,
+    91
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/cb896eac-f4bc-4591-ab25-685e66b2b2b0/zoomlarge_page_25.jpg?impolicy=large"
+  },
+  {
+   "marke": "DAUNASOFT",
+   "name": "Toilettenpapier Nature Recycling 3-lagig",
+   "packung": "je 8x220-Blatt",
+   "preis": 2.55,
+   "alt_preis": 2.65,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Toilettenpapier",
+   "bereich": [
+    72,
+    82,
+    96,
+    91
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/cb896eac-f4bc-4591-ab25-685e66b2b2b0/zoomlarge_page_25.jpg?impolicy=large"
+  }
+ ]
+}
