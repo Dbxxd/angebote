@@ -1,5 +1,5 @@
 {
- "stand": "2026-10-31T13:17+01:00",
+ "stand": "2026-10-31T13:19+01:00",
  "regionen": [
   {
    "id": "steinfurt",
@@ -7,8 +7,7 @@
    "maerkte": [
     "Aldi",
     "E center",
-    "Edeka Altenberge",
-    "Edeka Greven",
+    "Edeka Altenberge/Greven",
     "K+K",
     "Kaufland",
     "Lidl",
@@ -16,7 +15,7 @@
     "Penny",
     "Rossmann"
    ],
-   "anzahl": 4125
+   "anzahl": 3743
   },
   {
    "id": "winsen",
