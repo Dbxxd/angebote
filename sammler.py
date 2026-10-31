@@ -98,7 +98,9 @@ AUSSCHLIESSEN = ["foodservice"]  # Großhandel, nicht für Endkunden
 
 # Diese Märkte kommen überall aus eigenen Quellen; marktguru-Treffer dafür werden
 # ignoriert, damit nichts doppelt auftaucht. (Pro Region kommen die "kaufda"-Märkte dazu.)
-EIGENE_QUELLE = {"Aldi", "Rossmann"}
+EIGENE_QUELLE = {"Aldi"}
+# Diese Märkte kommen bevorzugt aus eigener Quelle; marktguru nur, wenn die eigene leer ist
+RUECKFALL_MARKTGURU = {"Rossmann"}
 
 
 def markt_kurzname(name: str) -> str | None:
@@ -1094,7 +1096,9 @@ def main():
 
         for plz in r["plz"]:
             mg = versuche(f"marktguru {plz}", lambda p=plz: mg_alle_angebote(p), status)
-            angebote += [a for a in mg if a["h"] not in eigene]
+            # Rossmann: kaufDA hat am Wochenwechsel oft keinen Prospekt -> dann marktguru
+            ohne = eigene | ({m for m in RUECKFALL_MARKTGURU if any(a["h"] == m for a in rossmann)})
+            angebote += [a for a in mg if a["h"] not in ohne]
 
         for markt, seite in r.get("kaufda", {}).items():
             holen = kk_angebote if markt == "K+K" else (lambda s, ll, m=markt: kaufda_markt_angebote(m, s, ll))
