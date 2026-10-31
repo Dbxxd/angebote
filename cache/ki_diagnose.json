@@ -15,7 +15,7 @@
    "pages": "list",
    "publisher": "dict",
    "pageCount": 22,
-   "score": 0.00236,
+   "score": 0.00168,
    "contentBadges": "list",
    "externalTracking": "dict"
   },
@@ -34,7 +34,7 @@
    "pages": "list",
    "publisher": "dict",
    "pageCount": 16,
-   "score": 0.0002,
+   "score": 0.00014,
    "contentBadges": "list",
    "externalTracking": "dict"
   },
@@ -53,7 +53,7 @@
    "pages": "list",
    "publisher": "dict",
    "pageCount": 25,
-   "score": 0.00147,
+   "score": 0.00146,
    "contentBadges": "list",
    "externalTracking": "dict"
   },
@@ -152,53 +152,5 @@
    "contentBadges": "list",
    "externalTracking": "dict"
   }
- },
- "Norma 96823900-5c22-4b59-b4ee-5df9d7aec7a3": {
-  "titel": "Mehr fürs Geld",
-  "seiten_api": 29,
-  "bilder": 29,
-  "bildgroessen": [
-   "1600x1600",
-   "2800x2800",
-   "75x96",
-   "768x1024"
-  ],
-  "seitenschluessel": [
-   "images",
-   "linkOuts",
-   "number",
-   "offers"
-  ],
-  "je_seite": [
-   15,
-   17,
-   24,
-   18,
-   17,
-   18,
-   16,
-   13,
-   13,
-   13,
-   13,
-   17,
-   17,
-   19,
-   14,
-   13,
-   12,
-   9,
-   23,
-   24,
-   2,
-   4,
-   4,
-   6,
-   8,
-   11,
-   0,
-   0,
-   0
-  ]
  }
 }

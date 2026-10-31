@@ -1,0 +1,10 @@
+{
+ "Altenberge": {
+  "status": 200,
+  "links": []
+ },
+ "Greven": {
+  "status": 404,
+  "links": []
+ }
+}
