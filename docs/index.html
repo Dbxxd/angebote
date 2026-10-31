@@ -276,7 +276,7 @@ button.bild { padding: 0; cursor: zoom-in; font: inherit; }
   width: 36px; height: 36px; display: grid; place-items: center; padding: 0;
 }
 .zurueck svg { width: 18px; height: 18px; stroke: currentColor; fill: none; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
-.sortierung { display: flex; gap: 6px; align-items: center; margin: 0 0 10px; font-size: 14px; color: var(--grau); }
+.sortierung { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; margin: 0 0 10px; font-size: 14px; color: var(--grau); }
 .abschnitt-kopf { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
 .textknopf { border: 0; background: none; padding: 4px 0; font-size: 14px; color: var(--tinte); text-decoration: underline; text-underline-offset: 3px; }
 
@@ -536,7 +536,18 @@ function nieTrifft(a) {
   return zustand.nie.some((n) => passtAlle(a, begriffWoerter(n)));
 }
 function nieFiltern() {
-  angebote = alleAngebote.filter((a) => !nieTrifft(a));
+  // "Nur aktuelle Angebote": was erst ab einem späteren Tag gilt, bleibt ausgeblendet
+  angebote = alleAngebote.filter((a) => !nieTrifft(a) && !(zustand.nurAktuell && a.bald));
+}
+function nurAktuellSetzen(an) {
+  zustand.nurAktuell = an;
+  speichern(); nieFiltern(); vorratZaehler();
+  meldung(an ? "Nur aktuelle Angebote" : "Auch kommende Angebote werden gezeigt");
+}
+function aktuellChip() {
+  const erlaubt = new Set(aktiveMaerkte());
+  const n = alleAngebote.filter((a) => a.bald && erlaubt.has(a.h) && !nieTrifft(a)).length;
+  return `<button class="chip" data-nur-aktuell aria-pressed="${!!zustand.nurAktuell}" title="Angebote, die erst ab einem späteren Tag gelten, ausblenden">Nur aktuelle${zustand.nurAktuell && n ? ` (${n} ausgeblendet)` : ""}</button>`;
 }
 function nieAnzahl(text) {
   const w = begriffWoerter(text);
@@ -1451,6 +1462,7 @@ function sortierChips() {
   return `<div class="sortierung" role="group" aria-label="Sortierung">Sortieren:
     <button class="chip" data-sort="gp" aria-pressed="${sortierung === "gp"}">Grundpreis</button>
     <button class="chip" data-sort="rabatt" aria-pressed="${sortierung === "rabatt"}">Größter Rabatt</button>
+    ${aktuellChip()}
   </div>`;
 }
 
@@ -1504,7 +1516,7 @@ function zeichneSucheInnen() {
     ziel.innerHTML =
       (zustand.vorlieben.length
         ? `<p class="zwischentitel">Deine Vorlieben</p><div class="vorschlaege">${zustand.vorlieben.map((v) => `<button class="chip" data-suche="${esc(v)}">${esc(v)}</button>`).join("")}</div>`
-        : "") + kachelnHTML();
+        : "") + `<div class="sortierung" style="margin-top:10px">${aktuellChip()}</div>` + kachelnHTML();
     return;
   }
 
@@ -1677,6 +1689,7 @@ const HILFE = [
     <ul>
       <li>Die Chips oben filtern nach Markt.</li>
       <li>Ohne Suchbegriff siehst du die <strong>Kategorien</strong>. Darin gibt es Unterkategorien, z.B. Käse → Scheibenkäse.</li>
+      <li><strong>„Nur aktuelle“</strong> blendet Angebote aus, die erst ab einem späteren Tag gelten (rotes „ab …“). Gilt überall in der App, auch in den Einstellungen unter „Anzeige“ umschaltbar.</li>
       <li>„Weitere Treffer“ sind Angebote, in denen das Wort nur vorkommt, z.B. Butterkekse bei „Butter“.</li>
       <li>Andere Wörter werden mitgesucht: Klopapier findet auch Toilettenpapier.</li>
     </ul>`],
@@ -1888,6 +1901,13 @@ function zeichneEinstellungen() {
   el.innerHTML = `
     <button class="knopf leise hilfe-knopf" data-gehe="hilfe">So funktioniert die App</button>
     <div class="abschnitt">
+      <h2>Anzeige</h2>
+      <label class="schalter-zeile" style="display:flex;align-items:center;gap:10px;font-size:16px">
+        <input type="checkbox" data-nur-aktuell-schalter ${zustand.nurAktuell ? "checked" : ""} style="width:22px;height:22px;margin:0;accent-color:var(--tinte)">
+        Nur aktuelle Angebote anzeigen</label>
+      <p class="erkl" style="margin-top:6px">Angebote, die erst ab morgen oder später gelten, werden überall ausgeblendet. Die Wochenliste bleibt unverändert.</p>
+    </div>
+    <div class="abschnitt">
       <h2>Vorlieben</h2>
       <p class="erkl">Produkte oder Marken, die dich interessieren. Unter „Für dich“ siehst du die günstigsten Angebote dazu.</p>
       <div class="tag-liste">${zustand.vorlieben.map((v, i) =>
@@ -2015,6 +2035,10 @@ document.addEventListener("click", async (ev) => {
       wendeAn({ ansicht: "suche", gruppe: null });
     }
   }
+  else if (d.nurAktuell !== undefined) {
+    nurAktuellSetzen(!zustand.nurAktuell);
+    zeichneSuche();
+  }
   else if (d.sort) {
     sortierung = d.sort;
     zeichneSuche();
@@ -2115,6 +2139,7 @@ document.addEventListener("click", async (ev) => {
 
 document.addEventListener("change", async (ev) => {
   const t = ev.target;
+  if (t.dataset.nurAktuellSchalter !== undefined) { nurAktuellSetzen(t.checked); return; }
   if (t.dataset.rezeptDa !== undefined) {
     const r = zustand.rezepte[+t.dataset.rezeptDa];
     if (r) {
