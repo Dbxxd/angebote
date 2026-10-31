@@ -54,7 +54,9 @@ REGIONEN = {
         "plz": ["48282", "48341", "48356", "48565"],
         "latlng": ("52.1758", "7.52741"),
         "kaufda": {"K+K": "/Emsdetten/K-K-Klaas-Kock/p-r586",
-                   "E center": "/Steinfurt/E-center/p-r110"},  # E center Stroetmann Borghorst
+                   "E center": "/Steinfurt/E-center/p-r110",  # E center Stroetmann Borghorst
+                   "Edeka Altenberge": "/Altenberge/EDEKA/p-r107",  # EDEKA Kiwall-Schürmann, Münsterstraße
+                   "Edeka Greven": "/Greven-Westf/EDEKA/p-r107"},   # EDEKA Kiwall-Schürmann, Schützenstraße
     },
     "winsen": {
         "name": "Winsen (Luhe)",

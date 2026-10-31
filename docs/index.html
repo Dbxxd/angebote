@@ -578,7 +578,7 @@ function meldung(text) {
 
 /* Märkte, die in dieser Region angezeigt werden (Standard: alle) */
 // Märkte, die erst später dazugekommen sind: für alle, die schon eine Auswahl gespeichert haben, neu
-const SPAETER_DAZU = ["E center"];
+const SPAETER_DAZU = ["E center", "Edeka Altenberge", "Edeka Greven"];
 function aktiveMaerkte() {
   const alle = daten ? daten.maerkte : [];
   const gew = zustand.maerkte[zustand.region];
@@ -753,7 +753,7 @@ function schild(a) {
 /* Eigene Kennfarben je Markt – bewusst NICHT die Firmenfarben */
 const MARKT_FARBE = {
   "Lidl": "#2E7D6B", "Aldi": "#7A4FB3", "Penny": "#B5577D", "Netto": "#5E7A2E",
-  "Rewe": "#8A5A3C", "Edeka": "#2F6F8F", "E center": "#3B5C9E", "Kaufland": "#C26A2E", "K+K": "#3E8E5A",
+  "Rewe": "#8A5A3C", "Edeka": "#2F6F8F", "E center": "#3B5C9E", "Edeka Altenberge": "#2A7F9E", "Edeka Greven": "#4A6FB0", "Kaufland": "#C26A2E", "K+K": "#3E8E5A",
   "Combi": "#9C6B1F", "famila": "#A2475A", "Norma": "#546E7A", "nahkauf": "#6D8C3A",
   "Rossmann": "#8E5BA0", "budni": "#1F7F86", "dm": "#7D6B5D",
 };
