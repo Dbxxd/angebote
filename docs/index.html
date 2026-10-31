@@ -209,6 +209,13 @@ button.bild { padding: 0; cursor: zoom-in; font: inherit; }
   padding: env(safe-area-inset-top, 0px) 0 0;
 }
 .detail[hidden] { display: none; }
+.teile-teile { display: grid; gap: 6px; margin: 0 0 10px; }
+.teile-teile label { display: flex; align-items: center; gap: 10px; font-size: 15px; }
+.teile-teile input { width: 20px; height: 20px; margin: 0; accent-color: var(--tinte); }
+.teile-ergebnis { display: grid; gap: 10px; justify-items: start; margin-top: 10px; }
+.teile-ergebnis .qr { background: #fff; padding: 10px; border-radius: 10px; line-height: 0; }
+.teile-ergebnis .qr img, .teile-ergebnis .qr svg { width: 220px; height: 220px; }
+.teile-ergebnis input { width: 100%; font: inherit; font-size: 13px; padding: 8px; border-radius: 8px; border: 1px solid var(--linie); background: var(--karte); color: var(--grau); }
 .detail-karte {
   width: 100%; max-width: 640px; max-height: 92vh; overflow-y: auto;
   background: var(--karte); color: var(--tinte);
@@ -480,6 +487,7 @@ button.bild { padding: 0; cursor: zoom-in; font: inherit; }
 </nav>
 
 <div class="detail" id="detail" hidden role="dialog" aria-modal="true" aria-label="Angebot"></div>
+<div class="detail" id="uebernahme" hidden role="dialog" aria-modal="true" aria-label="Daten übernehmen"></div>
 
 <div class="meldung" id="meldung" role="status" aria-live="polite"></div>
 
@@ -1725,6 +1733,14 @@ const HILFE = [
       <li>Im Vorrat zählt ein Tiefstpreis seit mindestens 8 Wochen auch als gutes Angebot, selbst ohne 20 % Rabatt.</li>
     </ul>
     <p class="tipp">Die Preise werden seit Ende Oktober 2026 gesammelt. Die Hinweise werden deshalb mit jeder Woche aussagekräftiger.</p>`],
+  ["uebertragen", "Daten übertragen (PC, Familie)", `
+    <p>Die App läuft auch am PC im Browser. Listen werden aber pro Gerät gespeichert. Zum Übertragen:</p>
+    <ul>
+      <li>Einstellungen → <strong>Daten übertragen</strong>: auswählen, was mit soll, und „Link und QR-Code erstellen“.</li>
+      <li>Am anderen Gerät den QR-Code scannen oder den Link öffnen. Dann wählen: <strong>Hinzufügen</strong> (eigene Einträge bleiben) oder <strong>Ersetzen</strong>.</li>
+      <li>So kannst du auch Rezepte oder die Wochenliste an die Familie schicken.</li>
+    </ul>
+    <p class="tipp">Die Daten stecken nur im Link selbst und gehen an keinen Server. Es wird der Stand beim Erstellen übertragen, spätere Änderungen nicht.</p>`],
   ["einst", "Märkte und Ort", `
     <p>In den Einstellungen wählst du deinen <strong>Ort</strong> (Emsdetten/Steinfurt, Winsen, Harburg) und welche <strong>Märkte</strong> angezeigt werden. Für jeden Ort merkt sich die App die Märkte getrennt.</p>`],
   ["wissen", "Gut zu wissen", `
@@ -1746,6 +1762,121 @@ function zeichneHilfe() {
     hilfeOffen = null;
     if (z) requestAnimationFrame(() => z.scrollIntoView({ block: "start" }));
   }
+}
+
+/* ---------- Daten übertragen (Link mit den Listen im #-Teil, nichts geht an einen Server) ---------- */
+const TEILE = [["liste", "Wochenliste"], ["vorrat", "Vorrat"], ["rezepte", "Rezepte"], ["favoriten", "Favoriten"],
+  ["nie", "Nie anzeigen"], ["vorlieben", "Vorlieben"]];
+
+function b64url(bytes) {
+  let s2 = ""; for (const b of bytes) s2 += String.fromCharCode(b);
+  return btoa(s2).replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, "");
+}
+function ausB64url(t) {
+  const s2 = atob(t.replace(/-/g, "+").replace(/_/g, "/"));
+  return Uint8Array.from(s2, (c) => c.charCodeAt(0));
+}
+async function packen(obj) {
+  const roh = new TextEncoder().encode(JSON.stringify(obj));
+  if (typeof CompressionStream === "undefined") return "j" + b64url(roh);
+  const z = await new Response(new Blob([roh]).stream().pipeThrough(new CompressionStream("deflate-raw"))).arrayBuffer();
+  return "z" + b64url(new Uint8Array(z));
+}
+async function entpacken(t) {
+  const bytes = ausB64url(t.slice(1));
+  if (t[0] === "j") return JSON.parse(new TextDecoder().decode(bytes));
+  const roh = await new Response(new Blob([bytes]).stream().pipeThrough(new DecompressionStream("deflate-raw"))).arrayBuffer();
+  return JSON.parse(new TextDecoder().decode(roh));
+}
+function ladeSkript(url) {
+  return new Promise((ok, fehler) => {
+    const el = document.createElement("script"); el.src = url; el.onload = ok; el.onerror = fehler;
+    document.head.appendChild(el);
+  });
+}
+
+async function teilenLinkErstellen() {
+  const daten = { v: 1 };
+  document.querySelectorAll("[data-teil]").forEach((c) => {
+    if (c.checked) daten[c.dataset.teil] = zustand[c.dataset.teil] || [];
+  });
+  // Wochenliste ohne erledigte Posten
+  if (daten.liste) daten.liste = daten.liste.filter((p) => !p.erledigt);
+  if (Object.keys(daten).length === 1) { meldung("Bitte mindestens eine Liste auswählen"); return; }
+  const link = location.origin + location.pathname + "#daten=" + await packen(daten);
+  const ziel = $("#teilenErgebnis");
+  ziel.innerHTML = `<div class="teile-ergebnis">
+      <div class="qr" id="teilenQr" hidden></div>
+      <p class="erkl" id="teilenQrHinweis" style="margin:0">QR-Code mit dem anderen Handy scannen oder den Link schicken.</p>
+      <label class="sr" for="teilenLink">Link</label>
+      <input id="teilenLink" readonly value="${esc(link)}">
+      <div class="zeile" style="display:flex;gap:8px;flex-wrap:wrap">
+        <button class="knopf" data-teilen-senden>Link teilen</button>
+        <button class="knopf leise" data-teilen-kopieren>Kopieren</button>
+      </div>
+    </div>`;
+  ziel.dataset.link = link;
+  try {
+    if (typeof qrcode === "undefined") await ladeSkript("https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.4.4/qrcode.min.js");
+  } catch (e) {
+    $("#teilenQrHinweis").textContent = "Der QR-Code konnte gerade nicht geladen werden (keine Verbindung?). Schick einfach den Link.";
+    return;
+  }
+  try {
+    const qr = qrcode(0, "L");
+    qr.addData(link); qr.make();
+    const box = $("#teilenQr");
+    box.innerHTML = qr.createSvgTag({ cellSize: 4, margin: 0, scalable: true });
+    box.hidden = false;
+  } catch (e) {
+    $("#teilenQrHinweis").textContent = "Für einen QR-Code sind es zu viele Daten. Schick einfach den Link, z.B. per WhatsApp an dich selbst.";
+  }
+}
+
+/* Beim Öffnen eines Übertragungs-Links: fragen, ob hinzufügen oder ersetzen */
+let eingang = null;
+async function uebernahmePruefen() {
+  const m = location.hash.match(/^#daten=(.+)$/);
+  if (!m) return;
+  history.replaceState(history.state, "", location.pathname + location.search);
+  try { eingang = await entpacken(m[1]); } catch (e) { meldung("Der Link ist leider beschädigt."); return; }
+  const teile = TEILE.filter(([k]) => Array.isArray(eingang[k]) && eingang[k].length);
+  if (!teile.length) { meldung("Im Link sind keine Daten."); return; }
+  const el = $("#uebernahme");
+  el.innerHTML = `<div class="detail-karte">
+    <div class="detail-kopf"><span class="markt" style="color:var(--tinte)">Daten übernehmen</span><button class="detail-zu" data-uebernahme-zu aria-label="Schließen">×</button></div>
+    <p style="margin:0">Dieser Link enthält:</p>
+    <ul style="margin:0;padding-left:20px">${teile.map(([k, n]) => `<li>${n}: ${eingang[k].length} ${eingang[k].length === 1 ? "Eintrag" : "Einträge"}</li>`).join("")}</ul>
+    <p class="erkl" style="margin:0;color:var(--grau);font-size:14px"><strong>Hinzufügen</strong> behält deine Einträge und ergänzt die neuen. <strong>Ersetzen</strong> überschreibt diese Listen auf diesem Gerät.</p>
+    <button class="knopf detail-aktion" data-uebernahme="dazu">Hinzufügen</button>
+    <div class="detail-knoepfe">
+      <button class="knopf leise" data-uebernahme="ersetzen">Ersetzen</button>
+      <button class="knopf leise" data-uebernahme-zu>Abbrechen</button>
+    </div>
+  </div>`;
+  el.hidden = false;
+}
+function uebernehmen(art) {
+  const schl = { vorrat: (x) => norm(x.name), rezepte: (x) => norm(x.name), liste: (x) => x.id };
+  let n = 0;
+  for (const [k] of TEILE) {
+    const neu = eingang && eingang[k];
+    if (!Array.isArray(neu) || !neu.length) continue;
+    if (art === "ersetzen") { zustand[k] = neu; n += neu.length; continue; }
+    const alt = zustand[k] || (zustand[k] = []);
+    const key = schl[k] || ((x) => norm(x));
+    const da = new Map(alt.map((x, i) => [key(x), i]));
+    for (const x of neu) {
+      if (!da.has(key(x))) { alt.push(x); n++; }
+      else if (k === "rezepte") { alt[da.get(key(x))] = x; n++; }  // Rezept mit gleichem Namen: neue Fassung
+    }
+  }
+  speichern();
+  eingang = null;
+  $("#uebernahme").hidden = true;
+  listenZaehler(); vorratZaehler();
+  if (angebote.length) { nieFiltern(); neuZeichnen(); }
+  meldung(art === "ersetzen" ? "Daten übernommen" : `${n} ${n === 1 ? "Eintrag" : "Einträge"} hinzugefügt`);
 }
 
 /* ---------- Einstellungen ---------- */
@@ -1795,6 +1926,16 @@ function zeichneEinstellungen() {
         `<button class="chip" data-markt-schalter="${esc(m)}" aria-pressed="${aktiv.has(m)}">${esc(m)}</button>`).join("")}</div>
     </div>
     <div class="abschnitt">
+      <h2>Daten übertragen</h2>
+      <p class="erkl">Listen von diesem Gerät auf ein anderes bringen, z.B. vom PC aufs Handy oder an die Familie. Es wird der jetzige Stand übertragen, kein dauerhafter Abgleich.</p>
+      <div class="teile-teile">${TEILE.map(([k, name]) => {
+        const n = (zustand[k] || []).length;
+        return `<label><input type="checkbox" data-teil="${k}" ${n ? "checked" : "disabled"}>${name} <span class="klein" style="color:var(--grau)">(${n})</span></label>`;
+      }).join("")}</div>
+      <button class="knopf" data-teilen-link>Link und QR-Code erstellen</button>
+      <div id="teilenErgebnis"></div>
+    </div>
+    <div class="abschnitt">
       <h2>Ort</h2>
       <div class="wahl">${(index ? index.regionen : []).map((r) =>
         `<label><input type="radio" name="region" value="${esc(r.id)}" ${r.id === zustand.region ? "checked" : ""}>${esc(r.name)}<span class="klein">${r.anzahl} Angebote</span></label>`).join("")}</div>
@@ -1812,6 +1953,7 @@ function zeichneEinstellungen() {
    ========================================================================= */
 document.addEventListener("click", async (ev) => {
   if (ev.target.id === "detail") { history.back(); return; }  // Tipp neben die Karte
+  if (ev.target.id === "uebernahme") { $("#uebernahme").hidden = true; return; }
   const t = ev.target.closest("button, [data-region]");
   if (!t) return;
   const d = t.dataset;
@@ -1897,6 +2039,18 @@ document.addEventListener("click", async (ev) => {
     speichern();
     zeichneEinstellungen();
   }
+  else if (d.teilenLink !== undefined) teilenLinkErstellen();
+  else if (d.teilenKopieren !== undefined) {
+    try { await navigator.clipboard.writeText($("#teilenErgebnis").dataset.link); meldung("Link kopiert"); }
+    catch (e) { $("#teilenLink").select(); meldung("Link markiert – jetzt kopieren"); }
+  }
+  else if (d.teilenSenden !== undefined) {
+    const link = $("#teilenErgebnis").dataset.link;
+    try { if (navigator.share) await navigator.share({ title: "Angebote-App: meine Listen", url: link }); else { await navigator.clipboard.writeText(link); meldung("Link kopiert"); } }
+    catch (e) { /* abgebrochen */ }
+  }
+  else if (d.uebernahme) uebernehmen(d.uebernahme);
+  else if (d.uebernahmeZu !== undefined) { eingang = null; $("#uebernahme").hidden = true; }
   else if (d.rezeptNeu !== undefined) { rezeptBearbeiten = "neu"; zeichneVorrat(); $("#rezeptName").focus(); }
   else if (d.rezeptAbbruch !== undefined) { rezeptBearbeiten = null; zeichneVorrat(); }
   else if (d.rezeptBearbeiten !== undefined) { rezeptBearbeiten = +d.rezeptBearbeiten; zeichneVorrat(); }
@@ -2082,7 +2236,10 @@ async function ladeRegionSicher() {
   catch (e) { fehlerAnzeigen(); return false; }
 }
 
+window.addEventListener("hashchange", uebernahmePruefen);  // Link geöffnet, während die App schon läuft
+
 async function start() {
+  uebernahmePruefen();
   try { if (!index) await ladeIndex(); }
   catch (e) { fehlerAnzeigen(); return; }
   if (!zustand.region || !index.regionen.some((r) => r.id === zustand.region)) {
