@@ -1,57 +1,47 @@
 {
- "stand": "2026-10-30T17:43+01:00",
+ "stand": "2026-10-31T07:58+01:00",
  "regionen": [
   {
    "id": "steinfurt",
    "name": "Emsdetten / Steinfurt",
    "maerkte": [
     "Aldi",
-    "Combi",
     "E center",
     "K+K",
     "Kaufland",
     "Lidl",
     "Netto",
-    "Penny",
-    "Rossmann"
+    "Penny"
    ],
-   "anzahl": 3170
+   "anzahl": 2860
   },
   {
    "id": "winsen",
    "name": "Winsen (Luhe)",
    "maerkte": [
     "Aldi",
-    "budni",
-    "Edeka",
     "famila",
     "Kaufland",
     "Lidl",
-    "Netto",
     "Norma",
     "Penny",
-    "Rewe",
-    "Rossmann"
+    "Rewe"
    ],
-   "anzahl": 3929
+   "anzahl": 2857
   },
   {
    "id": "harburg",
    "name": "Hamburg-Harburg",
    "maerkte": [
     "Aldi",
-    "budni",
     "dm",
-    "Edeka",
     "Kaufland",
     "Lidl",
     "nahkauf",
-    "Netto",
     "Penny",
-    "Rewe",
-    "Rossmann"
+    "Rewe"
    ],
-   "anzahl": 3662
+   "anzahl": 2721
   }
  ]
 }
