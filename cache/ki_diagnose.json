@@ -1,24 +1,5 @@
 {
  "broschueren_roh": {
-  "e1fd3ead-bced-4651-8b28-0f4e087a4249": {
-   "title": "Mein Drogeriemarkt",
-   "type": "BROCHURE",
-   "id": 2501315403,
-   "contentId": "e1fd3ead-bced-4651-8b28-0f4e087a4249",
-   "publishedFrom": "2026-10-30T23:00:00.000+0000",
-   "publishedUntil": "2026-11-06T21:00:00.000+0000",
-   "validFrom": "2026-11-01T23:00:00.000+0000",
-   "validUntil": "2026-11-06T21:00:00.000+0000",
-   "hideValidityDate": false,
-   "adFormat": "ad_format__brochure_card_cover",
-   "adPlacement": "ad_placement__seo_brochure_box",
-   "pages": "list",
-   "publisher": "dict",
-   "pageCount": 22,
-   "score": 0.0042,
-   "contentBadges": "list",
-   "externalTracking": "dict"
-  },
   "8ce49fea-a0a0-46a5-b690-6edb87566092": {
    "title": "Mein Drogeriemarkt",
    "type": "BROCHURE",
@@ -34,26 +15,45 @@
    "pages": "list",
    "publisher": "dict",
    "pageCount": 16,
-   "score": 0.00035,
+   "score": 0,
    "contentBadges": "list",
    "externalTracking": "dict"
   },
-  "e917b6b4-8385-44ac-9af9-3f77fc4cdd59": {
-   "title": "Warme Styles für kalte Tage",
-   "type": "DYNAMIC",
-   "id": 2501316254,
-   "contentId": "e917b6b4-8385-44ac-9af9-3f77fc4cdd59",
-   "publishedFrom": "2026-10-31T23:00:00.000+0000",
+  "e1fd3ead-bced-4651-8b28-0f4e087a4249": {
+   "title": "Mein Drogeriemarkt",
+   "type": "BROCHURE",
+   "id": 2501315403,
+   "contentId": "e1fd3ead-bced-4651-8b28-0f4e087a4249",
+   "publishedFrom": "2026-10-30T23:00:00.000+0000",
+   "publishedUntil": "2026-11-06T21:00:00.000+0000",
+   "validFrom": "2026-11-01T23:00:00.000+0000",
+   "validUntil": "2026-11-06T21:00:00.000+0000",
+   "hideValidityDate": false,
+   "adFormat": "ad_format__brochure_card_cover",
+   "adPlacement": "ad_placement__seo_brochure_box",
+   "pages": "list",
+   "publisher": "dict",
+   "pageCount": 22,
+   "score": 0,
+   "contentBadges": "list",
+   "externalTracking": "dict"
+  },
+  "3d9772ee-ad11-4aa0-9eb2-5c21e5db2d15": {
+   "title": "Wenn Lebensmittel, dann K+K",
+   "type": "BROCHURE",
+   "id": 2501317916,
+   "contentId": "3d9772ee-ad11-4aa0-9eb2-5c21e5db2d15",
+   "publishedFrom": "2026-11-02T08:00:00.000+0000",
    "publishedUntil": "2026-11-07T22:00:00.000+0000",
-   "validFrom": "2026-11-02T22:00:00.000+0000",
+   "validFrom": "2026-11-01T23:00:00.000+0000",
    "validUntil": "2026-11-07T22:00:00.000+0000",
    "hideValidityDate": false,
    "adFormat": "ad_format__brochure_card_cover",
    "adPlacement": "ad_placement__seo_brochure_box",
    "pages": "list",
    "publisher": "dict",
-   "pageCount": 1,
-   "score": 0.03401,
+   "pageCount": 12,
+   "score": 2e-05,
    "contentBadges": "list",
    "externalTracking": "dict"
   },
@@ -72,7 +72,7 @@
    "pages": "list",
    "publisher": "dict",
    "pageCount": 26,
-   "score": 0.00268,
+   "score": 0.00242,
    "contentBadges": "list",
    "externalTracking": "dict"
   },
@@ -91,7 +91,7 @@
    "pages": "list",
    "publisher": "dict",
    "pageCount": 28,
-   "score": 0.04697,
+   "score": 0.03585,
    "contentBadges": "list",
    "externalTracking": "dict"
   },
@@ -110,7 +110,7 @@
    "pages": "list",
    "publisher": "dict",
    "pageCount": 22,
-   "score": 0.02101,
+   "score": 0.01985,
    "contentBadges": "list",
    "externalTracking": "dict"
   },
@@ -139,9 +139,9 @@
    "id": 2501311140,
    "contentId": "63ba31db-c4e9-4e5e-9edf-e4050484936d",
    "publishedFrom": "2026-10-31T23:00:00.000+0000",
-   "publishedUntil": "2026-11-07T22:00:00.000+0000",
+   "publishedUntil": "2026-11-14T22:00:00.000+0000",
    "validFrom": "2026-11-01T23:00:00.000+0000",
-   "validUntil": "2026-11-07T22:00:00.000+0000",
+   "validUntil": "2026-11-14T22:00:00.000+0000",
    "hideValidityDate": false,
    "adFormat": "ad_format__brochure_card_cover",
    "adPlacement": "ad_placement__seo_brochure_box",
@@ -190,5 +190,36 @@
    "contentBadges": "list",
    "externalTracking": "dict"
   }
+ },
+ "K+K 3d9772ee-ad11-4aa0-9eb2-5c21e5db2d15": {
+  "titel": "Wenn Lebensmittel, dann K+K",
+  "seiten_api": 12,
+  "bilder": 12,
+  "bildgroessen": [
+   "1600x1600",
+   "2800x2800",
+   "75x96",
+   "768x1024"
+  ],
+  "seitenschluessel": [
+   "images",
+   "linkOuts",
+   "number",
+   "offers"
+  ],
+  "je_seite": [
+   20,
+   9,
+   11,
+   10,
+   8,
+   12,
+   10,
+   19,
+   15,
+   18,
+   10,
+   12
+  ]
  }
 }

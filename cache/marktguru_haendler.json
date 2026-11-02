@@ -8,6 +8,7 @@
   "PENNY": 302,
   "ROSSMANN": 288,
   "Thomas Philipps": 245,
+  "Combi": 230,
   "SB-Möbel BOSS": 207,
   "EDEKA Foodservice": 206,
   "Woolworth": 136,
@@ -20,8 +21,7 @@
   "Kabs PolsterWelt": 41,
   "Peek & Cloppenburg Hamburg": 36,
   "OBI": 26,
-  "Bosch Car Service": 10,
-  "Combi": 7
+  "Bosch Car Service": 10
  },
  "48341": {
   "XXXLutz": 1224,
@@ -52,6 +52,7 @@
   "Netto Marken-Discount": 377,
   "toom Baumarkt": 346,
   "ROSSMANN": 288,
+  "Combi": 230,
   "Woolworth": 136,
   "Möbel Inhofer": 131,
   "Fressnapf": 113,
@@ -62,8 +63,7 @@
   "Kabs PolsterWelt": 41,
   "Peek & Cloppenburg Hamburg": 36,
   "OBI": 26,
-  "Bosch Car Service": 10,
-  "Combi": 7
+  "Bosch Car Service": 10
  },
  "48565": {
   "XXXLutz": 1224,
@@ -96,9 +96,9 @@
   "PENNY": 301,
   "ROSSMANN": 288,
   "Handelshof": 273,
+  "mömax": 260,
   "REWE": 236,
   "SB-Möbel BOSS": 207,
-  "mömax": 165,
   "Sconto SB": 138,
   "Woolworth": 136,
   "Möbel Inhofer": 131,
@@ -124,11 +124,11 @@
   "PENNY": 308,
   "ROSSMANN": 288,
   "Handelshof": 273,
+  "mömax": 260,
   "REWE": 258,
   "Thomas Philipps": 245,
   "EDEKA Frischemarkt": 219,
   "SB-Möbel BOSS": 207,
-  "mömax": 165,
   "Sconto SB": 138,
   "Woolworth": 136,
   "Möbel Inhofer": 131,
@@ -141,7 +141,7 @@
   "Höffner": 58,
   "nahkauf": 55,
   "KiK": 45,
-  "EDEKA Bandelt": 43,
+  "EDEKA Bandelt": 44,
   "Kabs PolsterWelt": 40,
   "Peek & Cloppenburg Hamburg": 36,
   "OBI": 26,

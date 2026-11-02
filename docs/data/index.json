@@ -1,5 +1,5 @@
 {
- "stand": "2026-11-02T08:39+01:00",
+ "stand": "2026-11-02T21:22+01:00",
  "regionen": [
   {
    "id": "steinfurt",
@@ -9,13 +9,14 @@
     "Combi",
     "E center",
     "Edeka Altenberge/Greven",
+    "K+K",
     "Kaufland",
     "Lidl",
     "Netto",
     "Penny",
     "Rossmann"
    ],
-   "anzahl": 3639
+   "anzahl": 3986
   },
   {
    "id": "winsen",
@@ -33,7 +34,7 @@
     "Rewe",
     "Rossmann"
    ],
-   "anzahl": 4412
+   "anzahl": 4414
   },
   {
    "id": "harburg",
@@ -50,7 +51,7 @@
     "Rewe",
     "Rossmann"
    ],
-   "anzahl": 4225
+   "anzahl": 4227
   }
  ]
 }
