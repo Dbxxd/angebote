@@ -1,8 +1,8 @@
 {
  "48282": {
-  "XXXLutz": 1246,
+  "XXXLutz": 1224,
   "Lidl": 856,
-  "Kaufland": 499,
+  "Kaufland": 508,
   "Netto Marken-Discount": 377,
   "toom Baumarkt": 346,
   "PENNY": 302,
@@ -20,12 +20,13 @@
   "Kabs PolsterWelt": 41,
   "Peek & Cloppenburg Hamburg": 36,
   "OBI": 26,
-  "Bosch Car Service": 10
+  "Bosch Car Service": 10,
+  "Combi": 7
  },
  "48341": {
-  "XXXLutz": 1246,
+  "XXXLutz": 1224,
   "Lidl": 856,
-  "Kaufland": 499,
+  "Kaufland": 508,
   "Netto Marken-Discount": 377,
   "toom Baumarkt": 330,
   "PENNY": 302,
@@ -45,9 +46,9 @@
   "Bosch Car Service": 10
  },
  "48356": {
-  "XXXLutz": 1246,
+  "XXXLutz": 1224,
   "Lidl": 856,
-  "Kaufland": 499,
+  "Kaufland": 508,
   "Netto Marken-Discount": 377,
   "toom Baumarkt": 346,
   "ROSSMANN": 288,
@@ -61,10 +62,11 @@
   "Kabs PolsterWelt": 41,
   "Peek & Cloppenburg Hamburg": 36,
   "OBI": 26,
-  "Bosch Car Service": 10
+  "Bosch Car Service": 10,
+  "Combi": 7
  },
  "48565": {
-  "XXXLutz": 1246,
+  "XXXLutz": 1224,
   "Lidl": 856,
   "Netto Marken-Discount": 377,
   "PENNY": 302,
@@ -84,19 +86,19 @@
   "Bosch Car Service": 10
  },
  "21423": {
-  "XXXLutz": 1247,
+  "XXXLutz": 1225,
   "Lidl": 856,
   "Kaufland": 521,
   "Opti Wohnwelt": 499,
   "EDEKA": 430,
   "Netto Marken-Discount": 378,
-  "mömax": 374,
   "toom Baumarkt": 330,
   "PENNY": 301,
   "ROSSMANN": 288,
   "Handelshof": 273,
   "REWE": 236,
   "SB-Möbel BOSS": 207,
+  "mömax": 165,
   "Sconto SB": 138,
   "Woolworth": 136,
   "Möbel Inhofer": 131,
@@ -112,12 +114,11 @@
   "Bosch Car Service": 10
  },
  "21073": {
-  "XXXLutz": 1247,
+  "XXXLutz": 1225,
   "Lidl": 856,
-  "Kaufland": 537,
+  "Kaufland": 540,
   "REWE Center": 392,
   "Netto Marken-Discount": 378,
-  "mömax": 374,
   "EDEKA": 359,
   "toom Baumarkt": 346,
   "PENNY": 308,
@@ -127,6 +128,7 @@
   "Thomas Philipps": 245,
   "EDEKA Frischemarkt": 219,
   "SB-Möbel BOSS": 207,
+  "mömax": 165,
   "Sconto SB": 138,
   "Woolworth": 136,
   "Möbel Inhofer": 131,

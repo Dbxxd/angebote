@@ -15,7 +15,7 @@
    "pages": "list",
    "publisher": "dict",
    "pageCount": 22,
-   "score": 0.00761,
+   "score": 0.0042,
    "contentBadges": "list",
    "externalTracking": "dict"
   },
@@ -34,7 +34,7 @@
    "pages": "list",
    "publisher": "dict",
    "pageCount": 16,
-   "score": 0.00061,
+   "score": 0.00035,
    "contentBadges": "list",
    "externalTracking": "dict"
   },
@@ -53,7 +53,7 @@
    "pages": "list",
    "publisher": "dict",
    "pageCount": 1,
-   "score": 0.0422,
+   "score": 0.03401,
    "contentBadges": "list",
    "externalTracking": "dict"
   },
@@ -72,7 +72,7 @@
    "pages": "list",
    "publisher": "dict",
    "pageCount": 26,
-   "score": 0.00298,
+   "score": 0.00268,
    "contentBadges": "list",
    "externalTracking": "dict"
   },
@@ -91,7 +91,7 @@
    "pages": "list",
    "publisher": "dict",
    "pageCount": 28,
-   "score": 0.05546,
+   "score": 0.04697,
    "contentBadges": "list",
    "externalTracking": "dict"
   },
@@ -110,7 +110,7 @@
    "pages": "list",
    "publisher": "dict",
    "pageCount": 22,
-   "score": 0.02251,
+   "score": 0.02101,
    "contentBadges": "list",
    "externalTracking": "dict"
   },
@@ -190,52 +190,5 @@
    "contentBadges": "list",
    "externalTracking": "dict"
   }
- },
- "Edeka Altenberge/Greven abb8c196-034d-4643-a80a-90c62ff30660": {
-  "titel": "Aktuelle Angebote",
-  "seiten_api": 28,
-  "bilder": 28,
-  "bildgroessen": [
-   "1600x1600",
-   "2800x2800",
-   "75x96",
-   "768x1024"
-  ],
-  "seitenschluessel": [
-   "images",
-   "linkOuts",
-   "number",
-   "offers"
-  ],
-  "je_seite": [
-   9,
-   9,
-   13,
-   0,
-   0,
-   9,
-   7,
-   12,
-   12,
-   10,
-   15,
-   15,
-   16,
-   12,
-   8,
-   14,
-   13,
-   9,
-   10,
-   12,
-   8,
-   8,
-   9,
-   4,
-   5,
-   0,
-   6,
-   8
-  ]
  }
 }

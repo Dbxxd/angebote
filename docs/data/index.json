@@ -1,11 +1,12 @@
 {
- "stand": "2026-11-01T17:49+01:00",
+ "stand": "2026-11-02T08:39+01:00",
  "regionen": [
   {
    "id": "steinfurt",
    "name": "Emsdetten / Steinfurt",
    "maerkte": [
     "Aldi",
+    "Combi",
     "E center",
     "Edeka Altenberge/Greven",
     "Kaufland",
@@ -14,7 +15,7 @@
     "Penny",
     "Rossmann"
    ],
-   "anzahl": 3623
+   "anzahl": 3639
   },
   {
    "id": "winsen",
@@ -49,7 +50,7 @@
     "Rewe",
     "Rossmann"
    ],
-   "anzahl": 4223
+   "anzahl": 4225
   }
  ]
 }
