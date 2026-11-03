@@ -1,5 +1,5 @@
 {
- "stand": "2026-11-03T16:05+01:00",
+ "stand": "2026-11-03T18:52+01:00",
  "regionen": [
   {
    "id": "steinfurt",
@@ -51,7 +51,7 @@
     "Rewe",
     "Rossmann"
    ],
-   "anzahl": 4230
+   "anzahl": 4228
   }
  ]
 }
