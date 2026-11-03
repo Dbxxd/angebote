@@ -38,12 +38,12 @@
    "contentBadges": "list",
    "externalTracking": "dict"
   },
-  "3d9772ee-ad11-4aa0-9eb2-5c21e5db2d15": {
-   "title": "Wenn Lebensmittel, dann K+K",
+  "6d2e9d80-98e3-4512-84b2-15619996ea76": {
+   "title": "Aktuelle Angebote",
    "type": "BROCHURE",
-   "id": 2501317916,
-   "contentId": "3d9772ee-ad11-4aa0-9eb2-5c21e5db2d15",
-   "publishedFrom": "2026-11-02T08:00:00.000+0000",
+   "id": 2501315586,
+   "contentId": "6d2e9d80-98e3-4512-84b2-15619996ea76",
+   "publishedFrom": "2026-10-31T23:00:00.000+0000",
    "publishedUntil": "2026-11-07T22:00:00.000+0000",
    "validFrom": "2026-11-01T23:00:00.000+0000",
    "validUntil": "2026-11-07T22:00:00.000+0000",
@@ -52,8 +52,8 @@
    "adPlacement": "ad_placement__seo_brochure_box",
    "pages": "list",
    "publisher": "dict",
-   "pageCount": 12,
-   "score": 2e-05,
+   "pageCount": 26,
+   "score": 0.00242,
    "contentBadges": "list",
    "externalTracking": "dict"
   },
@@ -72,7 +72,7 @@
    "pages": "list",
    "publisher": "dict",
    "pageCount": 28,
-   "score": 0.03056,
+   "score": 0.02484,
    "contentBadges": "list",
    "externalTracking": "dict"
   },
@@ -91,7 +91,7 @@
    "pages": "list",
    "publisher": "dict",
    "pageCount": 22,
-   "score": 0.01853,
+   "score": 0.01779,
    "contentBadges": "list",
    "externalTracking": "dict"
   },
@@ -171,5 +171,30 @@
    "contentBadges": "list",
    "externalTracking": "dict"
   }
+ },
+ "K+K kkweb-kundk_kw46-2026-11-09": {
+  "titel": "K+K_KW 46",
+  "seiten_api": 12,
+  "bilder": 12,
+  "bildgroessen": [
+   "1600x1600"
+  ],
+  "seitenschluessel": [
+   "images"
+  ],
+  "je_seite": [
+   17,
+   9,
+   13,
+   10,
+   14,
+   11,
+   14,
+   12,
+   17,
+   18,
+   12,
+   11
+  ]
  }
 }
