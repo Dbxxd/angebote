@@ -981,15 +981,18 @@ KONSERVE = re.compile(r"\b(dose|glas|konserve)\b|-dose\b|-glas\b", re.I)
 def versuche(name: str, funktion, status: dict) -> list[dict]:
     """Eine Quelle abrufen; Fehler protokollieren statt alles abzubrechen."""
     t0 = time.time()
-    try:
-        daten = funktion()
-        status[name] = {"ok": True, "anzahl": len(daten)}
-        log(f"  {name}: {len(daten)} Angebote ({time.time() - t0:.1f}s)")
-        return daten
-    except Exception as e:
-        status[name] = {"ok": False, "fehler": str(e)[:200]}
-        log(f"  {name}: FEHLER – {e}")
-        return []
+    for versuch in (1, 2, 3):
+        try:
+            daten = funktion()
+            status[name] = {"ok": True, "anzahl": len(daten)}
+            log(f"  {name}: {len(daten)} Angebote ({time.time() - t0:.1f}s)")
+            return daten
+        except Exception as e:
+            status[name] = {"ok": False, "fehler": str(e)[:200]}
+            log(f"  {name}: FEHLER (Versuch {versuch}) – {e}")
+            if versuch < 3:
+                time.sleep(20 * versuch)  # kurze Störungen (z.B. 503) abwarten
+    return []
 
 
 # =============================================================================
@@ -1105,6 +1108,22 @@ def main():
         for markt, seite in r.get("kaufda", {}).items():
             holen = kk_angebote if markt == "K+K" else (lambda s, ll, m=markt: kaufda_markt_angebote(m, s, ll))
             angebote += versuche(markt, lambda h=holen, s=seite: h(s, r["latlng"]), status)
+
+        # Quelle ausgefallen? Dann die noch gültigen Angebote dieses Markts vom letzten Abruf behalten
+        try:
+            alt = json.loads((DATEN_DIR / f"{rid}.json").read_text(encoding="utf-8"))
+        except (OSError, ValueError):
+            alt = {}
+        heute_iso = stand[:10]
+        for quelle, st in status.items():
+            if st.get("ok") or quelle.startswith("marktguru"):
+                continue
+            behalten = [a for a in alt.get("angebote", [])
+                        if a.get("h") == quelle and (not a.get("bis") or a["bis"] >= heute_iso)]
+            if behalten:
+                angebote += behalten
+                st["aus_letztem_abruf"] = len(behalten)
+                log(f"  {quelle}: {len(behalten)} noch gültige Angebote vom letzten Abruf übernommen")
 
         angebote = doppelte_entfernen(angebote)
         gruppen_zuordnen(angebote)  # Cache wird über alle Regionen geteilt
