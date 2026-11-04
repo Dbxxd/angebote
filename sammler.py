@@ -885,6 +885,8 @@ Wichtig:
   Trinkjoghurt, Actimel, Skyr-Drink -> Milch & Milchgetränke.
 - Frisches Lamm, Wild, Hirsch, Reh, Wildschwein, Kaninchen -> Lamm & Wild (tiefgekühlt -> Tiefkühl).
   Nuggets, Schnitzel usw. nach Tierart: "Schweine-Nuggets" -> Schwein, "Chicken Nuggets" -> Geflügel.
+- "Eier" nur für echte Eier. Eier-Teigwaren, Eiernudeln, Tortelloni, Maultaschen -> Nudeln & Reis
+  (bzw. Fertiggerichte); Eierlikör -> Likör; Eierstich -> Suppen & Eintöpfe.
 - Prozent-Aktionen ohne Produkt ("20 % Rabatt auf ...") -> Rabatte & Coupons.
 
 Antworte NUR mit einer Zeile pro Produkt im Format "Nummer: Code", z.B.

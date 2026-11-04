@@ -714,7 +714,11 @@ function suche(begriff, maerkte, gruppe) {
     }
   }
   // Bei klar abgegrenzten Begriffen zählt auch "Spülmittel-Konzentrat" (Wort steckt im Namen)
-  if (ohne.length) for (const a of weitere.values()) if (norm(a.n).includes(schluessel)) passend.set(a.id, a);
+  // ... aber nur in derselben Unterkategorie wie die übrigen Treffer (sonst käme Buttermilch zu Butter)
+  if (ohne.length) {
+    const unter = new Set([...passend.values()].map((a) => a.u).filter(Boolean));
+    for (const a of weitere.values()) if (norm(a.n).includes(schluessel) && a.u && unter.has(a.u)) passend.set(a.id, a);
+  }
   for (const id of passend.keys()) weitere.delete(id);
   // Was mit dem Begriff gemeint ist, aber anders heißt: Spülmittel ≠ Spülmaschinen-Tabs
   const raus = (a) => ohne.some((w) => a.such.includes(w));
@@ -729,7 +733,8 @@ function sucheEinzeln(begriff, maerkte, gruppe) {
   const treffer = angebote.filter((a) => erlaubt.has(a.h)
     && (!gruppe || gruppeVon(a) === gruppe)
     && woerter.every((w) => a.such.includes(w)));
-  const katWort = (k) => k.split(/[\s,&/-]+/);
+  // "Eier-Teigwaren" sind Teigwaren: bei Bindestrich zählt nur der letzte Teil
+  const katWort = (k) => k.split(/[\s,&/]+/).map((x) => x.split("-").pop());
   const katPasst = (a) => woerter.some((w) => katWort(a.kat).includes(w));
 
   // Typische Gruppe(n) für den Begriff: wo liegen die Treffer, deren Kategorie passt?
@@ -750,13 +755,20 @@ function sucheEinzeln(begriff, maerkte, gruppe) {
     const kw = katWort(a.kat);
     // Bei "Butter-Mandel-Stollen" zählt nur der letzte Teil ("stollen")
     const nameWoerter = norm(a.n).split(/[\s,&/()]+/).map((x) => x.split("-").pop());
+    const markenWoerter = norm(a.m).split(/[\s&/-]+/);
     const ok = !a.kat
+      || woerter.every((w) => markenWoerter.some((m) => m.startsWith(w)))  // Markensuche: "Aperol", "Kerrygold"
       || woerter.some((w) => kw.includes(w))
       || woerter.some((w) => nameWoerter.some((nw) => nw.endsWith(w)));
     (ok ? passend : weitere).push(a);
   }
   // Keine Kategorie-Treffer (z.B. Aldi ohne Kategorien): alles als passend zeigen
-  if (!passend.length) return { passend: sortiere(weitere), weitere: [] };
+  // Keine passende Kategorie: nur Angebote ganz ohne Kategorie gelten als passend,
+  // der Rest bleibt unter "Weitere Treffer" (sonst käme bei "Eier" Eierlikör und Tortelloni)
+  if (!passend.length) {
+    const ohneKat = weitere.filter((a) => !a.kat);
+    return { passend: sortiere(ohneKat), weitere: sortiere(weitere.filter((a) => a.kat)) };
+  }
   return { passend: sortiere(passend), weitere: sortiere(weitere) };
 }
 
