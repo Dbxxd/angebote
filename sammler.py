@@ -966,6 +966,10 @@ def gruppen_zuordnen(angebote: list[dict]) -> None:
     for a in angebote:
         wert = cache.get(schluessel(a), "Sonstiges|Weiteres")
         a["g"], a["u"] = wert.split("|", 1)
+        # Käse in Scheiben: steht oft nur auf der Packung bzw. im Bildnamen ("goudainscheiben")
+        if a["g"] == "Milch, Käse & Eier" and a["u"] in ("Käse am Stück & gerieben", "Weichkäse") \
+                and re.search(r"scheibe", f'{a.get("n") or ""} {a.get("b") or ""}', re.I):
+            a["u"] = "Scheibenkäse"
         # Obst und Gemüse in Dose oder Glas sind Konserven, auch wenn der Prospekt "Obst" sagt
         if a["g"] == "Obst & Gemüse" and KONSERVE.search(f'{a.get("pk") or ""} {a.get("n") or ""}'):
             a["g"], a["u"] = "Fertiggerichte & Konserven", "Gemüse- & Obstkonserven"
