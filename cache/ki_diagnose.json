@@ -1,24 +1,5 @@
 {
  "broschueren_roh": {
-  "e1fd3ead-bced-4651-8b28-0f4e087a4249": {
-   "title": "Mein Drogeriemarkt",
-   "type": "BROCHURE",
-   "id": 2501315403,
-   "contentId": "e1fd3ead-bced-4651-8b28-0f4e087a4249",
-   "publishedFrom": "2026-10-30T23:00:00.000+0000",
-   "publishedUntil": "2026-11-06T21:00:00.000+0000",
-   "validFrom": "2026-11-01T23:00:00.000+0000",
-   "validUntil": "2026-11-06T21:00:00.000+0000",
-   "hideValidityDate": false,
-   "adFormat": "ad_format__brochure_card_cover",
-   "adPlacement": "ad_placement__seo_brochure_box",
-   "pages": "list",
-   "publisher": "dict",
-   "pageCount": 22,
-   "score": 0.00037,
-   "contentBadges": "list",
-   "externalTracking": "dict"
-  },
   "8ce49fea-a0a0-46a5-b690-6edb87566092": {
    "title": "Mein Drogeriemarkt",
    "type": "BROCHURE",
@@ -34,7 +15,26 @@
    "pages": "list",
    "publisher": "dict",
    "pageCount": 16,
-   "score": 7e-05,
+   "score": 0,
+   "contentBadges": "list",
+   "externalTracking": "dict"
+  },
+  "e1fd3ead-bced-4651-8b28-0f4e087a4249": {
+   "title": "Mein Drogeriemarkt",
+   "type": "BROCHURE",
+   "id": 2501315403,
+   "contentId": "e1fd3ead-bced-4651-8b28-0f4e087a4249",
+   "publishedFrom": "2026-10-30T23:00:00.000+0000",
+   "publishedUntil": "2026-11-06T21:00:00.000+0000",
+   "validFrom": "2026-11-01T23:00:00.000+0000",
+   "validUntil": "2026-11-06T21:00:00.000+0000",
+   "hideValidityDate": false,
+   "adFormat": "ad_format__brochure_card_cover",
+   "adPlacement": "ad_placement__seo_brochure_box",
+   "pages": "list",
+   "publisher": "dict",
+   "pageCount": 22,
+   "score": 0,
    "contentBadges": "list",
    "externalTracking": "dict"
   },
@@ -53,7 +53,7 @@
    "pages": "list",
    "publisher": "dict",
    "pageCount": 26,
-   "score": 0.00175,
+   "score": 0.00166,
    "contentBadges": "list",
    "externalTracking": "dict"
   },
@@ -72,7 +72,7 @@
    "pages": "list",
    "publisher": "dict",
    "pageCount": 28,
-   "score": 0.03248,
+   "score": 0.02056,
    "contentBadges": "list",
    "externalTracking": "dict"
   },
@@ -91,7 +91,7 @@
    "pages": "list",
    "publisher": "dict",
    "pageCount": 22,
-   "score": 0.0118,
+   "score": 0.01089,
    "contentBadges": "list",
    "externalTracking": "dict"
   },
