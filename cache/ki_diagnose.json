@@ -53,7 +53,7 @@
    "pages": "list",
    "publisher": "dict",
    "pageCount": 26,
-   "score": 0.00166,
+   "score": 0.00165,
    "contentBadges": "list",
    "externalTracking": "dict"
   },
@@ -72,7 +72,7 @@
    "pages": "list",
    "publisher": "dict",
    "pageCount": 28,
-   "score": 0.02056,
+   "score": 0.01688,
    "contentBadges": "list",
    "externalTracking": "dict"
   },
@@ -91,7 +91,7 @@
    "pages": "list",
    "publisher": "dict",
    "pageCount": 22,
-   "score": 0.01089,
+   "score": 0.01034,
    "contentBadges": "list",
    "externalTracking": "dict"
   },
@@ -170,6 +170,77 @@
    "score": 2e-05,
    "contentBadges": "list",
    "externalTracking": "dict"
+  },
+  "f85c0aea-6355-4732-8401-eaece49bbe20": {
+   "title": "Mehr fürs Geld",
+   "type": "BROCHURE",
+   "id": 2501323670,
+   "contentId": "f85c0aea-6355-4732-8401-eaece49bbe20",
+   "publishedFrom": "2026-11-06T23:00:00.000+0000",
+   "publishedUntil": "2026-11-14T22:00:00.000+0000",
+   "validFrom": "2026-11-08T23:00:00.000+0000",
+   "validUntil": "2026-11-14T22:00:00.000+0000",
+   "hideValidityDate": false,
+   "adFormat": "ad_format__brochure_card_cover",
+   "adPlacement": "ad_placement__seo_brochure_box",
+   "pages": "list",
+   "publisher": "dict",
+   "pageCount": 33,
+   "score": 2e-05,
+   "contentBadges": "list",
+   "externalTracking": "dict"
   }
+ },
+ "Norma f85c0aea-6355-4732-8401-eaece49bbe20": {
+  "titel": "Mehr fürs Geld",
+  "seiten_api": 33,
+  "bilder": 33,
+  "bildgroessen": [
+   "1600x1600",
+   "2800x2800",
+   "75x96",
+   "768x1024"
+  ],
+  "seitenschluessel": [
+   "images",
+   "linkOuts",
+   "number",
+   "offers"
+  ],
+  "je_seite": [
+   18,
+   22,
+   14,
+   18,
+   0,
+   15,
+   15,
+   16,
+   14,
+   15,
+   15,
+   16,
+   17,
+   12,
+   13,
+   14,
+   12,
+   9,
+   23,
+   24,
+   1,
+   1,
+   13,
+   2,
+   9,
+   6,
+   6,
+   12,
+   9,
+   0,
+   0,
+   0,
+   0
+  ]
  }
 }
