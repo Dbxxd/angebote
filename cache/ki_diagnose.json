@@ -15,7 +15,7 @@
    "pages": "list",
    "publisher": "dict",
    "pageCount": 7,
-   "score": 0.00021,
+   "score": 0.00015,
    "contentBadges": "list",
    "externalTracking": "dict"
   },
@@ -72,7 +72,7 @@
    "pages": "list",
    "publisher": "dict",
    "pageCount": 26,
-   "score": 0.00152,
+   "score": 0.001,
    "contentBadges": "list",
    "externalTracking": "dict"
   },
@@ -91,7 +91,7 @@
    "pages": "list",
    "publisher": "dict",
    "pageCount": 26,
-   "score": 0.02736,
+   "score": 0.01517,
    "contentBadges": "list",
    "externalTracking": "dict"
   },
@@ -110,7 +110,7 @@
    "pages": "list",
    "publisher": "dict",
    "pageCount": 24,
-   "score": 0.01196,
+   "score": 0.00793,
    "contentBadges": "list",
    "externalTracking": "dict"
   },
