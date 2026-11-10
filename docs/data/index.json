@@ -1,5 +1,5 @@
 {
- "stand": "2026-11-10T09:24+01:00",
+ "stand": "2026-11-10T18:53+01:00",
  "regionen": [
   {
    "id": "steinfurt",
@@ -16,7 +16,7 @@
     "Penny",
     "Rossmann"
    ],
-   "anzahl": 4005
+   "anzahl": 4006
   },
   {
    "id": "winsen",
@@ -34,7 +34,7 @@
     "Rewe",
     "Rossmann"
    ],
-   "anzahl": 4340
+   "anzahl": 4341
   },
   {
    "id": "harburg",
@@ -52,7 +52,7 @@
     "Rewe",
     "Rossmann"
    ],
-   "anzahl": 4092
+   "anzahl": 4093
   }
  ]
 }
