@@ -1,6 +1,7 @@
 {
  "48282": {
   "Lidl": 834,
+  "Kaufland": 463,
   "Netto Marken-Discount": 400,
   "ROSSMANN": 316,
   "PENNY": 296,
@@ -14,14 +15,13 @@
   "XXXLutz": 190,
   "Möbel Inhofer": 144,
   "Getränke Hoffmann": 68,
-  "Kabs PolsterWelt": 64,
   "KiK": 45,
-  "Kaufland": 42,
   "Fressnapf": 28,
   "OBI": 26
  },
  "48341": {
   "Lidl": 834,
+  "Kaufland": 463,
   "Netto Marken-Discount": 400,
   "ROSSMANN": 316,
   "PENNY": 296,
@@ -32,15 +32,14 @@
   "Möbel Inhofer": 144,
   "Höffner": 128,
   "Getränke Hoffmann": 66,
-  "Kabs PolsterWelt": 64,
   "KiK": 45,
-  "Kaufland": 42,
   "Fressnapf": 28,
   "OBI": 26,
   "Hagebaumarkt": 8
  },
  "48356": {
   "Lidl": 834,
+  "Kaufland": 463,
   "Netto Marken-Discount": 400,
   "ROSSMANN": 316,
   "toom Baumarkt": 250,
@@ -50,9 +49,7 @@
   "XXXLutz": 190,
   "Möbel Inhofer": 144,
   "Höffner": 128,
-  "Kabs PolsterWelt": 64,
   "KiK": 45,
-  "Kaufland": 42,
   "Fressnapf": 28,
   "OBI": 26,
   "Hagebaumarkt": 8
@@ -69,7 +66,6 @@
   "Möbel Inhofer": 144,
   "Höffner": 128,
   "Getränke Hoffmann": 68,
-  "Kabs PolsterWelt": 64,
   "KiK": 45,
   "Fressnapf": 28,
   "OBI": 26
@@ -77,6 +73,7 @@
  "21423": {
   "Lidl": 834,
   "Opti Wohnwelt": 732,
+  "Kaufland": 484,
   "Netto Marken-Discount": 402,
   "EDEKA": 366,
   "ROSSMANN": 316,
@@ -94,13 +91,13 @@
   "Kabs PolsterWelt": 63,
   "EDEKA Frischemarkt": 50,
   "KiK": 45,
-  "Kaufland": 42,
   "Fressnapf": 28,
   "OBI": 26,
   "Pflanzen-Kölle": 19
  },
  "21073": {
   "Lidl": 834,
+  "Kaufland": 496,
   "Netto Marken-Discount": 402,
   "REWE Center": 374,
   "ROSSMANN": 316,
@@ -124,7 +121,6 @@
   "Kabs PolsterWelt": 63,
   "nahkauf": 53,
   "KiK": 45,
-  "Kaufland": 42,
   "EDEKA Bandelt": 42,
   "dm-drogerie markt": 29,
   "Fressnapf": 28,
