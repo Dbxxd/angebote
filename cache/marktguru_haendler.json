@@ -13,11 +13,13 @@
   "Opti-MegaStore": 204,
   "EDEKA Foodservice": 202,
   "XXXLutz": 190,
+  "Woolworth": 155,
   "Möbel Inhofer": 144,
   "Getränke Hoffmann": 68,
-  "KiK": 45,
+  "KiK": 59,
   "Fressnapf": 28,
-  "OBI": 26
+  "OBI": 26,
+  "Kabs PolsterWelt": 24
  },
  "48341": {
   "Lidl": 834,
@@ -29,12 +31,14 @@
   "Opti Wohnwelt": 241,
   "Opti-MegaStore": 204,
   "XXXLutz": 190,
+  "Woolworth": 155,
   "Möbel Inhofer": 144,
   "Höffner": 128,
   "Getränke Hoffmann": 66,
-  "KiK": 45,
+  "KiK": 59,
   "Fressnapf": 28,
   "OBI": 26,
+  "Kabs PolsterWelt": 24,
   "Hagebaumarkt": 8
  },
  "48356": {
@@ -47,11 +51,13 @@
   "Opti Wohnwelt": 241,
   "Opti-MegaStore": 204,
   "XXXLutz": 190,
+  "Woolworth": 155,
   "Möbel Inhofer": 144,
   "Höffner": 128,
-  "KiK": 45,
+  "KiK": 59,
   "Fressnapf": 28,
   "OBI": 26,
+  "Kabs PolsterWelt": 24,
   "Hagebaumarkt": 8
  },
  "48565": {
@@ -63,12 +69,14 @@
   "Opti Wohnwelt": 241,
   "Opti-MegaStore": 204,
   "XXXLutz": 190,
+  "Woolworth": 155,
   "Möbel Inhofer": 144,
   "Höffner": 128,
   "Getränke Hoffmann": 68,
-  "KiK": 45,
+  "KiK": 59,
   "Fressnapf": 28,
-  "OBI": 26
+  "OBI": 26,
+  "Kabs PolsterWelt": 24
  },
  "21423": {
   "Lidl": 834,
@@ -84,16 +92,17 @@
   "REWE": 210,
   "mömax": 197,
   "XXXLutz": 190,
+  "Woolworth": 155,
   "Möbel Inhofer": 144,
   "Höffner": 128,
   "Sconto SB": 122,
   "budni": 101,
-  "Kabs PolsterWelt": 63,
+  "Pflanzen-Kölle": 75,
+  "KiK": 59,
   "EDEKA Frischemarkt": 50,
-  "KiK": 45,
+  "Kabs PolsterWelt": 40,
   "Fressnapf": 28,
-  "OBI": 26,
-  "Pflanzen-Kölle": 19
+  "OBI": 26
  },
  "21073": {
   "Lidl": 834,
@@ -114,17 +123,18 @@
   "Opti-MegaStore": 204,
   "mömax": 197,
   "XXXLutz": 190,
+  "Woolworth": 155,
   "Möbel Inhofer": 144,
   "Höffner": 128,
   "Sconto SB": 122,
   "budni": 101,
-  "Kabs PolsterWelt": 63,
+  "Pflanzen-Kölle": 75,
+  "KiK": 59,
   "nahkauf": 53,
-  "KiK": 45,
   "EDEKA Bandelt": 42,
+  "Kabs PolsterWelt": 40,
   "dm-drogerie markt": 29,
   "Fressnapf": 28,
-  "OBI": 26,
-  "Pflanzen-Kölle": 19
+  "OBI": 26
  }
 }
