@@ -1,11 +1,11 @@
 {
  "48282": {
-  "Lidl": 834,
+  "Lidl": 837,
   "Kaufland": 463,
   "Netto Marken-Discount": 400,
+  "SB-Möbel BOSS": 394,
   "ROSSMANN": 316,
   "PENNY": 296,
-  "SB-Möbel BOSS": 269,
   "Thomas Philipps": 258,
   "toom Baumarkt": 250,
   "Combi": 244,
@@ -13,7 +13,7 @@
   "Opti-MegaStore": 204,
   "EDEKA Foodservice": 202,
   "XXXLutz": 190,
-  "Woolworth": 155,
+  "Woolworth": 159,
   "Möbel Inhofer": 144,
   "Getränke Hoffmann": 68,
   "KiK": 59,
@@ -22,7 +22,7 @@
   "Kabs PolsterWelt": 24
  },
  "48341": {
-  "Lidl": 834,
+  "Lidl": 837,
   "Kaufland": 463,
   "Netto Marken-Discount": 400,
   "ROSSMANN": 316,
@@ -31,7 +31,7 @@
   "Opti Wohnwelt": 241,
   "Opti-MegaStore": 204,
   "XXXLutz": 190,
-  "Woolworth": 155,
+  "Woolworth": 159,
   "Möbel Inhofer": 144,
   "Höffner": 128,
   "Getränke Hoffmann": 66,
@@ -42,7 +42,7 @@
   "Hagebaumarkt": 8
  },
  "48356": {
-  "Lidl": 834,
+  "Lidl": 837,
   "Kaufland": 463,
   "Netto Marken-Discount": 400,
   "ROSSMANN": 316,
@@ -51,7 +51,7 @@
   "Opti Wohnwelt": 241,
   "Opti-MegaStore": 204,
   "XXXLutz": 190,
-  "Woolworth": 155,
+  "Woolworth": 159,
   "Möbel Inhofer": 144,
   "Höffner": 128,
   "KiK": 59,
@@ -61,15 +61,15 @@
   "Hagebaumarkt": 8
  },
  "48565": {
-  "Lidl": 834,
+  "Lidl": 837,
   "Netto Marken-Discount": 400,
+  "SB-Möbel BOSS": 394,
   "ROSSMANN": 316,
   "PENNY": 296,
-  "SB-Möbel BOSS": 269,
   "Opti Wohnwelt": 241,
   "Opti-MegaStore": 204,
   "XXXLutz": 190,
-  "Woolworth": 155,
+  "Woolworth": 159,
   "Möbel Inhofer": 144,
   "Höffner": 128,
   "Getränke Hoffmann": 68,
@@ -79,7 +79,7 @@
   "Kabs PolsterWelt": 24
  },
  "21423": {
-  "Lidl": 834,
+  "Lidl": 837,
   "Opti Wohnwelt": 732,
   "Kaufland": 484,
   "Netto Marken-Discount": 402,
@@ -92,7 +92,7 @@
   "REWE": 210,
   "mömax": 197,
   "XXXLutz": 190,
-  "Woolworth": 155,
+  "Woolworth": 159,
   "Möbel Inhofer": 144,
   "Höffner": 128,
   "Sconto SB": 122,
@@ -105,7 +105,7 @@
   "OBI": 26
  },
  "21073": {
-  "Lidl": 834,
+  "Lidl": 837,
   "Kaufland": 496,
   "Netto Marken-Discount": 402,
   "REWE Center": 374,
@@ -123,7 +123,7 @@
   "Opti-MegaStore": 204,
   "mömax": 197,
   "XXXLutz": 190,
-  "Woolworth": 155,
+  "Woolworth": 159,
   "Möbel Inhofer": 144,
   "Höffner": 128,
   "Sconto SB": 122,
