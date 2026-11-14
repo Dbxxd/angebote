@@ -38,6 +38,25 @@
    "contentBadges": "list",
    "externalTracking": "dict"
   },
+  "f3ac6530-68eb-4033-9fcd-c6ebe71f0d40": {
+   "title": "Mein Drogeriemarkt",
+   "type": "BROCHURE",
+   "id": 2501330013,
+   "contentId": "f3ac6530-68eb-4033-9fcd-c6ebe71f0d40",
+   "publishedFrom": "2026-11-13T23:00:00.000+0000",
+   "publishedUntil": "2026-11-20T21:00:00.000+0000",
+   "validFrom": "2026-11-15T23:00:00.000+0000",
+   "validUntil": "2026-11-20T21:00:00.000+0000",
+   "hideValidityDate": false,
+   "adFormat": "ad_format__brochure_card_cover",
+   "adPlacement": "ad_placement__seo_brochure_box",
+   "pages": "list",
+   "publisher": "dict",
+   "pageCount": 7,
+   "score": 0,
+   "contentBadges": "list",
+   "externalTracking": "dict"
+  },
   "32e13750-6452-483f-9a08-71d365978211": {
    "title": "Aktuelle Angebote",
    "type": "BROCHURE",
@@ -57,25 +76,6 @@
    "contentBadges": "list",
    "externalTracking": "dict"
   },
-  "35eacc93-2bc3-432f-90df-be866cb59823": {
-   "title": "Aktuelle Angebote",
-   "type": "BROCHURE",
-   "id": 2501324438,
-   "contentId": "35eacc93-2bc3-432f-90df-be866cb59823",
-   "publishedFrom": "2026-11-07T23:00:00.000+0000",
-   "publishedUntil": "2026-11-14T21:00:00.000+0000",
-   "validFrom": "2026-11-08T23:00:00.000+0000",
-   "validUntil": "2026-11-14T21:00:00.000+0000",
-   "hideValidityDate": false,
-   "adFormat": "ad_format__brochure_card_cover",
-   "adPlacement": "ad_placement__seo_brochure_box",
-   "pages": "list",
-   "publisher": "dict",
-   "pageCount": 26,
-   "score": 0.01508,
-   "contentBadges": "list",
-   "externalTracking": "dict"
-  },
   "1c153b21-d19b-4bbd-9a8e-6f343f2a88d8": {
    "title": "Aktuelle Angebote",
    "type": "BROCHURE",
@@ -91,7 +91,26 @@
    "pages": "list",
    "publisher": "dict",
    "pageCount": 24,
-   "score": 0.01094,
+   "score": 0.01041,
+   "contentBadges": "list",
+   "externalTracking": "dict"
+  },
+  "35eacc93-2bc3-432f-90df-be866cb59823": {
+   "title": "Aktuelle Angebote",
+   "type": "BROCHURE",
+   "id": 2501324438,
+   "contentId": "35eacc93-2bc3-432f-90df-be866cb59823",
+   "publishedFrom": "2026-11-07T23:00:00.000+0000",
+   "publishedUntil": "2026-11-14T21:00:00.000+0000",
+   "validFrom": "2026-11-08T23:00:00.000+0000",
+   "validUntil": "2026-11-14T21:00:00.000+0000",
+   "hideValidityDate": false,
+   "adFormat": "ad_format__brochure_card_cover",
+   "adPlacement": "ad_placement__seo_brochure_box",
+   "pages": "list",
+   "publisher": "dict",
+   "pageCount": 26,
+   "score": 0.00915,
    "contentBadges": "list",
    "externalTracking": "dict"
   },
@@ -190,54 +209,5 @@
    "contentBadges": "list",
    "externalTracking": "dict"
   }
- },
- "Norma b18b25df-1ead-4081-8f42-3ae218b9d0b1": {
-  "titel": "Mehr fürs Geld",
-  "seiten_api": 30,
-  "bilder": 30,
-  "bildgroessen": [
-   "1600x1600",
-   "2800x2800",
-   "75x96",
-   "768x1024"
-  ],
-  "seitenschluessel": [
-   "images",
-   "linkOuts",
-   "number",
-   "offers"
-  ],
-  "je_seite": [
-   16,
-   21,
-   0,
-   22,
-   17,
-   12,
-   12,
-   12,
-   13,
-   15,
-   15,
-   14,
-   12,
-   19,
-   16,
-   13,
-   11,
-   10,
-   22,
-   23,
-   1,
-   4,
-   4,
-   6,
-   8,
-   11,
-   0,
-   0,
-   0,
-   0
-  ]
  }
 }
