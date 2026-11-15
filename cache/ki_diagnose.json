@@ -15,7 +15,7 @@
    "pages": "list",
    "publisher": "dict",
    "pageCount": 7,
-   "score": 7e-05,
+   "score": 0,
    "contentBadges": "list",
    "externalTracking": "dict"
   },
@@ -34,7 +34,7 @@
    "pages": "list",
    "publisher": "dict",
    "pageCount": 7,
-   "score": 6e-05,
+   "score": 0,
    "contentBadges": "list",
    "externalTracking": "dict"
   },
@@ -53,7 +53,7 @@
    "pages": "list",
    "publisher": "dict",
    "pageCount": 1,
-   "score": 0.01319,
+   "score": 0.00873,
    "contentBadges": "list",
    "externalTracking": "dict"
   },
@@ -72,7 +72,7 @@
    "pages": "list",
    "publisher": "dict",
    "pageCount": 27,
-   "score": 0.00136,
+   "score": 0.00113,
    "contentBadges": "list",
    "externalTracking": "dict"
   },
@@ -91,7 +91,7 @@
    "pages": "list",
    "publisher": "dict",
    "pageCount": 28,
-   "score": 0.02487,
+   "score": 0.01866,
    "contentBadges": "list",
    "externalTracking": "dict"
   },
@@ -110,7 +110,7 @@
    "pages": "list",
    "publisher": "dict",
    "pageCount": 23,
-   "score": 0.01044,
+   "score": 0.0091,
    "contentBadges": "list",
    "externalTracking": "dict"
   },
