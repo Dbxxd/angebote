@@ -38,22 +38,22 @@
    "contentBadges": "list",
    "externalTracking": "dict"
   },
-  "6a8a6f0a-77a6-4f82-8123-b26559adc376": {
-   "title": "Oh, du Fröhliche!",
-   "type": "DYNAMIC",
-   "id": 2501329678,
-   "contentId": "6a8a6f0a-77a6-4f82-8123-b26559adc376",
-   "publishedFrom": "2026-11-14T23:00:00.000+0000",
+  "33875e40-a102-4e7a-b853-4edebed9b24e": {
+   "title": "Wenn Lebensmittel, dann K+K",
+   "type": "BROCHURE",
+   "id": 2501333574,
+   "contentId": "33875e40-a102-4e7a-b853-4edebed9b24e",
+   "publishedFrom": "2026-11-16T08:00:00.000+0000",
    "publishedUntil": "2026-11-21T22:00:00.000+0000",
-   "validFrom": "2026-11-16T22:00:00.000+0000",
+   "validFrom": "2026-11-15T23:00:00.000+0000",
    "validUntil": "2026-11-21T22:00:00.000+0000",
    "hideValidityDate": false,
    "adFormat": "ad_format__brochure_card_cover",
    "adPlacement": "ad_placement__seo_brochure_box",
    "pages": "list",
    "publisher": "dict",
-   "pageCount": 1,
-   "score": 0.00311,
+   "pageCount": 12,
+   "score": 2e-05,
    "contentBadges": "list",
    "externalTracking": "dict"
   },
@@ -72,7 +72,7 @@
    "pages": "list",
    "publisher": "dict",
    "pageCount": 27,
-   "score": 0.00094,
+   "score": 0.00285,
    "contentBadges": "list",
    "externalTracking": "dict"
   },
@@ -91,7 +91,7 @@
    "pages": "list",
    "publisher": "dict",
    "pageCount": 28,
-   "score": 0.01208,
+   "score": 0.01031,
    "contentBadges": "list",
    "externalTracking": "dict"
   },
@@ -110,7 +110,7 @@
    "pages": "list",
    "publisher": "dict",
    "pageCount": 23,
-   "score": 0.00727,
+   "score": 0.00672,
    "contentBadges": "list",
    "externalTracking": "dict"
   },
@@ -171,5 +171,36 @@
    "contentBadges": "list",
    "externalTracking": "dict"
   }
+ },
+ "K+K 33875e40-a102-4e7a-b853-4edebed9b24e": {
+  "titel": "Wenn Lebensmittel, dann K+K",
+  "seiten_api": 12,
+  "bilder": 12,
+  "bildgroessen": [
+   "1600x1600",
+   "2800x2800",
+   "75x96",
+   "768x1024"
+  ],
+  "seitenschluessel": [
+   "images",
+   "linkOuts",
+   "number",
+   "offers"
+  ],
+  "je_seite": [
+   20,
+   9,
+   11,
+   10,
+   12,
+   13,
+   12,
+   15,
+   15,
+   15,
+   17,
+   13
+  ]
  }
 }

@@ -1,0 +1,2767 @@
+{
+ "version": 2,
+ "markt": "K+K",
+ "prospekt": {
+  "id": "33875e40-a102-4e7a-b853-4edebed9b24e",
+  "titel": "Wenn Lebensmittel, dann K+K",
+  "von": "2026-11-16",
+  "bis": "2026-11-21"
+ },
+ "modell": "claude-haiku-5-5",
+ "angebote": [
+  {
+   "marke": "Pringles",
+   "name": "Pringles Original und andere Sorten",
+   "packung": "160g–185g Dose",
+   "preis": 5.0,
+   "alt_preis": 8.37,
+   "grundpreis": null,
+   "gp_einheit": "kg",
+   "kategorie": "Chips",
+   "bereich": [
+    47,
+    2,
+    66,
+    18
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/ac7fd90f-8972-4ced-82b3-ac46029e72b6/zoomlarge_page_0.jpg?impolicy=large"
+  },
+  {
+   "marke": "Haribo",
+   "name": "Haribo versch. Sorten",
+   "packung": "160g–175g Beutel",
+   "preis": 5.0,
+   "alt_preis": 7.14,
+   "grundpreis": null,
+   "gp_einheit": "kg",
+   "kategorie": "Süßwaren",
+   "bereich": [
+    67,
+    0,
+    100,
+    18
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/ac7fd90f-8972-4ced-82b3-ac46029e72b6/zoomlarge_page_0.jpg?impolicy=large"
+  },
+  {
+   "marke": "drlander",
+   "name": "Premium Gehacktes Rind und Schwein gemischt",
+   "packung": "100g",
+   "preis": 1.19,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Hackfleisch",
+   "bereich": [
+    1,
+    23,
+    20,
+    33
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/ac7fd90f-8972-4ced-82b3-ac46029e72b6/zoomlarge_page_0.jpg?impolicy=large"
+  },
+  {
+   "marke": "",
+   "name": "Gyros Schweinefleisch in Streifen, küchenfertig zubereitet",
+   "packung": "100g",
+   "preis": 1.09,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Fleisch",
+   "bereich": [
+    34,
+    22,
+    48,
+    31
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/ac7fd90f-8972-4ced-82b3-ac46029e72b6/zoomlarge_page_0.jpg?impolicy=large"
+  },
+  {
+   "marke": "",
+   "name": "Rinderrouladen aus der Oberschale",
+   "packung": "100g",
+   "preis": 2.19,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Fleisch",
+   "bereich": [
+    28,
+    31,
+    48,
+    40
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/ac7fd90f-8972-4ced-82b3-ac46029e72b6/zoomlarge_page_0.jpg?impolicy=large"
+  },
+  {
+   "marke": "Kiwi Gold",
+   "name": "Kiwi Gold ein gesunder Snack",
+   "packung": "2er Packung",
+   "preis": 1.49,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Obst",
+   "bereich": [
+    55,
+    23,
+    69,
+    29
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/ac7fd90f-8972-4ced-82b3-ac46029e72b6/zoomlarge_page_0.jpg?impolicy=large"
+  },
+  {
+   "marke": "",
+   "name": "Tafeläpfel Pink Lady / Pink Kids",
+   "packung": "750g Schale",
+   "preis": 2.99,
+   "alt_preis": null,
+   "grundpreis": 3.99,
+   "gp_einheit": "kg",
+   "kategorie": "Obst",
+   "bereich": [
+    60,
+    29,
+    78,
+    36
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/ac7fd90f-8972-4ced-82b3-ac46029e72b6/zoomlarge_page_0.jpg?impolicy=large"
+  },
+  {
+   "marke": "",
+   "name": "Speise-Möhren aus dem Münsterland",
+   "packung": "1kg Schale",
+   "preis": 0.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Gemüse",
+   "bereich": [
+    82,
+    27,
+    98,
+    38
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/ac7fd90f-8972-4ced-82b3-ac46029e72b6/zoomlarge_page_0.jpg?impolicy=large"
+  },
+  {
+   "marke": "Dr. Oetker",
+   "name": "Pizza Ristorante Piccola Salame 2er",
+   "packung": "280g–410g",
+   "preis": 1.99,
+   "alt_preis": 3.49,
+   "grundpreis": null,
+   "gp_einheit": "kg",
+   "kategorie": "Pizza",
+   "bereich": [
+    11,
+    43,
+    29,
+    58
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/ac7fd90f-8972-4ced-82b3-ac46029e72b6/zoomlarge_page_0.jpg?impolicy=large"
+  },
+  {
+   "marke": "FRoSTA",
+   "name": "Fertiggerichte verschiedene Sorten",
+   "packung": "450g–500g Beutel",
+   "preis": 2.99,
+   "alt_preis": 4.99,
+   "grundpreis": null,
+   "gp_einheit": "kg",
+   "kategorie": "Fertiggericht",
+   "bereich": [
+    29,
+    43,
+    45,
+    58
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/ac7fd90f-8972-4ced-82b3-ac46029e72b6/zoomlarge_page_0.jpg?impolicy=large"
+  },
+  {
+   "marke": "Ehrmann",
+   "name": "High Protein Joghurt, Pudding, Pudding & Topping und Drink",
+   "packung": "200g/250ml",
+   "preis": 0.99,
+   "alt_preis": 1.49,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Joghurt",
+   "bereich": [
+    57,
+    43,
+    68,
+    58
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/ac7fd90f-8972-4ced-82b3-ac46029e72b6/zoomlarge_page_0.jpg?impolicy=large"
+  },
+  {
+   "marke": "Rama",
+   "name": "Rama 100% pflanzlich",
+   "packung": "400g Becher",
+   "preis": 1.29,
+   "alt_preis": 2.29,
+   "grundpreis": 3.23,
+   "gp_einheit": "kg",
+   "kategorie": "Margarine",
+   "bereich": [
+    68,
+    45,
+    83,
+    53
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/ac7fd90f-8972-4ced-82b3-ac46029e72b6/zoomlarge_page_0.jpg?impolicy=large"
+  },
+  {
+   "marke": "Arla",
+   "name": "Kaergården gesalzen",
+   "packung": "200g Becher",
+   "preis": 1.29,
+   "alt_preis": 2.69,
+   "grundpreis": 6.45,
+   "gp_einheit": "kg",
+   "kategorie": "Frischkäse",
+   "bereich": [
+    83,
+    45,
+    99,
+    58
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/ac7fd90f-8972-4ced-82b3-ac46029e72b6/zoomlarge_page_0.jpg?impolicy=large"
+  },
+  {
+   "marke": "Milram",
+   "name": "Milram Scheiben versch. Sorten",
+   "packung": "125g–150g Packung",
+   "preis": 1.59,
+   "alt_preis": 2.59,
+   "grundpreis": null,
+   "gp_einheit": "kg",
+   "kategorie": "Käse",
+   "bereich": [
+    10,
+    60,
+    23,
+    74
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/ac7fd90f-8972-4ced-82b3-ac46029e72b6/zoomlarge_page_0.jpg?impolicy=large"
+  },
+  {
+   "marke": "Meica",
+   "name": "6 Wiener/Frankfurter oder kleine Knacki",
+   "packung": "540g Glas/Dose",
+   "preis": 2.99,
+   "alt_preis": 4.49,
+   "grundpreis": 11.96,
+   "gp_einheit": "kg",
+   "kategorie": "Würstchen",
+   "bereich": [
+    31,
+    60,
+    41,
+    74
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/ac7fd90f-8972-4ced-82b3-ac46029e72b6/zoomlarge_page_0.jpg?impolicy=large"
+  },
+  {
+   "marke": "Birkel No.1",
+   "name": "Frische Nudeln oder Birkel High Protein",
+   "packung": "500g/400g",
+   "preis": 0.99,
+   "alt_preis": 1.99,
+   "grundpreis": null,
+   "gp_einheit": "kg",
+   "kategorie": "Nudeln",
+   "bereich": [
+    50,
+    60,
+    70,
+    74
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/ac7fd90f-8972-4ced-82b3-ac46029e72b6/zoomlarge_page_0.jpg?impolicy=large"
+  },
+  {
+   "marke": "Lorenz",
+   "name": "Erdnuß-Locken Classic und andere Sorten",
+   "packung": "130g–175g Beutel",
+   "preis": 2.5,
+   "alt_preis": 3.98,
+   "grundpreis": null,
+   "gp_einheit": "kg",
+   "kategorie": "Snack",
+   "bereich": [
+    85,
+    60,
+    100,
+    74
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/ac7fd90f-8972-4ced-82b3-ac46029e72b6/zoomlarge_page_0.jpg?impolicy=large"
+  },
+  {
+   "marke": "Ritter SPORT",
+   "name": "Bunte Vielfalt verschiedene Sorten",
+   "packung": "100g Tafel",
+   "preis": 1.29,
+   "alt_preis": 1.99,
+   "grundpreis": 12.9,
+   "gp_einheit": "kg",
+   "kategorie": "Schokolade",
+   "bereich": [
+    3,
+    77,
+    19,
+    89
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/ac7fd90f-8972-4ced-82b3-ac46029e72b6/zoomlarge_page_0.jpg?impolicy=large"
+  },
+  {
+   "marke": "RAABE",
+   "name": "Pfälzer Lebenslust Chardonnay und andere Sorten",
+   "packung": "6 Flaschen à 0,75 l",
+   "preis": 18.0,
+   "alt_preis": null,
+   "grundpreis": 5.05,
+   "gp_einheit": "l",
+   "kategorie": "Wein",
+   "bereich": [
+    20,
+    75,
+    36,
+    90
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/ac7fd90f-8972-4ced-82b3-ac46029e72b6/zoomlarge_page_0.jpg?impolicy=large"
+  },
+  {
+   "marke": "VELTINS",
+   "name": "Pilsener / Helles Pülleken / Helles Lager",
+   "packung": "24 Flaschen à 0,33 l / 0,5 l",
+   "preis": 13.99,
+   "alt_preis": 16.99,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Bier",
+   "bereich": [
+    63,
+    75,
+    83,
+    92
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/ac7fd90f-8972-4ced-82b3-ac46029e72b6/zoomlarge_page_0.jpg?impolicy=large"
+  },
+  {
+   "marke": "",
+   "name": "Rinderschmorbraten oder Rinderbratengulasch, aus der Keule, handgeschnitten",
+   "packung": "100g",
+   "preis": 1.89,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Fleisch",
+   "bereich": [
+    45,
+    4,
+    96,
+    19
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/ca1901cb-a0bc-4971-8ecb-8e73bd09c5b8/zoomlarge_page_1.jpg?impolicy=large"
+  },
+  {
+   "marke": "",
+   "name": "Rinderrouladen, aus der Oberschale",
+   "packung": "100g",
+   "preis": 2.19,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Fleisch",
+   "bereich": [
+    31,
+    23,
+    68,
+    37
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/ca1901cb-a0bc-4971-8ecb-8e73bd09c5b8/zoomlarge_page_1.jpg?impolicy=large"
+  },
+  {
+   "marke": "",
+   "name": "Gefüllte Rinderrouladen, aus der Oberschale, küchenfertig zubereitet",
+   "packung": "100g",
+   "preis": 2.19,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Fleisch",
+   "bereich": [
+    70,
+    20,
+    97,
+    36
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/ca1901cb-a0bc-4971-8ecb-8e73bd09c5b8/zoomlarge_page_1.jpg?impolicy=large"
+  },
+  {
+   "marke": "",
+   "name": "Premium Gehacktes, Rind und Schwein gemischt",
+   "packung": "100g",
+   "preis": 1.19,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Fleisch",
+   "bereich": [
+    68,
+    40,
+    95,
+    53
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/ca1901cb-a0bc-4971-8ecb-8e73bd09c5b8/zoomlarge_page_1.jpg?impolicy=large"
+  },
+  {
+   "marke": "",
+   "name": "1a Schnitzel, aus der Schweineoberschale",
+   "packung": "1000g",
+   "preis": 8.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Fleisch",
+   "bereich": [
+    66,
+    53,
+    97,
+    64
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/ca1901cb-a0bc-4971-8ecb-8e73bd09c5b8/zoomlarge_page_1.jpg?impolicy=large"
+  },
+  {
+   "marke": "drilander",
+   "name": "Bolognese oder Chili Con Carne, fix und fertig",
+   "packung": "500g Schlauchbeutel",
+   "preis": 5.99,
+   "alt_preis": null,
+   "grundpreis": 11.98,
+   "gp_einheit": "kg",
+   "kategorie": "Fertiggericht",
+   "bereich": [
+    5,
+    50,
+    51,
+    74
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/ca1901cb-a0bc-4971-8ecb-8e73bd09c5b8/zoomlarge_page_1.jpg?impolicy=large"
+  },
+  {
+   "marke": "",
+   "name": "1a Schinkenbraten, vom Schwein, am Stück, zart und mager",
+   "packung": "1000g",
+   "preis": 6.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Fleisch",
+   "bereich": [
+    67,
+    66,
+    95,
+    81
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/ca1901cb-a0bc-4971-8ecb-8e73bd09c5b8/zoomlarge_page_1.jpg?impolicy=large"
+  },
+  {
+   "marke": "",
+   "name": "Gyros, Schweinefleisch in Streifen, küchenfertig zubereitet",
+   "packung": "100g",
+   "preis": 1.09,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Fleisch",
+   "bereich": [
+    12,
+    79,
+    54,
+    96
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/ca1901cb-a0bc-4971-8ecb-8e73bd09c5b8/zoomlarge_page_1.jpg?impolicy=large"
+  },
+  {
+   "marke": "Reinert",
+   "name": "Sportsalami, fettreduziert",
+   "packung": "100g",
+   "preis": 1.99,
+   "alt_preis": 2.49,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Wurst",
+   "bereich": [
+    71,
+    84,
+    98,
+    97
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/ca1901cb-a0bc-4971-8ecb-8e73bd09c5b8/zoomlarge_page_1.jpg?impolicy=large"
+  },
+  {
+   "marke": "Heidegold",
+   "name": "Hähnchenschenkel ohne Rückenstück, gewürzt oder mariniert",
+   "packung": "1000g",
+   "preis": 6.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Geflügel",
+   "bereich": [
+    28,
+    2,
+    52,
+    17
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/4e24f5e3-06c2-4b57-96bb-861a76d47d96/zoomlarge_page_2.jpg?impolicy=large"
+  },
+  {
+   "marke": "Heidegold",
+   "name": "Hähnchenschenkel ohne Rückenstück",
+   "packung": "1000g",
+   "preis": 5.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Geflügel",
+   "bereich": [
+    66,
+    2,
+    97,
+    17
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/4e24f5e3-06c2-4b57-96bb-861a76d47d96/zoomlarge_page_2.jpg?impolicy=large"
+  },
+  {
+   "marke": "drilander",
+   "name": "Luftgetrocknete Mettwurst",
+   "packung": "100g",
+   "preis": 1.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Wurst",
+   "bereich": [
+    19,
+    21,
+    44,
+    35
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/4e24f5e3-06c2-4b57-96bb-861a76d47d96/zoomlarge_page_2.jpg?impolicy=large"
+  },
+  {
+   "marke": "drilander",
+   "name": "Frischwurstaufschnitt, verschiedene Sorten",
+   "packung": "100g",
+   "preis": 1.39,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Aufschnitt",
+   "bereich": [
+    55,
+    22,
+    94,
+    35
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/4e24f5e3-06c2-4b57-96bb-861a76d47d96/zoomlarge_page_2.jpg?impolicy=large"
+  },
+  {
+   "marke": "",
+   "name": "Bacon vom Schwein, geräuchert, am Stück oder geschnitten",
+   "packung": "100g",
+   "preis": 1.69,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Speck",
+   "bereich": [
+    16,
+    38,
+    47,
+    51
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/4e24f5e3-06c2-4b57-96bb-861a76d47d96/zoomlarge_page_2.jpg?impolicy=large"
+  },
+  {
+   "marke": "",
+   "name": "Nussschinken, geräuchert und ungeräuchert",
+   "packung": "100g",
+   "preis": 2.29,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Schinken",
+   "bereich": [
+    63,
+    39,
+    93,
+    54
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/4e24f5e3-06c2-4b57-96bb-861a76d47d96/zoomlarge_page_2.jpg?impolicy=large"
+  },
+  {
+   "marke": "",
+   "name": "Gekochter Hinterschinken, ungeräuchert",
+   "packung": "100g",
+   "preis": 1.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Schinken",
+   "bereich": [
+    17,
+    52,
+    46,
+    64
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/4e24f5e3-06c2-4b57-96bb-861a76d47d96/zoomlarge_page_2.jpg?impolicy=large"
+  },
+  {
+   "marke": "",
+   "name": "Bockwurst",
+   "packung": "100g",
+   "preis": 1.29,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Wurst",
+   "bereich": [
+    16,
+    67,
+    45,
+    79
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/4e24f5e3-06c2-4b57-96bb-861a76d47d96/zoomlarge_page_2.jpg?impolicy=large"
+  },
+  {
+   "marke": "",
+   "name": "Mettwürstchen, geräuchert und ungeräuchert (Lose Ware)",
+   "packung": "100g",
+   "preis": 1.29,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Wurst",
+   "bereich": [
+    63,
+    67,
+    93,
+    79
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/4e24f5e3-06c2-4b57-96bb-861a76d47d96/zoomlarge_page_2.jpg?impolicy=large"
+  },
+  {
+   "marke": "iglo",
+   "name": "Natur Gemüse Grünkohl",
+   "packung": "600g Packung",
+   "preis": 1.69,
+   "alt_preis": 1.99,
+   "grundpreis": 2.82,
+   "gp_einheit": "kg",
+   "kategorie": "Gemüse",
+   "bereich": [
+    47,
+    77,
+    73,
+    95
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/4e24f5e3-06c2-4b57-96bb-861a76d47d96/zoomlarge_page_2.jpg?impolicy=large"
+  },
+  {
+   "marke": "drilander",
+   "name": "Delikatess Leberwurst grob",
+   "packung": "100g",
+   "preis": 1.29,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Wurst",
+   "bereich": [
+    16,
+    79,
+    42,
+    97
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/4e24f5e3-06c2-4b57-96bb-861a76d47d96/zoomlarge_page_2.jpg?impolicy=large"
+  },
+  {
+   "marke": "BRUN",
+   "name": "Speisemöhren",
+   "packung": "1kg Schale",
+   "preis": 0.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Gemüse",
+   "bereich": [
+    67,
+    3,
+    87,
+    27
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/fd0fafa9-e3e4-4b8c-9126-407203e1e720/zoomlarge_page_3.jpg?impolicy=large"
+  },
+  {
+   "marke": "",
+   "name": "Kiwi Gold",
+   "packung": "2er Packung",
+   "preis": 1.49,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Obst",
+   "bereich": [
+    4,
+    31,
+    33,
+    49
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/fd0fafa9-e3e4-4b8c-9126-407203e1e720/zoomlarge_page_3.jpg?impolicy=large"
+  },
+  {
+   "marke": "Pink Lady",
+   "name": "Tafeläpfel Pink Lady / Pink Kids",
+   "packung": "750g Schale",
+   "preis": 2.99,
+   "alt_preis": null,
+   "grundpreis": 3.99,
+   "gp_einheit": "kg",
+   "kategorie": "Obst",
+   "bereich": [
+    37,
+    33,
+    65,
+    50
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/fd0fafa9-e3e4-4b8c-9126-407203e1e720/zoomlarge_page_3.jpg?impolicy=large"
+  },
+  {
+   "marke": "",
+   "name": "Clementinen",
+   "packung": "1kg Netz",
+   "preis": 2.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Obst",
+   "bereich": [
+    67,
+    34,
+    98,
+    49
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/fd0fafa9-e3e4-4b8c-9126-407203e1e720/zoomlarge_page_3.jpg?impolicy=large"
+  },
+  {
+   "marke": "",
+   "name": "Kaki / Persimon",
+   "packung": "je Stück",
+   "preis": 0.79,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Obst",
+   "bereich": [
+    4,
+    57,
+    33,
+    70
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/fd0fafa9-e3e4-4b8c-9126-407203e1e720/zoomlarge_page_3.jpg?impolicy=large"
+  },
+  {
+   "marke": "",
+   "name": "Feldsalat",
+   "packung": "125g Schale",
+   "preis": 1.69,
+   "alt_preis": null,
+   "grundpreis": 13.52,
+   "gp_einheit": "kg",
+   "kategorie": "Salat",
+   "bereich": [
+    36,
+    56,
+    65,
+    70
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/fd0fafa9-e3e4-4b8c-9126-407203e1e720/zoomlarge_page_3.jpg?impolicy=large"
+  },
+  {
+   "marke": "",
+   "name": "Romatomaten",
+   "packung": "500g Schale",
+   "preis": 2.79,
+   "alt_preis": null,
+   "grundpreis": 5.58,
+   "gp_einheit": "kg",
+   "kategorie": "Gemüse",
+   "bereich": [
+    68,
+    57,
+    98,
+    70
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/fd0fafa9-e3e4-4b8c-9126-407203e1e720/zoomlarge_page_3.jpg?impolicy=large"
+  },
+  {
+   "marke": "",
+   "name": "Spitzkohl",
+   "packung": "1kg",
+   "preis": 1.29,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Gemüse",
+   "bereich": [
+    12,
+    77,
+    33,
+    93
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/fd0fafa9-e3e4-4b8c-9126-407203e1e720/zoomlarge_page_3.jpg?impolicy=large"
+  },
+  {
+   "marke": "",
+   "name": "Speisezwiebeln",
+   "packung": "1kg Netz",
+   "preis": 1.29,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Gemüse",
+   "bereich": [
+    37,
+    77,
+    65,
+    93
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/fd0fafa9-e3e4-4b8c-9126-407203e1e720/zoomlarge_page_3.jpg?impolicy=large"
+  },
+  {
+   "marke": "",
+   "name": "Broccoli",
+   "packung": "500g Packung",
+   "preis": 1.99,
+   "alt_preis": null,
+   "grundpreis": 3.98,
+   "gp_einheit": "kg",
+   "kategorie": "Gemüse",
+   "bereich": [
+    75,
+    77,
+    98,
+    93
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/fd0fafa9-e3e4-4b8c-9126-407203e1e720/zoomlarge_page_3.jpg?impolicy=large"
+  },
+  {
+   "marke": "iglo",
+   "name": "Schlemmerfilet",
+   "packung": "380g Packung",
+   "preis": 2.99,
+   "alt_preis": 4.89,
+   "grundpreis": 7.87,
+   "gp_einheit": "kg",
+   "kategorie": "Fisch",
+   "bereich": [
+    13,
+    13,
+    36,
+    23
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/1f6b43f6-fd92-4ac9-9471-f00a89116401/zoomlarge_page_4.jpg?impolicy=large"
+  },
+  {
+   "marke": "iglo",
+   "name": "Filegro Ofen-Backfisch",
+   "packung": "240 – 250g Packung",
+   "preis": 3.29,
+   "alt_preis": 4.89,
+   "grundpreis": null,
+   "gp_einheit": "kg",
+   "kategorie": "Fisch",
+   "bereich": [
+    39,
+    8,
+    57,
+    24
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/1f6b43f6-fd92-4ac9-9471-f00a89116401/zoomlarge_page_4.jpg?impolicy=large"
+  },
+  {
+   "marke": "iglo",
+   "name": "Apfel-Rotkohl, traditionelle Art, vegan",
+   "packung": "450g Packung",
+   "preis": 1.49,
+   "alt_preis": 1.99,
+   "grundpreis": 3.31,
+   "gp_einheit": "kg",
+   "kategorie": "Gemüse",
+   "bereich": [
+    74,
+    2,
+    91,
+    14
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/1f6b43f6-fd92-4ac9-9471-f00a89116401/zoomlarge_page_4.jpg?impolicy=large"
+  },
+  {
+   "marke": "iglo",
+   "name": "Natur Gemüse Grünkohl",
+   "packung": "600g Packung",
+   "preis": 1.69,
+   "alt_preis": 1.99,
+   "grundpreis": 2.82,
+   "gp_einheit": "kg",
+   "kategorie": "Gemüse",
+   "bereich": [
+    73,
+    15,
+    97,
+    27
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/1f6b43f6-fd92-4ac9-9471-f00a89116401/zoomlarge_page_4.jpg?impolicy=large"
+  },
+  {
+   "marke": "Dr. Oetker",
+   "name": "Tradizionale",
+   "packung": "350g – 415g Packung",
+   "preis": 2.99,
+   "alt_preis": 3.69,
+   "grundpreis": null,
+   "gp_einheit": "kg",
+   "kategorie": "Pizza",
+   "bereich": [
+    4,
+    37,
+    27,
+    52
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/1f6b43f6-fd92-4ac9-9471-f00a89116401/zoomlarge_page_4.jpg?impolicy=large"
+  },
+  {
+   "marke": "Dr. Oetker",
+   "name": "Intermezzo",
+   "packung": "165g – 190g Packung",
+   "preis": 1.99,
+   "alt_preis": 2.49,
+   "grundpreis": null,
+   "gp_einheit": "kg",
+   "kategorie": "Pizza",
+   "bereich": [
+    31,
+    42,
+    50,
+    51
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/1f6b43f6-fd92-4ac9-9471-f00a89116401/zoomlarge_page_4.jpg?impolicy=large"
+  },
+  {
+   "marke": "FRoSTA",
+   "name": "Gemüsebeilagen",
+   "packung": "300g Packung",
+   "preis": 1.99,
+   "alt_preis": 2.79,
+   "grundpreis": 6.63,
+   "gp_einheit": "kg",
+   "kategorie": "Gemüse",
+   "bereich": [
+    75,
+    30,
+    97,
+    42
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/1f6b43f6-fd92-4ac9-9471-f00a89116401/zoomlarge_page_4.jpg?impolicy=large"
+  },
+  {
+   "marke": "Dr. Oetker",
+   "name": "Pizza Ristorante, Piccola Salame 2er",
+   "packung": "280g – 410g Packung",
+   "preis": 1.99,
+   "alt_preis": 3.49,
+   "grundpreis": null,
+   "gp_einheit": "kg",
+   "kategorie": "Pizza",
+   "bereich": [
+    4,
+    61,
+    27,
+    76
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/1f6b43f6-fd92-4ac9-9471-f00a89116401/zoomlarge_page_4.jpg?impolicy=large"
+  },
+  {
+   "marke": "agrarfrost",
+   "name": "Kartoffelpuffer",
+   "packung": "1200g Beutel",
+   "preis": 3.99,
+   "alt_preis": 4.99,
+   "grundpreis": 3.33,
+   "gp_einheit": "kg",
+   "kategorie": "Kartoffelprodukt",
+   "bereich": [
+    30,
+    60,
+    57,
+    78
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/1f6b43f6-fd92-4ac9-9471-f00a89116401/zoomlarge_page_4.jpg?impolicy=large"
+  },
+  {
+   "marke": "Mövenpick",
+   "name": "Eis, verschiedene Sorten",
+   "packung": "800ml – 900ml Packung",
+   "preis": 1.99,
+   "alt_preis": 3.99,
+   "grundpreis": null,
+   "gp_einheit": "l",
+   "kategorie": "Eis",
+   "bereich": [
+    6,
+    83,
+    59,
+    96
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/1f6b43f6-fd92-4ac9-9471-f00a89116401/zoomlarge_page_4.jpg?impolicy=large"
+  },
+  {
+   "marke": "FRoSTA",
+   "name": "Veggie, verschiedene Sorten",
+   "packung": "500g Beutel",
+   "preis": 2.99,
+   "alt_preis": 4.69,
+   "grundpreis": 5.98,
+   "gp_einheit": "kg",
+   "kategorie": "Fertiggericht",
+   "bereich": [
+    77,
+    45,
+    90,
+    58
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/1f6b43f6-fd92-4ac9-9471-f00a89116401/zoomlarge_page_4.jpg?impolicy=large"
+  },
+  {
+   "marke": "FRoSTA",
+   "name": "Fertiggerichte, verschiedene Sorten",
+   "packung": "450g – 500g Beutel",
+   "preis": 2.99,
+   "alt_preis": 4.99,
+   "grundpreis": null,
+   "gp_einheit": "kg",
+   "kategorie": "Fertiggericht",
+   "bereich": [
+    63,
+    58,
+    98,
+    83
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/1f6b43f6-fd92-4ac9-9471-f00a89116401/zoomlarge_page_4.jpg?impolicy=large"
+  },
+  {
+   "marke": "Dr. Oetker",
+   "name": "Grieß Pudding Natur oder Sahne Pudding",
+   "packung": "500g Becher",
+   "preis": 1.99,
+   "alt_preis": 2.69,
+   "grundpreis": 3.98,
+   "gp_einheit": "kg",
+   "kategorie": "Pudding",
+   "bereich": [
+    12,
+    5,
+    39,
+    25
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/6409df0b-139e-430d-bfb2-401f9d4b8ddb/zoomlarge_page_5.jpg?impolicy=large"
+  },
+  {
+   "marke": "Weihenstephan",
+   "name": "Rahmjoghurt",
+   "packung": "150g Becher",
+   "preis": 0.69,
+   "alt_preis": 0.99,
+   "grundpreis": 4.6,
+   "gp_einheit": "kg",
+   "kategorie": "Joghurt",
+   "bereich": [
+    46,
+    4,
+    63,
+    15
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/6409df0b-139e-430d-bfb2-401f9d4b8ddb/zoomlarge_page_5.jpg?impolicy=large"
+  },
+  {
+   "marke": "müller",
+   "name": "Reine Buttermilch",
+   "packung": "500g Flasche",
+   "preis": 0.79,
+   "alt_preis": 1.19,
+   "grundpreis": 1.58,
+   "gp_einheit": "kg",
+   "kategorie": "Buttermilch",
+   "bereich": [
+    75,
+    4,
+    92,
+    24
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/6409df0b-139e-430d-bfb2-401f9d4b8ddb/zoomlarge_page_5.jpg?impolicy=large"
+  },
+  {
+   "marke": "DANONE",
+   "name": "Fruchtzwerge",
+   "packung": "6x 50g Becher",
+   "preis": 1.49,
+   "alt_preis": 1.99,
+   "grundpreis": 4.97,
+   "gp_einheit": "kg",
+   "kategorie": "Joghurt",
+   "bereich": [
+    13,
+    25,
+    39,
+    35
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/6409df0b-139e-430d-bfb2-401f9d4b8ddb/zoomlarge_page_5.jpg?impolicy=large"
+  },
+  {
+   "marke": "Ehrmann",
+   "name": "High Protein Joghurt, Pudding, Pudding & Topping oder Drink",
+   "packung": "200g / 250ml Becher / Flasche",
+   "preis": 0.99,
+   "alt_preis": 1.49,
+   "grundpreis": 4.95,
+   "gp_einheit": "kg",
+   "kategorie": "Milchprodukt",
+   "bereich": [
+    52,
+    23,
+    69,
+    40
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/6409df0b-139e-430d-bfb2-401f9d4b8ddb/zoomlarge_page_5.jpg?impolicy=large"
+  },
+  {
+   "marke": "Gutfried",
+   "name": "Hähnchenbraten Roast Chicken",
+   "packung": "100g Packung",
+   "preis": 1.79,
+   "alt_preis": 2.29,
+   "grundpreis": 17.9,
+   "gp_einheit": "kg",
+   "kategorie": "Wurst",
+   "bereich": [
+    80,
+    25,
+    96,
+    41
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/6409df0b-139e-430d-bfb2-401f9d4b8ddb/zoomlarge_page_5.jpg?impolicy=large"
+  },
+  {
+   "marke": "Arla",
+   "name": "Kaergården gesalzen und ungesalzen",
+   "packung": "200g Becher",
+   "preis": 1.29,
+   "alt_preis": 2.69,
+   "grundpreis": 6.45,
+   "gp_einheit": "kg",
+   "kategorie": "Butter",
+   "bereich": [
+    13,
+    41,
+    39,
+    56
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/6409df0b-139e-430d-bfb2-401f9d4b8ddb/zoomlarge_page_5.jpg?impolicy=large"
+  },
+  {
+   "marke": "Rama",
+   "name": "Rama",
+   "packung": "400g Becher",
+   "preis": 1.29,
+   "alt_preis": 2.29,
+   "grundpreis": 3.23,
+   "gp_einheit": "kg",
+   "kategorie": "Margarine",
+   "bereich": [
+    45,
+    43,
+    64,
+    54
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/6409df0b-139e-430d-bfb2-401f9d4b8ddb/zoomlarge_page_5.jpg?impolicy=large"
+  },
+  {
+   "marke": "GIOVANNI Ferrari",
+   "name": "Grana Padano gerieben",
+   "packung": "60g Beutel",
+   "preis": 1.99,
+   "alt_preis": 2.29,
+   "grundpreis": 33.17,
+   "gp_einheit": "kg",
+   "kategorie": "Käse",
+   "bereich": [
+    80,
+    43,
+    94,
+    58
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/6409df0b-139e-430d-bfb2-401f9d4b8ddb/zoomlarge_page_5.jpg?impolicy=large"
+  },
+  {
+   "marke": "MILRAM",
+   "name": "Scheiben verschiedene Sorten",
+   "packung": "125g – 150g Packung",
+   "preis": 1.59,
+   "alt_preis": 2.59,
+   "grundpreis": 10.6,
+   "gp_einheit": "kg",
+   "kategorie": "Käse",
+   "bereich": [
+    13,
+    60,
+    63,
+    78
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/6409df0b-139e-430d-bfb2-401f9d4b8ddb/zoomlarge_page_5.jpg?impolicy=large"
+  },
+  {
+   "marke": "LEERDAMMER",
+   "name": "Original Scheiben verschiedene Sorten",
+   "packung": "125g – 140g Packung",
+   "preis": 1.99,
+   "alt_preis": 2.99,
+   "grundpreis": 14.21,
+   "gp_einheit": "kg",
+   "kategorie": "Käse",
+   "bereich": [
+    76,
+    60,
+    96,
+    76
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/6409df0b-139e-430d-bfb2-401f9d4b8ddb/zoomlarge_page_5.jpg?impolicy=large"
+  },
+  {
+   "marke": "MILRAM",
+   "name": "Pizzaliebe Gouda & Mozzarella oder Auflaufliebe Cheddar & Mozzarella",
+   "packung": "150g Beutel",
+   "preis": 1.59,
+   "alt_preis": 2.59,
+   "grundpreis": 10.6,
+   "gp_einheit": "kg",
+   "kategorie": "Käse",
+   "bereich": [
+    13,
+    80,
+    30,
+    96
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/6409df0b-139e-430d-bfb2-401f9d4b8ddb/zoomlarge_page_5.jpg?impolicy=large"
+  },
+  {
+   "marke": "Arla",
+   "name": "Finello verschiedene Sorten",
+   "packung": "150g Beutel",
+   "preis": 1.79,
+   "alt_preis": 2.59,
+   "grundpreis": 11.93,
+   "gp_einheit": "kg",
+   "kategorie": "Käse",
+   "bereich": [
+    40,
+    80,
+    72,
+    97
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/6409df0b-139e-430d-bfb2-401f9d4b8ddb/zoomlarge_page_5.jpg?impolicy=large"
+  },
+  {
+   "marke": "Golden Toast",
+   "name": "Toastbrot Butter oder Vollkorn",
+   "packung": "500g Packung",
+   "preis": 1.29,
+   "alt_preis": 1.89,
+   "grundpreis": 2.58,
+   "gp_einheit": "kg",
+   "kategorie": "Brot",
+   "bereich": [
+    16,
+    6,
+    56,
+    22
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/ecf89ade-63d2-4bad-84a1-26eea9346589/zoomlarge_page_6.jpg?impolicy=large"
+  },
+  {
+   "marke": "Lieken Urkorn",
+   "name": "Bauernmild oder Mehrkornbrot",
+   "packung": "500g Packung",
+   "preis": 1.49,
+   "alt_preis": 1.89,
+   "grundpreis": 2.98,
+   "gp_einheit": "kg",
+   "kategorie": "Brot",
+   "bereich": [
+    59,
+    2,
+    98,
+    28
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/ecf89ade-63d2-4bad-84a1-26eea9346589/zoomlarge_page_6.jpg?impolicy=large"
+  },
+  {
+   "marke": "Leicht & Cross",
+   "name": "Knusperbrot Weizen und andere Sorten",
+   "packung": "125g Packung",
+   "preis": 0.99,
+   "alt_preis": 1.39,
+   "grundpreis": 7.92,
+   "gp_einheit": "kg",
+   "kategorie": "Knäckebrot",
+   "bereich": [
+    13,
+    26,
+    39,
+    38
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/ecf89ade-63d2-4bad-84a1-26eea9346589/zoomlarge_page_6.jpg?impolicy=large"
+  },
+  {
+   "marke": "Brandt",
+   "name": "Markenzwieback verschiedene Sorten",
+   "packung": "225g Packung",
+   "preis": 1.49,
+   "alt_preis": 1.79,
+   "grundpreis": 6.62,
+   "gp_einheit": "kg",
+   "kategorie": "Zwieback",
+   "bereich": [
+    50,
+    29,
+    73,
+    45
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/ecf89ade-63d2-4bad-84a1-26eea9346589/zoomlarge_page_6.jpg?impolicy=large"
+  },
+  {
+   "marke": "Milka",
+   "name": "Haselnusscreme",
+   "packung": "350g Glas",
+   "preis": 2.99,
+   "alt_preis": 3.99,
+   "grundpreis": 8.54,
+   "gp_einheit": "kg",
+   "kategorie": "Aufstrich",
+   "bereich": [
+    83,
+    33,
+    96,
+    46
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/ecf89ade-63d2-4bad-84a1-26eea9346589/zoomlarge_page_6.jpg?impolicy=large"
+  },
+  {
+   "marke": "Nesquik",
+   "name": "Original und andere Sorten",
+   "packung": "280g - 350g",
+   "preis": 2.69,
+   "alt_preis": 3.29,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Kakaogetränk",
+   "bereich": [
+    5,
+    52,
+    30,
+    76
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/ecf89ade-63d2-4bad-84a1-26eea9346589/zoomlarge_page_6.jpg?impolicy=large"
+  },
+  {
+   "marke": "Meßmer",
+   "name": "Verfeinerter Früchte-, Kräuter- oder Rooibostee verschiedene Sorten",
+   "packung": "20er Packung",
+   "preis": 1.69,
+   "alt_preis": 2.29,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Tee",
+   "bereich": [
+    32,
+    53,
+    50,
+    68
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/ecf89ade-63d2-4bad-84a1-26eea9346589/zoomlarge_page_6.jpg?impolicy=large"
+  },
+  {
+   "marke": "Teekanne",
+   "name": "Kräuter- oder Früchtetee verschiedene Sorten",
+   "packung": "40er / 50er Beutel",
+   "preis": 2.99,
+   "alt_preis": 3.49,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Tee",
+   "bereich": [
+    54,
+    52,
+    76,
+    63
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/ecf89ade-63d2-4bad-84a1-26eea9346589/zoomlarge_page_6.jpg?impolicy=large"
+  },
+  {
+   "marke": "MinusL",
+   "name": "H-Vollmilch oder fettarme H-Milch 3,5% / 1,5%",
+   "packung": "1l Packung",
+   "preis": 1.49,
+   "alt_preis": 1.99,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Milch",
+   "bereich": [
+    85,
+    47,
+    97,
+    68
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/ecf89ade-63d2-4bad-84a1-26eea9346589/zoomlarge_page_6.jpg?impolicy=large"
+  },
+  {
+   "marke": "yfood",
+   "name": "Trinkmahlzeit versch. Sorten",
+   "packung": "500ml Flasche",
+   "preis": 3.49,
+   "alt_preis": 3.99,
+   "grundpreis": 6.98,
+   "gp_einheit": "l",
+   "kategorie": "Trinkmahlzeit",
+   "bereich": [
+    12,
+    78,
+    33,
+    97
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/ecf89ade-63d2-4bad-84a1-26eea9346589/zoomlarge_page_6.jpg?impolicy=large"
+  },
+  {
+   "marke": "Melitta",
+   "name": "Bella Crema Bohnen",
+   "packung": "1kg",
+   "preis": 15.99,
+   "alt_preis": 17.99,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Kaffee",
+   "bereich": [
+    40,
+    74,
+    56,
+    97
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/ecf89ade-63d2-4bad-84a1-26eea9346589/zoomlarge_page_6.jpg?impolicy=large"
+  },
+  {
+   "marke": "Jacobs Tassimo",
+   "name": "Tassimo verschiedene Sorten",
+   "packung": "132g - 270g",
+   "preis": 4.99,
+   "alt_preis": 6.99,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Kaffee",
+   "bereich": [
+    58,
+    69,
+    97,
+    97
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/ecf89ade-63d2-4bad-84a1-26eea9346589/zoomlarge_page_6.jpg?impolicy=large"
+  },
+  {
+   "marke": "Erasco",
+   "name": "Hühner Nudel-Topf und andere Sorten",
+   "packung": "400g Dose",
+   "preis": 1.69,
+   "alt_preis": 1.99,
+   "grundpreis": 4.23,
+   "gp_einheit": "kg",
+   "kategorie": "Suppe",
+   "bereich": [
+    39,
+    4,
+    52,
+    18
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/717ab3e3-a3ea-45ed-9fad-5218e29ec016/zoomlarge_page_7.jpg?impolicy=large"
+  },
+  {
+   "marke": "Maggi",
+   "name": "Für Genießer Suppen, Zwiebelsuppe und andere Sorten",
+   "packung": "Beutel",
+   "preis": 1.19,
+   "alt_preis": 1.49,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Suppe",
+   "bereich": [
+    61,
+    3,
+    76,
+    18
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/717ab3e3-a3ea-45ed-9fad-5218e29ec016/zoomlarge_page_7.jpg?impolicy=large"
+  },
+  {
+   "marke": "Thomy",
+   "name": "Reines Sonnenblumenöl",
+   "packung": "750-ml-Flasche",
+   "preis": 2.79,
+   "alt_preis": 3.79,
+   "grundpreis": 3.72,
+   "gp_einheit": "l",
+   "kategorie": "Speiseöl",
+   "bereich": [
+    84,
+    2,
+    96,
+    27
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/717ab3e3-a3ea-45ed-9fad-5218e29ec016/zoomlarge_page_7.jpg?impolicy=large"
+  },
+  {
+   "marke": "Meica",
+   "name": "6 Wiener / Frankfurter oder kleine Knackzarte",
+   "packung": "540g Glas/Dose",
+   "preis": 2.99,
+   "alt_preis": 4.49,
+   "grundpreis": 11.96,
+   "gp_einheit": "kg",
+   "kategorie": "Würstchen",
+   "bereich": [
+    12,
+    13,
+    32,
+    40
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/717ab3e3-a3ea-45ed-9fad-5218e29ec016/zoomlarge_page_7.jpg?impolicy=large"
+  },
+  {
+   "marke": "Appel",
+   "name": "Heringsfilets, verschiedene Sorten",
+   "packung": "200g Dose",
+   "preis": 1.49,
+   "alt_preis": 1.99,
+   "grundpreis": 7.45,
+   "gp_einheit": "kg",
+   "kategorie": "Fisch",
+   "bereich": [
+    34,
+    26,
+    48,
+    33
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/717ab3e3-a3ea-45ed-9fad-5218e29ec016/zoomlarge_page_7.jpg?impolicy=large"
+  },
+  {
+   "marke": "BiFi",
+   "name": "Roll",
+   "packung": "3x 45g Packung",
+   "preis": 1.99,
+   "alt_preis": 2.99,
+   "grundpreis": 14.74,
+   "gp_einheit": "kg",
+   "kategorie": "Wurst",
+   "bereich": [
+    59,
+    24,
+    76,
+    32
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/717ab3e3-a3ea-45ed-9fad-5218e29ec016/zoomlarge_page_7.jpg?impolicy=large"
+  },
+  {
+   "marke": "Mirácoli",
+   "name": "Spaghetti oder Maccaroni, 3 Portionen",
+   "packung": "360g-380g Packung",
+   "preis": 2.49,
+   "alt_preis": 2.99,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Nudeln",
+   "bereich": [
+    83,
+    29,
+    96,
+    50
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/717ab3e3-a3ea-45ed-9fad-5218e29ec016/zoomlarge_page_7.jpg?impolicy=large"
+  },
+  {
+   "marke": "Yum Yum",
+   "name": "Instant Nudeln Ente oder Huhn",
+   "packung": "60g Beutel",
+   "preis": 0.49,
+   "alt_preis": 0.69,
+   "grundpreis": 8.17,
+   "gp_einheit": "kg",
+   "kategorie": "Instantnudeln",
+   "bereich": [
+    14,
+    41,
+    44,
+    51
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/717ab3e3-a3ea-45ed-9fad-5218e29ec016/zoomlarge_page_7.jpg?impolicy=large"
+  },
+  {
+   "marke": "hareico",
+   "name": "Mini-Schinkenknacker",
+   "packung": "200g Packung",
+   "preis": 2.99,
+   "alt_preis": 3.79,
+   "grundpreis": 14.95,
+   "gp_einheit": "kg",
+   "kategorie": "Wurst",
+   "bereich": [
+    58,
+    37,
+    77,
+    49
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/717ab3e3-a3ea-45ed-9fad-5218e29ec016/zoomlarge_page_7.jpg?impolicy=large"
+  },
+  {
+   "marke": "Lindt",
+   "name": "Weihnachtsmann Milch, Hohlfigur",
+   "packung": "40g Hohlfigur",
+   "preis": 1.79,
+   "alt_preis": 2.29,
+   "grundpreis": 44.75,
+   "gp_einheit": "kg",
+   "kategorie": "Schokolade",
+   "bereich": [
+    17,
+    60,
+    25,
+    75
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/717ab3e3-a3ea-45ed-9fad-5218e29ec016/zoomlarge_page_7.jpg?impolicy=large"
+  },
+  {
+   "marke": "Lindt",
+   "name": "Weihnachtsmann Milch, Hohlfigur",
+   "packung": "70g Hohlfigur",
+   "preis": 2.95,
+   "alt_preis": 3.69,
+   "grundpreis": 42.14,
+   "gp_einheit": "kg",
+   "kategorie": "Schokolade",
+   "bereich": [
+    37,
+    57,
+    48,
+    75
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/717ab3e3-a3ea-45ed-9fad-5218e29ec016/zoomlarge_page_7.jpg?impolicy=large"
+  },
+  {
+   "marke": "Lindt",
+   "name": "Weihnachtsmann Milch Edelbitter und Weiß, Hohlfigur",
+   "packung": "125g Hohlfigur",
+   "preis": 4.39,
+   "alt_preis": 5.49,
+   "grundpreis": 35.12,
+   "gp_einheit": "kg",
+   "kategorie": "Schokolade",
+   "bereich": [
+    61,
+    55,
+    80,
+    75
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/717ab3e3-a3ea-45ed-9fad-5218e29ec016/zoomlarge_page_7.jpg?impolicy=large"
+  },
+  {
+   "marke": "Lindt",
+   "name": "Weihnachtsmann Geschenkbeutel Mischung",
+   "packung": "130g Beutel",
+   "preis": 6.39,
+   "alt_preis": 7.99,
+   "grundpreis": 49.15,
+   "gp_einheit": "kg",
+   "kategorie": "Schokolade",
+   "bereich": [
+    81,
+    60,
+    97,
+    86
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/717ab3e3-a3ea-45ed-9fad-5218e29ec016/zoomlarge_page_7.jpg?impolicy=large"
+  },
+  {
+   "marke": "Lindt",
+   "name": "Weihnachtsmänner und Engel Milch, Hohlfigur",
+   "packung": "50g Hohlfigur",
+   "preis": 3.59,
+   "alt_preis": 4.49,
+   "grundpreis": 71.8,
+   "gp_einheit": "kg",
+   "kategorie": "Schokolade",
+   "bereich": [
+    17,
+    81,
+    48,
+    97
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/717ab3e3-a3ea-45ed-9fad-5218e29ec016/zoomlarge_page_7.jpg?impolicy=large"
+  },
+  {
+   "marke": "Lindt",
+   "name": "Mini Pralinés",
+   "packung": "90g Packung",
+   "preis": 3.59,
+   "alt_preis": 5.99,
+   "grundpreis": 39.89,
+   "gp_einheit": "kg",
+   "kategorie": "Pralinen",
+   "bereich": [
+    60,
+    77,
+    83,
+    97
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/717ab3e3-a3ea-45ed-9fad-5218e29ec016/zoomlarge_page_7.jpg?impolicy=large"
+  },
+  {
+   "marke": "Dr. Oetker",
+   "name": "Paradies Creme",
+   "packung": "60g-74g Packung",
+   "preis": 0.99,
+   "alt_preis": 1.29,
+   "grundpreis": null,
+   "gp_einheit": "kg",
+   "kategorie": "Dessertpulver",
+   "bereich": [
+    4,
+    8,
+    25,
+    26
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/1af2e8c7-6158-448c-97ad-e5d417b195ac/zoomlarge_page_8.jpg?impolicy=large"
+  },
+  {
+   "marke": "Bonduelle",
+   "name": "Junge Erbsen oder Erbsen & Möhrchen Dampfgegart",
+   "packung": "425ml Dose",
+   "preis": 1.99,
+   "alt_preis": 2.29,
+   "grundpreis": 7.51,
+   "gp_einheit": "kg",
+   "kategorie": "Gemüse",
+   "bereich": [
+    36,
+    2,
+    51,
+    19
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/1af2e8c7-6158-448c-97ad-e5d417b195ac/zoomlarge_page_8.jpg?impolicy=large"
+  },
+  {
+   "marke": "Pfanni",
+   "name": "Knödel im Kochbeutel",
+   "packung": "6er 200g Packung",
+   "preis": 1.59,
+   "alt_preis": 1.99,
+   "grundpreis": 7.95,
+   "gp_einheit": "kg",
+   "kategorie": "Knödel",
+   "bereich": [
+    62,
+    2,
+    80,
+    18
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/1af2e8c7-6158-448c-97ad-e5d417b195ac/zoomlarge_page_8.jpg?impolicy=large"
+  },
+  {
+   "marke": "Kühne",
+   "name": "Schlemmertöpfchen",
+   "packung": "580ml Glas",
+   "preis": 2.49,
+   "alt_preis": 3.49,
+   "grundpreis": 8.3,
+   "gp_einheit": "kg",
+   "kategorie": "Essiggurken",
+   "bereich": [
+    36,
+    21,
+    51,
+    34
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/1af2e8c7-6158-448c-97ad-e5d417b195ac/zoomlarge_page_8.jpg?impolicy=large"
+  },
+  {
+   "marke": "Knorr",
+   "name": "Basissaucen Braten Sauce",
+   "packung": "2er / 3er und andere Sorten",
+   "preis": 0.99,
+   "alt_preis": 1.59,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Sauce",
+   "bereich": [
+    64,
+    18,
+    90,
+    25
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/1af2e8c7-6158-448c-97ad-e5d417b195ac/zoomlarge_page_8.jpg?impolicy=large"
+  },
+  {
+   "marke": "Beach Flower",
+   "name": "Pfirsiche Schnitten oder 1/2 Frucht",
+   "packung": "850ml Dose",
+   "preis": 2.49,
+   "alt_preis": 2.99,
+   "grundpreis": 5.19,
+   "gp_einheit": "kg",
+   "kategorie": "Obstkonserve",
+   "bereich": [
+    12,
+    36,
+    28,
+    51
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/1af2e8c7-6158-448c-97ad-e5d417b195ac/zoomlarge_page_8.jpg?impolicy=large"
+  },
+  {
+   "marke": "Werder",
+   "name": "Paprika Sauce oder Paprika Sauce Hot",
+   "packung": "500g Glas",
+   "preis": 1.49,
+   "alt_preis": 1.99,
+   "grundpreis": 2.98,
+   "gp_einheit": "kg",
+   "kategorie": "Paprikasauce",
+   "bereich": [
+    37,
+    36,
+    49,
+    51
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/1af2e8c7-6158-448c-97ad-e5d417b195ac/zoomlarge_page_8.jpg?impolicy=large"
+  },
+  {
+   "marke": "Maggi",
+   "name": "Ravioli in Tomatensauce und andere Sorten",
+   "packung": "800g Dose",
+   "preis": 1.99,
+   "alt_preis": 2.99,
+   "grundpreis": 2.49,
+   "gp_einheit": "kg",
+   "kategorie": "Ravioli",
+   "bereich": [
+    84,
+    30,
+    97,
+    50
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/1af2e8c7-6158-448c-97ad-e5d417b195ac/zoomlarge_page_8.jpg?impolicy=large"
+  },
+  {
+   "marke": "Milka",
+   "name": "Riegel oder Wunderbar",
+   "packung": "5er Packung 157,5g-185g",
+   "preis": 2.49,
+   "alt_preis": 2.99,
+   "grundpreis": null,
+   "gp_einheit": "kg",
+   "kategorie": "Schokoriegel",
+   "bereich": [
+    11,
+    57,
+    33,
+    72
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/1af2e8c7-6158-448c-97ad-e5d417b195ac/zoomlarge_page_8.jpg?impolicy=large"
+  },
+  {
+   "marke": "Twix",
+   "name": "Twix oder Balisto",
+   "packung": "5er / 8er 148g-250g Packung",
+   "preis": 2.99,
+   "alt_preis": 3.79,
+   "grundpreis": null,
+   "gp_einheit": "kg",
+   "kategorie": "Schokoriegel",
+   "bereich": [
+    35,
+    53,
+    69,
+    67
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/1af2e8c7-6158-448c-97ad-e5d417b195ac/zoomlarge_page_8.jpg?impolicy=large"
+  },
+  {
+   "marke": "Ritter Sport",
+   "name": "Bunte Vielfalt oder Nuss-Klasse",
+   "packung": "100g Tafel",
+   "preis": 1.29,
+   "alt_preis": 1.99,
+   "grundpreis": null,
+   "gp_einheit": "kg",
+   "kategorie": "Schokolade",
+   "bereich": [
+    65,
+    53,
+    96,
+    68
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/1af2e8c7-6158-448c-97ad-e5d417b195ac/zoomlarge_page_8.jpg?impolicy=large"
+  },
+  {
+   "marke": "Kinder",
+   "name": "Riegel oder Duplo",
+   "packung": "18 + 2 gratis, 420g Packung bzw. 364g Packung",
+   "preis": 4.99,
+   "alt_preis": 5.99,
+   "grundpreis": null,
+   "gp_einheit": "kg",
+   "kategorie": "Schokoriegel",
+   "bereich": [
+    4,
+    72,
+    28,
+    97
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/1af2e8c7-6158-448c-97ad-e5d417b195ac/zoomlarge_page_8.jpg?impolicy=large"
+  },
+  {
+   "marke": "Griesson",
+   "name": "Soft Cake Orange und andere Sorten",
+   "packung": "300g Packung",
+   "preis": 1.99,
+   "alt_preis": 2.49,
+   "grundpreis": 6.63,
+   "gp_einheit": "kg",
+   "kategorie": "Gebäck",
+   "bereich": [
+    47,
+    72,
+    67,
+    82
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/1af2e8c7-6158-448c-97ad-e5d417b195ac/zoomlarge_page_8.jpg?impolicy=large"
+  },
+  {
+   "marke": "DeBeukelaer",
+   "name": "Prinzen Rolle Schoko und andere Sorten",
+   "packung": "352g-400g Rolle",
+   "preis": 1.99,
+   "alt_preis": 2.49,
+   "grundpreis": null,
+   "gp_einheit": "kg",
+   "kategorie": "Kekse",
+   "bereich": [
+    72,
+    71,
+    98,
+    95
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/1af2e8c7-6158-448c-97ad-e5d417b195ac/zoomlarge_page_8.jpg?impolicy=large"
+  },
+  {
+   "marke": "Em-Eukal",
+   "name": "zuckerfrei verschiedene Sorten",
+   "packung": "75g Beutel",
+   "preis": 1.99,
+   "alt_preis": 2.19,
+   "grundpreis": 26.53,
+   "gp_einheit": "kg",
+   "kategorie": "Bonbons",
+   "bereich": [
+    43,
+    85,
+    63,
+    98
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/1af2e8c7-6158-448c-97ad-e5d417b195ac/zoomlarge_page_8.jpg?impolicy=large"
+  },
+  {
+   "marke": "GLISS",
+   "name": "Kur Shampoo oder Spülung",
+   "packung": "250 ml / 200 ml Flasche",
+   "preis": 2.49,
+   "alt_preis": 2.99,
+   "grundpreis": 9.96,
+   "gp_einheit": "l",
+   "kategorie": "Shampoo",
+   "bereich": [
+    15,
+    3,
+    28,
+    17
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/bf8f718a-162f-4a3c-94fc-0f8df18dfbda/zoomlarge_page_9.jpg?impolicy=large"
+  },
+  {
+   "marke": "duschdas",
+   "name": "Duschgel",
+   "packung": "225 ml Flasche",
+   "preis": 1.29,
+   "alt_preis": 1.79,
+   "grundpreis": 5.73,
+   "gp_einheit": "l",
+   "kategorie": "Duschgel",
+   "bereich": [
+    46,
+    3,
+    64,
+    17
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/bf8f718a-162f-4a3c-94fc-0f8df18dfbda/zoomlarge_page_9.jpg?impolicy=large"
+  },
+  {
+   "marke": "NIVEA",
+   "name": "Haarspray oder Schaumfestiger",
+   "packung": "250 ml / 150 ml Flasche",
+   "preis": 2.99,
+   "alt_preis": 3.99,
+   "grundpreis": 11.96,
+   "gp_einheit": "l",
+   "kategorie": "Haarspray",
+   "bereich": [
+    84,
+    2,
+    96,
+    17
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/bf8f718a-162f-4a3c-94fc-0f8df18dfbda/zoomlarge_page_9.jpg?impolicy=large"
+  },
+  {
+   "marke": "blend-a-med",
+   "name": "Zahncreme",
+   "packung": "75 ml Tube",
+   "preis": 0.99,
+   "alt_preis": 1.39,
+   "grundpreis": 13.2,
+   "gp_einheit": "l",
+   "kategorie": "Zahncreme",
+   "bereich": [
+    11,
+    21,
+    27,
+    30
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/bf8f718a-162f-4a3c-94fc-0f8df18dfbda/zoomlarge_page_9.jpg?impolicy=large"
+  },
+  {
+   "marke": "LISTERINE",
+   "name": "Mundspülung Basis",
+   "packung": "500 ml Flasche",
+   "preis": 2.99,
+   "alt_preis": 3.99,
+   "grundpreis": 5.98,
+   "gp_einheit": "l",
+   "kategorie": "Mundspülung",
+   "bereich": [
+    46,
+    19,
+    64,
+    32
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/bf8f718a-162f-4a3c-94fc-0f8df18dfbda/zoomlarge_page_9.jpg?impolicy=large"
+  },
+  {
+   "marke": "Tempo",
+   "name": "Taschentücher",
+   "packung": "30 x 10er Packung",
+   "preis": 3.33,
+   "alt_preis": 4.49,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Taschentücher",
+   "bereich": [
+    77,
+    20,
+    97,
+    32
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/bf8f718a-162f-4a3c-94fc-0f8df18dfbda/zoomlarge_page_9.jpg?impolicy=large"
+  },
+  {
+   "marke": "Perwoll",
+   "name": "Waschmittel",
+   "packung": "27 WL",
+   "preis": 5.49,
+   "alt_preis": 6.99,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Waschmittel",
+   "bereich": [
+    83,
+    35,
+    97,
+    49
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/bf8f718a-162f-4a3c-94fc-0f8df18dfbda/zoomlarge_page_9.jpg?impolicy=large"
+  },
+  {
+   "marke": "finish",
+   "name": "Maxipack Tabs und Cabs",
+   "packung": "36er- bis 64er-Tabs",
+   "preis": 6.99,
+   "alt_preis": 9.99,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Spülmaschinentabs",
+   "bereich": [
+    22,
+    41,
+    42,
+    52
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/bf8f718a-162f-4a3c-94fc-0f8df18dfbda/zoomlarge_page_9.jpg?impolicy=large"
+  },
+  {
+   "marke": "WC FRISCH",
+   "name": "Kraft Aktiv WC-Spüler",
+   "packung": "50 g Packung",
+   "preis": 1.59,
+   "alt_preis": 1.99,
+   "grundpreis": 31.8,
+   "gp_einheit": "kg",
+   "kategorie": "WC-Reiniger",
+   "bereich": [
+    76,
+    51,
+    92,
+    66
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/bf8f718a-162f-4a3c-94fc-0f8df18dfbda/zoomlarge_page_9.jpg?impolicy=large"
+  },
+  {
+   "marke": "Bebivita",
+   "name": "Früchte oder Frucht & Getreide",
+   "packung": "250 g Glas",
+   "preis": 1.11,
+   "alt_preis": 1.29,
+   "grundpreis": 4.44,
+   "gp_einheit": "kg",
+   "kategorie": "Babynahrung",
+   "bereich": [
+    14,
+    68,
+    28,
+    81
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/bf8f718a-162f-4a3c-94fc-0f8df18dfbda/zoomlarge_page_9.jpg?impolicy=large"
+  },
+  {
+   "marke": "Bebivita",
+   "name": "Knabberprodukte",
+   "packung": "30 g / 40 g Tüte",
+   "preis": 0.79,
+   "alt_preis": 0.99,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Babysnack",
+   "bereich": [
+    51,
+    69,
+    64,
+    81
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/bf8f718a-162f-4a3c-94fc-0f8df18dfbda/zoomlarge_page_9.jpg?impolicy=large"
+  },
+  {
+   "marke": "Air Wick",
+   "name": "Freshmatic Starter",
+   "packung": "250 ml Flasche",
+   "preis": 4.99,
+   "alt_preis": 6.49,
+   "grundpreis": 19.96,
+   "gp_einheit": "l",
+   "kategorie": "Raumduft",
+   "bereich": [
+    84,
+    69,
+    99,
+    82
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/bf8f718a-162f-4a3c-94fc-0f8df18dfbda/zoomlarge_page_9.jpg?impolicy=large"
+  },
+  {
+   "marke": "Air Wick",
+   "name": "Freshmatic Max Nachfüller",
+   "packung": "250 ml Flasche",
+   "preis": 3.99,
+   "alt_preis": 5.49,
+   "grundpreis": 15.96,
+   "gp_einheit": "l",
+   "kategorie": "Raumduft",
+   "bereich": [
+    84,
+    69,
+    99,
+    82
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/bf8f718a-162f-4a3c-94fc-0f8df18dfbda/zoomlarge_page_9.jpg?impolicy=large"
+  },
+  {
+   "marke": "Dreamies, whiskas oder Pedigree",
+   "name": "Snacks für Katzen und Hunde",
+   "packung": "40 g – 180 g Beutel / Packung",
+   "preis": 0.99,
+   "alt_preis": 1.49,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Tiersnack",
+   "bereich": [
+    20,
+    83,
+    58,
+    92
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/bf8f718a-162f-4a3c-94fc-0f8df18dfbda/zoomlarge_page_9.jpg?impolicy=large"
+  },
+  {
+   "marke": "Beneful",
+   "name": "Trockenfutter für Hunde",
+   "packung": "1,4 kg Beutel",
+   "preis": 3.79,
+   "alt_preis": 4.99,
+   "grundpreis": 2.71,
+   "gp_einheit": "kg",
+   "kategorie": "Trockenfutter",
+   "bereich": [
+    77,
+    83,
+    96,
+    96
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/bf8f718a-162f-4a3c-94fc-0f8df18dfbda/zoomlarge_page_9.jpg?impolicy=large"
+  },
+  {
+   "marke": "bree",
+   "name": "Secco, verschiedene Sorten",
+   "packung": "200-ml-Dose",
+   "preis": 0.99,
+   "alt_preis": 1.39,
+   "grundpreis": 4.95,
+   "gp_einheit": "l",
+   "kategorie": "Secco",
+   "bereich": [
+    3,
+    5,
+    16,
+    23
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/8f52ad87-ed82-4d1f-a4ec-5d3ac7c7436d/zoomlarge_page_10.jpg?impolicy=large"
+  },
+  {
+   "marke": "Söhnlein",
+   "name": "Brillant und Sparkling, verschiedene Sorten",
+   "packung": "0,75-l-Flasche",
+   "preis": 2.99,
+   "alt_preis": 4.49,
+   "grundpreis": 3.99,
+   "gp_einheit": "l",
+   "kategorie": "Sekt",
+   "bereich": [
+    22,
+    5,
+    31,
+    30
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/8f52ad87-ed82-4d1f-a4ec-5d3ac7c7436d/zoomlarge_page_10.jpg?impolicy=large"
+  },
+  {
+   "marke": "Fürst von Metternich",
+   "name": "Sekt, verschiedene Sorten",
+   "packung": "",
+   "preis": 6.99,
+   "alt_preis": 9.49,
+   "grundpreis": 9.32,
+   "gp_einheit": "l",
+   "kategorie": "Sekt",
+   "bereich": [
+    40,
+    5,
+    50,
+    30
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/8f52ad87-ed82-4d1f-a4ec-5d3ac7c7436d/zoomlarge_page_10.jpg?impolicy=large"
+  },
+  {
+   "marke": "Heinrich Hansjakob",
+   "name": "Weine, verschiedene Sorten",
+   "packung": "1-l-Flasche",
+   "preis": 3.99,
+   "alt_preis": 5.49,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Wein",
+   "bereich": [
+    59,
+    3,
+    70,
+    29
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/8f52ad87-ed82-4d1f-a4ec-5d3ac7c7436d/zoomlarge_page_10.jpg?impolicy=large"
+  },
+  {
+   "marke": "Gerstacker",
+   "name": "Nürnberger Christkindles Glühwein, verschiedene Sorten",
+   "packung": "1-l-Flasche",
+   "preis": 3.49,
+   "alt_preis": 3.99,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Glühwein",
+   "bereich": [
+    78,
+    3,
+    97,
+    30
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/8f52ad87-ed82-4d1f-a4ec-5d3ac7c7436d/zoomlarge_page_10.jpg?impolicy=large"
+  },
+  {
+   "marke": "Kuemmerling",
+   "name": "Kräuterlikör, verschiedene Sorten",
+   "packung": "25 x 0,02 l Würfel",
+   "preis": 8.99,
+   "alt_preis": 12.99,
+   "grundpreis": 17.98,
+   "gp_einheit": "l",
+   "kategorie": "Likör",
+   "bereich": [
+    2,
+    31,
+    18,
+    50
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/8f52ad87-ed82-4d1f-a4ec-5d3ac7c7436d/zoomlarge_page_10.jpg?impolicy=large"
+  },
+  {
+   "marke": "Strothmann",
+   "name": "Weizenkorn",
+   "packung": "0,71-l-Flasche",
+   "preis": 5.49,
+   "alt_preis": 7.29,
+   "grundpreis": 7.84,
+   "gp_einheit": "l",
+   "kategorie": "Branntwein",
+   "bereich": [
+    27,
+    31,
+    35,
+    55
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/8f52ad87-ed82-4d1f-a4ec-5d3ac7c7436d/zoomlarge_page_10.jpg?impolicy=large"
+  },
+  {
+   "marke": "Strothmann",
+   "name": "Kräuter",
+   "packung": "0,71-l-Flasche",
+   "preis": 5.99,
+   "alt_preis": 7.79,
+   "grundpreis": 8.56,
+   "gp_einheit": "l",
+   "kategorie": "Branntwein",
+   "bereich": [
+    36,
+    31,
+    45,
+    55
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/8f52ad87-ed82-4d1f-a4ec-5d3ac7c7436d/zoomlarge_page_10.jpg?impolicy=large"
+  },
+  {
+   "marke": "Bacardí",
+   "name": "Carta Blanca und andere Sorten",
+   "packung": "0,71-l-Flasche",
+   "preis": 10.99,
+   "alt_preis": 14.99,
+   "grundpreis": 15.7,
+   "gp_einheit": "l",
+   "kategorie": "Rum",
+   "bereich": [
+    54,
+    31,
+    63,
+    55
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/8f52ad87-ed82-4d1f-a4ec-5d3ac7c7436d/zoomlarge_page_10.jpg?impolicy=large"
+  },
+  {
+   "marke": "Heydt",
+   "name": "HKT mild & fein",
+   "packung": "0,71-l-Flasche",
+   "preis": 8.99,
+   "alt_preis": 10.49,
+   "grundpreis": 12.84,
+   "gp_einheit": "l",
+   "kategorie": "Kräuterlikör",
+   "bereich": [
+    70,
+    31,
+    79,
+    55
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/8f52ad87-ed82-4d1f-a4ec-5d3ac7c7436d/zoomlarge_page_10.jpg?impolicy=large"
+  },
+  {
+   "marke": "Smirnoff",
+   "name": "Vodka Red Label",
+   "packung": "0,71-l-Flasche",
+   "preis": 10.99,
+   "alt_preis": 13.99,
+   "grundpreis": 15.7,
+   "gp_einheit": "l",
+   "kategorie": "Wodka",
+   "bereich": [
+    88,
+    31,
+    97,
+    55
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/8f52ad87-ed82-4d1f-a4ec-5d3ac7c7436d/zoomlarge_page_10.jpg?impolicy=large"
+  },
+  {
+   "marke": "Chio",
+   "name": "Dip Hot Cheese und andere Sorten",
+   "packung": "200-ml-Glas",
+   "preis": 1.99,
+   "alt_preis": 2.49,
+   "grundpreis": 9.95,
+   "gp_einheit": "l",
+   "kategorie": "Dip",
+   "bereich": [
+    15,
+    59,
+    36,
+    73
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/8f52ad87-ed82-4d1f-a4ec-5d3ac7c7436d/zoomlarge_page_10.jpg?impolicy=large"
+  },
+  {
+   "marke": "Chio",
+   "name": "Tortillas Wild Paprika und andere Sorten",
+   "packung": "110-g-Packung",
+   "preis": 1.49,
+   "alt_preis": 1.99,
+   "grundpreis": 13.55,
+   "gp_einheit": "kg",
+   "kategorie": "Tortilla-Chips",
+   "bereich": [
+    44,
+    57,
+    62,
+    73
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/8f52ad87-ed82-4d1f-a4ec-5d3ac7c7436d/zoomlarge_page_10.jpg?impolicy=large"
+  },
+  {
+   "marke": "Lay's",
+   "name": "Paprika und andere Sorten",
+   "packung": "150-g-Beutel",
+   "preis": 1.49,
+   "alt_preis": 1.99,
+   "grundpreis": 9.93,
+   "gp_einheit": "kg",
+   "kategorie": "Chips",
+   "bereich": [
+    82,
+    57,
+    97,
+    73
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/8f52ad87-ed82-4d1f-a4ec-5d3ac7c7436d/zoomlarge_page_10.jpg?impolicy=large"
+  },
+  {
+   "marke": "",
+   "name": "Akku-Stabmixer mit 2 Mixstäben",
+   "packung": "",
+   "preis": 79.99,
+   "alt_preis": 179.95,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Stabmixer",
+   "bereich": [
+    2,
+    80,
+    18,
+    95
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/8f52ad87-ed82-4d1f-a4ec-5d3ac7c7436d/zoomlarge_page_10.jpg?impolicy=large"
+  },
+  {
+   "marke": "",
+   "name": "Air Fryer Professional, 1800 Watt, inkl. Einsätze",
+   "packung": "",
+   "preis": 99.99,
+   "alt_preis": 268.95,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Heißluftfritteuse",
+   "bereich": [
+    41,
+    79,
+    57,
+    92
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/8f52ad87-ed82-4d1f-a4ec-5d3ac7c7436d/zoomlarge_page_10.jpg?impolicy=large"
+  },
+  {
+   "marke": "",
+   "name": "Air Fryer Zubehör-Set, mit 2 Körben, Backmatte und 12 Muffin-Förmchen aus Silikon",
+   "packung": "",
+   "preis": 12.99,
+   "alt_preis": 44.95,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Zubehör",
+   "bereich": [
+    77,
+    79,
+    96,
+    92
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/8f52ad87-ed82-4d1f-a4ec-5d3ac7c7436d/zoomlarge_page_10.jpg?impolicy=large"
+  },
+  {
+   "marke": "hella",
+   "name": "still und fruchtig",
+   "packung": "0,75l PET-Flasche",
+   "preis": 0.69,
+   "alt_preis": 0.89,
+   "grundpreis": 0.92,
+   "gp_einheit": "l",
+   "kategorie": "Mineralwasser",
+   "bereich": [
+    8,
+    1,
+    24,
+    21
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/2e541c74-986b-4b22-8579-e043db3afc01/zoomlarge_page_11.jpg?impolicy=large"
+  },
+  {
+   "marke": "Rheinfels Quelle",
+   "name": "Klassik, Medium oder Lemon",
+   "packung": "12 Glasflaschen à 0,7 l / 12 PET-Flaschen à 0,75 l",
+   "preis": 5.99,
+   "alt_preis": 6.49,
+   "grundpreis": 0.71,
+   "gp_einheit": "l",
+   "kategorie": "Mineralwasser",
+   "bereich": [
+    34,
+    7,
+    62,
+    21
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/2e541c74-986b-4b22-8579-e043db3afc01/zoomlarge_page_11.jpg?impolicy=large"
+  },
+  {
+   "marke": "Emsland Quelle",
+   "name": "Classic, Medium oder Naturelle",
+   "packung": "12 PET-Flaschen à 1,0 l",
+   "preis": 4.99,
+   "alt_preis": 6.49,
+   "grundpreis": 0.42,
+   "gp_einheit": "l",
+   "kategorie": "Mineralwasser",
+   "bereich": [
+    70,
+    7,
+    99,
+    21
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/2e541c74-986b-4b22-8579-e043db3afc01/zoomlarge_page_11.jpg?impolicy=large"
+  },
+  {
+   "marke": "VELTINS",
+   "name": "REMIX Cola-Orange",
+   "packung": "0,33l Dose",
+   "preis": 0.59,
+   "alt_preis": 0.89,
+   "grundpreis": 1.79,
+   "gp_einheit": "l",
+   "kategorie": "Erfrischungsgetränk",
+   "bereich": [
+    11,
+    24,
+    23,
+    40
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/2e541c74-986b-4b22-8579-e043db3afc01/zoomlarge_page_11.jpg?impolicy=large"
+  },
+  {
+   "marke": "Capri-Sun",
+   "name": "verschiedene Sorten",
+   "packung": "10x 0,2l Packung",
+   "preis": 2.99,
+   "alt_preis": 4.29,
+   "grundpreis": 1.5,
+   "gp_einheit": "l",
+   "kategorie": "Saft",
+   "bereich": [
+    27,
+    25,
+    50,
+    42
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/2e541c74-986b-4b22-8579-e043db3afc01/zoomlarge_page_11.jpg?impolicy=large"
+  },
+  {
+   "marke": "MONSTER ENERGY",
+   "name": "verschiedene Sorten, 5 für 5.95",
+   "packung": "0,5l Dosen",
+   "preis": 5.95,
+   "alt_preis": 8.95,
+   "grundpreis": 2.38,
+   "gp_einheit": "l",
+   "kategorie": "Energy-Drink",
+   "bereich": [
+    59,
+    23,
+    74,
+    42
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/2e541c74-986b-4b22-8579-e043db3afc01/zoomlarge_page_11.jpg?impolicy=large"
+  },
+  {
+   "marke": "5.0 Original",
+   "name": "verschiedene Sorten oder 2,5 Original Radler naturtrüb, 5 für 2.79",
+   "packung": "0,5l Dosen",
+   "preis": 2.79,
+   "alt_preis": 3.45,
+   "grundpreis": 1.12,
+   "gp_einheit": "l",
+   "kategorie": "Bier",
+   "bereich": [
+    84,
+    23,
+    98,
+    43
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/2e541c74-986b-4b22-8579-e043db3afc01/zoomlarge_page_11.jpg?impolicy=large"
+  },
+  {
+   "marke": "Valensina",
+   "name": "verschiedene Sorten",
+   "packung": "1l PET-Flasche",
+   "preis": 1.79,
+   "alt_preis": 2.49,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Saft",
+   "bereich": [
+    10,
+    44,
+    24,
+    62
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/2e541c74-986b-4b22-8579-e043db3afc01/zoomlarge_page_11.jpg?impolicy=large"
+  },
+  {
+   "marke": "Krombacher",
+   "name": "Spezi",
+   "packung": "24 / 20 Flaschen à 0,33l / 0,5l",
+   "preis": 11.99,
+   "alt_preis": 14.99,
+   "grundpreis": 1.51,
+   "gp_einheit": "l",
+   "kategorie": "Erfrischungsgetränk",
+   "bereich": [
+    37,
+    45,
+    62,
+    61
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/2e541c74-986b-4b22-8579-e043db3afc01/zoomlarge_page_11.jpg?impolicy=large"
+  },
+  {
+   "marke": "BRINKHOFF's",
+   "name": "No.1 Pils",
+   "packung": "24 / 20 Flaschen à 0,33l / 0,5l",
+   "preis": 11.99,
+   "alt_preis": 13.99,
+   "grundpreis": 1.51,
+   "gp_einheit": "l",
+   "kategorie": "Bier",
+   "bereich": [
+    74,
+    45,
+    96,
+    62
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/2e541c74-986b-4b22-8579-e043db3afc01/zoomlarge_page_11.jpg?impolicy=large"
+  },
+  {
+   "marke": "Vitamalz",
+   "name": "Das Original",
+   "packung": "6er Träger à 0,33l Flaschen",
+   "preis": 3.79,
+   "alt_preis": 4.29,
+   "grundpreis": 1.91,
+   "gp_einheit": "l",
+   "kategorie": "Malzbier",
+   "bereich": [
+    6,
+    65,
+    25,
+    80
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/2e541c74-986b-4b22-8579-e043db3afc01/zoomlarge_page_11.jpg?impolicy=large"
+  },
+  {
+   "marke": "Maisel's Weisse",
+   "name": "Original oder alkoholfrei",
+   "packung": "20 Flaschen à 0,5l",
+   "preis": 16.99,
+   "alt_preis": 19.99,
+   "grundpreis": 1.7,
+   "gp_einheit": "l",
+   "kategorie": "Bier",
+   "bereich": [
+    35,
+    64,
+    53,
+    78
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/2e541c74-986b-4b22-8579-e043db3afc01/zoomlarge_page_11.jpg?impolicy=large"
+  },
+  {
+   "marke": "Warsteiner",
+   "name": "Premium Pilsener",
+   "packung": "24 / 20 Flaschen à 0,33l / 0,5l",
+   "preis": 13.99,
+   "alt_preis": 16.99,
+   "grundpreis": 1.77,
+   "gp_einheit": "l",
+   "kategorie": "Bier",
+   "bereich": [
+    73,
+    65,
+    96,
+    78
+   ],
+   "seiten_bild": "https://content-media.bonial.biz/2e541c74-986b-4b22-8579-e043db3afc01/zoomlarge_page_11.jpg?impolicy=large"
+  }
+ ]
+}
