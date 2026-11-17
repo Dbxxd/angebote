@@ -38,25 +38,6 @@
    "contentBadges": "list",
    "externalTracking": "dict"
   },
-  "33875e40-a102-4e7a-b853-4edebed9b24e": {
-   "title": "Wenn Lebensmittel, dann K+K",
-   "type": "BROCHURE",
-   "id": 2501333574,
-   "contentId": "33875e40-a102-4e7a-b853-4edebed9b24e",
-   "publishedFrom": "2026-11-16T08:00:00.000+0000",
-   "publishedUntil": "2026-11-21T22:00:00.000+0000",
-   "validFrom": "2026-11-15T23:00:00.000+0000",
-   "validUntil": "2026-11-21T22:00:00.000+0000",
-   "hideValidityDate": false,
-   "adFormat": "ad_format__brochure_card_cover",
-   "adPlacement": "ad_placement__seo_brochure_box",
-   "pages": "list",
-   "publisher": "dict",
-   "pageCount": 12,
-   "score": 2e-05,
-   "contentBadges": "list",
-   "externalTracking": "dict"
-  },
   "d4e4ee70-db1d-4e36-9331-8de0614ce548": {
    "title": "Aktuelle Angebote",
    "type": "BROCHURE",
@@ -72,7 +53,7 @@
    "pages": "list",
    "publisher": "dict",
    "pageCount": 27,
-   "score": 0.00285,
+   "score": 0.00278,
    "contentBadges": "list",
    "externalTracking": "dict"
   },
@@ -91,7 +72,7 @@
    "pages": "list",
    "publisher": "dict",
    "pageCount": 28,
-   "score": 0.01031,
+   "score": 0.0234,
    "contentBadges": "list",
    "externalTracking": "dict"
   },
@@ -110,7 +91,7 @@
    "pages": "list",
    "publisher": "dict",
    "pageCount": 23,
-   "score": 0.00672,
+   "score": 0.02124,
    "contentBadges": "list",
    "externalTracking": "dict"
   },
@@ -172,34 +153,28 @@
    "externalTracking": "dict"
   }
  },
- "K+K 33875e40-a102-4e7a-b853-4edebed9b24e": {
-  "titel": "Wenn Lebensmittel, dann K+K",
+ "K+K kkweb-kundk_kw49-2026-11-30": {
+  "titel": "K+K_KW 49",
   "seiten_api": 12,
   "bilder": 12,
   "bildgroessen": [
-   "1600x1600",
-   "2800x2800",
-   "75x96",
-   "768x1024"
+   "1600x1600"
   ],
   "seitenschluessel": [
-   "images",
-   "linkOuts",
-   "number",
-   "offers"
+   "images"
   ],
   "je_seite": [
-   20,
-   9,
-   11,
+   0,
+   12,
+   12,
    10,
+   10,
+   16,
    12,
-   13,
-   12,
-   15,
-   15,
-   15,
    17,
+   21,
+   13,
+   19,
    13
   ]
  }

@@ -1,5 +1,5 @@
 {
- "stand": "2026-11-16T21:31+01:00",
+ "stand": "2026-11-17T10:11+01:00",
  "regionen": [
   {
    "id": "steinfurt",
@@ -16,7 +16,7 @@
     "Penny",
     "Rossmann"
    ],
-   "anzahl": 3568
+   "anzahl": 3575
   },
   {
    "id": "winsen",
