@@ -1,0 +1,2971 @@
+{
+ "version": 2,
+ "markt": "K+K",
+ "prospekt": {
+  "id": "kkweb-kundk_kw48-2026-11-23",
+  "titel": "k+k_KW48",
+  "von": "2026-11-23",
+  "bis": "2026-11-28"
+ },
+ "modell": "claude-haiku-5-5",
+ "angebote": [
+  {
+   "marke": "FRoSTA",
+   "name": "Fertiggerichte à la Carte oder High Protein",
+   "packung": "450 g / 500 g Beutel",
+   "preis": 4.49,
+   "alt_preis": 5.99,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Fertiggericht",
+   "bereich": [
+    49,
+    1,
+    99,
+    19
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_1.jpg"
+  },
+  {
+   "marke": "dr.lander",
+   "name": "Frische grobe Bratwurst vom Schwein",
+   "packung": "1000 g",
+   "preis": 7.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Bratwurst",
+   "bereich": [
+    2,
+    30,
+    26,
+    42
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_1.jpg"
+  },
+  {
+   "marke": "",
+   "name": "Schweinefilet lang, ideal für Raclette oder Fondue, gefroren/getaut",
+   "packung": "100 g",
+   "preis": 1.19,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Schweinefleisch",
+   "bereich": [
+    25,
+    23,
+    42,
+    31
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_1.jpg"
+  },
+  {
+   "marke": "",
+   "name": "1a Schweinerückenbraten ohne Knochen",
+   "packung": "1000 g",
+   "preis": 7.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Schweinefleisch",
+   "bereich": [
+    32,
+    26,
+    52,
+    43
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_1.jpg"
+  },
+  {
+   "marke": "",
+   "name": "Helle Tafeltrauben, kernlos und süß, Brasilien",
+   "packung": "500 g Packung",
+   "preis": 2.99,
+   "alt_preis": null,
+   "grundpreis": 5.98,
+   "gp_einheit": "kg",
+   "kategorie": "Obst",
+   "bereich": [
+    60,
+    23,
+    77,
+    33
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_1.jpg"
+  },
+  {
+   "marke": "",
+   "name": "Tafeläpfel, Deutschland, Elstar und Braeburn",
+   "packung": "1,5 kg Beutel",
+   "preis": 2.49,
+   "alt_preis": null,
+   "grundpreis": 1.66,
+   "gp_einheit": "kg",
+   "kategorie": "Obst",
+   "bereich": [
+    60,
+    33,
+    77,
+    43
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_1.jpg"
+  },
+  {
+   "marke": "",
+   "name": "Gurken, knackig und frisch, Spanien",
+   "packung": "350 g – 400 g je Stück",
+   "preis": 0.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Gemüse",
+   "bereich": [
+    77,
+    24,
+    95,
+    39
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_1.jpg"
+  },
+  {
+   "marke": "Dr. Oetker",
+   "name": "Die Ofenfrische, verschiedene Sorten",
+   "packung": "385 g – 435 g Packung",
+   "preis": 2.49,
+   "alt_preis": 3.69,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Tiefkühlpizza",
+   "bereich": [
+    3,
+    46,
+    21,
+    58
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_1.jpg"
+  },
+  {
+   "marke": "Dr. Oetker",
+   "name": "Bistro Baguettes, verschiedene Sorten",
+   "packung": "250-g-Packung",
+   "preis": 1.49,
+   "alt_preis": 2.29,
+   "grundpreis": 5.96,
+   "gp_einheit": "kg",
+   "kategorie": "Baguette",
+   "bereich": [
+    23,
+    46,
+    33,
+    58
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_1.jpg"
+  },
+  {
+   "marke": "Ammerländer",
+   "name": "Weidekäse, verschiedene Sorten",
+   "packung": "125 g – 150 g Packung",
+   "preis": 1.29,
+   "alt_preis": 1.79,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Käse",
+   "bereich": [
+    42,
+    49,
+    49,
+    59
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_1.jpg"
+  },
+  {
+   "marke": "Arla Buko",
+   "name": "Frischkäse, verschiedene Sorten",
+   "packung": "200-g-Becher",
+   "preis": 1.29,
+   "alt_preis": 1.99,
+   "grundpreis": 6.45,
+   "gp_einheit": "kg",
+   "kategorie": "Frischkäse",
+   "bereich": [
+    54,
+    48,
+    66,
+    56
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_1.jpg"
+  },
+  {
+   "marke": "Ehrmann",
+   "name": "Almighurt, versch. Sorten",
+   "packung": "150-g-Becher",
+   "preis": 0.49,
+   "alt_preis": 0.89,
+   "grundpreis": 3.27,
+   "gp_einheit": "kg",
+   "kategorie": "Joghurt",
+   "bereich": [
+    72,
+    49,
+    78,
+    58
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_1.jpg"
+  },
+  {
+   "marke": "Arla",
+   "name": "Skyr, verschiedene Sorten, 2 für 2,50",
+   "packung": "450-g-Becher",
+   "preis": 2.5,
+   "alt_preis": 3.98,
+   "grundpreis": 2.78,
+   "gp_einheit": "kg",
+   "kategorie": "Skyr",
+   "bereich": [
+    83,
+    44,
+    96,
+    59
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_1.jpg"
+  },
+  {
+   "marke": "DELVERDE",
+   "name": "Pasta Classica, verschiedene Sorten, 1/2 Preis",
+   "packung": "500-g-Packung",
+   "preis": 0.99,
+   "alt_preis": 1.99,
+   "grundpreis": 1.98,
+   "gp_einheit": "kg",
+   "kategorie": "Nudeln",
+   "bereich": [
+    10,
+    64,
+    17,
+    78
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_1.jpg"
+  },
+  {
+   "marke": "Borggreve",
+   "name": "Gewürzspekulatius",
+   "packung": "600-g-Packung",
+   "preis": 1.69,
+   "alt_preis": null,
+   "grundpreis": 3.38,
+   "gp_einheit": "kg",
+   "kategorie": "Gebäck",
+   "bereich": [
+    30,
+    63,
+    43,
+    78
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_1.jpg"
+  },
+  {
+   "marke": "Milka",
+   "name": "Tafeln, versch. Sorten, 5 für 5,00",
+   "packung": "87 g – 100 g Packung",
+   "preis": 5.0,
+   "alt_preis": 9.95,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Schokolade",
+   "bereich": [
+    47,
+    62,
+    63,
+    75
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_1.jpg"
+  },
+  {
+   "marke": "Rotkäppchen",
+   "name": "Piccolo, 3 für 3,00",
+   "packung": "0,2-l-Flasche",
+   "preis": 3.0,
+   "alt_preis": 5.37,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Sekt",
+   "bereich": [
+    76,
+    63,
+    94,
+    78
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_1.jpg"
+  },
+  {
+   "marke": "Freixenet",
+   "name": "Carta Sparkling, verschiedene Sorten",
+   "packung": "0,75-l-Flasche",
+   "preis": 3.99,
+   "alt_preis": 6.49,
+   "grundpreis": 5.32,
+   "gp_einheit": "l",
+   "kategorie": "Sekt",
+   "bereich": [
+    5,
+    79,
+    21,
+    96
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_1.jpg"
+  },
+  {
+   "marke": "Adelholzener",
+   "name": "Active O2, verschiedene Sorten",
+   "packung": "0,75-l-Flasche",
+   "preis": 0.99,
+   "alt_preis": 1.39,
+   "grundpreis": 1.32,
+   "gp_einheit": "l",
+   "kategorie": "Mineralwasser",
+   "bereich": [
+    32,
+    81,
+    45,
+    96
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_1.jpg"
+  },
+  {
+   "marke": "VELTINS",
+   "name": "Pilsener / Helles Pülleken / Helles Lager, Kiste",
+   "packung": "24 Flaschen à 0,33 l / 0,5 l",
+   "preis": 13.99,
+   "alt_preis": 16.99,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Bier",
+   "bereich": [
+    59,
+    79,
+    82,
+    96
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_1.jpg"
+  },
+  {
+   "marke": "",
+   "name": "Rinderbeinscheibe für die gute Suppe",
+   "packung": "1000g",
+   "preis": 10.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Fleisch",
+   "bereich": [
+    35,
+    7,
+    63,
+    28
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_2.jpg"
+  },
+  {
+   "marke": "Valenzi",
+   "name": "Markklößchen oder Suppenklößchen",
+   "packung": "100g Beutel",
+   "preis": 0.79,
+   "alt_preis": 1.09,
+   "grundpreis": 7.9,
+   "gp_einheit": "kg",
+   "kategorie": "Suppeneinlage",
+   "bereich": [
+    71,
+    11,
+    97,
+    31
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_2.jpg"
+  },
+  {
+   "marke": "drilander",
+   "name": "Frische grobe Bratwurst vom Schwein",
+   "packung": "1000g",
+   "preis": 7.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Wurst",
+   "bereich": [
+    18,
+    35,
+    42,
+    49
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_2.jpg"
+  },
+  {
+   "marke": "",
+   "name": "Schweinefilet lang, gefroren/getaut",
+   "packung": "100g",
+   "preis": 1.19,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Fleisch",
+   "bereich": [
+    14,
+    49,
+    49,
+    61
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_2.jpg"
+  },
+  {
+   "marke": "drilander",
+   "name": "1a Backschinken vom Schwein",
+   "packung": "1000g",
+   "preis": 8.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Schinken",
+   "bereich": [
+    14,
+    63,
+    44,
+    79
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_2.jpg"
+  },
+  {
+   "marke": "drilander",
+   "name": "1a Schweinerückenbraten ohne Knochen",
+   "packung": "1000g",
+   "preis": 7.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Fleisch",
+   "bereich": [
+    21,
+    78,
+    49,
+    99
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_2.jpg"
+  },
+  {
+   "marke": "drilander",
+   "name": "Kasselernackenbraten ohne Knochen",
+   "packung": "1000g",
+   "preis": 7.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Fleisch",
+   "bereich": [
+    16,
+    99,
+    47,
+    122
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_2.jpg"
+  },
+  {
+   "marke": "Hengstenberg",
+   "name": "Mildessa Weinsauerkraut",
+   "packung": "425-ml-Dose",
+   "preis": 1.79,
+   "alt_preis": 2.49,
+   "grundpreis": 5.11,
+   "gp_einheit": "kg",
+   "kategorie": "Sauerkraut",
+   "bereich": [
+    35,
+    120,
+    49,
+    140
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_2.jpg"
+  },
+  {
+   "marke": "drilander",
+   "name": "Partyschnitzel vom Schweinerücken, paniert",
+   "packung": "100g",
+   "preis": 1.39,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Fleisch",
+   "bereich": [
+    49,
+    56,
+    71,
+    75
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_2.jpg"
+  },
+  {
+   "marke": "drilander",
+   "name": "Cordon-bleu oder Zwiebeltaschen vom Schwein",
+   "packung": "100g",
+   "preis": 1.39,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Fleisch",
+   "bereich": [
+    73,
+    55,
+    97,
+    76
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_2.jpg"
+  },
+  {
+   "marke": "drilander",
+   "name": "Schaschliktopf vom Schwein",
+   "packung": "500g Schlauchbeutel",
+   "preis": 5.99,
+   "alt_preis": null,
+   "grundpreis": 11.98,
+   "gp_einheit": "kg",
+   "kategorie": "Eintopf",
+   "bereich": [
+    63,
+    83,
+    96,
+    99
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_2.jpg"
+  },
+  {
+   "marke": "drilander",
+   "name": "Rindfleischtopf Stroganoff",
+   "packung": "500g Schlauchbeutel",
+   "preis": 7.99,
+   "alt_preis": null,
+   "grundpreis": 15.98,
+   "gp_einheit": "kg",
+   "kategorie": "Eintopf",
+   "bereich": [
+    64,
+    100,
+    96,
+    118
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_2.jpg"
+  },
+  {
+   "marke": "drilander",
+   "name": "Sauerkrautpfanne mit Kasseler vom Schwein",
+   "packung": "1000g",
+   "preis": 5.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Fertiggericht",
+   "bereich": [
+    68,
+    118,
+    96,
+    139
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_2.jpg"
+  },
+  {
+   "marke": "Heidegold",
+   "name": "Hähnchen-Brustfiletspieß, pikant gewürzt oder mariniert",
+   "packung": "100 g",
+   "preis": 1.79,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Geflügel",
+   "bereich": [
+    29,
+    1,
+    48,
+    11
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_3.jpg"
+  },
+  {
+   "marke": "Heidegold",
+   "name": "Hähnchen-Brustfilet, Teilstück",
+   "packung": "100 g",
+   "preis": 1.49,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Geflügel",
+   "bereich": [
+    72,
+    0,
+    97,
+    12
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_3.jpg"
+  },
+  {
+   "marke": "Heidegold",
+   "name": "Hähnchen-Brustfiletpfanne Gyros",
+   "packung": "100 g",
+   "preis": 1.69,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Geflügel",
+   "bereich": [
+    34,
+    12,
+    53,
+    21
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_3.jpg"
+  },
+  {
+   "marke": "Heidegold",
+   "name": "Hähnchenschnitzel, verschieden paniert",
+   "packung": "100 g",
+   "preis": 1.59,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Geflügel",
+   "bereich": [
+    70,
+    12,
+    94,
+    21
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_3.jpg"
+  },
+  {
+   "marke": "drilander",
+   "name": "Mediterrano Salami, am Stück oder geschnitten",
+   "packung": "100 g",
+   "preis": 2.29,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Salami",
+   "bereich": [
+    17,
+    23,
+    40,
+    42
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_3.jpg"
+  },
+  {
+   "marke": "drilander",
+   "name": "Frischwurstaufschnitt, verschiedene Sorten",
+   "packung": "100 g",
+   "preis": 1.39,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Aufschnitt",
+   "bereich": [
+    46,
+    26,
+    96,
+    40
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_3.jpg"
+  },
+  {
+   "marke": "drilander",
+   "name": "Kräuterleberwurst, Pfälzer Art",
+   "packung": "100 g",
+   "preis": 1.29,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Leberwurst",
+   "bereich": [
+    21,
+    45,
+    41,
+    58
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_3.jpg"
+  },
+  {
+   "marke": "drilander",
+   "name": "Schweinelachsbratenaufschnitt, Gyros-, Pfeffer-, Kasseler-, mit und ohne Kräuter, Schweinebratenaufschnitt",
+   "packung": "100 g",
+   "preis": 1.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Aufschnitt",
+   "bereich": [
+    47,
+    56,
+    98,
+    76
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_3.jpg"
+  },
+  {
+   "marke": "drilander",
+   "name": "Rinderrauchfleisch",
+   "packung": "100 g",
+   "preis": 3.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Rauchfleisch",
+   "bereich": [
+    18,
+    62,
+    43,
+    75
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_3.jpg"
+  },
+  {
+   "marke": "",
+   "name": "Wurstebrot und Leberbrot",
+   "packung": "100 g",
+   "preis": 0.69,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Wurst",
+   "bereich": [
+    13,
+    78,
+    44,
+    96
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_3.jpg"
+  },
+  {
+   "marke": "THOMY",
+   "name": "Delikatess Senf, mittelscharf",
+   "packung": "200-ml-Tube",
+   "preis": 1.29,
+   "alt_preis": 1.49,
+   "grundpreis": 6.45,
+   "gp_einheit": "l",
+   "kategorie": "Senf",
+   "bereich": [
+    59,
+    76,
+    88,
+    82
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_3.jpg"
+  },
+  {
+   "marke": "",
+   "name": "Schinkenkrakauer im Naturdarm",
+   "packung": "100 g",
+   "preis": 1.29,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Wurst",
+   "bereich": [
+    56,
+    83,
+    100,
+    97
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_3.jpg"
+  },
+  {
+   "marke": "",
+   "name": "Gurken",
+   "packung": "350g–400g",
+   "preis": 0.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Gemüse",
+   "bereich": [
+    51,
+    1,
+    98,
+    24
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_4.jpg"
+  },
+  {
+   "marke": "",
+   "name": "Helle Tafeltrauben",
+   "packung": "500g Packung",
+   "preis": 2.99,
+   "alt_preis": null,
+   "grundpreis": 5.98,
+   "gp_einheit": "kg",
+   "kategorie": "Obst",
+   "bereich": [
+    10,
+    32,
+    26,
+    45
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_4.jpg"
+  },
+  {
+   "marke": "",
+   "name": "Orangen Navelinas",
+   "packung": "2kg Netz",
+   "preis": 3.99,
+   "alt_preis": null,
+   "grundpreis": 1.99,
+   "gp_einheit": "kg",
+   "kategorie": "Obst",
+   "bereich": [
+    36,
+    35,
+    65,
+    50
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_4.jpg"
+  },
+  {
+   "marke": "",
+   "name": "Bio-Zitronen",
+   "packung": "500g Netz",
+   "preis": 1.99,
+   "alt_preis": null,
+   "grundpreis": 3.98,
+   "gp_einheit": "kg",
+   "kategorie": "Obst",
+   "bereich": [
+    70,
+    33,
+    96,
+    45
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_4.jpg"
+  },
+  {
+   "marke": "",
+   "name": "Tafeläpfel Elstar und Braeburn",
+   "packung": "je 1,5kg Beutel",
+   "preis": 2.49,
+   "alt_preis": null,
+   "grundpreis": 1.66,
+   "gp_einheit": "kg",
+   "kategorie": "Obst",
+   "bereich": [
+    3,
+    53,
+    33,
+    72
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_4.jpg"
+  },
+  {
+   "marke": "",
+   "name": "Kiwi",
+   "packung": "je Stück",
+   "preis": 0.69,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Obst",
+   "bereich": [
+    35,
+    53,
+    65,
+    68
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_4.jpg"
+  },
+  {
+   "marke": "Pompur",
+   "name": "Tafeläpfel",
+   "packung": "800g Packung",
+   "preis": 2.99,
+   "alt_preis": null,
+   "grundpreis": 3.74,
+   "gp_einheit": "kg",
+   "kategorie": "Obst",
+   "bereich": [
+    77,
+    60,
+    98,
+    70
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_4.jpg"
+  },
+  {
+   "marke": "",
+   "name": "Cherrydattel-Tomaten",
+   "packung": "je 250g Schale",
+   "preis": 1.99,
+   "alt_preis": null,
+   "grundpreis": 7.96,
+   "gp_einheit": "kg",
+   "kategorie": "Tomaten",
+   "bereich": [
+    3,
+    81,
+    33,
+    91
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_4.jpg"
+  },
+  {
+   "marke": "",
+   "name": "Rosenkohl",
+   "packung": "500g Flowpack",
+   "preis": 1.49,
+   "alt_preis": null,
+   "grundpreis": 2.98,
+   "gp_einheit": "kg",
+   "kategorie": "Gemüse",
+   "bereich": [
+    38,
+    76,
+    66,
+    93
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_4.jpg"
+  },
+  {
+   "marke": "",
+   "name": "Suppenbund",
+   "packung": "500 Packung",
+   "preis": 1.49,
+   "alt_preis": null,
+   "grundpreis": 2.98,
+   "gp_einheit": "kg",
+   "kategorie": "Suppengemüse",
+   "bereich": [
+    78,
+    76,
+    98,
+    94
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_4.jpg"
+  },
+  {
+   "marke": "iglo",
+   "name": "Frisch vom Feld Rohgemüse",
+   "packung": "400g Packung",
+   "preis": 1.99,
+   "alt_preis": 2.99,
+   "grundpreis": 4.98,
+   "gp_einheit": "kg",
+   "kategorie": "Gemüse",
+   "bereich": [
+    14,
+    3,
+    48,
+    27
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_5.jpg"
+  },
+  {
+   "marke": "agrarfrost",
+   "name": "Back- und Knusperfrites",
+   "packung": "1500g Beutel",
+   "preis": 2.99,
+   "alt_preis": 4.49,
+   "grundpreis": 1.99,
+   "gp_einheit": "kg",
+   "kategorie": "Pommes frites",
+   "bereich": [
+    12,
+    28,
+    50,
+    55
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_5.jpg"
+  },
+  {
+   "marke": "Coppenrath & Wiese",
+   "name": "Sahne Rollen",
+   "packung": "400g Packung",
+   "preis": 2.99,
+   "alt_preis": 3.99,
+   "grundpreis": 7.48,
+   "gp_einheit": "kg",
+   "kategorie": "Kuchen",
+   "bereich": [
+    15,
+    58,
+    45,
+    70
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_5.jpg"
+  },
+  {
+   "marke": "Coppenrath & Wiese",
+   "name": "Unsere Goldstücke",
+   "packung": "400g – 490g Beutel",
+   "preis": 2.79,
+   "alt_preis": 3.69,
+   "grundpreis": 5.69,
+   "gp_einheit": "kg",
+   "kategorie": "Brot",
+   "bereich": [
+    15,
+    75,
+    34,
+    99
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_5.jpg"
+  },
+  {
+   "marke": "FRoSTA",
+   "name": "Fertiggerichte à la Carte oder High Protein",
+   "packung": "450g / 500g Beutel",
+   "preis": 4.49,
+   "alt_preis": 5.99,
+   "grundpreis": 9.98,
+   "gp_einheit": "kg",
+   "kategorie": "Fertiggericht",
+   "bereich": [
+    55,
+    4,
+    97,
+    53
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_5.jpg"
+  },
+  {
+   "marke": "Coppenrath & Wiese",
+   "name": "Meistertorten",
+   "packung": "500g – 1150g Packung",
+   "preis": 6.99,
+   "alt_preis": 9.49,
+   "grundpreis": 6.08,
+   "gp_einheit": "kg",
+   "kategorie": "Torte",
+   "bereich": [
+    66,
+    54,
+    95,
+    81
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_5.jpg"
+  },
+  {
+   "marke": "Tafelzeit",
+   "name": "Zimtsterne-Eis oder Tannenbaum-Eis",
+   "packung": "5x 85ml / 5x 80ml Packung",
+   "preis": 2.99,
+   "alt_preis": null,
+   "grundpreis": 7.04,
+   "gp_einheit": "kg",
+   "kategorie": "Eis",
+   "bereich": [
+    49,
+    81,
+    88,
+    99
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_5.jpg"
+  },
+  {
+   "marke": "wasa",
+   "name": "Selection Chia & Meersalz oder Protein",
+   "packung": "200g / 245g Packung",
+   "preis": 1.99,
+   "alt_preis": 2.99,
+   "grundpreis": 8.12,
+   "gp_einheit": "kg",
+   "kategorie": "Knäckebrot",
+   "bereich": [
+    3,
+    85,
+    35,
+    99
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_5.jpg"
+  },
+  {
+   "marke": "wasa",
+   "name": "Sandwich Multipack 3er Käse & Schnittlauch und andere Sorten",
+   "packung": "90g – 120g Packung",
+   "preis": 1.99,
+   "alt_preis": 2.59,
+   "grundpreis": 16.58,
+   "gp_einheit": "kg",
+   "kategorie": "Knäckebrot",
+   "bereich": [
+    37,
+    85,
+    68,
+    99
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_5.jpg"
+  },
+  {
+   "marke": "wasa",
+   "name": "Tasty Snacks Crackers oder Rounds",
+   "packung": "150g – 267g Packung",
+   "preis": 1.99,
+   "alt_preis": 2.99,
+   "grundpreis": 7.45,
+   "gp_einheit": "kg",
+   "kategorie": "Snack",
+   "bereich": [
+    70,
+    84,
+    97,
+    99
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_5.jpg"
+  },
+  {
+   "marke": "Ehrmann",
+   "name": "Almighurt, verschiedene Sorten",
+   "packung": "150g Becher",
+   "preis": 0.49,
+   "alt_preis": 0.89,
+   "grundpreis": 3.27,
+   "gp_einheit": "kg",
+   "kategorie": "Joghurt",
+   "bereich": [
+    13,
+    11,
+    27,
+    24
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_6.jpg"
+  },
+  {
+   "marke": "Ehrmann",
+   "name": "Grand Dessert, verschiedene Sorten",
+   "packung": "190g Becher",
+   "preis": 0.69,
+   "alt_preis": 1.19,
+   "grundpreis": 3.63,
+   "gp_einheit": "kg",
+   "kategorie": "Dessert",
+   "bereich": [
+    30,
+    8,
+    48,
+    20
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_6.jpg"
+  },
+  {
+   "marke": "müller",
+   "name": "Joghurt mit der Ecke, verschiedene Sorten",
+   "packung": "150g Becher",
+   "preis": 0.49,
+   "alt_preis": 0.99,
+   "grundpreis": 3.27,
+   "gp_einheit": "kg",
+   "kategorie": "Joghurt",
+   "bereich": [
+    48,
+    8,
+    70,
+    18
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_6.jpg"
+  },
+  {
+   "marke": "Arla",
+   "name": "Skyr, verschiedene Sorten, 2 für 2.50",
+   "packung": "450g Becher",
+   "preis": 2.5,
+   "alt_preis": 3.98,
+   "grundpreis": 2.78,
+   "gp_einheit": "kg",
+   "kategorie": "Joghurt",
+   "bereich": [
+    71,
+    2,
+    96,
+    22
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_6.jpg"
+  },
+  {
+   "marke": "Géramont",
+   "name": "Weichkäse, verschiedene Sorten, 60% Fett i. Tr.",
+   "packung": "200g Packung",
+   "preis": 2.79,
+   "alt_preis": 3.49,
+   "grundpreis": 13.95,
+   "gp_einheit": "kg",
+   "kategorie": "Käse",
+   "bereich": [
+    7,
+    29,
+    28,
+    38
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_6.jpg"
+  },
+  {
+   "marke": "Arla Buko",
+   "name": "Frischkäse, verschiedene Sorten",
+   "packung": "200g Becher",
+   "preis": 1.29,
+   "alt_preis": 1.99,
+   "grundpreis": 6.45,
+   "gp_einheit": "kg",
+   "kategorie": "Frischkäse",
+   "bereich": [
+    29,
+    29,
+    52,
+    36
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_6.jpg"
+  },
+  {
+   "marke": "Cambozola",
+   "name": "Classic, 70% Fett i. Tr.",
+   "packung": "150g Packung",
+   "preis": 1.99,
+   "alt_preis": 2.99,
+   "grundpreis": 13.27,
+   "gp_einheit": "kg",
+   "kategorie": "Käse",
+   "bereich": [
+    57,
+    27,
+    73,
+    38
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_6.jpg"
+  },
+  {
+   "marke": "Deli Reform",
+   "name": "für meine Familie",
+   "packung": "500g Becher",
+   "preis": 0.99,
+   "alt_preis": 1.49,
+   "grundpreis": 1.98,
+   "gp_einheit": "kg",
+   "kategorie": "Margarine",
+   "bereich": [
+    76,
+    29,
+    99,
+    40
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_6.jpg"
+  },
+  {
+   "marke": "Bihophar",
+   "name": "Honig, verschiedene Sorten (Blütenhonig, Wabenquell, Nord-Deutschland, Deutscher Blütenhonig/Raps-Honig, Akazien-Honig, Gelee Royale)",
+   "packung": "450 g / 500 g Glas",
+   "preis": 4.99,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Honig",
+   "bereich": [
+    4,
+    42,
+    96,
+    66
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_6.jpg"
+  },
+  {
+   "marke": "Kornmark",
+   "name": "Sandwich, Weizen oder Vollkorn",
+   "packung": "750g Packung",
+   "preis": 1.49,
+   "alt_preis": null,
+   "grundpreis": 1.99,
+   "gp_einheit": "kg",
+   "kategorie": "Brot",
+   "bereich": [
+    0,
+    66,
+    25,
+    98
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_6.jpg"
+  },
+  {
+   "marke": "Teekanne",
+   "name": "Kräuter-, Schwarz- oder Früchtetee, verschiedene Sorten",
+   "packung": "18er / 20er Packung",
+   "preis": 1.49,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Tee",
+   "bereich": [
+    32,
+    81,
+    54,
+    99
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_6.jpg"
+  },
+  {
+   "marke": "Brandt",
+   "name": "Zwieback",
+   "packung": "450g Packung",
+   "preis": 2.99,
+   "alt_preis": 3.29,
+   "grundpreis": 6.64,
+   "gp_einheit": "kg",
+   "kategorie": "Zwieback",
+   "bereich": [
+    60,
+    74,
+    95,
+    87
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_6.jpg"
+  },
+  {
+   "marke": "Bihophar",
+   "name": "Frühstücks-Trio (Akazien-Honig, Wabenquell, Wald-Honig)",
+   "packung": "3x 50g Gläser",
+   "preis": 2.99,
+   "alt_preis": 3.99,
+   "grundpreis": 19.93,
+   "gp_einheit": "kg",
+   "kategorie": "Honig",
+   "bereich": [
+    64,
+    90,
+    87,
+    98
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_6.jpg"
+  },
+  {
+   "marke": "Gutfried",
+   "name": "Geflügel-Fleischwurst mit oder ohne Knoblauch",
+   "packung": "400g Packung",
+   "preis": 2.99,
+   "alt_preis": 3.79,
+   "grundpreis": 7.48,
+   "gp_einheit": "kg",
+   "kategorie": "Wurst",
+   "bereich": [
+    2,
+    2,
+    33,
+    21
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_7.jpg"
+  },
+  {
+   "marke": "Jamón Serrano",
+   "name": "Schinken",
+   "packung": "80g Packung",
+   "preis": 1.79,
+   "alt_preis": 1.99,
+   "grundpreis": 22.38,
+   "gp_einheit": "kg",
+   "kategorie": "Schinken",
+   "bereich": [
+    32,
+    3,
+    65,
+    19
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_7.jpg"
+  },
+  {
+   "marke": "Lysell",
+   "name": "Gabelröllchen und andere Sorten",
+   "packung": "125g Dose",
+   "preis": 1.99,
+   "alt_preis": 2.69,
+   "grundpreis": 15.92,
+   "gp_einheit": "kg",
+   "kategorie": "Fisch",
+   "bereich": [
+    79,
+    2,
+    97,
+    18
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_7.jpg"
+  },
+  {
+   "marke": "Arla Starbucks",
+   "name": "Frappuccino oder Discoveries",
+   "packung": "220ml – 250ml Becher / Flasche",
+   "preis": 1.99,
+   "alt_preis": 2.49,
+   "grundpreis": 7.96,
+   "gp_einheit": "l",
+   "kategorie": "Kaffeegetränk",
+   "bereich": [
+    15,
+    23,
+    35,
+    40
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_7.jpg"
+  },
+  {
+   "marke": "Zott",
+   "name": "Zottarella Classic Rolle",
+   "packung": "200g Beutel",
+   "preis": 1.99,
+   "alt_preis": 2.79,
+   "grundpreis": 9.95,
+   "gp_einheit": "kg",
+   "kategorie": "Käse",
+   "bereich": [
+    37,
+    22,
+    67,
+    39
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_7.jpg"
+  },
+  {
+   "marke": "Casa Pietra",
+   "name": "Tortelloni und andere Sorten",
+   "packung": "400g – 500g Packung",
+   "preis": 1.59,
+   "alt_preis": 1.89,
+   "grundpreis": 3.18,
+   "gp_einheit": "kg",
+   "kategorie": "Teigwaren",
+   "bereich": [
+    77,
+    21,
+    100,
+    40
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_7.jpg"
+  },
+  {
+   "marke": "Zentis",
+   "name": "Frühstücks-Konfitüre",
+   "packung": "230g Glas",
+   "preis": 1.49,
+   "alt_preis": 1.99,
+   "grundpreis": 6.48,
+   "gp_einheit": "kg",
+   "kategorie": "Konfitüre",
+   "bereich": [
+    9,
+    42,
+    28,
+    60
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_7.jpg"
+  },
+  {
+   "marke": "Lieken Urkorn",
+   "name": "Proteinbrot",
+   "packung": "500g Packung",
+   "preis": 1.99,
+   "alt_preis": 2.49,
+   "grundpreis": 3.98,
+   "gp_einheit": "kg",
+   "kategorie": "Brot",
+   "bereich": [
+    34,
+    42,
+    54,
+    61
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_7.jpg"
+  },
+  {
+   "marke": "Zentis",
+   "name": "Nusspli das Original",
+   "packung": "400g Glas",
+   "preis": 2.49,
+   "alt_preis": 3.49,
+   "grundpreis": 6.23,
+   "gp_einheit": "kg",
+   "kategorie": "Nuss-Nougat-Creme",
+   "bereich": [
+    65,
+    42,
+    94,
+    64
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_7.jpg"
+  },
+  {
+   "marke": "Bärenmarke",
+   "name": "Haltbare Milch 1,5% / 3,5% Fett",
+   "packung": "1l Packung",
+   "preis": 1.49,
+   "alt_preis": 1.69,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Milch",
+   "bereich": [
+    11,
+    61,
+    21,
+    83
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_7.jpg"
+  },
+  {
+   "marke": "alpro",
+   "name": "Sojadrink Original oder Vanille",
+   "packung": "1l Packung",
+   "preis": 1.99,
+   "alt_preis": 2.49,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Sojadrink",
+   "bereich": [
+    29,
+    63,
+    41,
+    83
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_7.jpg"
+  },
+  {
+   "marke": "Kölln",
+   "name": "Flocken (Blütenzarte oder Echte Kölln Kernige)",
+   "packung": "500g Packung",
+   "preis": 1.39,
+   "alt_preis": 1.69,
+   "grundpreis": 2.78,
+   "gp_einheit": "kg",
+   "kategorie": "Haferflocken",
+   "bereich": [
+    50,
+    59,
+    76,
+    81
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_7.jpg"
+  },
+  {
+   "marke": "NESCAFÉ",
+   "name": "Cappuccino verschiedene Sorten",
+   "packung": "220g – 250g Dose",
+   "preis": 3.99,
+   "alt_preis": 4.99,
+   "grundpreis": 15.96,
+   "gp_einheit": "kg",
+   "kategorie": "Kaffee",
+   "bereich": [
+    4,
+    84,
+    29,
+    99
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_7.jpg"
+  },
+  {
+   "marke": "Senseo",
+   "name": "Milka Choco Pads",
+   "packung": "92g – 125g Packung",
+   "preis": 2.99,
+   "alt_preis": 3.99,
+   "grundpreis": 23.92,
+   "gp_einheit": "kg",
+   "kategorie": "Kaffeepads",
+   "bereich": [
+    44,
+    84,
+    66,
+    98
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_7.jpg"
+  },
+  {
+   "marke": "Melitta",
+   "name": "Barista Crema Bohnen",
+   "packung": "1kg",
+   "preis": 12.99,
+   "alt_preis": 17.99,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Kaffee",
+   "bereich": [
+    76,
+    74,
+    94,
+    97
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_7.jpg"
+  },
+  {
+   "marke": "Delverde",
+   "name": "Pastasaucen, Cremoso oder Pesto",
+   "packung": "190g – 400g Glas",
+   "preis": 1.99,
+   "alt_preis": 2.99,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Pastasauce",
+   "bereich": [
+    36,
+    3,
+    72,
+    31
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_8.jpg"
+  },
+  {
+   "marke": "Pfanni",
+   "name": "Püree, verschiedene Sorten",
+   "packung": "3x3 Portionen",
+   "preis": 1.59,
+   "alt_preis": 2.29,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Kartoffelpüree",
+   "bereich": [
+    78,
+    3,
+    96,
+    24
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_8.jpg"
+  },
+  {
+   "marke": "Bertolli",
+   "name": "Bratolivenöl",
+   "packung": "500ml Flasche",
+   "preis": 4.99,
+   "alt_preis": 6.99,
+   "grundpreis": 9.98,
+   "gp_einheit": "l",
+   "kategorie": "Speiseöl",
+   "bereich": [
+    12,
+    26,
+    22,
+    53
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_8.jpg"
+  },
+  {
+   "marke": "Biskin",
+   "name": "Speiseöl",
+   "packung": "750ml Flasche",
+   "preis": 2.99,
+   "alt_preis": 3.99,
+   "grundpreis": 3.99,
+   "gp_einheit": "l",
+   "kategorie": "Speiseöl",
+   "bereich": [
+    25,
+    25,
+    35,
+    53
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_8.jpg"
+  },
+  {
+   "marke": "Ben's Original",
+   "name": "Express Reis Mediterran und andere Sorten",
+   "packung": "220g / 250g Beutel",
+   "preis": 1.79,
+   "alt_preis": 2.29,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Reis",
+   "bereich": [
+    43,
+    34,
+    59,
+    53
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_8.jpg"
+  },
+  {
+   "marke": "Stollenwerk",
+   "name": "Grünkohl, grob gehackt",
+   "packung": "660g Glas",
+   "preis": 1.49,
+   "alt_preis": 1.69,
+   "grundpreis": 3.55,
+   "gp_einheit": "kg",
+   "kategorie": "Gemüse",
+   "bereich": [
+    68,
+    29,
+    80,
+    53
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_8.jpg"
+  },
+  {
+   "marke": "Original",
+   "name": "Span. Serrano Stangensalami (Fuet)",
+   "packung": "160g Packung",
+   "preis": 2.99,
+   "alt_preis": 3.49,
+   "grundpreis": 18.69,
+   "gp_einheit": "kg",
+   "kategorie": "Salami",
+   "bereich": [
+    87,
+    24,
+    99,
+    53
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_8.jpg"
+  },
+  {
+   "marke": "Sonnen Bassermann",
+   "name": "Hühner-Nudel-Eintopf oder Hochzeitssuppe und andere Sorten",
+   "packung": "400g / 400ml Dose",
+   "preis": 1.49,
+   "alt_preis": 1.89,
+   "grundpreis": 3.73,
+   "gp_einheit": "kg",
+   "kategorie": "Eintopf",
+   "bereich": [
+    13,
+    60,
+    25,
+    77
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_8.jpg"
+  },
+  {
+   "marke": "Spreewaldhof",
+   "name": "Apfelkompott",
+   "packung": "360g Glas",
+   "preis": 1.49,
+   "alt_preis": 1.69,
+   "grundpreis": 4.14,
+   "gp_einheit": "kg",
+   "kategorie": "Kompott",
+   "bereich": [
+    31,
+    60,
+    43,
+    77
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_8.jpg"
+  },
+  {
+   "marke": "Birkel No.1",
+   "name": "Spezialitäten, verschiedene Sorten",
+   "packung": "250g Packung",
+   "preis": 0.99,
+   "alt_preis": 1.29,
+   "grundpreis": 3.96,
+   "gp_einheit": "kg",
+   "kategorie": "Nudeln",
+   "bereich": [
+    52,
+    58,
+    63,
+    77
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_8.jpg"
+  },
+  {
+   "marke": "Heinz",
+   "name": "Curry Gewürz Ketchup, original oder scharf",
+   "packung": "400ml Flasche",
+   "preis": 1.99,
+   "alt_preis": 2.99,
+   "grundpreis": 4.98,
+   "gp_einheit": "l",
+   "kategorie": "Ketchup",
+   "bereich": [
+    72,
+    56,
+    79,
+    77
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_8.jpg"
+  },
+  {
+   "marke": "Knorr",
+   "name": "Salatkrönung, verschiedene Sorten",
+   "packung": "5er Beutel",
+   "preis": 0.99,
+   "alt_preis": 1.59,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Gewürz",
+   "bereich": [
+    80,
+    57,
+    92,
+    77
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_8.jpg"
+  },
+  {
+   "marke": "Del Monte",
+   "name": "Ananas in Scheiben oder Stücke",
+   "packung": "580ml Dose",
+   "preis": 1.99,
+   "alt_preis": 2.69,
+   "grundpreis": 5.69,
+   "gp_einheit": "kg",
+   "kategorie": "Obstkonserve",
+   "bereich": [
+    13,
+    81,
+    27,
+    98
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_8.jpg"
+  },
+  {
+   "marke": "Diamant",
+   "name": "Weizenmehl Type 550 und andere Sorten",
+   "packung": "1kg Packung",
+   "preis": 1.49,
+   "alt_preis": 1.99,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Mehl",
+   "bereich": [
+    36,
+    79,
+    51,
+    100
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_8.jpg"
+  },
+  {
+   "marke": "Maggi",
+   "name": "Delikatess Saucen, Rahmsauce zu Braten und andere Sorten",
+   "packung": "2er Packung",
+   "preis": 1.19,
+   "alt_preis": 1.49,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Soße",
+   "bereich": [
+    72,
+    79,
+    90,
+    89
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_8.jpg"
+  },
+  {
+   "marke": "Dr. Oetker",
+   "name": "Premium Backmischungen, Maulwurfkuchen und andere Sorten",
+   "packung": "395g – 730g Packung",
+   "preis": 2.99,
+   "alt_preis": 4.49,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Backmischung",
+   "bereich": [
+    13,
+    84,
+    28,
+    99
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_8.jpg"
+  },
+  {
+   "marke": "Dr. Oetker",
+   "name": "Original Pudding Pulver, verschiedene Sorten",
+   "packung": "2er oder 3er Packung",
+   "preis": 0.79,
+   "alt_preis": 1.09,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Pudding",
+   "bereich": [
+    35,
+    84,
+    51,
+    99
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_8.jpg"
+  },
+  {
+   "marke": "Maggi",
+   "name": "Guten Appetit Suppen, versch. Sorten",
+   "packung": "je Beutel",
+   "preis": 0.69,
+   "alt_preis": 0.99,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Suppe",
+   "bereich": [
+    63,
+    74,
+    73,
+    86
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_8.jpg"
+  },
+  {
+   "marke": "Maggi",
+   "name": "Fix, Produkte und Würzpasten, versch. Sorten",
+   "packung": "je Beutel",
+   "preis": 0.69,
+   "alt_preis": 1.09,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Würzmischung",
+   "bereich": [
+    62,
+    86,
+    72,
+    97
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_8.jpg"
+  },
+  {
+   "marke": "merci",
+   "name": "Große Vielfalt Finest Selection",
+   "packung": "250-g-Tafel",
+   "preis": 3.99,
+   "alt_preis": 4.79,
+   "grundpreis": 15.96,
+   "gp_einheit": "kg",
+   "kategorie": "Schokolade",
+   "bereich": [
+    12,
+    11,
+    36,
+    28
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_9.jpg"
+  },
+  {
+   "marke": "Carstens",
+   "name": "Lübecker Edel Marzipan",
+   "packung": "100-g-Packung",
+   "preis": 1.79,
+   "alt_preis": 1.99,
+   "grundpreis": 17.9,
+   "gp_einheit": "kg",
+   "kategorie": "Marzipan",
+   "bereich": [
+    46,
+    7,
+    56,
+    28
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_9.jpg"
+  },
+  {
+   "marke": "Milka",
+   "name": "Weihnachtsmann",
+   "packung": "45-g-Figur",
+   "preis": 1.69,
+   "alt_preis": 1.89,
+   "grundpreis": 37.56,
+   "gp_einheit": "kg",
+   "kategorie": "Schokolade",
+   "bereich": [
+    66,
+    7,
+    73,
+    24
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_9.jpg"
+  },
+  {
+   "marke": "Milka",
+   "name": "Feine Kugeln",
+   "packung": "82-g-Packung",
+   "preis": 2.79,
+   "alt_preis": 2.99,
+   "grundpreis": 34.02,
+   "gp_einheit": "kg",
+   "kategorie": "Schokolade",
+   "bereich": [
+    82,
+    7,
+    97,
+    24
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_9.jpg"
+  },
+  {
+   "marke": "merci",
+   "name": "lovelies, verschiedene Sorten",
+   "packung": "185-g-Packung",
+   "preis": 2.99,
+   "alt_preis": 3.99,
+   "grundpreis": 16.16,
+   "gp_einheit": "kg",
+   "kategorie": "Pralinen",
+   "bereich": [
+    15,
+    31,
+    54,
+    48
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_9.jpg"
+  },
+  {
+   "marke": "Milka",
+   "name": "Tafeln, verschiedene Sorten",
+   "packung": "87-g–100-g-Packung, 5 für 5.00",
+   "preis": 5.0,
+   "alt_preis": 9.95,
+   "grundpreis": null,
+   "gp_einheit": "kg",
+   "kategorie": "Schokolade",
+   "bereich": [
+    66,
+    27,
+    97,
+    48
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_9.jpg"
+  },
+  {
+   "marke": "Nestlé",
+   "name": "Smarties Riesenrolle Classic",
+   "packung": "130-g-Rolle",
+   "preis": 1.99,
+   "alt_preis": 2.79,
+   "grundpreis": 15.31,
+   "gp_einheit": "kg",
+   "kategorie": "Süßwaren",
+   "bereich": [
+    10,
+    50,
+    45,
+    57
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_9.jpg"
+  },
+  {
+   "marke": "Schwarze Herren",
+   "name": "Schokolade",
+   "packung": "100-g-Tafel",
+   "preis": 1.69,
+   "alt_preis": 1.99,
+   "grundpreis": 16.9,
+   "gp_einheit": "kg",
+   "kategorie": "Schokolade",
+   "bereich": [
+    54,
+    49,
+    74,
+    60
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_9.jpg"
+  },
+  {
+   "marke": "Kinder",
+   "name": "Mix Bunte Mischung klein",
+   "packung": "132-g-Beutel",
+   "preis": 4.49,
+   "alt_preis": 4.99,
+   "grundpreis": 34.02,
+   "gp_einheit": "kg",
+   "kategorie": "Schokolade",
+   "bereich": [
+    85,
+    49,
+    97,
+    74
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_9.jpg"
+  },
+  {
+   "marke": "Jeden Tag",
+   "name": "Schoko Lolly Vollmilch 8er",
+   "packung": "150-g-Packung",
+   "preis": 1.79,
+   "alt_preis": null,
+   "grundpreis": 11.93,
+   "gp_einheit": "kg",
+   "kategorie": "Schokolade",
+   "bereich": [
+    13,
+    61,
+    40,
+    76
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_9.jpg"
+  },
+  {
+   "marke": "Schluckwerder",
+   "name": "Schokokränze",
+   "packung": "200-g-Packung",
+   "preis": 1.69,
+   "alt_preis": null,
+   "grundpreis": 8.45,
+   "gp_einheit": "kg",
+   "kategorie": "Gebäck",
+   "bereich": [
+    52,
+    61,
+    76,
+    74
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_9.jpg"
+  },
+  {
+   "marke": "Bahlsen",
+   "name": "Akora Vollmilch und Edelherb",
+   "packung": "150-g-Packung",
+   "preis": 1.49,
+   "alt_preis": 1.79,
+   "grundpreis": 9.93,
+   "gp_einheit": "kg",
+   "kategorie": "Gebäck",
+   "bereich": [
+    11,
+    80,
+    23,
+    100
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_9.jpg"
+  },
+  {
+   "marke": "Bahlsen",
+   "name": "Contessa",
+   "packung": "200-g-Packung",
+   "preis": 1.99,
+   "alt_preis": 2.49,
+   "grundpreis": 9.95,
+   "gp_einheit": "kg",
+   "kategorie": "Gebäck",
+   "bereich": [
+    24,
+    81,
+    43,
+    100
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_9.jpg"
+  },
+  {
+   "marke": "Jeden Tag",
+   "name": "Marzipankartoffeln",
+   "packung": "125-g-Packung",
+   "preis": 1.49,
+   "alt_preis": null,
+   "grundpreis": 11.92,
+   "gp_einheit": "kg",
+   "kategorie": "Marzipan",
+   "bereich": [
+    45,
+    87,
+    60,
+    100
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_9.jpg"
+  },
+  {
+   "marke": "Schulte",
+   "name": "Dominosteine",
+   "packung": "175-g-Packung",
+   "preis": 2.69,
+   "alt_preis": null,
+   "grundpreis": 15.37,
+   "gp_einheit": "kg",
+   "kategorie": "Gebäck",
+   "bereich": [
+    64,
+    81,
+    77,
+    98
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_9.jpg"
+  },
+  {
+   "marke": "Haribo",
+   "name": "Merry Christmas Minis",
+   "packung": "250-g-Packung",
+   "preis": 2.49,
+   "alt_preis": 2.79,
+   "grundpreis": 9.96,
+   "gp_einheit": "kg",
+   "kategorie": "Fruchtgummi",
+   "bereich": [
+    79,
+    82,
+    97,
+    100
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_9.jpg"
+  },
+  {
+   "marke": "Bahlsen",
+   "name": "Feiner Butterspekulatius oder Mandelspekulatius",
+   "packung": "200-g-Packung",
+   "preis": 1.79,
+   "alt_preis": 1.99,
+   "grundpreis": 8.95,
+   "gp_einheit": "kg",
+   "kategorie": "Gebäck",
+   "bereich": [
+    12,
+    84,
+    23,
+    100
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_9.jpg"
+  },
+  {
+   "marke": "Riegelein",
+   "name": "Eierlikör-Fässchen",
+   "packung": "125-g-Beutel",
+   "preis": 1.89,
+   "alt_preis": null,
+   "grundpreis": 15.12,
+   "gp_einheit": "kg",
+   "kategorie": "Pralinen",
+   "bereich": [
+    26,
+    86,
+    37,
+    100
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_9.jpg"
+  },
+  {
+   "marke": "Alpia",
+   "name": "Schokolade, verschiedene Sorten",
+   "packung": "100-g-Tafel",
+   "preis": 0.99,
+   "alt_preis": 1.69,
+   "grundpreis": 9.9,
+   "gp_einheit": "kg",
+   "kategorie": "Schokolade",
+   "bereich": [
+    39,
+    88,
+    56,
+    100
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_9.jpg"
+  },
+  {
+   "marke": "Weiss",
+   "name": "Lebkuchen Allerlei",
+   "packung": "400-g-Packung",
+   "preis": 2.99,
+   "alt_preis": null,
+   "grundpreis": 7.48,
+   "gp_einheit": "kg",
+   "kategorie": "Lebkuchen",
+   "bereich": [
+    63,
+    84,
+    77,
+    100
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_9.jpg"
+  },
+  {
+   "marke": "Vivil",
+   "name": "Bonbons ohne Zucker, verschiedene Sorten",
+   "packung": "120-g-Beutel",
+   "preis": 1.69,
+   "alt_preis": 1.99,
+   "grundpreis": 14.08,
+   "gp_einheit": "kg",
+   "kategorie": "Bonbons",
+   "bereich": [
+    85,
+    88,
+    96,
+    100
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_9.jpg"
+  },
+  {
+   "marke": "NIVEA",
+   "name": "Duschgel",
+   "packung": "250ml Flasche",
+   "preis": 1.99,
+   "alt_preis": 2.69,
+   "grundpreis": 7.96,
+   "gp_einheit": "l",
+   "kategorie": "Duschgel",
+   "bereich": [
+    9,
+    21,
+    23,
+    34
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_10.jpg"
+  },
+  {
+   "marke": "NIVEA",
+   "name": "Deospray oder Roll-on (50ml Dose)",
+   "packung": "50ml Dose",
+   "preis": 3.49,
+   "alt_preis": 4.29,
+   "grundpreis": 69.8,
+   "gp_einheit": "l",
+   "kategorie": "Deodorant",
+   "bereich": [
+    25,
+    20,
+    36,
+    34
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_10.jpg"
+  },
+  {
+   "marke": "NIVEA",
+   "name": "Deospray oder Roll-on (150ml Dose)",
+   "packung": "150ml Dose",
+   "preis": 2.99,
+   "alt_preis": 3.79,
+   "grundpreis": 19.93,
+   "gp_einheit": "l",
+   "kategorie": "Deodorant",
+   "bereich": [
+    38,
+    20,
+    43,
+    32
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_10.jpg"
+  },
+  {
+   "marke": "NIVEA",
+   "name": "Shampoo oder Spülung",
+   "packung": "250ml / 200ml Flasche",
+   "preis": 2.49,
+   "alt_preis": 2.99,
+   "grundpreis": 9.96,
+   "gp_einheit": "l",
+   "kategorie": "Shampoo",
+   "bereich": [
+    53,
+    20,
+    65,
+    34
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_10.jpg"
+  },
+  {
+   "marke": "Odol med 3",
+   "name": "Zahnpasta Advanced",
+   "packung": "75ml Tube",
+   "preis": 2.29,
+   "alt_preis": 2.99,
+   "grundpreis": 30.53,
+   "gp_einheit": "l",
+   "kategorie": "Zahnpasta",
+   "bereich": [
+    76,
+    7,
+    97,
+    17
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_10.jpg"
+  },
+  {
+   "marke": "Palmolive",
+   "name": "Flüssigseife",
+   "packung": "300ml Flasche",
+   "preis": 1.19,
+   "alt_preis": 1.79,
+   "grundpreis": 3.97,
+   "gp_einheit": "l",
+   "kategorie": "Flüssigseife",
+   "bereich": [
+    76,
+    20,
+    95,
+    33
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_10.jpg"
+  },
+  {
+   "marke": "Persil",
+   "name": "Waschmittel Flüssig, Discs oder Megaperls",
+   "packung": "16 WL / 20 WL",
+   "preis": 5.49,
+   "alt_preis": 6.99,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Waschmittel",
+   "bereich": [
+    13,
+    42,
+    31,
+    55
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_10.jpg"
+  },
+  {
+   "marke": "Lenor",
+   "name": "Weichspüler",
+   "packung": "38WL",
+   "preis": 2.29,
+   "alt_preis": 3.29,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Weichspüler",
+   "bereich": [
+    47,
+    36,
+    61,
+    50
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_10.jpg"
+  },
+  {
+   "marke": "Hakle",
+   "name": "Toilettenpapier Sanft & Sicher",
+   "packung": "20x 130 Blatt",
+   "preis": 7.99,
+   "alt_preis": 9.99,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Toilettenpapier",
+   "bereich": [
+    69,
+    38,
+    96,
+    50
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_10.jpg"
+  },
+  {
+   "marke": "Lenor",
+   "name": "Wäscheparfüm",
+   "packung": "155g Packung",
+   "preis": 3.99,
+   "alt_preis": 4.99,
+   "grundpreis": 25.74,
+   "gp_einheit": "kg",
+   "kategorie": "Wäscheparfüm",
+   "bereich": [
+    47,
+    52,
+    61,
+    67
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_10.jpg"
+  },
+  {
+   "marke": "WC ENTE",
+   "name": "Total Aktiv Gel",
+   "packung": "750ml Flasche",
+   "preis": 1.99,
+   "alt_preis": 2.69,
+   "grundpreis": 2.65,
+   "gp_einheit": "l",
+   "kategorie": "WC-Reiniger",
+   "bereich": [
+    82,
+    53,
+    97,
+    67
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_10.jpg"
+  },
+  {
+   "marke": "WC ENTE",
+   "name": "Aktive Clean WC-Hänger",
+   "packung": "38,6g Packung",
+   "preis": 1.19,
+   "alt_preis": 1.69,
+   "grundpreis": 30.83,
+   "gp_einheit": "kg",
+   "kategorie": "WC-Reiniger",
+   "bereich": [
+    77,
+    69,
+    96,
+    83
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_10.jpg"
+  },
+  {
+   "marke": "Cesar",
+   "name": "Hunde-Nassfutter versch. Sorten",
+   "packung": "150g Schale",
+   "preis": 0.79,
+   "alt_preis": 0.99,
+   "grundpreis": 5.27,
+   "gp_einheit": "kg",
+   "kategorie": "Hundefutter",
+   "bereich": [
+    7,
+    88,
+    23,
+    98
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_10.jpg"
+  },
+  {
+   "marke": "Sheba",
+   "name": "Katzen-Nassfutter versch. Sorten",
+   "packung": "85g Beutel / Schale",
+   "preis": 0.55,
+   "alt_preis": 0.69,
+   "grundpreis": 6.47,
+   "gp_einheit": "kg",
+   "kategorie": "Katzenfutter",
+   "bereich": [
+    38,
+    88,
+    52,
+    98
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_10.jpg"
+  },
+  {
+   "marke": "Toppits",
+   "name": "Frischhaltefolie",
+   "packung": "20m Rolle",
+   "preis": 1.49,
+   "alt_preis": 1.99,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Frischhaltefolie",
+   "bereich": [
+    68,
+    86,
+    97,
+    98
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_10.jpg"
+  },
+  {
+   "marke": "Mumm",
+   "name": "Sekt dry",
+   "packung": "0,75-l-Flasche",
+   "preis": 4.99,
+   "alt_preis": 6.49,
+   "grundpreis": 6.65,
+   "gp_einheit": "l",
+   "kategorie": "Sekt",
+   "bereich": [
+    8,
+    9,
+    20,
+    45
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_11.jpg"
+  },
+  {
+   "marke": "Freixenet",
+   "name": "Carta Sparkling",
+   "packung": "0,75-l-Flasche",
+   "preis": 3.99,
+   "alt_preis": 6.49,
+   "grundpreis": 5.32,
+   "gp_einheit": "l",
+   "kategorie": "Sekt",
+   "bereich": [
+    29,
+    9,
+    41,
+    45
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_11.jpg"
+  },
+  {
+   "marke": "Freixenet",
+   "name": "Mederano oder Mia Weine, Mederano Glühwein",
+   "packung": "0,75-l-Flasche",
+   "preis": 2.99,
+   "alt_preis": 4.49,
+   "grundpreis": 3.99,
+   "gp_einheit": "l",
+   "kategorie": "Wein",
+   "bereich": [
+    52,
+    9,
+    80,
+    45
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_11.jpg"
+  },
+  {
+   "marke": "Rotwild",
+   "name": "Dornfelder halbtrocken",
+   "packung": "0,75-l-Flasche",
+   "preis": 2.99,
+   "alt_preis": 3.99,
+   "grundpreis": 3.99,
+   "gp_einheit": "l",
+   "kategorie": "Wein",
+   "bereich": [
+    87,
+    9,
+    96,
+    45
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_11.jpg"
+  },
+  {
+   "marke": "Rotkäppchen",
+   "name": "Piccolo",
+   "packung": "3 x 0,2-l-Flasche",
+   "preis": 3.0,
+   "alt_preis": 5.37,
+   "grundpreis": 5.0,
+   "gp_einheit": "l",
+   "kategorie": "Sekt",
+   "bereich": [
+    5,
+    59,
+    27,
+    86
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_11.jpg"
+  },
+  {
+   "marke": "Fürst von Metternich",
+   "name": "Piccolo",
+   "packung": "0,2-l-Flasche",
+   "preis": 1.99,
+   "alt_preis": 3.29,
+   "grundpreis": 9.95,
+   "gp_einheit": "l",
+   "kategorie": "Sekt",
+   "bereich": [
+    33,
+    63,
+    42,
+    86
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_11.jpg"
+  },
+  {
+   "marke": "Shatler's",
+   "name": "Cocktails, verschiedene Sorten",
+   "packung": "0,25-l-Dose",
+   "preis": 2.49,
+   "alt_preis": 2.79,
+   "grundpreis": 9.96,
+   "gp_einheit": "l",
+   "kategorie": "Mixgetränk",
+   "bereich": [
+    62,
+    56,
+    81,
+    86
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_11.jpg"
+  },
+  {
+   "marke": "Bacardí",
+   "name": "Mojito und andere Sorten (außer Cola)",
+   "packung": "0,33-l-Dose",
+   "preis": 2.49,
+   "alt_preis": null,
+   "grundpreis": 7.55,
+   "gp_einheit": "l",
+   "kategorie": "Mixgetränk",
+   "bereich": [
+    83,
+    53,
+    98,
+    85
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_11.jpg"
+  },
+  {
+   "marke": "Osborne",
+   "name": "Veterano oder Osborne 103",
+   "packung": "0,7-l-Flasche",
+   "preis": 9.99,
+   "alt_preis": 12.99,
+   "grundpreis": 14.27,
+   "gp_einheit": "l",
+   "kategorie": "Brandy",
+   "bereich": [
+    11,
+    88,
+    33,
+    98
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_11.jpg"
+  },
+  {
+   "marke": "Southern Comfort",
+   "name": "Southern Comfort 35% Vol.",
+   "packung": "0,7-l-Flasche",
+   "preis": 9.99,
+   "alt_preis": 14.99,
+   "grundpreis": 14.27,
+   "gp_einheit": "l",
+   "kategorie": "Likör",
+   "bereich": [
+    41,
+    88,
+    54,
+    97
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_11.jpg"
+  },
+  {
+   "marke": "Three Sixty",
+   "name": "Vodka",
+   "packung": "0,7-l-Flasche",
+   "preis": 10.99,
+   "alt_preis": 13.99,
+   "grundpreis": 15.7,
+   "gp_einheit": "l",
+   "kategorie": "Wodka",
+   "bereich": [
+    63,
+    86,
+    76,
+    97
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_11.jpg"
+  },
+  {
+   "marke": "Heydt",
+   "name": "Hell Yeah Butterscotch Caramell Liqueur",
+   "packung": "0,5-l-Flasche",
+   "preis": 11.99,
+   "alt_preis": 14.99,
+   "grundpreis": 23.98,
+   "gp_einheit": "l",
+   "kategorie": "Likör",
+   "bereich": [
+    82,
+    88,
+    95,
+    97
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_11.jpg"
+  },
+  {
+   "marke": "Adelholzener",
+   "name": "Active O2 (verschiedene Sorten)",
+   "packung": "0,75-l-Flasche",
+   "preis": 0.99,
+   "alt_preis": 1.39,
+   "grundpreis": 1.32,
+   "gp_einheit": "l",
+   "kategorie": "Wasser",
+   "bereich": [
+    10,
+    2,
+    23,
+    20
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_12.jpg"
+  },
+  {
+   "marke": "Römerwall",
+   "name": "Classic, Medium oder Naturelle",
+   "packung": "12 Glasflaschen à 0,75 l",
+   "preis": 4.49,
+   "alt_preis": 4.99,
+   "grundpreis": 0.5,
+   "gp_einheit": "l",
+   "kategorie": "Mineralwasser",
+   "bereich": [
+    29,
+    5,
+    56,
+    22
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_12.jpg"
+  },
+  {
+   "marke": "Burgwallbronn",
+   "name": "First Class Classic, Medium oder Naturelle",
+   "packung": "12 PET-Flaschen à 1 l",
+   "preis": 4.99,
+   "alt_preis": 5.99,
+   "grundpreis": 0.42,
+   "gp_einheit": "l",
+   "kategorie": "Mineralwasser",
+   "bereich": [
+    69,
+    6,
+    100,
+    22
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_12.jpg"
+  },
+  {
+   "marke": "Warsteiner",
+   "name": "Pilsener",
+   "packung": "0,5-l-Dose",
+   "preis": 0.79,
+   "alt_preis": 1.09,
+   "grundpreis": 1.58,
+   "gp_einheit": "l",
+   "kategorie": "Bier",
+   "bereich": [
+    10,
+    25,
+    23,
+    38
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_12.jpg"
+  },
+  {
+   "marke": "Herforder",
+   "name": "Pils, 27 Steinflaschen",
+   "packung": "27 Steinflaschen à 0,33 l",
+   "preis": 14.99,
+   "alt_preis": 16.49,
+   "grundpreis": 1.68,
+   "gp_einheit": "l",
+   "kategorie": "Bier",
+   "bereich": [
+    35,
+    23,
+    57,
+    37
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_12.jpg"
+  },
+  {
+   "marke": "Krombacher",
+   "name": "Alkoholfrei oder Fassbrause (verschiedene Sorten)",
+   "packung": "6er Träger à 0,33 l Flaschen",
+   "preis": 4.49,
+   "alt_preis": 5.29,
+   "grundpreis": 2.27,
+   "gp_einheit": "l",
+   "kategorie": "Bier",
+   "bereich": [
+    72,
+    23,
+    98,
+    40
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_12.jpg"
+  },
+  {
+   "marke": "Krombacher",
+   "name": "Pils",
+   "packung": "24 / 20 Flaschen à 0,33 l / 0,5 l",
+   "preis": 14.99,
+   "alt_preis": 17.99,
+   "grundpreis": 1.89,
+   "gp_einheit": "l",
+   "kategorie": "Bier",
+   "bereich": [
+    37,
+    42,
+    61,
+    61
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_12.jpg"
+  },
+  {
+   "marke": "Jever",
+   "name": "Pilsener (oder Fun)",
+   "packung": "24 / 20 Flaschen à 0,33 l / 0,5 l",
+   "preis": 14.99,
+   "alt_preis": 16.99,
+   "grundpreis": 1.89,
+   "gp_einheit": "l",
+   "kategorie": "Bier",
+   "bereich": [
+    74,
+    40,
+    98,
+    61
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_12.jpg"
+  },
+  {
+   "marke": "Coca-Cola",
+   "name": "Cola und andere Sorten",
+   "packung": "1,25-l-Flasche",
+   "preis": 1.29,
+   "alt_preis": 1.79,
+   "grundpreis": 1.03,
+   "gp_einheit": "l",
+   "kategorie": "Erfrischungsgetränk",
+   "bereich": [
+    9,
+    43,
+    24,
+    62
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_12.jpg"
+  },
+  {
+   "marke": "Rauch",
+   "name": "happy day Säfte (verschiedene Sorten)",
+   "packung": "1-l-Tetrapack",
+   "preis": 1.99,
+   "alt_preis": 2.69,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Saft",
+   "bereich": [
+    9,
+    63,
+    19,
+    80
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_12.jpg"
+  },
+  {
+   "marke": "Heimart",
+   "name": "Krosse Kerle",
+   "packung": "115-g-Beutel",
+   "preis": 1.49,
+   "alt_preis": null,
+   "grundpreis": 12.96,
+   "gp_einheit": "kg",
+   "kategorie": "Chips",
+   "bereich": [
+    26,
+    68,
+    43,
+    83
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_12.jpg"
+  },
+  {
+   "marke": "Lorenz",
+   "name": "Saltletts (verschiedene Sorten)",
+   "packung": "100–250 g Packung",
+   "preis": 1.49,
+   "alt_preis": null,
+   "grundpreis": null,
+   "gp_einheit": "",
+   "kategorie": "Salzgebäck",
+   "bereich": [
+    42,
+    70,
+    57,
+    83
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_12.jpg"
+  },
+  {
+   "marke": "Doritos",
+   "name": "Nacho Cheese und andere Sorten",
+   "packung": "110-g-Beutel",
+   "preis": 1.49,
+   "alt_preis": null,
+   "grundpreis": 13.55,
+   "gp_einheit": "kg",
+   "kategorie": "Chips",
+   "bereich": [
+    57,
+    69,
+    72,
+    83
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_12.jpg"
+  },
+  {
+   "marke": "Chester's",
+   "name": "Original (und andere Sorten)",
+   "packung": "85-g-Beutel",
+   "preis": 1.49,
+   "alt_preis": null,
+   "grundpreis": 17.53,
+   "gp_einheit": "kg",
+   "kategorie": "Chips",
+   "bereich": [
+    72,
+    70,
+    85,
+    83
+   ],
+   "seiten_bild": "https://www.klaas-und-kock.de/kataloge/blaetterkatalog/catalogs/kundk_kw48/large/bk_12.jpg"
+  }
+ ]
+}
