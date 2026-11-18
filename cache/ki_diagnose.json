@@ -53,26 +53,7 @@
    "pages": "list",
    "publisher": "dict",
    "pageCount": 27,
-   "score": 0.00271,
-   "contentBadges": "list",
-   "externalTracking": "dict"
-  },
-  "29696020-d924-4e4b-97bb-f7bb50fc51b0": {
-   "title": "Aktuelle Angebote",
-   "type": "BROCHURE",
-   "id": 2501332863,
-   "contentId": "29696020-d924-4e4b-97bb-f7bb50fc51b0",
-   "publishedFrom": "2026-11-14T23:00:00.000+0000",
-   "publishedUntil": "2026-11-21T21:00:00.000+0000",
-   "validFrom": "2026-11-15T23:00:00.000+0000",
-   "validUntil": "2026-11-21T21:00:00.000+0000",
-   "hideValidityDate": false,
-   "adFormat": "ad_format__brochure_card_cover",
-   "adPlacement": "ad_placement__seo_brochure_box",
-   "pages": "list",
-   "publisher": "dict",
-   "pageCount": 28,
-   "score": 0.02129,
+   "score": 0.00266,
    "contentBadges": "list",
    "externalTracking": "dict"
   },
@@ -91,7 +72,26 @@
    "pages": "list",
    "publisher": "dict",
    "pageCount": 23,
-   "score": 0.02092,
+   "score": 0.01904,
+   "contentBadges": "list",
+   "externalTracking": "dict"
+  },
+  "29696020-d924-4e4b-97bb-f7bb50fc51b0": {
+   "title": "Aktuelle Angebote",
+   "type": "BROCHURE",
+   "id": 2501332863,
+   "contentId": "29696020-d924-4e4b-97bb-f7bb50fc51b0",
+   "publishedFrom": "2026-11-14T23:00:00.000+0000",
+   "publishedUntil": "2026-11-21T21:00:00.000+0000",
+   "validFrom": "2026-11-15T23:00:00.000+0000",
+   "validUntil": "2026-11-21T21:00:00.000+0000",
+   "hideValidityDate": false,
+   "adFormat": "ad_format__brochure_card_cover",
+   "adPlacement": "ad_placement__seo_brochure_box",
+   "pages": "list",
+   "publisher": "dict",
+   "pageCount": 28,
+   "score": 0.01171,
    "contentBadges": "list",
    "externalTracking": "dict"
   },
@@ -152,30 +152,5 @@
    "contentBadges": "list",
    "externalTracking": "dict"
   }
- },
- "K+K kkweb-kundk_kw48-2026-11-23": {
-  "titel": "k+k_KW48",
-  "seiten_api": 12,
-  "bilder": 12,
-  "bildgroessen": [
-   "1600x1600"
-  ],
-  "seitenschluessel": [
-   "images"
-  ],
-  "je_seite": [
-   20,
-   13,
-   12,
-   10,
-   10,
-   13,
-   15,
-   19,
-   21,
-   15,
-   12,
-   14
-  ]
  }
 }
