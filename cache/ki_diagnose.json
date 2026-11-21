@@ -1,39 +1,39 @@
 {
  "broschueren_roh": {
-  "64dff418-51f1-410c-83bc-9cd36708a4a4": {
+  "d087d145-bb8a-48dc-a1c5-2d2244ea0ec6": {
    "title": "Mein Drogeriemarkt",
    "type": "BROCHURE",
-   "id": 2501321369,
-   "contentId": "64dff418-51f1-410c-83bc-9cd36708a4a4",
-   "publishedFrom": "2026-11-06T23:00:00.000+0000",
-   "publishedUntil": "2026-11-20T21:00:00.000+0000",
-   "validFrom": "2026-11-08T23:00:00.000+0000",
-   "validUntil": "2026-11-20T21:00:00.000+0000",
+   "id": 2501335576,
+   "contentId": "d087d145-bb8a-48dc-a1c5-2d2244ea0ec6",
+   "publishedFrom": "2026-11-20T23:00:00.000+0000",
+   "publishedUntil": "2026-11-27T21:00:00.000+0000",
+   "validFrom": "2026-11-22T23:00:00.000+0000",
+   "validUntil": "2026-11-27T21:00:00.000+0000",
    "hideValidityDate": false,
    "adFormat": "ad_format__brochure_card_cover",
    "adPlacement": "ad_placement__seo_brochure_box",
    "pages": "list",
    "publisher": "dict",
-   "pageCount": 7,
-   "score": 0,
+   "pageCount": 28,
+   "score": 1e-05,
    "contentBadges": "list",
    "externalTracking": "dict"
   },
-  "f3ac6530-68eb-4033-9fcd-c6ebe71f0d40": {
+  "9ecab646-cbe6-4356-a55b-77c39d04f9c8": {
    "title": "Mein Drogeriemarkt",
    "type": "BROCHURE",
-   "id": 2501330013,
-   "contentId": "f3ac6530-68eb-4033-9fcd-c6ebe71f0d40",
-   "publishedFrom": "2026-11-13T23:00:00.000+0000",
-   "publishedUntil": "2026-11-20T21:00:00.000+0000",
-   "validFrom": "2026-11-15T23:00:00.000+0000",
-   "validUntil": "2026-11-20T21:00:00.000+0000",
+   "id": 2501335450,
+   "contentId": "9ecab646-cbe6-4356-a55b-77c39d04f9c8",
+   "publishedFrom": "2026-11-20T23:00:00.000+0000",
+   "publishedUntil": "2026-12-04T21:00:00.000+0000",
+   "validFrom": "2026-11-22T23:00:00.000+0000",
+   "validUntil": "2026-12-04T21:00:00.000+0000",
    "hideValidityDate": false,
    "adFormat": "ad_format__brochure_card_cover",
    "adPlacement": "ad_placement__seo_brochure_box",
    "pages": "list",
    "publisher": "dict",
-   "pageCount": 7,
+   "pageCount": 16,
    "score": 0,
    "contentBadges": "list",
    "externalTracking": "dict"
@@ -53,7 +53,7 @@
    "pages": "list",
    "publisher": "dict",
    "pageCount": 27,
-   "score": 0.00208,
+   "score": 0.00214,
    "contentBadges": "list",
    "externalTracking": "dict"
   },
@@ -72,7 +72,7 @@
    "pages": "list",
    "publisher": "dict",
    "pageCount": 23,
-   "score": 0.01375,
+   "score": 0.01273,
    "contentBadges": "list",
    "externalTracking": "dict"
   },
@@ -91,7 +91,7 @@
    "pages": "list",
    "publisher": "dict",
    "pageCount": 28,
-   "score": 0.01233,
+   "score": 0.00631,
    "contentBadges": "list",
    "externalTracking": "dict"
   },
@@ -171,55 +171,5 @@
    "contentBadges": "list",
    "externalTracking": "dict"
   }
- },
- "Norma 69d2c9ce-eddb-4920-91b7-6c2bff3f03e1": {
-  "titel": "Mehr fürs Geld",
-  "seiten_api": 31,
-  "bilder": 31,
-  "bildgroessen": [
-   "1600x1600",
-   "2800x2800",
-   "75x96",
-   "768x1024"
-  ],
-  "seitenschluessel": [
-   "images",
-   "linkOuts",
-   "number",
-   "offers"
-  ],
-  "je_seite": [
-   14,
-   14,
-   15,
-   19,
-   15,
-   17,
-   17,
-   15,
-   15,
-   14,
-   14,
-   14,
-   16,
-   12,
-   16,
-   23,
-   15,
-   11,
-   24,
-   23,
-   5,
-   2,
-   9,
-   6,
-   6,
-   12,
-   9,
-   0,
-   0,
-   0,
-   0
-  ]
  }
 }
