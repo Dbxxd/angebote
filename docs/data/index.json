@@ -1,5 +1,5 @@
 {
- "stand": "2026-11-24T21:41+01:00",
+ "stand": "2026-11-25T10:50+01:00",
  "regionen": [
   {
    "id": "steinfurt",
@@ -42,7 +42,6 @@
    "maerkte": [
     "Aldi",
     "budni",
-    "dm",
     "Edeka",
     "Kaufland",
     "Lidl",
@@ -52,7 +51,7 @@
     "Rewe",
     "Rossmann"
    ],
-   "anzahl": 4409
+   "anzahl": 4380
   }
  ]
 }

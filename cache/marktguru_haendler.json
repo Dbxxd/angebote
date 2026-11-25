@@ -1,16 +1,16 @@
 {
  "48282": {
-  "Lidl": 875,
+  "Lidl": 873,
   "XXXLutz": 662,
   "Kaufland": 593,
   "Netto Marken-Discount": 363,
+  "EDEKA Foodservice": 336,
   "PENNY": 319,
   "ROSSMANN": 318,
   "toom Baumarkt": 303,
   "Combi": 274,
   "Thomas Philipps": 234,
   "Opti Wohnwelt": 217,
-  "EDEKA Foodservice": 204,
   "SB-Möbel BOSS": 160,
   "Getränke Hoffmann": 93,
   "Opti-MegaStore": 93,
@@ -19,13 +19,14 @@
   "Kabs PolsterWelt": 24
  },
  "48341": {
-  "Lidl": 875,
+  "Lidl": 873,
   "XXXLutz": 662,
   "Kaufland": 593,
   "Netto Marken-Discount": 363,
   "PENNY": 319,
   "ROSSMANN": 318,
   "toom Baumarkt": 285,
+  "HORNBACH": 257,
   "Opti Wohnwelt": 217,
   "Hagebaumarkt": 103,
   "Getränke Hoffmann": 93,
@@ -35,7 +36,7 @@
   "Kabs PolsterWelt": 24
  },
  "48356": {
-  "Lidl": 875,
+  "Lidl": 873,
   "XXXLutz": 662,
   "Kaufland": 593,
   "Netto Marken-Discount": 363,
@@ -50,7 +51,7 @@
   "Kabs PolsterWelt": 24
  },
  "48565": {
-  "Lidl": 875,
+  "Lidl": 873,
   "XXXLutz": 662,
   "Netto Marken-Discount": 363,
   "PENNY": 319,
@@ -64,9 +65,10 @@
   "Kabs PolsterWelt": 24
  },
  "21423": {
-  "Lidl": 875,
+  "Lidl": 873,
   "XXXLutz": 662,
   "Kaufland": 617,
+  "Handelshof": 460,
   "EDEKA": 442,
   "Opti Wohnwelt": 404,
   "Netto Marken-Discount": 365,
@@ -75,7 +77,6 @@
   "ROSSMANN": 318,
   "toom Baumarkt": 303,
   "mömax": 266,
-  "Handelshof": 255,
   "SB-Möbel BOSS": 160,
   "budni": 143,
   "Sconto SB": 122,
@@ -87,9 +88,10 @@
   "OBI": 26
  },
  "21073": {
-  "Lidl": 875,
+  "Lidl": 873,
   "XXXLutz": 662,
   "Kaufland": 612,
+  "Handelshof": 460,
   "REWE Center": 414,
   "REWE": 394,
   "EDEKA": 366,
@@ -98,7 +100,6 @@
   "PENNY": 319,
   "ROSSMANN": 318,
   "mömax": 266,
-  "Handelshof": 255,
   "Thomas Philipps": 234,
   "Opti Wohnwelt": 217,
   "EDEKA Frischemarkt": 215,
@@ -114,7 +115,6 @@
   "DAS FUTTERHAUS": 45,
   "EDEKA Bandelt": 42,
   "Kabs PolsterWelt": 40,
-  "dm-drogerie markt": 29,
   "OBI": 26
  }
 }
